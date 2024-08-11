@@ -838,7 +838,7 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 464,
+          "x": 336,
           "y": 152,
           "zOrder": 1,
           "numberProperties": [],
@@ -1137,7 +1137,7 @@
           "layer": "",
           "name": "FloorObj",
           "persistentUuid": "21dc6518-9824-4113-b39c-0f5c98f00087",
-          "width": 616,
+          "width": 424,
           "x": -64,
           "y": 176,
           "zOrder": 2,
@@ -3570,7 +3570,7 @@
                         },
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "VariableChildCount(SensorsData)/3",
+                          "repeatExpression": "VariableChildCount(SensorsData)/4",
                           "conditions": [],
                           "actions": [],
                           "events": [
@@ -4333,7 +4333,6 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4804,7 +4803,6 @@
                           "comment": "Stick to the ground"
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -5960,7 +5958,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Angle calculation",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6006,30 +6003,6 @@
                                 "GroundAngle",
                                 "=",
                                 "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreXY"
-                              },
-                              "parameters": [
-                                "NewSprite",
-                                "=",
-                                "Sonic.Collision.AngleCentre.X",
-                                "=",
-                                "Sonic.Collision.AngleCentre.Y"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreXY"
-                              },
-                              "parameters": [
-                                "NewSprite",
-                                "=",
-                                "Sonic.Collision.AngleRight.X",
-                                "=",
-                                "Sonic.Collision.AngleRight.Y"
                               ]
                             }
                           ]
@@ -6177,7 +6150,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Change sensor angle",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
