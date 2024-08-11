@@ -2594,14 +2594,11 @@
             },
             {
               "type": {
-                "value": "PlayMusic"
+                "value": "SoundManagement::RequestLevelMusic"
               },
               "parameters": [
                 "",
-                "testlevel.ogg",
-                "yes",
-                "100",
-                "1"
+                ""
               ]
             }
           ]
@@ -2611,6 +2608,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Player Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7963,6 +7961,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Camera",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8205,6 +8204,34 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SoundManagement::LevelMusicRequested"
+              },
+              "parameters": [
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "testlevel.ogg",
+                "yes",
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -8319,7 +8346,139 @@
     }
   ],
   "externalEvents": [],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
+      "name": "SoundManagement",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "",
+      "description": "",
+      "tags": [],
+      "authorIds": [],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [
+        {
+          "folded": true,
+          "name": "LevelMusicRequest",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "eventsFunctions": [
+        {
+          "fullName": "Request level music",
+          "functionType": "Action",
+          "name": "RequestLevelMusic",
+          "sentence": "Request level music",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "LevelMusicRequest",
+                    "True",
+                    "="
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "fullName": "Level music requested",
+          "functionType": "Condition",
+          "name": "LevelMusicRequested",
+          "sentence": "Level music requested",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "LevelMusicRequest",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "LevelMusicRequest",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "False"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "LevelMusicRequest",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
+      "eventsBasedObjects": []
+    }
+  ],
   "externalLayouts": [],
   "externalSourceFiles": []
 }
