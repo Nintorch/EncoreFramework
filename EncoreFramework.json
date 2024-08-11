@@ -2354,15 +2354,7 @@
           "width": 32,
           "variables": [],
           "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": true,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ]
+          "behaviors": []
         },
         {
           "assetStoreId": "",
@@ -2475,15 +2467,7 @@
           "width": 32,
           "variables": [],
           "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": true,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ]
+          "behaviors": []
         },
         {
           "assetStoreId": "",
@@ -2494,15 +2478,7 @@
           "width": 32,
           "variables": [],
           "effects": [],
-          "behaviors": [
-            {
-              "name": "Platform",
-              "type": "PlatformBehavior::PlatformBehavior",
-              "canBeGrabbed": true,
-              "platformType": "NormalPlatform",
-              "yGrabOffset": 0
-            }
-          ]
+          "behaviors": []
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -5913,7 +5889,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Air movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6108,7 +6083,7 @@
                                 "Sonic",
                                 "YSpeed",
                                 ">",
-                                "-4"
+                                "-4*60"
                               ]
                             }
                           ],
@@ -6992,6 +6967,26 @@
                             "=",
                             "\"Roll\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "-",
+                            "5*sin(ToRad(Sonic.SensorAngle))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreY"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "+",
+                            "5*cos(ToRad(Sonic.SensorAngle))"
+                          ]
                         }
                       ]
                     }
@@ -7442,6 +7437,35 @@
                             "Action",
                             "=",
                             "\"Stand\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Ground",
+                            "=",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Jump\""
                           ]
                         }
                       ]
@@ -8278,10 +8302,6 @@
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
-        },
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior"
         },
         {
           "name": "Resizable",
