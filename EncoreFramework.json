@@ -810,7 +810,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.8227501575163626,
+        "zoomFactor": 2.6264853916550526,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -838,8 +838,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 336,
-          "y": 152,
+          "x": 648,
+          "y": 184,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -2608,7 +2608,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Player Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2733,7 +2732,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2748,7 +2746,7 @@
                       },
                       "parameters": [
                         "Sonic",
-                        "Input.YAxis",
+                        "Input.XAxis",
                         "=",
                         "0"
                       ]
@@ -2759,7 +2757,7 @@
                       },
                       "parameters": [
                         "Sonic",
-                        "Input.XAxis",
+                        "Input.YAxis",
                         "=",
                         "0"
                       ]
@@ -4163,7 +4161,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Wall collision",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4372,7 +4369,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Ground movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5170,7 +5166,7 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": ""
+                          "comment": "Apply ground speed"
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
@@ -6100,6 +6096,18 @@
                           ]
                         },
                         {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Gravity"
+                        },
+                        {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -6115,6 +6123,18 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Apply speed"
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
@@ -6355,7 +6375,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Angle calculation",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7032,6 +7051,18 @@
                   ],
                   "events": [
                     {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Perform jump"
+                    },
+                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -7118,6 +7149,18 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": ""
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -7281,6 +7324,17 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "JumpFlag",
+                        "True",
+                        "\"Jump\""
+                      ]
+                    },
                     {
                       "type": {
                         "value": "StringObjectVariable"
@@ -8206,32 +8260,44 @@
           "parameters": []
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Music",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
             {
-              "type": {
-                "value": "SoundManagement::LevelMusicRequested"
-              },
-              "parameters": [
-                "",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SoundManagement::LevelMusicRequested"
+                  },
+                  "parameters": [
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "testlevel.ogg",
+                    "yes",
+                    "",
+                    ""
+                  ]
+                }
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlayMusic"
-              },
-              "parameters": [
-                "",
-                "testlevel.ogg",
-                "yes",
-                "",
-                ""
-              ]
-            }
-          ]
+          "parameters": []
         }
       ],
       "layers": [
