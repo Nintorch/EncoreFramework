@@ -1394,6 +1394,11 @@
             },
             {
               "folded": true,
+              "name": "SpinDashRev",
+              "type": "number",
+              "value": 0
+            },
+            {
               "name": "Input",
               "type": "structure",
               "children": [
@@ -1413,6 +1418,12 @@
                   "name": "C",
                   "type": "number",
                   "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "DirectionalMovement",
+                  "type": "boolean",
+                  "value": true
                 },
                 {
                   "name": "HasInput",
@@ -2724,6 +2735,17 @@
                         "=",
                         "0.125*60"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "SpinDashRev",
+                        "=",
+                        "0*60"
+                      ]
                     }
                   ]
                 }
@@ -2735,7 +2757,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2990,6 +3011,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Hitboxes",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4374,7 +4396,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Ground movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4442,31 +4463,19 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "BooleanObjectVariable"
                                   },
                                   "parameters": [
                                     "Sonic",
-                                    "Input.XAxis",
-                                    "=",
-                                    "1"
+                                    "Input.DirectionalMovement",
+                                    "True",
+                                    ""
                                   ]
                                 }
                               ],
                               "actions": [],
                               "events": [
                                 {
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "Acceleration"
-                                },
-                                {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -4475,78 +4484,26 @@
                                       },
                                       "parameters": [
                                         "Sonic",
-                                        "XSpeed",
-                                        ">=",
-                                        "0"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "<",
-                                        "Sonic.TopSpeed"
+                                        "Input.XAxis",
+                                        "=",
+                                        "1"
                                       ]
                                     }
                                   ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "+",
-                                        "Sonic.Acceleration"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "Deceleration"
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "<",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "+",
-                                        "Sonic.Deceleration"
-                                      ]
-                                    }
-                                  ],
+                                  "actions": [],
                                   "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "Acceleration"
+                                    },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
@@ -4560,6 +4517,118 @@
                                             ">=",
                                             "0"
                                           ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "<",
+                                            "Sonic.TopSpeed"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "+",
+                                            "Sonic.Acceleration"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "Deceleration"
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "<",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "+",
+                                            "Sonic.Deceleration"
+                                          ]
+                                        }
+                                      ],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "XSpeed",
+                                                ">=",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "XSpeed",
+                                                "=",
+                                                "Sonic.Deceleration"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            ">",
+                                            "Sonic.TopSpeed"
+                                          ]
                                         }
                                       ],
                                       "actions": [
@@ -4571,7 +4640,7 @@
                                             "Sonic",
                                             "XSpeed",
                                             "=",
-                                            "Sonic.Deceleration"
+                                            "Sonic.TopSpeed"
                                           ]
                                         }
                                       ]
@@ -4587,138 +4656,26 @@
                                       },
                                       "parameters": [
                                         "Sonic",
-                                        "XSpeed",
-                                        ">",
-                                        "Sonic.TopSpeed"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
+                                        "Input.XAxis",
                                         "=",
-                                        "Sonic.TopSpeed"
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "Input.XAxis",
-                                    "=",
-                                    "-1"
-                                  ]
-                                }
-                              ],
-                              "actions": [],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "Acceleration"
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "<=",
-                                        "0"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        ">",
-                                        "-Sonic.TopSpeed"
+                                        "-1"
                                       ]
                                     }
                                   ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "-",
-                                        "Sonic.Acceleration"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
-                                  },
-                                  "comment": "Deceleration"
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        ">",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "-",
-                                        "Sonic.Deceleration"
-                                      ]
-                                    }
-                                  ],
+                                  "actions": [],
                                   "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "Acceleration"
+                                    },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
@@ -4732,6 +4689,118 @@
                                             "<=",
                                             "0"
                                           ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            ">",
+                                            "-Sonic.TopSpeed"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "-",
+                                            "Sonic.Acceleration"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "Deceleration"
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            ">",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "-",
+                                            "Sonic.Deceleration"
+                                          ]
+                                        }
+                                      ],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "XSpeed",
+                                                "<=",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "XSpeed",
+                                                "=",
+                                                "-Sonic.Deceleration"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "<",
+                                            "-Sonic.TopSpeed"
+                                          ]
                                         }
                                       ],
                                       "actions": [
@@ -4743,38 +4812,9 @@
                                             "Sonic",
                                             "XSpeed",
                                             "=",
-                                            "-Sonic.Deceleration"
+                                            "-Sonic.TopSpeed"
                                           ]
                                         }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "<",
-                                        "-Sonic.TopSpeed"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "XSpeed",
-                                        "=",
-                                        "-Sonic.TopSpeed"
                                       ]
                                     }
                                   ]
@@ -5944,29 +5984,17 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "BooleanObjectVariable"
                                   },
                                   "parameters": [
                                     "Sonic",
-                                    "Input.XAxis",
-                                    "=",
-                                    "1"
+                                    "Input.DirectionalMovement",
+                                    "True",
+                                    ""
                                   ]
                                 }
                               ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "XSpeed",
-                                    "+",
-                                    "Sonic.Acceleration*2"
-                                  ]
-                                }
-                              ],
+                              "actions": [],
                               "events": [
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
@@ -5977,9 +6005,9 @@
                                       },
                                       "parameters": [
                                         "Sonic",
-                                        "XSpeed",
-                                        ">",
-                                        "Sonic.TopSpeed"
+                                        "Input.XAxis",
+                                        "=",
+                                        "1"
                                       ]
                                     }
                                   ],
@@ -5991,43 +6019,43 @@
                                       "parameters": [
                                         "Sonic",
                                         "XSpeed",
-                                        "=",
-                                        "Sonic.TopSpeed"
+                                        "+",
+                                        "Sonic.Acceleration*2"
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            ">",
+                                            "Sonic.TopSpeed"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "=",
+                                            "Sonic.TopSpeed"
+                                          ]
+                                        }
                                       ]
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "Input.XAxis",
-                                    "=",
-                                    "-1"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "XSpeed",
-                                    "-",
-                                    "Sonic.Acceleration*2"
-                                  ]
-                                }
-                              ],
-                              "events": [
+                                },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
@@ -6037,9 +6065,9 @@
                                       },
                                       "parameters": [
                                         "Sonic",
-                                        "XSpeed",
-                                        "<",
-                                        "-Sonic.TopSpeed"
+                                        "Input.XAxis",
+                                        "=",
+                                        "-1"
                                       ]
                                     }
                                   ],
@@ -6051,8 +6079,39 @@
                                       "parameters": [
                                         "Sonic",
                                         "XSpeed",
-                                        "=",
-                                        "-Sonic.TopSpeed"
+                                        "-",
+                                        "Sonic.Acceleration*2"
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "<",
+                                            "-Sonic.TopSpeed"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "XSpeed",
+                                            "=",
+                                            "-Sonic.TopSpeed"
+                                          ]
+                                        }
                                       ]
                                     }
                                   ]
@@ -6989,6 +7048,79 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "XSpeed",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.YAxis",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.A",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Ground",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SpinDashRev",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Spin Dash\""
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -7466,6 +7598,247 @@
                             "Action",
                             "=",
                             "\"Jump\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Spin Dash\n"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Action",
+                        "=",
+                        "\"Spin Dash\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Animation",
+                        "=",
+                        "\"Jumping\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "XSpeed",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SpinDashRev",
+                            ">=",
+                            "8"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SpinDashRev",
+                            "=",
+                            "8"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SpinDashRev",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SpinDashRev",
+                            "-",
+                            "Sonic.SpinDashRev / 0.125 / 256"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.A",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SpinDashRev",
+                            "+",
+                            "2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.YAxis",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Ground",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Roll\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Direction",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "(8 + (floor(Sonic.SpinDashRev) / 2)) * 60"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Direction",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "(-8 - (floor(Sonic.SpinDashRev) / 2)) * 60"
+                              ]
+                            }
                           ]
                         }
                       ]
