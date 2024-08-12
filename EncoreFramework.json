@@ -72,46 +72,10 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "sprites/spritesheet.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "sprites/spritesheet.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/Idle.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Idle",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Idle2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Idle2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Idle3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Idle3",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Idle4.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Idle4",
         "smoothed": false,
         "userAdded": false
       },
@@ -185,7 +149,7 @@
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping",
         "smoothed": false,
-        "userAdded": true
+        "userAdded": false
       },
       {
         "alwaysLoaded": false,
@@ -194,7 +158,7 @@
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping2",
         "smoothed": false,
-        "userAdded": true
+        "userAdded": false
       },
       {
         "alwaysLoaded": false,
@@ -203,7 +167,7 @@
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping3",
         "smoothed": false,
-        "userAdded": true
+        "userAdded": false
       },
       {
         "alwaysLoaded": false,
@@ -212,7 +176,7 @@
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping4",
         "smoothed": false,
-        "userAdded": true
+        "userAdded": false
       },
       {
         "alwaysLoaded": false,
@@ -220,447 +184,6 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping5",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping6.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping6",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping7.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping7",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping8.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping8",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping9.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping9",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping10.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping10",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping11.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping11",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping12.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping12",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping13.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping13",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping14.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping14",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping15.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping15",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping16.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping16",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping17.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping17",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping18.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping18",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping19.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping19",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping20.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping20",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping21.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping21",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping22.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping22",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping23.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping23",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping24.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping24",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping25.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping25",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping26.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping26",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping27.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping27",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping28.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping28",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping29.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping29",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping30.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping30",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping31.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping31",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping32.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping32",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping33.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping33",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping34.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping34",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping35.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping35",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping36.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping36",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping37.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping37",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping38.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping38",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping39.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping39",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping40.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping40",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping41.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping41",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping42.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping42",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping43.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping43",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping44.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping44",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping45.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping45",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping46.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping46",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping47.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping47",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping48.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping48",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping49.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping49",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping50.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping50",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping51.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping51",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping52.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping52",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping53.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping53",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Jumping54.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Jumping54",
         "smoothed": false,
         "userAdded": false
       },
@@ -699,34 +222,6 @@
         "name": "Running4",
         "smoothed": false,
         "userAdded": true
-      },
-      {
-        "file": "testlevel.ogg",
-        "kind": "audio",
-        "metadata": "",
-        "name": "testlevel.ogg",
-        "preloadAsMusic": false,
-        "preloadAsSound": false,
-        "preloadInCache": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/NewSprite.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/NewSprite2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite2",
-        "smoothed": false,
-        "userAdded": false
       },
       {
         "alwaysLoaded": false,
@@ -808,6 +303,56 @@
         "name": "Pushing4",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "audio/music/testlevel.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/music/testlevel.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "audio/sfx/jump.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/sfx/jump.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "audio/sfx/spin.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/sfx/spin.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audio/sfx/spindash.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/sfx/spindash.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "audio/sfx/spindash_release.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/sfx/spindash_release.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -855,7 +400,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 8,
         "gridHeight": 8,
@@ -863,7 +408,7 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": true,
+        "snap": false,
         "zoomFactor": 0.7959117505723241,
         "windowMask": false
       },
@@ -1168,22 +713,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite",
-          "persistentUuid": "e42dddcc-dd4b-4a60-9d7e-96d6c4fcd759",
-          "width": 0,
-          "x": 48,
-          "y": 80,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 32,
@@ -1463,21 +992,15 @@
                 },
                 {
                   "folded": true,
+                  "name": "APressed",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
                   "name": "AllowDirectionalMovement",
                   "type": "boolean",
                   "value": true
-                },
-                {
-                  "folded": true,
-                  "name": "B",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "C",
-                  "type": "number",
-                  "value": 0
                 },
                 {
                   "name": "HasInput",
@@ -2226,7 +1749,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Jumping50",
+                      "image": "Jumping",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2262,7 +1785,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Jumping51",
+                      "image": "Jumping2",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2298,7 +1821,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Jumping52",
+                      "image": "Jumping3",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2334,7 +1857,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Jumping53",
+                      "image": "Jumping4",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2370,7 +1893,7 @@
                     },
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Jumping54",
+                      "image": "Jumping5",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2718,67 +2241,6 @@
           }
         },
         {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "NewSprite",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite2",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 1.5,
-                        "y": 1.5
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 3,
-                            "y": 0
-                          },
-                          {
-                            "x": 3,
-                            "y": 3
-                          },
-                          {
-                            "x": 0,
-                            "y": 3
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "assetStoreId": "",
           "height": 32,
           "name": "FloorObj2",
@@ -2879,9 +2341,6 @@
           },
           {
             "objectName": "NewText2"
-          },
-          {
-            "objectName": "NewSprite"
           },
           {
             "objectName": "LayerSwapper"
@@ -3064,7 +2523,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3102,6 +2560,17 @@
                       "parameters": [
                         "Sonic",
                         "Input.A",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Input.APressed",
                         "=",
                         "0"
                       ]
@@ -3299,6 +2768,39 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "z"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.APressed",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -3319,6 +2821,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Hitboxes",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7430,6 +6933,18 @@
                           ]
                         },
                         {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Spin"
+                        },
+                        {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -7485,6 +7000,18 @@
                                 "+",
                                 "5*cos(ToRad(Sonic.SensorAngle))"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "audio/sfx/spin.wav",
+                                "",
+                                "",
+                                ""
+                              ]
                             }
                           ]
                         }
@@ -7501,23 +7028,6 @@
                         "textR": 0
                       },
                       "comment": "Animation"
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "NewText2",
-                            "Text",
-                            "=",
-                            "ToString(Sonic.Ground)"
-                          ]
-                        }
-                      ]
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -7889,6 +7399,18 @@
                                 "Ground",
                                 "False",
                                 "Sonic.JumpForce"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "audio/sfx/jump.wav",
+                                "",
+                                "",
+                                ""
                               ]
                             }
                           ]
@@ -8621,6 +8143,54 @@
                       "conditions": [
                         {
                           "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "audio/sfx/spindash.wav",
+                            "1",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModPitchSoundChannel"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.APressed",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
                             "value": "NumberObjectVariable"
                           },
                           "parameters": [
@@ -8683,16 +8253,10 @@
                           },
                           "parameters": [
                             "Sonic",
-                            "Input.A",
+                            "Input.APressed",
                             "=",
                             "1"
                           ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Once"
-                          },
-                          "parameters": []
                         }
                       ],
                       "actions": [
@@ -8705,6 +8269,30 @@
                             "SpinDashRev",
                             "+",
                             "2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySoundCanal"
+                          },
+                          "parameters": [
+                            "",
+                            "audio/sfx/spindash.wav",
+                            "1",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModPitchSoundChannel"
+                          },
+                          "parameters": [
+                            "",
+                            "1",
+                            "=",
+                            "1+Sonic.SpinDashRev/16"
                           ]
                         }
                       ]
@@ -8767,6 +8355,18 @@
                             "XSpeed",
                             "=",
                             "(8 + (floor(Sonic.SpinDashRev) / 2)) * 60 * Sonic.Direction"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "audio/sfx/spindash_release.wav",
+                            "",
+                            "",
+                            ""
                           ]
                         }
                       ]
@@ -9336,7 +8936,7 @@
                   },
                   "parameters": [
                     "",
-                    "testlevel.ogg",
+                    "audio/music/testlevel.ogg",
                     "yes",
                     "",
                     ""
