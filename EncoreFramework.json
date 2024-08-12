@@ -399,6 +399,24 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Balancing1.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Balancing1",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Balancing2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Balancing2",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1807,6 +1825,91 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "Skidding4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Balancing1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.5333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Balancing1",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Balancing2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -7183,6 +7286,134 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Balancing TODO: add a new animation from Sonic CD"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.AngleCentre.Collision",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Direction",
+                                            "=",
+                                            "1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Collision.AngleLeft.Collision",
+                                            "True",
+                                            "0"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Direction",
+                                            "=",
+                                            "-1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Collision.AngleRight.Collision",
+                                            "True",
+                                            "0"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Animation",
+                                    "=",
+                                    "\"Balancing1\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     },
@@ -7395,6 +7626,18 @@
                                     "Pushing",
                                     "=",
                                     ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Animation",
+                                    "=",
+                                    "\"Balancing1\""
                                   ]
                                 }
                               ],
