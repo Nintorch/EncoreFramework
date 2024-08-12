@@ -772,6 +772,42 @@
         "name": "LookUp",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Pushing.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Pushing2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Pushing3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Pushing4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing4",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -828,7 +864,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.8227501575163636,
+        "zoomFactor": 0.7959117505723241,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -856,8 +892,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 648,
-          "y": 184,
+          "x": -168,
+          "y": 176,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1172,7 +1208,7 @@
           "layer": "",
           "name": "FloorObj",
           "persistentUuid": "e4daf0b4-3854-4c99-be8e-caaca21e267a",
-          "width": 128,
+          "width": 160,
           "x": -272,
           "y": 200,
           "zOrder": 2,
@@ -2186,7 +2222,7 @@
                 {
                   "looping": true,
                   "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.016667,
+                  "timeBetweenFrames": 0.016666666666666666,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -2433,6 +2469,163 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Duck",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 52
+                          },
+                          {
+                            "x": 16,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Pushing",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.016666666666666666,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Pushing",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 52
+                          },
+                          {
+                            "x": 16,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Pushing2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 52
+                          },
+                          {
+                            "x": 16,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Pushing3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 52
+                          },
+                          {
+                            "x": 16,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Pushing4",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2744,6 +2937,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Setup",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2870,6 +3064,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3161,13 +3356,32 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                            "value": "BuiltinCommonInstructions::Or"
                           },
-                          "parameters": [
-                            "Sonic",
-                            "Animation",
-                            "=",
-                            "\"Jumping\""
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "StringObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Action",
+                                "=",
+                                "\"Jump\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StringObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Action",
+                                "=",
+                                "\"Roll\""
+                              ]
+                            }
                           ]
                         }
                       ],
@@ -3204,6 +3418,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4298,6 +4513,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Wall collision",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4506,6 +4722,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Ground movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4597,6 +4814,17 @@
                                         "Input.XAxis",
                                         "=",
                                         "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Sonic",
+                                        "Collision.WallRight.Collision",
+                                        "=",
+                                        ""
                                       ]
                                     }
                                   ],
@@ -4725,35 +4953,6 @@
                                           ]
                                         }
                                       ]
-                                    },
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "NumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Sonic",
-                                            "XSpeed",
-                                            ">",
-                                            "Sonic.TopSpeed"
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Sonic",
-                                            "XSpeed",
-                                            "=",
-                                            "Sonic.TopSpeed"
-                                          ]
-                                        }
-                                      ]
                                     }
                                   ]
                                 },
@@ -4769,6 +4968,17 @@
                                         "Input.XAxis",
                                         "=",
                                         "-1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Sonic",
+                                        "Collision.WallLeft.Collision",
+                                        "=",
+                                        ""
                                       ]
                                     }
                                   ],
@@ -4894,35 +5104,6 @@
                                                 "-Sonic.Deceleration"
                                               ]
                                             }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "NumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Sonic",
-                                            "XSpeed",
-                                            "<",
-                                            "-Sonic.TopSpeed"
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Sonic",
-                                            "XSpeed",
-                                            "=",
-                                            "-Sonic.TopSpeed"
                                           ]
                                         }
                                       ]
@@ -6039,6 +6220,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Air movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6550,6 +6732,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Angle calculation",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6959,10 +7142,39 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Actions",
+              "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "(Restore animation speed before any action)"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Animation",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
@@ -7277,6 +7489,257 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Animation"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "NewText2",
+                            "Text",
+                            "=",
+                            "ToString(Sonic.Ground)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(Sonic.SavedGroundSpeed)",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Input.AllowDirectionalMovement",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Input.XAxis",
+                                "!=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Ground",
+                                "True",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Pushing\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "1/(floor(max(0, 8-abs(Sonic.SavedGroundSpeed/60.0))*4)+1)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Pushing",
+                                "True",
+                                "="
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Pushing",
+                                "=",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Idle\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "Pushing",
+                          "type": "boolean",
+                          "value": false
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "abs(Sonic.SavedGroundSpeed)",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Animation",
+                            "=",
+                            "1/(floor(max(0, 8-abs(Sonic.SavedGroundSpeed/60.0)))+1)"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(Sonic.SavedGroundSpeed)",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(Sonic.SavedGroundSpeed)",
+                                "<",
+                                "Sonic.TopSpeed"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Walking\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(Sonic.SavedGroundSpeed)",
+                                ">=",
+                                "Sonic.TopSpeed"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Running\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -7317,6 +7780,17 @@
                         "Animation",
                         "=",
                         "\"Jumping\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Animation",
+                        "=",
+                        "1/(floor(max(0, 4-abs(Sonic.SavedGroundSpeed/60.0)))+1)"
                       ]
                     }
                   ],
@@ -7469,6 +7943,26 @@
                             "JumpControlLock",
                             "False",
                             "\"Stand\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "+",
+                            "5*sin(ToRad(Sonic.SensorAngle))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "MettreY"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "-",
+                            "5*cos(ToRad(Sonic.SensorAngle))"
                           ]
                         }
                       ]
@@ -8278,131 +8772,18 @@
                       ]
                     }
                   ]
-                }
-              ],
-              "parameters": []
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Animations",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [
+                },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Action",
-                        "=",
-                        "\"Stand\""
-                      ]
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(Sonic.XSpeed)",
-                            "=",
-                            "0"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Animation",
-                            "=",
-                            "\"Idle\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(Sonic.XSpeed)",
-                            ">",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(Sonic.XSpeed)",
-                            "<",
-                            "Sonic.TopSpeed"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Animation",
-                            "=",
-                            "\"Walking\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(Sonic.XSpeed)",
-                            ">=",
-                            "Sonic.TopSpeed"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Animation",
-                            "=",
-                            "\"Running\""
-                          ]
-                        }
-                      ]
-                    }
-                  ]
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Other animation-related code here \\/"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
@@ -8568,93 +8949,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Speed"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Animation",
-                        "=",
-                        "1"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Action",
-                        "=",
-                        "\"Stand\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Animation",
-                        "=",
-                        "1/(floor(max(0, 8-abs(Sonic.SavedGroundSpeed/60.0)))+1)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Animation",
-                        "=",
-                        "\"Jumping\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Animation",
-                        "=",
-                        "1/(floor(max(0, 4-abs(Sonic.SavedGroundSpeed/60.0)))+1)"
-                      ]
-                    }
-                  ]
                 }
               ],
               "parameters": []
@@ -8770,7 +9064,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Camera",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
