@@ -810,7 +810,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 2.6264853916550526,
+        "zoomFactor": 1.7641613315444467,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1409,6 +1409,12 @@
                 },
                 {
                   "folded": true,
+                  "name": "AllowDirectionalMovement",
+                  "type": "boolean",
+                  "value": true
+                },
+                {
+                  "folded": true,
                   "name": "B",
                   "type": "number",
                   "value": 0
@@ -1418,12 +1424,6 @@
                   "name": "C",
                   "type": "number",
                   "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "DirectionalMovement",
-                  "type": "boolean",
-                  "value": true
                 },
                 {
                   "name": "HasInput",
@@ -2628,6 +2628,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Setup",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2754,6 +2755,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4463,7 +4465,7 @@
                                   },
                                   "parameters": [
                                     "Sonic",
-                                    "Input.DirectionalMovement",
+                                    "Input.AllowDirectionalMovement",
                                     "True",
                                     ""
                                   ]
@@ -5984,7 +5986,7 @@
                                   },
                                   "parameters": [
                                     "Sonic",
-                                    "Input.DirectionalMovement",
+                                    "Input.AllowDirectionalMovement",
                                     "True",
                                     ""
                                   ]
@@ -7707,6 +7709,17 @@
                         "=",
                         "0"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Input.AllowDirectionalMovement",
+                        "False",
+                        ""
+                      ]
                     }
                   ],
                   "events": [
@@ -7781,6 +7794,12 @@
                             "=",
                             "1"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
                         }
                       ],
                       "actions": [
@@ -7833,6 +7852,17 @@
                             "Action",
                             "=",
                             "\"Roll\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.AllowDirectionalMovement",
+                            "True",
+                            ""
                           ]
                         }
                       ],
