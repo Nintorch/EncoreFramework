@@ -754,6 +754,24 @@
         "name": "NewSprite3",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Duck.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Duck.png\"}",
+        "name": "Duck",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/LookUp.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "LookUp",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -810,7 +828,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.7641613315444467,
+        "zoomFactor": 0.8227501575163636,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1347,8 +1365,8 @@
             {
               "folded": true,
               "name": "Direction",
-              "type": "boolean",
-              "value": true
+              "type": "number",
+              "value": 1
             },
             {
               "folded": true,
@@ -2353,6 +2371,104 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "LookUp",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "LookUp",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 52
+                          },
+                          {
+                            "x": 16,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Duck",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Duck",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 32,
+                        "y": 32
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 16,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 13
+                          },
+                          {
+                            "x": 45,
+                            "y": 52
+                          },
+                          {
+                            "x": 16,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -2628,7 +2744,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Setup",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2755,7 +2870,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3010,7 +3124,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Hitboxes",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -3091,7 +3204,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -6909,13 +7021,13 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
                             "Sonic",
                             "Direction",
-                            "True",
-                            ""
+                            "=",
+                            "1"
                           ]
                         }
                       ]
@@ -6949,13 +7061,13 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
                             "Sonic",
                             "Direction",
-                            "False",
-                            ""
+                            "=",
+                            "-1"
                           ]
                         }
                       ]
@@ -6963,149 +7075,6 @@
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Input.A",
-                            "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Collision.CeilingLeft.Collision",
-                            "=",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Collision.CeilingRight.Collision",
-                            "=",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Action",
-                            "=",
-                            "\"Jump\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Input.YAxis",
-                            "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::CompareNumbers"
-                          },
-                          "parameters": [
-                            "abs(Sonic.XSpeed/60)",
-                            ">=",
-                            "0.5"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Action",
-                            "=",
-                            "\"Roll\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "MettreX"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "-",
-                            "5*sin(ToRad(Sonic.SensorAngle))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "MettreY"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "+",
-                            "5*cos(ToRad(Sonic.SensorAngle))"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "XSpeed",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Input.YAxis",
-                            "=",
-                            "1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Input.A",
-                            "=",
-                            "1"
-                          ]
-                        },
                         {
                           "type": {
                             "value": "BooleanObjectVariable"
@@ -7118,27 +7087,193 @@
                           ]
                         }
                       ],
-                      "actions": [
+                      "actions": [],
+                      "events": [
                         {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "SpinDashRev",
-                            "=",
-                            "0"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Input.A",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.CeilingLeft.Collision",
+                                "=",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.CeilingRight.Collision",
+                                "=",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Action",
+                                "=",
+                                "\"Jump\""
+                              ]
+                            }
                           ]
                         },
                         {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Action",
-                            "=",
-                            "\"Spin Dash\""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Input.YAxis",
+                                    "=",
+                                    "-1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetStringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Action",
+                                    "=",
+                                    "\"LookUp\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Input.YAxis",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetStringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Action",
+                                    "=",
+                                    "\"Duck\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Input.YAxis",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(Sonic.XSpeed/60)",
+                                ">=",
+                                "0.5"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Action",
+                                "=",
+                                "\"Roll\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "-",
+                                "5*sin(ToRad(Sonic.SensorAngle))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "+",
+                                "5*cos(ToRad(Sonic.SensorAngle))"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -7391,66 +7526,29 @@
                             "=",
                             "1"
                           ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "Input.XAxis",
-                                "=",
-                                "1"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "Direction",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ]
                         },
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "Input.XAxis",
-                                "=",
-                                "-1"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "Direction",
-                                "False",
-                                ""
-                              ]
-                            }
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.XAxis",
+                            "!=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Direction",
+                            "=",
+                            "Sonic.Input.XAxis"
                           ]
                         }
                       ]
@@ -7670,6 +7768,307 @@
                     "textG": 0,
                     "textR": 0
                   },
+                  "comment": "Look up"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Action",
+                        "=",
+                        "\"LookUp\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Animation",
+                        "=",
+                        "\"LookUp\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Input.AllowDirectionalMovement",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.YAxis",
+                            ">=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Stand\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.AllowDirectionalMovement",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.A",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Ground",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Jump\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.AllowDirectionalMovement",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Duck"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Action",
+                        "=",
+                        "\"Duck\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Animation",
+                        "=",
+                        "\"Duck\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Input.AllowDirectionalMovement",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.YAxis",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Stand\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.AllowDirectionalMovement",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.A",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Ground",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SpinDashRev",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Spindash\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Input.AllowDirectionalMovement",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
                   "comment": "Spin Dash\n"
                 },
                 {
@@ -7683,7 +8082,7 @@
                         "Sonic",
                         "Action",
                         "=",
-                        "\"Spin Dash\""
+                        "\"Spindash\""
                       ]
                     }
                   ],
@@ -7864,65 +8263,16 @@
                             "True",
                             ""
                           ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "Direction",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "XSpeed",
-                                "=",
-                                "(8 + (floor(Sonic.SpinDashRev) / 2)) * 60"
-                              ]
-                            }
-                          ]
                         },
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "Direction",
-                                "False",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "XSpeed",
-                                "=",
-                                "(-8 - (floor(Sonic.SpinDashRev) / 2)) * 60"
-                              ]
-                            }
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "XSpeed",
+                            "=",
+                            "(8 + (floor(Sonic.SpinDashRev) / 2)) * 60 * Sonic.Direction"
                           ]
                         }
                       ]
@@ -8071,13 +8421,13 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BooleanObjectVariable"
+                        "value": "NumberObjectVariable"
                       },
                       "parameters": [
                         "Sonic",
                         "Direction",
-                        "True",
-                        "\"Stand\""
+                        "=",
+                        "1"
                       ]
                     }
                   ],
@@ -8099,13 +8449,13 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BooleanObjectVariable"
+                        "value": "NumberObjectVariable"
                       },
                       "parameters": [
                         "Sonic",
                         "Direction",
-                        "False",
-                        "\"Stand\""
+                        "=",
+                        "-1"
                       ]
                     }
                   ],
