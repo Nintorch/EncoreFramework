@@ -9041,7 +9041,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Spin Dash\n"
+                  "comment": "Spin Dash"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -9249,6 +9249,16 @@
                             "1",
                             "=",
                             "1+Sonic.SpinDashRev/16"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeSprite"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "=",
+                            "0"
                           ]
                         }
                       ]
