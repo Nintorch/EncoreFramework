@@ -489,6 +489,60 @@
         "name": "assets/Spindash6.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Balancing3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Balancing3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Balancing4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Balancing4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/BackBalancing1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/BackBalancing1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/BackBalancing2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/BackBalancing2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/BackBalancing3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/BackBalancing3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/BackBalancing4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/BackBalancing4.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1935,13 +1989,13 @@
           ]
         },
         {
-          "name": "Balancing1",
+          "name": "Balancing",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": true,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.5333333,
+              "timeBetweenFrames": 0.3333333333333333,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -2014,6 +2068,234 @@
                       }
                     ]
                   ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Balancing3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Balancing4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BackBalancing",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.3333333333333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/BackBalancing1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/BackBalancing2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/BackBalancing3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/BackBalancing4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -2026,7 +2308,7 @@
             {
               "looping": true,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.016666666666666666,
+              "timeBetweenFrames": 0.016667,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -2458,7 +2740,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.0038904426417516,
+        "zoomFactor": 1.9487111557166896,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -2599,7 +2881,7 @@
           "layer": "",
           "name": "FloorObj",
           "persistentUuid": "5c68298d-09b4-47d3-a93a-464030abf601",
-          "width": 296,
+          "width": 304,
           "x": 944,
           "y": 264,
           "zOrder": 2,
@@ -2747,14 +3029,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 192,
+          "height": 208,
           "keepRatio": true,
           "layer": "",
           "name": "FloorObj",
           "persistentUuid": "d3cf446a-377c-43d5-b946-5772cf0c42b1",
           "width": 64,
-          "x": -272,
-          "y": 8,
+          "x": 1184,
+          "y": 56,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -2874,6 +3156,23 @@
           "x": 168,
           "y": -264,
           "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 192,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FloorObj",
+          "persistentUuid": "4a632cf1-90c0-4b54-860a-cc63560daa5c",
+          "width": 64,
+          "x": -272,
+          "y": 8,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7390,6 +7689,7 @@
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -7708,12 +8008,31 @@
                             },
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "Sonic.XSpeed*Sonic.Direction",
-                                "<=",
-                                "0"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "Sonic.XSpeed*Sonic.Direction",
+                                    "<=",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Input.XAxis",
+                                    "=",
+                                    "Sonic.Direction"
+                                  ]
+                                }
                               ]
                             }
                           ],
@@ -7852,7 +8171,93 @@
                                     "Sonic",
                                     "Animation",
                                     "=",
-                                    "\"Balancing1\""
+                                    "\"Balancing\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Direction",
+                                            "=",
+                                            "-1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Collision.AngleLeft.Collision",
+                                            "True",
+                                            "0"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Direction",
+                                            "=",
+                                            "1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Sonic",
+                                            "Collision.AngleRight.Collision",
+                                            "True",
+                                            "0"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Animation",
+                                    "=",
+                                    "\"BackBalancing\""
                                   ]
                                 }
                               ]
@@ -8081,7 +8486,19 @@
                                     "Sonic",
                                     "Animation",
                                     "=",
-                                    "\"Balancing1\""
+                                    "\"Balancing\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Animation",
+                                    "=",
+                                    "\"BackBalancing\""
                                   ]
                                 }
                               ],
