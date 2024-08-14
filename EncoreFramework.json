@@ -3600,17 +3600,6 @@
                         "=",
                         "0.125*60"
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "SpinDashRev",
-                        "=",
-                        "0*60"
-                      ]
                     }
                   ]
                 }
@@ -8539,7 +8528,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Stand",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8562,7 +8550,6 @@
                       "actions": [],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -8631,6 +8618,252 @@
                               ]
                             },
                             {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Balancing"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Collision.AngleCentre.Collision",
+                                    "=",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "XSpeed",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Direction",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Collision.AngleLeft.Collision",
+                                                "True",
+                                                "0"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Direction",
+                                                "=",
+                                                "-1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Collision.AngleRight.Collision",
+                                                "True",
+                                                "0"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "Sonic",
+                                        "Animation",
+                                        "=",
+                                        "\"Balancing\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanVariable"
+                                      },
+                                      "parameters": [
+                                        "Balancing",
+                                        "True",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Direction",
+                                                "=",
+                                                "-1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Collision.AngleLeft.Collision",
+                                                "True",
+                                                "0"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Direction",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Sonic",
+                                                "Collision.AngleRight.Collision",
+                                                "True",
+                                                "0"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "Sonic",
+                                        "Animation",
+                                        "=",
+                                        "\"BackBalancing\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanVariable"
+                                      },
+                                      "parameters": [
+                                        "Balancing",
+                                        "True",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": ""
+                            },
+                            {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -8642,6 +8875,16 @@
                                     "XSpeed",
                                     "=",
                                     "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "Balancing",
+                                    "=",
+                                    ""
                                   ]
                                 }
                               ],
@@ -8922,220 +9165,6 @@
                                   ]
                                 }
                               ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Comment",
-                              "color": {
-                                "b": 109,
-                                "g": 230,
-                                "r": 255,
-                                "textB": 0,
-                                "textG": 0,
-                                "textR": 0
-                              },
-                              "comment": "Balancing TODO: add a new animation from Sonic CD"
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "Collision.AngleCentre.Collision",
-                                    "=",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "XSpeed",
-                                    "=",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
-                                      },
-                                      "parameters": [],
-                                      "subInstructions": [
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Direction",
-                                                "=",
-                                                "1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Collision.AngleLeft.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Direction",
-                                                "=",
-                                                "-1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Collision.AngleRight.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "Animation",
-                                        "=",
-                                        "\"Balancing\""
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
-                                      },
-                                      "parameters": [],
-                                      "subInstructions": [
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Direction",
-                                                "=",
-                                                "-1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Collision.AngleLeft.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Direction",
-                                                "=",
-                                                "1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Sonic",
-                                                "Collision.AngleRight.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "Animation",
-                                        "=",
-                                        "\"BackBalancing\""
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
                             }
                           ]
                         },
@@ -9382,26 +9411,12 @@
                                     },
                                     {
                                       "type": {
-                                        "inverted": true,
-                                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                        "value": "BooleanVariable"
                                       },
                                       "parameters": [
-                                        "Sonic",
-                                        "Animation",
+                                        "Balancing",
                                         "=",
-                                        "\"Balancing\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "inverted": true,
-                                        "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "Animation",
-                                        "=",
-                                        "\"BackBalancing\""
+                                        ""
                                       ]
                                     }
                                   ],
@@ -9526,6 +9541,14 @@
                               ]
                             }
                           ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "Balancing",
+                          "type": "boolean",
+                          "value": false
                         }
                       ]
                     }
@@ -10358,23 +10381,6 @@
                   "parameters": []
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                      },
-                      "parameters": [
-                        "NewText2",
-                        "Text",
-                        "=",
-                        "ToString(Sonic.SpinDashRev)"
-                      ]
-                    }
-                  ]
-                },
-                {
                   "colorB": 228,
                   "colorG": 176,
                   "colorR": 74,
@@ -10512,7 +10518,6 @@
                           ]
                         },
                         {
-                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
