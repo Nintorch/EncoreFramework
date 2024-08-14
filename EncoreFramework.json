@@ -10206,7 +10206,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Duck",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10359,11 +10358,27 @@
                   "parameters": []
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "NewText2",
+                        "Text",
+                        "=",
+                        "ToString(Sonic.SpinDashRev)"
+                      ]
+                    }
+                  ]
+                },
+                {
                   "colorB": 228,
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Spindash",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10497,6 +10512,7 @@
                           ]
                         },
                         {
+                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -10520,7 +10536,7 @@
                                 "Sonic",
                                 "SpinDashRev",
                                 "-",
-                                "Sonic.SpinDashRev / 0.125 / 256"
+                                "Sonic.SpinDashRev / 0.125 / 256 * 60 * TimeDelta()"
                               ]
                             }
                           ]
@@ -11249,23 +11265,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "NewText2",
-                "Text",
-                "=",
-                "ToString(Sonic.GroundAngle)"
-              ]
-            }
-          ]
         }
       ],
       "layers": [
