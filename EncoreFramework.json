@@ -543,6 +543,15 @@
         "name": "assets/BackBalancing4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -576,6 +585,12 @@
         {
           "folded": true,
           "name": "Ground",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "Landed",
           "type": "boolean",
           "value": false
         },
@@ -682,9 +697,15 @@
         },
         {
           "folded": true,
-          "name": "JumpControlLock",
+          "name": "ControlLock",
           "type": "boolean",
           "value": false
+        },
+        {
+          "folded": true,
+          "name": "ControlLockTimer",
+          "type": "number",
+          "value": 0
         },
         {
           "folded": true,
@@ -2740,7 +2761,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.9487111557166896,
+        "zoomFactor": 0.45291107184983176,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -2800,23 +2821,6 @@
           "width": 544,
           "x": -144,
           "y": 264,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 337,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "f8ff0397-e878-47cd-9575-f864aa9b90d9",
-          "width": 168,
-          "x": 360,
-          "y": 232,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -2924,23 +2928,6 @@
           "initialVariables": []
         },
         {
-          "angle": 60,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "56e104ed-33f9-4a3d-a993-ee73cd8c7ffd",
-          "width": 168,
-          "x": 308,
-          "y": -161,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
           "angle": 24,
           "customSize": true,
           "depth": 1,
@@ -2986,23 +2973,6 @@
           "width": 168,
           "x": -32,
           "y": -264,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 303,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "3d90fc67-e907-4a67-8542-987933442701",
-          "width": 168,
-          "x": -143,
-          "y": -169,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -3086,8 +3056,8 @@
           "name": "FloorObj2",
           "persistentUuid": "9804837b-d92d-4ae6-a332-780e6f5e4c3b",
           "width": 160,
-          "x": -53,
-          "y": 138,
+          "x": 200,
+          "y": -38,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -3103,8 +3073,8 @@
           "name": "FloorObj2",
           "persistentUuid": "6b09a324-5ee5-494f-8fe5-99787556c595",
           "width": 160,
-          "x": -141,
-          "y": 50,
+          "x": 139,
+          "y": -76,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -3172,6 +3142,73 @@
           "width": 64,
           "x": -272,
           "y": 8,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 60,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FloorObj",
+          "persistentUuid": "23ba2f20-7534-45f9-a8bb-a79e38c47ab0",
+          "width": 168,
+          "x": 308,
+          "y": -161,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 303,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FloorObj",
+          "persistentUuid": "9fd06c39-eda2-4637-aa93-bcdc3ab15d2d",
+          "width": 168,
+          "x": -143,
+          "y": -169,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "4ff4dcac-f787-4136-b55c-c40754ef50d9",
+          "width": 0,
+          "x": -97,
+          "y": 67,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 337,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FloorObj",
+          "persistentUuid": "47c376f5-542f-4251-a54a-c60a2d917d51",
+          "width": 168,
+          "x": 360,
+          "y": 232,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -3313,6 +3350,67 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 1.5,
+                        "y": 1.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 3,
+                            "y": 0
+                          },
+                          {
+                            "x": 3,
+                            "y": 3
+                          },
+                          {
+                            "x": 0,
+                            "y": 3
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -3332,6 +3430,9 @@
           },
           {
             "objectName": "LayerSwapper"
+          },
+          {
+            "objectName": "NewSprite"
           }
         ]
       },
@@ -3385,23 +3486,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Setup",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "DepartScene"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
+                  "conditions": [],
                   "actions": [
                     {
                       "type": {
@@ -3411,7 +3502,7 @@
                         "Sonic",
                         "Acceleration",
                         "=",
-                        "0.046875*60"
+                        "0.046875*60*60*TimeDelta()"
                       ]
                     },
                     {
@@ -3422,7 +3513,7 @@
                         "Sonic",
                         "Deceleration",
                         "=",
-                        "0.5*60"
+                        "0.5*60*60*TimeDelta()"
                       ]
                     },
                     {
@@ -3433,7 +3524,7 @@
                         "Sonic",
                         "RollDeceleration",
                         "=",
-                        "0.125*60"
+                        "0.125*60*60*TimeDelta()"
                       ]
                     },
                     {
@@ -3466,7 +3557,7 @@
                         "Sonic",
                         "Gravity",
                         "=",
-                        "0.21875*60"
+                        "0.21875*60*60*TimeDelta()"
                       ]
                     },
                     {
@@ -3802,7 +3893,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4925,11 +5015,157 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Wall collision",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Ground",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SensorsHorizontal",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.WallLeft.Collision",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.WallRight.Collision",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SensorAngle",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "SensorsHorizontal",
+                            "True",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "GroundAngle",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "XSpeed",
+                            "=",
+                            "Sonic.XSpeed*cos(ToRad(Sonic.GroundAngle))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Collision.AngleCentre.Collision",
+                            "False",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Collision.WallLeft.Collision",
+                            "False",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Collision.WallRight.Collision",
+                            "False",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "NewText2",
+                            "Text",
+                            "=",
+                            "ToString(Sonic.XSpeed)"
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -5177,7 +5413,7 @@
                               },
                               "parameters": [
                                 "Sonic",
-                                "JumpControlLock",
+                                "ControlLock",
                                 "=",
                                 "1"
                               ]
@@ -5492,6 +5728,17 @@
                                 "True",
                                 ""
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Landed",
+                                "True",
+                                ""
+                              ]
                             }
                           ]
                         },
@@ -5717,7 +5964,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Ground movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5791,6 +6037,17 @@
                                     "Sonic",
                                     "Input.AllowDirectionalMovement",
                                     "True",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "ControlLock",
+                                    "False",
                                     ""
                                   ]
                                 }
@@ -6530,6 +6787,7 @@
                           "comment": "Stick to the ground"
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -7204,6 +7462,206 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Slipping down slopes"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLock",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                "<=",
+                                "315"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                ">=",
+                                "45"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(Sonic.XSpeed)",
+                                "<",
+                                "2.5*60"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Ground",
+                                "False",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLock",
+                                "True",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLockTimer",
+                                "=",
+                                "0.5"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Control lock timer"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLock",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLockTimer",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLockTimer",
+                                "-",
+                                "TimeDelta()"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "ControlLockTimer",
+                                    "<=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "ControlLock",
+                                    "False",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "ControlLockTimer",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -7617,6 +8075,133 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Landing",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Landed",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Landed",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "AngleDifference(0, Sonic.GroundAngle)",
+                                ">",
+                                "23"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "AngleDifference(0, Sonic.GroundAngle)",
+                                "<=",
+                                "45"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "Sonic.YSpeed * 0.5 * sign(sin(ToRad(Sonic.GroundAngle)))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "AngleDifference(0, Sonic.GroundAngle)",
+                                ">",
+                                "45"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "Sonic.YSpeed * sign(sin(ToRad(Sonic.GroundAngle)))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "YSpeed",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
                 }
               ],
               "parameters": []
@@ -7626,6 +8211,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8835,7 +9421,7 @@
                           },
                           "parameters": [
                             "Sonic",
-                            "JumpControlLock",
+                            "ControlLock",
                             "False",
                             "\"Stand\""
                           ]
@@ -8911,7 +9497,7 @@
                           },
                           "parameters": [
                             "Sonic",
-                            "JumpControlLock",
+                            "ControlLock",
                             "=",
                             "1"
                           ]
@@ -9080,7 +9666,7 @@
                           },
                           "parameters": [
                             "Sonic",
-                            "JumpControlLock",
+                            "ControlLock",
                             "True",
                             ""
                           ]
@@ -10047,6 +10633,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Camera",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10295,6 +10882,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10336,6 +10924,36 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "NewText2",
+                "Text",
+                "=",
+                "ToString(Sonic.XSpeed)"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "NewSprite",
+                "=",
+                "Sonic.Collision.AngleLeft.X",
+                "=",
+                "Sonic.Collision.AngleLeft.Y"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
