@@ -81,15 +81,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/NewTiledSprite.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "NewTiledSprite",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/Walking.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -225,24 +216,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/NewTiledSprite2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "NewTiledSprite2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/NewTiledSprite3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "NewTiledSprite3",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/NewSprite3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -356,24 +329,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Skidding.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Skidding",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Skidding.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Skidding2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/Skidding3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -415,24 +370,6 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Balancing2",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Spindash7.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Spindash",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Spindash7.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Spindash2",
         "smoothed": false,
         "userAdded": true
       },
@@ -543,6 +480,31 @@
         "name": "assets/BackBalancing4.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "disablePreload": false,
+        "file": "layouts/testlevel.json",
+        "kind": "tilemap",
+        "metadata": "",
+        "name": "layouts/testlevel.json",
+        "userAdded": false
+      },
+      {
+        "disablePreload": false,
+        "file": "layouts/tileset.json",
+        "kind": "tileset",
+        "metadata": "",
+        "name": "layouts/tileset.json",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "layouts/tileset.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "layouts/tileset.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2776,7 +2738,7 @@
       "name": "Collision",
       "objects": [
         {
-          "name": "FloorObj"
+          "name": "TilemapCollision"
         }
       ]
     },
@@ -2826,7 +2788,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 2.2251520959982187,
+        "zoomFactor": 1.4945932298110105,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -2842,6 +2804,42 @@
           "name": "ObjectCollisionY",
           "type": "number",
           "value": 0
+        },
+        {
+          "folded": true,
+          "name": "CameraX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "CameraY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "CameraOffsetX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "CameraOffsetY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "LevelWidth",
+          "type": "number",
+          "value": 5000
+        },
+        {
+          "folded": true,
+          "name": "LevelHeight",
+          "type": "number",
+          "value": 1024
         }
       ],
       "instances": [
@@ -2854,8 +2852,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": -167,
-          "y": 180,
+          "x": 163,
+          "y": 491,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -2876,23 +2874,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "5047f67c-9d8a-4037-b85b-8e0094cc88f9",
-          "width": 544,
-          "x": -144,
-          "y": 264,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -2903,278 +2884,6 @@
           "x": 11,
           "y": 16,
           "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "ceea4b63-c44f-4f32-a311-0c457b291e9c",
-          "width": 296,
-          "x": 512,
-          "y": 200,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 24,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "8403fe82-c787-46d7-99b4-7820633f1c47",
-          "width": 168,
-          "x": 791,
-          "y": 233,
-          "zOrder": 0,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "5c68298d-09b4-47d3-a93a-464030abf601",
-          "width": 304,
-          "x": 944,
-          "y": 264,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 59,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "041ad53a-8e25-456d-a314-8e6d7a8d7fde",
-          "width": 48,
-          "x": -208,
-          "y": 80,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 270,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "71240b20-b28c-4b56-b5e6-4024d87e91dd",
-          "width": 296,
-          "x": 284,
-          "y": -164,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 24,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "c659c0e5-545d-42ce-8553-86bc44e2da00",
-          "width": 168,
-          "x": 185,
-          "y": -273,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "5c6ab13a-5bfd-4ac2-a5a4-59a14ad35728",
-          "width": 296,
-          "x": -64,
-          "y": -296,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 337,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "68fcbd32-a68f-4c8f-a2d6-5489746ea891",
-          "width": 168,
-          "x": -32,
-          "y": -264,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 270,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "95b19092-6a5e-4ab4-9db6-f82e681f2db7",
-          "width": 296,
-          "x": -252,
-          "y": -156,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 208,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "d3cf446a-377c-43d5-b946-5772cf0c42b1",
-          "width": 64,
-          "x": 1184,
-          "y": 56,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "21dc6518-9824-4113-b39c-0f5c98f00087",
-          "width": 424,
-          "x": -64,
-          "y": 176,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 96,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "e4daf0b4-3854-4c99-be8e-caaca21e267a",
-          "width": 160,
-          "x": -272,
-          "y": 200,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 30,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj2",
-          "persistentUuid": "9804837b-d92d-4ae6-a332-780e6f5e4c3b",
-          "width": 160,
-          "x": 200,
-          "y": -38,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 53,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj2",
-          "persistentUuid": "6b09a324-5ee5-494f-8fe5-99787556c595",
-          "width": 160,
-          "x": 139,
-          "y": -76,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 328,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj3",
-          "persistentUuid": "279fa871-4a3a-4f94-9477-55f472ea7072",
-          "width": 160,
-          "x": 204,
-          "y": 144,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 301,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj3",
-          "persistentUuid": "d2e89876-cf02-49e4-8774-a861d3ba001d",
-          "width": 160,
-          "x": 305,
-          "y": 48,
-          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3197,119 +2906,38 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 192,
+          "customSize": false,
+          "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "4a632cf1-90c0-4b54-860a-cc63560daa5c",
-          "width": 64,
-          "x": -272,
-          "y": 8,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 60,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "23ba2f20-7534-45f9-a8bb-a79e38c47ab0",
-          "width": 168,
-          "x": 308,
-          "y": -161,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 303,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "9fd06c39-eda2-4637-aa93-bcdc3ab15d2d",
-          "width": 168,
-          "x": -212,
-          "y": 44,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 337,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "47c376f5-542f-4251-a54a-c60a2d917d51",
-          "width": 168,
-          "x": 360,
-          "y": 232,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 303,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "a96ec70a-33cf-46ff-9fe0-3f7b3fad1d28",
-          "width": 168,
-          "x": -143,
-          "y": -169,
-          "zOrder": 2,
+          "name": "Tilemap",
+          "persistentUuid": "36f84d16-16e4-4b10-b218-64bf5dbeb46b",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": -2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 16,
+          "customSize": false,
+          "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "FloorObj",
-          "persistentUuid": "c9b626cb-247e-4390-a178-593329a1e0cb",
-          "width": 96,
-          "x": -64,
-          "y": 208,
-          "zOrder": 2,
+          "name": "TilemapCollision",
+          "persistentUuid": "d89062cb-3a9a-48f8-af53-7fdd6699d94d",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": -1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "FloorObj",
-          "texture": "NewTiledSprite",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
         {
           "assetStoreId": "",
           "bold": false,
@@ -3350,28 +2978,6 @@
             "characterSize": 20,
             "color": "0;0;0"
           }
-        },
-        {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "FloorObj2",
-          "texture": "NewTiledSprite2",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "FloorObj3",
-          "texture": "NewTiledSprite3",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -3433,25 +3039,59 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "Tilemap",
+          "type": "TileMap::TileMap",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "tilemapJsonFile": "layouts/testlevel.json",
+            "tilesetJsonFile": "layouts/tileset.json",
+            "tilemapAtlasImage": "layouts/tileset.png",
+            "displayMode": "visible",
+            "layerIndex": 0,
+            "levelIndex": 0,
+            "animationSpeedScale": 1,
+            "animationFps": 4
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "TilemapCollision",
+          "type": "TileMap::CollisionMask",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "tilemapJsonFile": "layouts/testlevel.json",
+            "tilesetJsonFile": "layouts/tileset.json",
+            "collisionMaskTag": "main",
+            "debugMode": false,
+            "fillColor": "255;255;255",
+            "outlineColor": "255;255;255",
+            "fillOpacity": 64,
+            "outlineOpacity": 128,
+            "outlineSize": 1
+          }
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "FloorObj"
-          },
-          {
-            "objectName": "FloorObj2"
-          },
-          {
-            "objectName": "FloorObj3"
-          },
-          {
             "objectName": "NewText2"
           },
           {
             "objectName": "LayerSwapper"
+          },
+          {
+            "objectName": "Tilemap"
+          },
+          {
+            "objectName": "TilemapCollision"
           }
         ]
       },
@@ -4010,7 +3650,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4020,6 +3659,325 @@
                       "conditions": [],
                       "actions": [],
                       "events": [
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Change sensor angle",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Main sensors"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "SensorAngle",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "<",
+                                    "135"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    ">=",
+                                    "45"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "SensorAngle",
+                                    "=",
+                                    "90"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "<",
+                                    "225"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    ">=",
+                                    "135"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "SensorAngle",
+                                    "=",
+                                    "180"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "<",
+                                    "315"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    ">=",
+                                    "225"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "SensorAngle",
+                                    "=",
+                                    "270"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "SensorAngle",
+                                    "=",
+                                    "SensorAngle"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Wall sensors"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "WallSensorAngle",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "<",
+                                    "135"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    ">=",
+                                    "30"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "WallSensorAngle",
+                                    "=",
+                                    "90"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "<",
+                                    "225"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    ">=",
+                                    "135"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "WallSensorAngle",
+                                    "=",
+                                    "180"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "<",
+                                    "330"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    ">=",
+                                    "225"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "WallSensorAngle",
+                                    "=",
+                                    "270"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Comment",
                           "color": {
@@ -4071,6 +4029,15 @@
                                 "SensorsData",
                                 "Sonic.HeightRadius"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "SensorAngle"
+                              ]
                             }
                           ]
                         },
@@ -4112,6 +4079,15 @@
                               "parameters": [
                                 "SensorsData",
                                 "Sonic.HeightRadius"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "SensorAngle"
                               ]
                             }
                           ]
@@ -4167,6 +4143,15 @@
                                 "SensorsData",
                                 "Sonic.HeightRadius"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "SensorAngle"
+                              ]
                             }
                           ]
                         },
@@ -4208,6 +4193,15 @@
                               "parameters": [
                                 "SensorsData",
                                 "Sonic.HeightRadius"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "SensorAngle"
                               ]
                             }
                           ]
@@ -4261,7 +4255,16 @@
                               },
                               "parameters": [
                                 "SensorsData",
-                                "Sonic.PushRadius-Sonic.XSpeed/60"
+                                "Sonic.PushRadius-Sonic.XSpeed/60+1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "WallSensorAngle"
                               ]
                             }
                           ]
@@ -4304,6 +4307,15 @@
                               "parameters": [
                                 "SensorsData",
                                 "Sonic.PushRadius+Sonic.XSpeed/60"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "WallSensorAngle"
                               ]
                             }
                           ]
@@ -4359,6 +4371,15 @@
                                 "SensorsData",
                                 "Sonic.HeightRadius+5"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "SensorAngle"
+                              ]
                             }
                           ]
                         },
@@ -4401,6 +4422,15 @@
                                 "SensorsData",
                                 "Sonic.HeightRadius+5"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "SensorAngle"
+                              ]
                             }
                           ]
                         },
@@ -4419,252 +4449,321 @@
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
-                          "actions": [
+                          "actions": [],
+                          "events": [
                             {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"AngleCentre\""
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"AngleCentre\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "0"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"AngleLeft\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "-Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "90"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"AngleRight\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+24"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"AngleCeilingCentre\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "-90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"AngleCeilingLeft\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "-Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "-90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"AngleCeilingRight\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "-90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
+                          ],
+                          "variables": [
                             {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"AngleLeft\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "-Sonic.WidthRadius"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+24"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"AngleRight\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.WidthRadius"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+24"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"AngleCeilingCentre\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "-90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+24"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"AngleCeilingLeft\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "-Sonic.WidthRadius"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "-90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+24"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"AngleCeilingRight\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.WidthRadius"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "-90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+24"
-                              ]
+                              "folded": true,
+                              "name": "Offset",
+                              "type": "number",
+                              "value": 24
                             }
                           ]
                         },
@@ -4682,7 +4781,7 @@
                         },
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "VariableChildCount(SensorsData)/4",
+                          "repeatExpression": "VariableChildCount(SensorsData)/5",
                           "conditions": [],
                           "actions": [],
                           "events": [
@@ -4695,9 +4794,19 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
+                                    "AngleOffset",
+                                    "=",
+                                    "SensorsData[ArrayIndex+4]"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
                                     "CentreX",
                                     "=",
-                                    "Sonic.X()+SensorsData[ArrayIndex+1]*cos(ToRad(Sonic.SensorAngle))"
+                                    "Sonic.X()+SensorsData[ArrayIndex+1]*cos(ToRad(AngleOffset))"
                                   ]
                                 },
                                 {
@@ -4707,7 +4816,7 @@
                                   "parameters": [
                                     "CentreY",
                                     "=",
-                                    "Sonic.Y()+SensorsData[ArrayIndex+1]*sin(ToRad(Sonic.SensorAngle))"
+                                    "Sonic.Y()+SensorsData[ArrayIndex+1]*sin(ToRad(AngleOffset))"
                                   ]
                                 },
                                 {
@@ -4717,7 +4826,7 @@
                                   "parameters": [
                                     "Angle",
                                     "=",
-                                    "SensorsData[ArrayIndex+2]+Sonic.SensorAngle"
+                                    "SensorsData[ArrayIndex+2]+AngleOffset"
                                   ]
                                 },
                                 {
@@ -5018,7 +5127,7 @@
                                       "parameters": [
                                         "ArrayIndex",
                                         "+",
-                                        "4"
+                                        "5"
                                       ]
                                     }
                                   ]
@@ -5040,6 +5149,12 @@
                                 {
                                   "folded": true,
                                   "name": "Angle",
+                                  "type": "number",
+                                  "value": 0
+                                },
+                                {
+                                  "folded": true,
+                                  "name": "AngleOffset",
                                   "type": "number",
                                   "value": 0
                                 },
@@ -5080,6 +5195,18 @@
                         {
                           "folded": true,
                           "name": "ArrayIndex",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "SensorAngle",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "WallSensorAngle",
                           "type": "number",
                           "value": 0
                         }
@@ -5213,17 +5340,6 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "SensorAngle",
-                            "=",
-                            "0"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
@@ -5286,17 +5402,6 @@
                             "Collision.WallRight.Collision",
                             "False",
                             "0"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "NewText2",
-                            "Text",
-                            "=",
-                            "ToString(Sonic.XSpeed)"
                           ]
                         }
                       ]
@@ -5532,7 +5637,7 @@
                           },
                           "parameters": [
                             "Sonic",
-                            "SensorAngle",
+                            "GroundAngle",
                             "=",
                             "0"
                           ]
@@ -6281,6 +6386,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Ground movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7047,7 +7153,18 @@
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(sin(ToRad(Sonic.GroundAngle)))",
+                                ">=",
+                                "0.3"
+                              ]
+                            }
+                          ],
                           "actions": [
                             {
                               "type": {
@@ -7101,9 +7218,221 @@
                             "textG": 0,
                             "textR": 0
                           },
+                          "comment": "Slipping down slopes"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLock",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                "<=",
+                                "315"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                ">=",
+                                "45"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(Sonic.XSpeed)",
+                                "<",
+                                "2.5*60"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Ground",
+                                "False",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLock",
+                                "True",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLockTimer",
+                                "=",
+                                "0.5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "Sonic.XSpeed*cos(ToRad(Sonic.GroundAngle))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "YSpeed",
+                                "=",
+                                "Sonic.XSpeed*sin(ToRad(Sonic.GroundAngle))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Control lock timer"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLock",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLockTimer",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "ControlLockTimer",
+                                "-",
+                                "TimeDelta()"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "ControlLockTimer",
+                                    "<=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "ControlLock",
+                                    "False",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "ControlLockTimer",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
                           "comment": "Stick to the ground"
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -7436,7 +7765,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -7732,17 +8060,6 @@
                                       },
                                       "parameters": [
                                         "Sonic",
-                                        "SavedGroundSpeed",
-                                        "=",
-                                        "Sonic.XSpeed"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
                                         "XSpeed",
                                         "=",
                                         "Sonic.SavedGroundSpeed*cos(ToRad(Sonic.GroundAngle))"
@@ -7778,206 +8095,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Slipping down slopes"
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "ControlLock",
-                                "False",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                "<=",
-                                "315"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                ">=",
-                                "45"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
-                              },
-                              "parameters": [
-                                "abs(Sonic.XSpeed)",
-                                "<",
-                                "2.5*60"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "Ground",
-                                "False",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "XSpeed",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "ControlLock",
-                                "True",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "ControlLockTimer",
-                                "=",
-                                "0.5"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Control lock timer"
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "ControlLock",
-                                "True",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "ControlLockTimer",
-                                ">",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "ControlLockTimer",
-                                "-",
-                                "TimeDelta()"
-                              ]
-                            }
-                          ],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "ControlLockTimer",
-                                    "<=",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "ControlLock",
-                                    "False",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "ControlLockTimer",
-                                    "=",
-                                    "0"
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
                         }
                       ]
                     }
@@ -7989,7 +8106,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Angle calculation",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8044,17 +8160,6 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "BooleanObjectVariable"
                               },
                               "parameters": [
@@ -8068,13 +8173,23 @@
                           "actions": [
                             {
                               "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "RightAngle",
+                                "=",
+                                "AngleBetweenPositions(Sonic.Collision.AngleCentre.X, Sonic.Collision.AngleCentre.Y, Sonic.Collision.AngleRight.X, Sonic.Collision.AngleRight.Y)"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "SetNumberObjectVariable"
                               },
                               "parameters": [
                                 "Sonic",
                                 "GroundAngle",
                                 "=",
-                                "mod(clamp(AngleBetweenPositions(Sonic.Collision.AngleCentre.X, Sonic.Collision.AngleCentre.Y, Sonic.Collision.AngleRight.X, Sonic.Collision.AngleRight.Y), 0, 360), 360)"
+                                "RightAngle"
                               ]
                             }
                           ]
@@ -8084,13 +8199,52 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "NumberObjectVariable"
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.AngleLeft.Collision",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "LeftAngle",
+                                "=",
+                                "AngleBetweenPositions(Sonic.Collision.AngleCentre.X, Sonic.Collision.AngleCentre.Y, Sonic.Collision.AngleLeft.X, Sonic.Collision.AngleLeft.Y)+180"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
                               },
                               "parameters": [
                                 "Sonic",
                                 "GroundAngle",
                                 "=",
-                                "0"
+                                "LeftAngle"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.AngleRight.Collision",
+                                "True",
+                                ""
                               ]
                             },
                             {
@@ -8114,10 +8268,112 @@
                                 "Sonic",
                                 "GroundAngle",
                                 "=",
-                                "mod(clamp(AngleBetweenPositions(Sonic.Collision.AngleCentre.X, Sonic.Collision.AngleCentre.Y, Sonic.Collision.AngleLeft.X, Sonic.Collision.AngleLeft.Y)+180, 0, 360), 360)"
+                                "lerpAngle(LeftAngle, RightAngle, 0.5)"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "AngleDifference(LeftAngle, RightAngle)",
+                                    ">",
+                                    "60"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                "<",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                "+",
+                                "360"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                ">=",
+                                "360"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "GroundAngle",
+                                "-",
+                                "360"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "LeftAngle",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "RightAngle",
+                          "type": "number",
+                          "value": 0
                         }
                       ]
                     },
@@ -8160,187 +8416,6 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      "colorB": 228,
-                      "colorG": 176,
-                      "colorR": 74,
-                      "creationTime": 0,
-                      "folded": true,
-                      "name": "Change sensor angle",
-                      "source": "",
-                      "type": "BuiltinCommonInstructions::Group",
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "GroundAngle",
-                                    "<",
-                                    "45"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Sonic",
-                                    "GroundAngle",
-                                    ">=",
-                                    "315"
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "SensorAngle",
-                                "=",
-                                "0"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                "<",
-                                "135"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                ">=",
-                                "45"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "SensorAngle",
-                                "=",
-                                "90"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                "<",
-                                "225"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                ">=",
-                                "135"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "SensorAngle",
-                                "=",
-                                "180"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                "<",
-                                "315"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                ">=",
-                                "225"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "SensorAngle",
-                                "=",
-                                "270"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "parameters": []
                     }
                   ],
                   "parameters": []
@@ -8350,6 +8425,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Landing",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8490,6 +8566,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9962,7 +10039,7 @@
                               },
                               "parameters": [
                                 "Sonic",
-                                "Input.A",
+                                "Input.APressed",
                                 "=",
                                 "1"
                               ]
@@ -10229,6 +10306,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Duck",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10385,6 +10463,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Spindash",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10979,11 +11058,45 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Camera",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraX",
+                    "=",
+                    "Sonic.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraY",
+                    "=",
+                    "Sonic.Y()"
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
@@ -11006,21 +11119,19 @@
                   "parameters": [
                     "Sonic",
                     "<",
-                    "CameraCenterX()-16"
+                    "CameraX-16"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetCameraCenterX"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "",
+                    "CameraX",
                     "=",
-                    "Sonic.X()+16",
-                    "",
-                    ""
+                    "Sonic.X()+16"
                   ]
                 }
               ]
@@ -11035,21 +11146,19 @@
                   "parameters": [
                     "Sonic",
                     ">",
-                    "CameraCenterX()"
+                    "CameraX"
                   ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "value": "SetCameraCenterX"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "",
+                    "CameraX",
                     "=",
-                    "Sonic.X()",
-                    "",
-                    ""
+                    "Sonic.X()"
                   ]
                 }
               ]
@@ -11093,21 +11202,19 @@
                       "parameters": [
                         "Sonic",
                         "<",
-                        "CameraCenterY()-32"
+                        "CameraY-32"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetCameraCenterY"
+                        "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "",
+                        "CameraY",
                         "=",
-                        "Sonic.Y()+32",
-                        "",
-                        ""
+                        "Sonic.Y()+32"
                       ]
                     }
                   ]
@@ -11122,21 +11229,19 @@
                       "parameters": [
                         "Sonic",
                         ">",
-                        "CameraCenterY()+32"
+                        "CameraY+32"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetCameraCenterY"
+                        "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "",
+                        "CameraY",
                         "=",
-                        "Sonic.Y()-32",
-                        "",
-                        ""
+                        "Sonic.Y()-32"
                       ]
                     }
                   ]
@@ -11170,21 +11275,19 @@
                       "parameters": [
                         "Sonic",
                         ">",
-                        "CameraCenterY()"
+                        "CameraY"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetCameraCenterY"
+                        "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "",
+                        "CameraY",
                         "=",
-                        "min(CameraCenterY()+8*60*TimeDelta(), Sonic.Y())",
-                        "",
-                        ""
+                        "min(CameraY+8*60*TimeDelta(), Sonic.Y())"
                       ]
                     }
                   ]
@@ -11199,23 +11302,95 @@
                       "parameters": [
                         "Sonic",
                         "<",
-                        "CameraCenterY()"
+                        "CameraY"
                       ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetCameraCenterY"
+                        "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "",
+                        "CameraY",
                         "=",
-                        "max(CameraCenterY()-8*60*TimeDelta(), Sonic.Y())",
-                        "",
-                        ""
+                        "max(CameraY-8*60*TimeDelta(), Sonic.Y())"
                       ]
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Moving the camera"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetCameraCenterX"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "CameraX",
+                    "",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetCameraCenterY"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "CameraY",
+                    "",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Boundaries"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ClampCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "0",
+                    "0",
+                    "LevelWidth",
+                    "LevelHeight",
+                    "",
+                    ""
                   ]
                 }
               ]
