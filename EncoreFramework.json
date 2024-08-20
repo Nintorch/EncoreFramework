@@ -604,6 +604,51 @@
         "name": "assets/backgrounds/testlevel/bg11.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Waiting.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Waiting",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Waiting2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Waiting2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Waiting3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Waiting3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Waiting2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Waiting2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Waiting3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/Waiting3.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1222,13 +1267,218 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 4.8,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
                   "image": "Idle",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Waiting1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.4,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Waiting2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Waiting",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Waiting",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Waiting2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.4,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Waiting2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/Waiting3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3329,7 +3579,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.29428843058871856,
+        "zoomFactor": 1.494593229811019,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3393,8 +3643,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 1163,
-          "y": 616,
+          "x": 68,
+          "y": 492,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -10270,7 +10520,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Stand",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -11172,6 +11421,12 @@
                                         "=",
                                         ""
                                       ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Once"
+                                      },
+                                      "parameters": []
                                     }
                                   ],
                                   "actions": [
@@ -11295,6 +11550,82 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Idle\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Waiting1\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Waiting1\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Animation",
+                                "=",
+                                "\"Waiting2\""
+                              ]
+                            }
+                          ]
                         }
                       ],
                       "variables": [
@@ -11314,6 +11645,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Jump",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -11752,6 +12084,17 @@
                                 "Action",
                                 "=",
                                 "\"Jump\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "JumpFlag",
+                                "True",
+                                ""
                               ]
                             },
                             {
