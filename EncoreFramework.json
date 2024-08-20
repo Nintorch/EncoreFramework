@@ -3579,7 +3579,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.8236494339589453,
+        "zoomFactor": 1.6509433962264537,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4348,43 +4348,48 @@
         "folderName": "__ROOT",
         "children": [
           {
+            "folderName": "Background",
+            "children": [
+              {
+                "objectName": "BG11"
+              },
+              {
+                "objectName": "BG10"
+              },
+              {
+                "objectName": "BG9"
+              },
+              {
+                "objectName": "BG8"
+              },
+              {
+                "objectName": "BG7"
+              },
+              {
+                "objectName": "BG6"
+              },
+              {
+                "objectName": "BG5"
+              },
+              {
+                "objectName": "BG4"
+              },
+              {
+                "objectName": "BG3"
+              },
+              {
+                "objectName": "BG2"
+              },
+              {
+                "objectName": "BG1"
+              }
+            ]
+          },
+          {
             "objectName": "Tilemap"
           },
           {
             "objectName": "TilemapCollision"
-          },
-          {
-            "objectName": "BG1"
-          },
-          {
-            "objectName": "BG2"
-          },
-          {
-            "objectName": "BG3"
-          },
-          {
-            "objectName": "BG4"
-          },
-          {
-            "objectName": "BG5"
-          },
-          {
-            "objectName": "BG6"
-          },
-          {
-            "objectName": "BG7"
-          },
-          {
-            "objectName": "BG8"
-          },
-          {
-            "objectName": "BG9"
-          },
-          {
-            "objectName": "BG10"
-          },
-          {
-            "objectName": "BG11"
           }
         ]
       },
