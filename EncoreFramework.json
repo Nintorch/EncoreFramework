@@ -4246,6 +4246,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4568,6 +4569,33 @@
                                     "WallSensorAngle",
                                     "=",
                                     "270"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "Sonic.XSpeed*sin(ToRad(Sonic.GroundAngle))",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "WallSensorAngle",
+                                    "=",
+                                    "SensorAngle"
                                   ]
                                 }
                               ]
@@ -9253,23 +9281,39 @@
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "DifferenceInAngle",
+                                "=",
+                                "abs(AngleDifference(0, Sonic.GroundAngle))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                "value": "NumberVariable"
                               },
                               "parameters": [
-                                "AngleDifference(0, Sonic.GroundAngle)",
+                                "DifferenceInAngle",
                                 ">",
                                 "23"
                               ]
                             },
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                "value": "NumberVariable"
                               },
                               "parameters": [
-                                "AngleDifference(0, Sonic.GroundAngle)",
+                                "DifferenceInAngle",
                                 "<=",
                                 "45"
                               ]
@@ -9278,13 +9322,39 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "SetNumberObjectVariable"
+                                "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Sonic",
-                                "XSpeed",
+                                "CalculatedGroundSpeed",
                                 "=",
                                 "Sonic.YSpeed * 0.5 * sign(sin(ToRad(Sonic.GroundAngle)))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "DifferenceInAngle",
+                                ">",
+                                "45"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "CalculatedGroundSpeed",
+                                "=",
+                                "Sonic.YSpeed * sign(sin(ToRad(Sonic.GroundAngle)))"
                               ]
                             }
                           ]
@@ -9297,9 +9367,9 @@
                                 "value": "BuiltinCommonInstructions::CompareNumbers"
                               },
                               "parameters": [
-                                "AngleDifference(0, Sonic.GroundAngle)",
-                                ">",
-                                "45"
+                                "abs(Sonic.XSpeed)",
+                                "<",
+                                "abs(CalculatedGroundSpeed)"
                               ]
                             }
                           ],
@@ -9312,7 +9382,7 @@
                                 "Sonic",
                                 "XSpeed",
                                 "=",
-                                "Sonic.YSpeed * sign(sin(ToRad(Sonic.GroundAngle)))"
+                                "CalculatedGroundSpeed"
                               ]
                             }
                           ]
@@ -9333,6 +9403,20 @@
                               ]
                             }
                           ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "DifferenceInAngle",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "CalculatedGroundSpeed",
+                          "type": "number",
+                          "value": 0
                         }
                       ]
                     }
