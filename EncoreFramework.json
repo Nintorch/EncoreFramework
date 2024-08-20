@@ -3329,7 +3329,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.308912997646028,
+        "zoomFactor": 0.29428843058871856,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3393,8 +3393,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 72,
-          "y": 492,
+          "x": 1163,
+          "y": 616,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4957,6 +4957,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -7862,6 +7863,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Ground movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10176,6 +10178,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Level boundaries",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10229,7 +10232,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10268,6 +10270,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Stand",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10352,6 +10355,17 @@
                                     "Sonic",
                                     "Action",
                                     "=",
+                                    "\"Jump\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "JumpFlag",
+                                    "True",
                                     "\"Jump\""
                                   ]
                                 }
@@ -11300,7 +11314,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Jump",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -11367,7 +11380,7 @@
                               "parameters": [
                                 "Sonic",
                                 "JumpFlag",
-                                "False",
+                                "True",
                                 ""
                               ]
                             },
@@ -11378,19 +11391,7 @@
                               "parameters": []
                             }
                           ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "JumpFlag",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ],
+                          "actions": [],
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
@@ -11552,6 +11553,17 @@
                                 "YSpeed",
                                 "<",
                                 "-4*60"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "JumpFlag",
+                                "True",
+                                ""
                               ]
                             }
                           ],
