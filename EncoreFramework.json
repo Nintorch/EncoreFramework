@@ -505,6 +505,105 @@
         "name": "layouts/tileset.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg9.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg10.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/backgrounds/testlevel/bg11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/backgrounds/testlevel/bg11.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2991,66 +3090,9 @@
               "value": 0
             }
           ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "NewText2",
-          "persistentUuid": "46137853-337d-4d14-8551-c570a0fc4457",
-          "width": 0,
-          "x": 11,
-          "y": 16,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "NewText2",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Text",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Text",
-            "font": "",
-            "textAlignment": "left",
-            "characterSize": 20,
-            "color": "0;0;0"
-          }
-        },
         {
           "assetStoreId": "",
           "name": "Tilemap",
@@ -3092,9 +3134,6 @@
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
-          {
-            "objectName": "NewText2"
-          },
           {
             "objectName": "Tilemap"
           },
@@ -3290,7 +3329,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4100187948541683,
+        "zoomFactor": 0.5905237897892737,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3341,7 +3380,7 @@
           "folded": true,
           "name": "LevelHeight",
           "type": "number",
-          "value": 1024
+          "value": 2000
         }
       ],
       "instances": [
@@ -3354,8 +3393,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 1159,
-          "y": 607,
+          "x": 96,
+          "y": 496,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -3373,22 +3412,6 @@
               "value": 0
             }
           ]
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "HUD",
-          "name": "NewText2",
-          "persistentUuid": "46137853-337d-4d14-8551-c570a0fc4457",
-          "width": 0,
-          "x": 11,
-          "y": 16,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         },
         {
           "angle": 0,
@@ -3421,50 +3444,238 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG1",
+          "persistentUuid": "03aa6dad-799b-48a9-b12c-b7c871528612",
+          "width": 424,
+          "x": 0,
+          "y": 0,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0.75
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG2",
+          "persistentUuid": "7c1d2170-029b-4707-bced-4646b407957c",
+          "width": 424,
+          "x": 0,
+          "y": 16,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0.7
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG3",
+          "persistentUuid": "3a31bb55-c21a-4168-bc9c-9ac8a86df16e",
+          "width": 424,
+          "x": 0,
+          "y": 48,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0.65
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG4",
+          "persistentUuid": "85ef0a81-1863-4fe9-a936-1fee0b8784a5",
+          "width": 424,
+          "x": 0,
+          "y": 64,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0.6
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG5",
+          "persistentUuid": "85e147ed-7941-4f79-85e1-e131d6140493",
+          "width": 424,
+          "x": 0,
+          "y": 96,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0.55
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 144,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG6",
+          "persistentUuid": "38c89483-d216-4856-ad20-b04d9a077bf0",
+          "width": 424,
+          "x": 0,
+          "y": 112,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0.5
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG7",
+          "persistentUuid": "3e10bf3b-b68b-4e01-975d-5e8439e57666",
+          "width": 424,
+          "x": 0,
+          "y": 256,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 16,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG8",
+          "persistentUuid": "b475694b-1413-419c-b78d-1cb44cfd4400",
+          "width": 424,
+          "x": 0,
+          "y": 272,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG9",
+          "persistentUuid": "d01fc5f9-931a-426a-844d-c15334758183",
+          "width": 424,
+          "x": 0,
+          "y": 288,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG10",
+          "persistentUuid": "649d9022-477c-491c-baef-fee6f42d3ce2",
+          "width": 424,
+          "x": 0,
+          "y": 320,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "Background",
+          "name": "BG11",
+          "persistentUuid": "d649c913-9d5d-4880-93e8-32249c4c76e0",
+          "width": 424,
+          "x": 0,
+          "y": 352,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "NewText2",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Text",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Text",
-            "font": "",
-            "textAlignment": "left",
-            "characterSize": 20,
-            "color": "0;0;0"
-          }
-        },
         {
           "assetStoreId": "",
           "name": "Tilemap",
@@ -3501,19 +3712,429 @@
             "outlineOpacity": 128,
             "outlineSize": 1
           }
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG1",
+          "texture": "assets/backgrounds/testlevel/bg1.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.55,
+              "YFactor": 0.1,
+              "XSpeed": 0.25
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG2",
+          "texture": "assets/backgrounds/testlevel/bg2.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.5,
+              "YFactor": 0.1,
+              "XSpeed": 0.2
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG3",
+          "texture": "assets/backgrounds/testlevel/bg3.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.45,
+              "YFactor": 0.1,
+              "XSpeed": 0.15
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG4",
+          "texture": "assets/backgrounds/testlevel/bg4.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.4,
+              "YFactor": 0.1,
+              "XSpeed": 0.1
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG5",
+          "texture": "assets/backgrounds/testlevel/bg5.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.35,
+              "YFactor": 0.1,
+              "XSpeed": 0.05
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG6",
+          "texture": "assets/backgrounds/testlevel/bg6.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.3,
+              "YFactor": 0.1,
+              "XSpeed": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG7",
+          "texture": "assets/backgrounds/testlevel/bg7.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.3,
+              "YFactor": 0.1,
+              "XSpeed": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG8",
+          "texture": "assets/backgrounds/testlevel/bg8.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.35,
+              "YFactor": 0.1,
+              "XSpeed": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG9",
+          "texture": "assets/backgrounds/testlevel/bg9.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.4,
+              "YFactor": 0.1,
+              "XSpeed": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG10",
+          "texture": "assets/backgrounds/testlevel/bg10.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.45,
+              "YFactor": 0.1,
+              "XSpeed": 0
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 16,
+          "name": "BG11",
+          "texture": "assets/backgrounds/testlevel/bg11.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [
+            {
+              "folded": true,
+              "name": "XSpeed",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "YFactor",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "folded": true,
+              "name": "XFactor",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Parallax",
+              "type": "HelperExtension::Parallax",
+              "XFactor": 0.5,
+              "YFactor": 0.1,
+              "XSpeed": 0
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "NewText2"
-          },
-          {
             "objectName": "Tilemap"
           },
           {
             "objectName": "TilemapCollision"
+          },
+          {
+            "objectName": "BG1"
+          },
+          {
+            "objectName": "BG2"
+          },
+          {
+            "objectName": "BG3"
+          },
+          {
+            "objectName": "BG4"
+          },
+          {
+            "objectName": "BG5"
+          },
+          {
+            "objectName": "BG6"
+          },
+          {
+            "objectName": "BG7"
+          },
+          {
+            "objectName": "BG8"
+          },
+          {
+            "objectName": "BG9"
+          },
+          {
+            "objectName": "BG10"
+          },
+          {
+            "objectName": "BG11"
           }
         ]
       },
@@ -3530,7 +4151,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3547,25 +4167,63 @@
                     "=",
                     "\"Level\""
                   ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "value": "PlayMusic"
-                  },
-                  "parameters": [
-                    "",
-                    "audio/music/testlevel.ogg",
-                    "yes",
-                    "",
-                    ""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlayMusicCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "audio/music/testlevel.ogg",
+                        "32",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MusicChannelPlayingOffset"
+                      },
+                      "parameters": [
+                        "",
+                        "32",
+                        ">=",
+                        "41.796"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModPlayingOffsetMusicChannel"
+                      },
+                      "parameters": [
+                        "",
+                        "32",
+                        "=",
+                        "11.88+(MusicChannelPlayingOffset(32)-41.796)"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -3575,6 +4233,39 @@
         }
       ],
       "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Background",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
         {
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
@@ -3671,16 +4362,16 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "Parallax",
+          "type": "HelperExtension::Parallax"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "Text",
-          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
@@ -3722,6 +4413,26 @@
                 "PlayingMusic",
                 "=",
                 "\"Level\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "LevelWidth",
+                "=",
+                "Tilemap.Width()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "LevelHeight",
+                "=",
+                "Tilemap.Height()"
               ]
             }
           ]
@@ -5128,6 +5839,18 @@
                           "actions": [],
                           "events": [
                             {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Floor angle sensors"
+                            },
+                            {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -5147,57 +5870,6 @@
                                   "parameters": [
                                     "SensorsData",
                                     "-Sonic.WidthRadius-4"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PushNumber"
-                                  },
-                                  "parameters": [
-                                    "SensorsData",
-                                    "90"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PushNumber"
-                                  },
-                                  "parameters": [
-                                    "SensorsData",
-                                    "Sonic.HeightRadius+Offset"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PushNumber"
-                                  },
-                                  "parameters": [
-                                    "SensorsData",
-                                    "SensorAngle"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "PushString"
-                                  },
-                                  "parameters": [
-                                    "SensorsData",
-                                    "\"AngleRight1\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PushNumber"
-                                  },
-                                  "parameters": [
-                                    "SensorsData",
-                                    "Sonic.WidthRadius"
                                   ]
                                 },
                                 {
@@ -5290,6 +5962,57 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
+                                    "\"AngleRight1\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
                                     "\"AngleRight2\""
                                   ]
                                 },
@@ -5330,6 +6053,18 @@
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Ceiling angle sensors\nThey are used in case the player jumps onto a slope on the ceiling to land on"
                             },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
@@ -9422,6 +10157,56 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Level boundaries",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosX"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "<",
+                            "16"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreX"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "=",
+                            "16"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "XSpeed",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
                 }
               ],
               "parameters": []
@@ -9431,6 +10216,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -11922,6 +12708,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Camera",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12265,7 +13052,173 @@
       ]
     }
   ],
-  "eventsFunctionsExtensions": [],
+  "eventsFunctionsExtensions": [
+    {
+      "author": "",
+      "category": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
+      "name": "HelperExtension",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "",
+      "description": "",
+      "tags": [],
+      "authorIds": [],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "",
+          "fullName": "Parallax",
+          "name": "Parallax",
+          "objectType": "TiledSpriteObject::TiledSprite",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Parallax",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HelperExtension::Parallax::SetPropertyYInit"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "Object.Y()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::XOffset"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "CameraBorderLeft()*XFactor+TimeFromStart()*XSpeed*60"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "YInit-CameraBorderTop()*YFactor"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Parallax",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "XFactor"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "YFactor"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "XSpeed"
+            },
+            {
+              "value": "",
+              "type": "Number",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "YInit"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    }
+  ],
   "externalLayouts": [],
   "externalSourceFiles": []
 }
