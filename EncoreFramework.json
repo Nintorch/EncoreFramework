@@ -3329,7 +3329,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5905237897892737,
+        "zoomFactor": 1.308912997646028,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3393,8 +3393,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 96,
-          "y": 496,
+          "x": 72,
+          "y": 492,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4957,7 +4957,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5666,158 +5665,173 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "Floor sensors"
+                          "comment": "Floor sensors\nUsed to stick the player to the floor"
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
-                          "actions": [
+                          "actions": [],
+                          "events": [
                             {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"FloorCentre\""
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"FloorCentre\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "0"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"FloorLeft\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "-Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
                               ]
                             },
                             {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+5"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "SensorAngle"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"FloorRight\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
+                          ],
+                          "variables": [
                             {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"FloorLeft\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "-Sonic.WidthRadius"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+5"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "SensorAngle"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "PushString"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "\"FloorRight\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.WidthRadius"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "Sonic.HeightRadius+5"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PushNumber"
-                              },
-                              "parameters": [
-                                "SensorsData",
-                                "SensorAngle"
-                              ]
+                              "folded": true,
+                              "name": "Offset",
+                              "type": "number",
+                              "value": 12
                             }
                           ]
                         },
@@ -7848,7 +7862,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Ground movement",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8894,7 +8907,6 @@
                           "comment": "Stick to the ground"
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -9227,6 +9239,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
