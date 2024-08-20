@@ -791,7 +791,7 @@
             },
             {
               "folded": true,
-              "name": "AngleCentre",
+              "name": "AngleLeft1",
               "type": "structure",
               "children": [
                 {
@@ -816,7 +816,7 @@
             },
             {
               "folded": true,
-              "name": "AngleLeft",
+              "name": "AngleLeft2",
               "type": "structure",
               "children": [
                 {
@@ -841,7 +841,32 @@
             },
             {
               "folded": true,
-              "name": "AngleRight",
+              "name": "AngleRight1",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "Collision",
+                  "type": "boolean",
+                  "value": false
+                },
+                {
+                  "folded": true,
+                  "name": "X",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "Y",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "name": "AngleRight2",
               "type": "structure",
               "children": [
                 {
@@ -891,6 +916,31 @@
             {
               "folded": true,
               "name": "CeilingRight",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "Collision",
+                  "type": "boolean",
+                  "value": false
+                },
+                {
+                  "folded": true,
+                  "name": "X",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "folded": true,
+                  "name": "Y",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "name": "FloorCentre",
               "type": "structure",
               "children": [
                 {
@@ -3240,7 +3290,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4381369492991215,
+        "zoomFactor": 0.4100187948541683,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3304,8 +3354,8 @@
           "name": "Sonic",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 163,
-          "y": 491,
+          "x": 1159,
+          "y": 607,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -3681,7 +3731,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Player Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4088,7 +4137,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4212,6 +4260,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Change sensor angle",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -4890,6 +4939,57 @@
                               },
                               "parameters": [
                                 "SensorsData",
+                                "\"FloorCentre\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "90"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "Sonic.HeightRadius+5"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PushNumber"
+                              },
+                              "parameters": [
+                                "SensorsData",
+                                "SensorAngle"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PushString"
+                              },
+                              "parameters": [
+                                "SensorsData",
                                 "\"FloorLeft\""
                               ]
                             },
@@ -5009,7 +5109,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "\"AngleCentre\""
+                                    "\"AngleLeft1\""
                                   ]
                                 },
                                 {
@@ -5018,7 +5118,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "0"
+                                    "-Sonic.WidthRadius-4"
                                   ]
                                 },
                                 {
@@ -5060,7 +5160,58 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "\"AngleLeft\""
+                                    "\"AngleRight1\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.WidthRadius"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "90"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "Sonic.HeightRadius+Offset"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumber"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "SensorAngle"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PushString"
+                                  },
+                                  "parameters": [
+                                    "SensorsData",
+                                    "\"AngleLeft2\""
                                   ]
                                 },
                                 {
@@ -5111,7 +5262,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "\"AngleRight\""
+                                    "\"AngleRight2\""
                                   ]
                                 },
                                 {
@@ -5120,7 +5271,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "Sonic.WidthRadius"
+                                    "Sonic.WidthRadius+4"
                                   ]
                                 },
                                 {
@@ -5311,7 +5462,7 @@
                               "folded": true,
                               "name": "Offset",
                               "type": "number",
-                              "value": 24
+                              "value": 64
                             }
                           ]
                         },
@@ -8654,6 +8805,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Angle calculation",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8668,17 +8820,6 @@
                           "parameters": [
                             "Sonic",
                             "Ground",
-                            "True",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Sonic",
-                            "Collision.AngleCentre.Collision",
                             "True",
                             ""
                           ]
@@ -8712,46 +8853,18 @@
                               },
                               "parameters": [
                                 "Sonic",
-                                "Collision.AngleRight.Collision",
+                                "Collision.AngleLeft1.Collision",
                                 "True",
                                 ""
                               ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "RightAngle",
-                                "=",
-                                "AngleBetweenPositions(Sonic.Collision.AngleCentre.X, Sonic.Collision.AngleCentre.Y, Sonic.Collision.AngleRight.X, Sonic.Collision.AngleRight.Y)"
-                              ]
                             },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Sonic",
-                                "GroundAngle",
-                                "=",
-                                "RightAngle"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
                             {
                               "type": {
                                 "value": "BooleanObjectVariable"
                               },
                               "parameters": [
                                 "Sonic",
-                                "Collision.AngleLeft.Collision",
+                                "Collision.AngleLeft2.Collision",
                                 "True",
                                 ""
                               ]
@@ -8765,7 +8878,17 @@
                               "parameters": [
                                 "LeftAngle",
                                 "=",
-                                "AngleBetweenPositions(Sonic.Collision.AngleCentre.X, Sonic.Collision.AngleCentre.Y, Sonic.Collision.AngleLeft.X, Sonic.Collision.AngleLeft.Y)+180"
+                                "AngleBetweenPositions(Sonic.Collision.AngleLeft1.X, Sonic.Collision.AngleLeft1.Y, Sonic.Collision.AngleLeft2.X, Sonic.Collision.AngleLeft2.Y)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "LeftDistance",
+                                "=",
+                                "DistanceBetweenPositions(Sonic.X(), Sonic.Y(),\n(Sonic.Collision.AngleLeft1.X+Sonic.Collision.AngleLeft2.X)/2,\n(Sonic.Collision.AngleLeft1.Y+Sonic.Collision.AngleLeft2.Y)/2)"
                               ]
                             },
                             {
@@ -8790,7 +8913,7 @@
                               },
                               "parameters": [
                                 "Sonic",
-                                "Collision.AngleRight.Collision",
+                                "Collision.AngleRight1.Collision",
                                 "True",
                                 ""
                               ]
@@ -8801,7 +8924,7 @@
                               },
                               "parameters": [
                                 "Sonic",
-                                "Collision.AngleLeft.Collision",
+                                "Collision.AngleRight2.Collision",
                                 "True",
                                 ""
                               ]
@@ -8810,28 +8933,98 @@
                           "actions": [
                             {
                               "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "RightAngle",
+                                "=",
+                                "AngleBetweenPositions(Sonic.Collision.AngleRight1.X, Sonic.Collision.AngleRight1.Y, Sonic.Collision.AngleRight2.X, Sonic.Collision.AngleRight2.Y)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "RightDistance",
+                                "=",
+                                "DistanceBetweenPositions(Sonic.X(), Sonic.Y(),\n(Sonic.Collision.AngleRight1.X+Sonic.Collision.AngleRight2.X)/2,\n(Sonic.Collision.AngleRight1.Y+Sonic.Collision.AngleRight2.Y)/2)"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "SetNumberObjectVariable"
                               },
                               "parameters": [
                                 "Sonic",
                                 "GroundAngle",
                                 "=",
-                                "lerpAngle(LeftAngle, RightAngle, 0.5)"
+                                "RightAngle"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.AngleLeft1.Collision",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.AngleLeft2.Collision",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.AngleRight1.Collision",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision.AngleRight2.Collision",
+                                "True",
+                                ""
                               ]
                             }
                           ],
+                          "actions": [],
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                    "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "AngleDifference(LeftAngle, RightAngle)",
-                                    ">",
-                                    "60"
+                                    "LeftDistance",
+                                    "<=",
+                                    "RightDistance"
                                   ]
                                 }
                               ],
@@ -8844,7 +9037,35 @@
                                     "Sonic",
                                     "GroundAngle",
                                     "=",
-                                    "0"
+                                    "LeftAngle"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "LeftDistance",
+                                    ">",
+                                    "RightDistance"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "GroundAngle",
+                                    "=",
+                                    "RightAngle"
                                   ]
                                 }
                               ]
@@ -8920,6 +9141,18 @@
                         {
                           "folded": true,
                           "name": "RightAngle",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "LeftDistance",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "RightDistance",
                           "type": "number",
                           "value": 0
                         }
@@ -9114,7 +9347,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9263,7 +9495,7 @@
                                   },
                                   "parameters": [
                                     "Sonic",
-                                    "Collision.AngleCentre.Collision",
+                                    "Collision.FloorCentre.Collision",
                                     "=",
                                     "0"
                                   ]
@@ -9314,7 +9546,7 @@
                                               },
                                               "parameters": [
                                                 "Sonic",
-                                                "Collision.AngleLeft.Collision",
+                                                "Collision.FloorLeft.Collision",
                                                 "True",
                                                 "0"
                                               ]
@@ -9344,7 +9576,7 @@
                                               },
                                               "parameters": [
                                                 "Sonic",
-                                                "Collision.AngleRight.Collision",
+                                                "Collision.FloorRight.Collision",
                                                 "True",
                                                 "0"
                                               ]
@@ -9410,7 +9642,7 @@
                                               },
                                               "parameters": [
                                                 "Sonic",
-                                                "Collision.AngleLeft.Collision",
+                                                "Collision.FloorLeft.Collision",
                                                 "True",
                                                 "0"
                                               ]
@@ -9440,7 +9672,7 @@
                                               },
                                               "parameters": [
                                                 "Sonic",
-                                                "Collision.AngleRight.Collision",
+                                                "Collision.FloorRight.Collision",
                                                 "True",
                                                 "0"
                                               ]
