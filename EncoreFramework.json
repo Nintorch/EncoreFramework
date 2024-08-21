@@ -1305,6 +1305,12 @@
               ]
             }
           ]
+        },
+        {
+          "folded": true,
+          "name": "PositionRecord",
+          "type": "array",
+          "children": []
         }
       ],
       "effects": [],
@@ -3411,6 +3417,60 @@
       "name": "CurrentLevel",
       "type": "string",
       "value": "TestLevel"
+    },
+    {
+      "folded": true,
+      "name": "LevelWidth",
+      "type": "number",
+      "value": 5000
+    },
+    {
+      "folded": true,
+      "name": "LevelHeight",
+      "type": "number",
+      "value": 1024
+    },
+    {
+      "folded": true,
+      "name": "CameraX",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "CameraY",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "CameraOffsetX",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "CameraOffsetY",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "CameraTargetX",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "CameraTargetY",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "folded": true,
+      "name": "CameraLagTimer",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -3450,42 +3510,6 @@
           "name": "ObjectCollisionY",
           "type": "number",
           "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraY",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraOffsetX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraOffsetY",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "LevelWidth",
-          "type": "number",
-          "value": 5000
-        },
-        {
-          "folded": true,
-          "name": "LevelHeight",
-          "type": "number",
-          "value": 1024
         }
       ],
       "instances": [
@@ -3747,7 +3771,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": false,
+        "grid": true,
         "gridType": "rectangular",
         "gridWidth": 8,
         "gridHeight": 8,
@@ -3755,8 +3779,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 1.3986752677778378,
+        "snap": true,
+        "zoomFactor": 1.0377419597320443,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3772,42 +3796,6 @@
           "name": "ObjectCollisionY",
           "type": "number",
           "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraY",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraOffsetX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CameraOffsetY",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "LevelWidth",
-          "type": "number",
-          "value": 5000
-        },
-        {
-          "folded": true,
-          "name": "LevelHeight",
-          "type": "number",
-          "value": 2000
         }
       ],
       "instances": [
@@ -4110,7 +4098,7 @@
           "name": "Spikes",
           "persistentUuid": "88782bb1-1fe6-4a0c-ad44-22f89bf98d76",
           "width": 0,
-          "x": 171,
+          "x": 240,
           "y": 496,
           "zOrder": 13,
           "numberProperties": [],
@@ -4904,6 +4892,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Setup",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -5329,7 +5318,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6153,19 +6141,36 @@
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "Offset",
-                                "=",
-                                "5+abs(Sonic.XSpeed/60)"
-                              ]
-                            }
-                          ],
+                          "actions": [],
                           "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Ground",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Offset",
+                                    "=",
+                                    "12"
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
@@ -6325,7 +6330,7 @@
                               "folded": true,
                               "name": "Offset",
                               "type": "number",
-                              "value": 0
+                              "value": 5
                             }
                           ]
                         },
@@ -10716,6 +10721,83 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Post-movement code",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PushNumberToObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "PositionRecord",
+                            "Sonic.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PushNumberToObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "PositionRecord",
+                            "Sonic.Y()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableChildCount"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "PositionRecord",
+                            ">=",
+                            "60*2"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableRemoveAt"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "PositionRecord",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ObjectVariableRemoveAt"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "PositionRecord",
+                            "0"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
                 }
               ],
               "parameters": []
@@ -10725,6 +10807,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Hurting",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10865,10 +10948,10 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "ResetTimer"
+                            "value": "ResetObjectTimer"
                           },
                           "parameters": [
-                            "",
+                            "Sonic",
                             "\"PlayerFlashing\""
                           ]
                         }
@@ -10896,7 +10979,7 @@
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "mod(floor(TimerElapsedTime(\"PlayerFlashing\")*60), 8)",
+                            "mod(floor(Sonic.ObjectTimerElapsedTime(\"PlayerFlashing\")*60), 8)",
                             ">=",
                             "4"
                           ]
@@ -10954,10 +11037,10 @@
                         },
                         {
                           "type": {
-                            "value": "RemoveTimer"
+                            "value": "RemoveObjectTimer"
                           },
                           "parameters": [
-                            "",
+                            "Sonic",
                             "\"PlayerFlashing\""
                           ]
                         },
@@ -10982,7 +11065,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13036,6 +13118,17 @@
                             "True",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "ControlLock",
+                            "False",
+                            ""
+                          ]
                         }
                       ],
                       "events": [
@@ -13204,7 +13297,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Spindash",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -13499,6 +13591,16 @@
                                 "",
                                 "",
                                 ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "CameraLagTimer",
+                                "=",
+                                "(32-Sonic.SpinDashRev)/60"
                               ]
                             }
                           ]
@@ -13799,7 +13901,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Camera",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13840,6 +13941,90 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "CameraLagTimer",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraTargetX",
+                    "=",
+                    "Sonic.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraTargetY",
+                    "=",
+                    "Sonic.Y()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "CameraLagTimer",
+                    ">",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraTargetX",
+                    "=",
+                    "Sonic.PositionRecord[floor((2-CameraLagTimer)*60/2)*2]"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraTargetY",
+                    "=",
+                    "Sonic.PositionRecord[floor((2-CameraLagTimer)*60/2)*2+1]"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "CameraLagTimer",
+                    "=",
+                    "max(0, CameraLagTimer-TimeDelta())"
+                  ]
+                }
+              ]
+            },
+            {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -13856,10 +14041,10 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PosX"
+                    "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Sonic",
+                    "CameraTargetX",
                     "<",
                     "CameraX-16"
                   ]
@@ -13873,7 +14058,7 @@
                   "parameters": [
                     "CameraX",
                     "=",
-                    "Sonic.X()+16"
+                    "max(CameraX-16, CameraTargetX+16)"
                   ]
                 }
               ]
@@ -13883,10 +14068,10 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "PosX"
+                    "value": "NumberVariable"
                   },
                   "parameters": [
-                    "Sonic",
+                    "CameraTargetX",
                     ">",
                     "CameraX"
                   ]
@@ -13900,7 +14085,7 @@
                   "parameters": [
                     "CameraX",
                     "=",
-                    "Sonic.X()"
+                    "min(CameraX+16, CameraTargetX)"
                   ]
                 }
               ]
@@ -13939,10 +14124,10 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "PosY"
+                        "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Sonic",
+                        "CameraTargetY",
                         "<",
                         "CameraY-32"
                       ]
@@ -13956,7 +14141,7 @@
                       "parameters": [
                         "CameraY",
                         "=",
-                        "Sonic.Y()+32"
+                        "CameraTargetY+32"
                       ]
                     }
                   ]
@@ -13966,10 +14151,10 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "PosY"
+                        "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Sonic",
+                        "CameraTargetY",
                         ">",
                         "CameraY+32"
                       ]
@@ -13983,7 +14168,7 @@
                       "parameters": [
                         "CameraY",
                         "=",
-                        "Sonic.Y()-32"
+                        "CameraTargetY-32"
                       ]
                     }
                   ]
@@ -14012,10 +14197,10 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "PosY"
+                        "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Sonic",
+                        "CameraTargetY",
                         ">",
                         "CameraY"
                       ]
@@ -14029,7 +14214,7 @@
                       "parameters": [
                         "CameraY",
                         "=",
-                        "min(CameraY+8*60*TimeDelta(), Sonic.Y())"
+                        "min(CameraY+8*60*TimeDelta(), CameraTargetY)"
                       ]
                     }
                   ]
@@ -14039,10 +14224,10 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "PosY"
+                        "value": "NumberVariable"
                       },
                       "parameters": [
-                        "Sonic",
+                        "CameraTargetY",
                         "<",
                         "CameraY"
                       ]
@@ -14056,9 +14241,277 @@
                       "parameters": [
                         "CameraY",
                         "=",
-                        "max(CameraY-8*60*TimeDelta(), Sonic.Y())"
+                        "max(CameraY-8*60*TimeDelta(), CameraTargetY)"
                       ]
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Looking up"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Action",
+                        "=",
+                        "\"LookUp\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Action",
+                        "=",
+                        "\"Duck\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CameraWait\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnPauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CameraWait\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CameraWait\"",
+                    ">=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Action",
+                        "=",
+                        "\"LookUp\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "CameraOffsetY",
+                        "=",
+                        "max(CameraOffsetY-2*60*TimeDelta(),-88)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Action",
+                        "=",
+                        "\"Duck\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "CameraOffsetY",
+                        "=",
+                        "min(CameraOffsetY+2*60*TimeDelta(),88)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CameraWait\"",
+                    "<",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "CameraOffsetY",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "CameraOffsetY",
+                        "=",
+                        "max(CameraOffsetY-2*60*TimeDelta(),0)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "CameraOffsetY",
+                        "<",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "CameraOffsetY",
+                        "=",
+                        "min(CameraOffsetY+2*60*TimeDelta(),0)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Sonic",
+                    "Action",
+                    "!=",
+                    "\"LookUp\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Sonic",
+                    "Action",
+                    "!=",
+                    "\"Duck\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CameraWait\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"CameraWait\""
                   ]
                 }
               ]
