@@ -667,6 +667,16 @@
         "name": "assets/spikes.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "audio/sfx/spike.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/sfx/spike.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -837,6 +847,18 @@
         {
           "folded": true,
           "name": "DamageX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "Invulnerable",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "folded": true,
+          "name": "InvulnerableTimer",
           "type": "number",
           "value": 0
         },
@@ -3206,7 +3228,13 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Player",
+          "type": "HelperExtension::Player",
+          "Property": 2.697e-306
+        }
+      ],
       "animations": [
         {
           "name": "Main",
@@ -3258,6 +3286,66 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Spikes",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/spikes.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3268,10 +3356,21 @@
       },
       {
         "objectName": "LayerSwapper"
+      },
+      {
+        "objectName": "Spikes"
       }
     ]
   },
   "objectsGroups": [
+    {
+      "name": "Player",
+      "objects": [
+        {
+          "name": "Sonic"
+        }
+      ]
+    },
     {
       "name": "Collision",
       "objects": [
@@ -3657,7 +3756,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.5449914068559383,
+        "zoomFactor": 1.3986752677778378,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4011,25 +4110,9 @@
           "name": "Spikes",
           "persistentUuid": "88782bb1-1fe6-4a0c-ad44-22f89bf98d76",
           "width": 0,
-          "x": 129,
-          "y": 480,
+          "x": 171,
+          "y": 496,
           "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 270,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Spikes",
-          "persistentUuid": "6c04326d-0520-48b8-bbaf-9b6ca30ecf99",
-          "width": 0,
-          "x": 224,
-          "y": 479,
-          "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4452,66 +4535,6 @@
               "XSpeed": 0
             }
           ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Spikes",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets/spikes.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 0
-                          },
-                          {
-                            "x": 32,
-                            "y": 32
-                          },
-                          {
-                            "x": 0,
-                            "y": 32
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "objectsFolderStructure": {
@@ -4560,9 +4583,6 @@
           },
           {
             "objectName": "TilemapCollision"
-          },
-          {
-            "objectName": "Spikes"
           }
         ]
       },
@@ -4792,6 +4812,11 @@
         {
           "name": "Parallax",
           "type": "HelperExtension::Parallax"
+        },
+        {
+          "name": "Player",
+          "type": "HelperExtension::Player",
+          "Property": 0
         },
         {
           "name": "Resizable",
@@ -6128,7 +6153,18 @@
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
-                          "actions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Offset",
+                                "=",
+                                "5+abs(Sonic.XSpeed/60)"
+                              ]
+                            }
+                          ],
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
@@ -6289,7 +6325,7 @@
                               "folded": true,
                               "name": "Offset",
                               "type": "number",
-                              "value": 12
+                              "value": 0
                             }
                           ]
                         },
@@ -10689,6 +10725,264 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "name": "Hurting",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Invulnerable",
+                        "=",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "HelperExtension::PlayerStanding"
+                          },
+                          "parameters": [
+                            "",
+                            "Sonic",
+                            "Spikes",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Hurt\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "DamageX",
+                            "=",
+                            "Spikes.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "audio/sfx/spike.wav",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Invulnerability flash"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "Invulnerable",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "InvulnerableTimer",
+                        ">",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Sonic",
+                        "InvulnerableTimer",
+                        "-",
+                        "TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"PlayerFlashing\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Sonic"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod(floor(TimerElapsedTime(\"PlayerFlashing\")*60), 8)",
+                            ">=",
+                            "4"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "InvulnerableTimer",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Invulnerable",
+                            "False",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "InvulnerableTimer",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RemoveTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"PlayerFlashing\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12689,6 +12983,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Hurt",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -12728,6 +13023,17 @@
                             "Sonic",
                             "Input.AllowDirectionalMovement",
                             "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Invulnerable",
+                            "True",
                             ""
                           ]
                         }
@@ -12873,6 +13179,17 @@
                                 "XSpeed",
                                 "=",
                                 "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "InvulnerableTimer",
+                                "=",
+                                "2"
                               ]
                             }
                           ]
@@ -13858,7 +14175,7 @@
       "author": "",
       "category": "",
       "extensionNamespace": "",
-      "fullName": "",
+      "fullName": "Helper Extension",
       "helpPath": "",
       "iconUrl": "",
       "name": "HelperExtension",
@@ -13871,7 +14188,141 @@
       "dependencies": [],
       "globalVariables": [],
       "sceneVariables": [],
-      "eventsFunctions": [],
+      "eventsFunctions": [
+        {
+          "description": "Check if the player's sensor is in collision with an object",
+          "fullName": "Sensor is in collision with object",
+          "functionType": "Condition",
+          "group": "Player Sensors",
+          "name": "SensorCollision",
+          "sentence": "Sensor _PARAM2_ of _PARAM1_ is in collision with _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "PlayerObject",
+                    "Collision[SensorName].Collision",
+                    "True"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionPoint"
+                  },
+                  "parameters": [
+                    "TestObject",
+                    "PlayerObject.Collision[SensorName].X",
+                    "PlayerObject.Collision[SensorName].Y"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "The player object",
+              "name": "PlayerObject",
+              "type": "objectList"
+            },
+            {
+              "description": "Sensor name",
+              "name": "SensorName",
+              "type": "string"
+            },
+            {
+              "description": "",
+              "name": "TestObject",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the player is about to stand on an object",
+          "fullName": "Player is about to stand on object",
+          "functionType": "Condition",
+          "group": "Player Sensors",
+          "name": "PlayerStanding",
+          "sentence": "Player _PARAM1_ is about to stand on _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "HelperExtension::SensorCollision"
+                      },
+                      "parameters": [
+                        "",
+                        "Player",
+                        "\"FloorLeft\"",
+                        "TestObject",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HelperExtension::SensorCollision"
+                      },
+                      "parameters": [
+                        "",
+                        "Player",
+                        "\"FloorRight\"",
+                        "TestObject",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "",
+              "name": "Player",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "TestObject",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
       "eventsBasedBehaviors": [
         {
           "description": "",
