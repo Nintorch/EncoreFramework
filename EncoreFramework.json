@@ -72,7 +72,7 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "assets/Idle.png",
+        "file": "assets/Characters/Sonic/Idle.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Idle",
@@ -81,7 +81,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Walking.png",
+        "file": "assets/Characters/Sonic/Walking.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Walking",
@@ -90,7 +90,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Walking2.png",
+        "file": "assets/Characters/Sonic/Walking2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Walking2",
@@ -99,7 +99,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Walking3.png",
+        "file": "assets/Characters/Sonic/Walking3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Walking3",
@@ -108,7 +108,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Walking4.png",
+        "file": "assets/Characters/Sonic/Walking4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Walking4",
@@ -117,7 +117,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Walking5.png",
+        "file": "assets/Characters/Sonic/Walking5.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Walking5",
@@ -126,7 +126,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Walking6.png",
+        "file": "assets/Characters/Sonic/Walking6.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Walking6",
@@ -135,7 +135,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Jumping.png",
+        "file": "assets/Characters/Sonic/Jumping.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping",
@@ -144,7 +144,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Jumping2.png",
+        "file": "assets/Characters/Sonic/Jumping2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping2",
@@ -153,7 +153,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Jumping3.png",
+        "file": "assets/Characters/Sonic/Jumping3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping3",
@@ -162,7 +162,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Jumping4.png",
+        "file": "assets/Characters/Sonic/Jumping4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping4",
@@ -171,7 +171,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Jumping5.png",
+        "file": "assets/Characters/Sonic/Jumping5.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Jumping5",
@@ -180,7 +180,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Running.png",
+        "file": "assets/Characters/Sonic/Running.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Running",
@@ -189,7 +189,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Running2.png",
+        "file": "assets/Characters/Sonic/Running2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Running2",
@@ -198,7 +198,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Running3.png",
+        "file": "assets/Characters/Sonic/Running3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Running3",
@@ -207,7 +207,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Running4.png",
+        "file": "assets/Characters/Sonic/Running4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Running4",
@@ -225,7 +225,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Duck.png",
+        "file": "assets/Characters/Sonic/Duck.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Duck.png\"}",
         "name": "Duck",
@@ -234,7 +234,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/LookUp.png",
+        "file": "assets/Characters/Sonic/LookUp.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "LookUp",
@@ -243,7 +243,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Pushing.png",
+        "file": "assets/Characters/Sonic/Pushing.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Pushing",
@@ -252,7 +252,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Pushing2.png",
+        "file": "assets/Characters/Sonic/Pushing2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Pushing2",
@@ -261,7 +261,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Pushing3.png",
+        "file": "assets/Characters/Sonic/Pushing3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Pushing3",
@@ -270,7 +270,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Pushing4.png",
+        "file": "assets/Characters/Sonic/Pushing4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Pushing4",
@@ -329,7 +329,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Skidding3.png",
+        "file": "assets/Characters/Sonic/Skidding3.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Skidding3",
@@ -338,7 +338,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Skidding4.png",
+        "file": "assets/Characters/Sonic/Skidding4.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Skidding4",
@@ -357,7 +357,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Balancing1.png",
+        "file": "assets/Characters/Sonic/Balancing1.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Balancing1",
@@ -366,7 +366,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Balancing2.png",
+        "file": "assets/Characters/Sonic/Balancing2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Balancing2",
@@ -375,7 +375,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Spindash8.png",
+        "file": "assets/Characters/Sonic/Spindash8.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Spindash3",
@@ -384,100 +384,100 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Spindash5.png",
+        "file": "assets/Characters/Sonic/Spindash5.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Spindash5.png",
+        "name": "assets/Characters/Sonic/Spindash5.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Spindash4.png",
+        "file": "assets/Characters/Sonic/Spindash4.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Spindash4.png",
+        "name": "assets/Characters/Sonic/Spindash4.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Spindash3.png",
+        "file": "assets/Characters/Sonic/Spindash3.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Spindash3.png",
+        "name": "assets/Characters/Sonic/Spindash3.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Spindash2.png",
+        "file": "assets/Characters/Sonic/Spindash2.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Spindash2.png",
+        "name": "assets/Characters/Sonic/Spindash2.png",
         "smoothed": false,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Spindash6.png",
+        "file": "assets/Characters/Sonic/Spindash6.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Spindash6.png",
+        "name": "assets/Characters/Sonic/Spindash6.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Balancing3.png",
+        "file": "assets/Characters/Sonic/Balancing3.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Balancing3.png",
+        "name": "assets/Characters/Sonic/Balancing3.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Balancing4.png",
+        "file": "assets/Characters/Sonic/Balancing4.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Balancing4.png",
+        "name": "assets/Characters/Sonic/Balancing4.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/BackBalancing1.png",
+        "file": "assets/Characters/Sonic/BackBalancing1.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/BackBalancing1.png",
+        "name": "assets/Characters/Sonic/BackBalancing1.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/BackBalancing2.png",
+        "file": "assets/Characters/Sonic/BackBalancing2.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/BackBalancing2.png",
+        "name": "assets/Characters/Sonic/BackBalancing2.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/BackBalancing3.png",
+        "file": "assets/Characters/Sonic/BackBalancing3.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/BackBalancing3.png",
+        "name": "assets/Characters/Sonic/BackBalancing3.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/BackBalancing4.png",
+        "file": "assets/Characters/Sonic/BackBalancing4.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/BackBalancing4.png",
+        "name": "assets/Characters/Sonic/BackBalancing4.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -607,7 +607,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Waiting.png",
+        "file": "assets/Characters/Sonic/Waiting.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Waiting",
@@ -616,7 +616,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Waiting2.png",
+        "file": "assets/Characters/Sonic/Waiting2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Waiting2",
@@ -625,34 +625,25 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Waiting3.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Waiting3",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "assets/Waiting2.png",
+        "file": "assets/Characters/Sonic/Waiting2.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Waiting2.png",
+        "name": "assets/Characters/Sonic/Waiting2.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Waiting3.png",
+        "file": "assets/Characters/Sonic/Waiting3.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets/Waiting3.png",
+        "name": "assets/Characters/Sonic/Waiting3.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Hurt.png",
+        "file": "assets/Characters/Sonic/Hurt.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Hurt",
@@ -680,7 +671,7 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Dead.png",
+        "file": "assets/Characters/Sonic/Dead.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "Dead",
@@ -691,17 +682,368 @@
         "alwaysLoaded": false,
         "file": "assets/Fade.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
-        "name": "Fade",
+        "metadata": "",
+        "name": "assets\\Fade.png",
         "smoothed": false,
         "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "assets/Fade.png",
+        "file": "assets/Characters/Tails/TailsIdle.png",
         "kind": "image",
-        "metadata": "",
-        "name": "assets\\Fade.png",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsIdle",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking4",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking5",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking6",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking7",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsWalking8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsWalking8",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsRunning.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsRunning",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsRunning2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsRunning2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsRunning3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsRunning3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsRunning4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsRunning4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsJumping.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsJumping",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsJumping2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsJumping2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsJumping3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsJumping3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsIdle.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsIdle",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsIdle2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsIdle2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsIdle3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsIdle3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsIdle4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsIdle4",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsIdle5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsIdle5",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsJumping.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsJumping",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsJumping2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsJumping2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsJumping3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsJumping3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsTailsJumping4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsTailsJumping4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsLookUp.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsLookUp",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsDuck.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsDuck",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsSkidding.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsSkidding",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsSkidding2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsSkidding2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsBalancing.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsBalancing",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsBalancing2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsBalancing2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsHurt.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsHurt",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsDead.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsDead",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsSpindash.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsSpindash",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsSpindash2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsSpindash2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/TailsSpindash3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsSpindash3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/Pushing5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing5",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/Pushing6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing6",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/Pushing7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing7",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Characters/Tails/Pushing8.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Pushing8",
         "smoothed": false,
         "userAdded": true
       }
@@ -716,6 +1058,11 @@
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
+        {
+          "name": "Character",
+          "type": "string",
+          "value": "Tails"
+        },
         {
           "folded": true,
           "name": "XSpeed",
@@ -1412,13 +1759,7 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "Player",
-          "type": "HelperExtension::Player",
-          "Property": 2.697e-306
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "Main",
@@ -1604,12 +1945,7 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "Player",
-          "type": "HelperExtension::Player"
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "Idle",
@@ -1791,7 +2127,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Waiting2.png",
+                  "image": "assets/Characters/Sonic/Waiting2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1827,7 +2163,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Waiting3.png",
+                  "image": "assets/Characters/Sonic/Waiting3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2867,7 +3203,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Balancing3.png",
+                  "image": "assets/Characters/Sonic/Balancing3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2903,7 +3239,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Balancing4.png",
+                  "image": "assets/Characters/Sonic/Balancing4.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2951,7 +3287,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing1.png",
+                  "image": "assets/Characters/Sonic/BackBalancing1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -2987,7 +3323,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing2.png",
+                  "image": "assets/Characters/Sonic/BackBalancing2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3023,7 +3359,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing3.png",
+                  "image": "assets/Characters/Sonic/BackBalancing3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3059,7 +3395,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing4.png",
+                  "image": "assets/Characters/Sonic/BackBalancing4.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3242,7 +3578,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash2.png",
+                  "image": "assets/Characters/Sonic/Spindash2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3314,7 +3650,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash3.png",
+                  "image": "assets/Characters/Sonic/Spindash3.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3386,7 +3722,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash4.png",
+                  "image": "assets/Characters/Sonic/Spindash4.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3458,7 +3794,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash5.png",
+                  "image": "assets/Characters/Sonic/Spindash5.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3530,7 +3866,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash6.png",
+                  "image": "assets/Characters/Sonic/Spindash6.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3569,6 +3905,1676 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "TailsSkin",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 4.8,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsIdle",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Walking",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.016667,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking7",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsWalking8",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Running",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.016667,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsRunning",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsRunning2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsRunning3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsRunning4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Jumping",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.016666666666666666,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsJumping3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsJumping2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsJumping",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "LookUp",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsLookUp",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Duck",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsDuck",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pushing",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.016666666666666666,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Pushing5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Pushing6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Pushing7",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Pushing8",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Skidding",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.133333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsSkidding",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsSkidding2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Balancing",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.3333333333333333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsBalancing",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsBalancing2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hurt",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsHurt",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dead",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsDead",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Spindash",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.016667,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsSpindash",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsSpindash2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsSpindash3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "TailsTails",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "folded": true,
+          "name": "XOffset",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "YOffset",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.15,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsIdle",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsIdle2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsIdle3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsIdle4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsIdle5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Jumping",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsJumping",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsJumping2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsJumping3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsTailsJumping4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 29
+                      },
+                      {
+                        "x": 32,
+                        "y": 51
+                      },
+                      {
+                        "x": 16,
+                        "y": 51
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Void",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3579,6 +5585,12 @@
       },
       {
         "objectName": "SonicSkin"
+      },
+      {
+        "objectName": "TailsSkin"
+      },
+      {
+        "objectName": "TailsTails"
       },
       {
         "objectName": "LayerSwapper"
@@ -3597,6 +5609,9 @@
       "objects": [
         {
           "name": "SonicSkin"
+        },
+        {
+          "name": "TailsSkin"
         }
       ]
     },
@@ -5164,6 +7179,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Setup",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -5183,11 +7199,12 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "Create"
+                        "value": "CreateByName"
                       },
                       "parameters": [
                         "",
-                        "SonicSkin",
+                        "PlayerSkin",
+                        "Player.Character + \"Skin\"",
                         "Player.X()",
                         "Player.Y()",
                         ""
@@ -5199,6 +7216,48 @@
                       },
                       "parameters": [
                         "Player"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Character",
+                            "=",
+                            "\"Tails\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "TailsTails",
+                            "Player.X()",
+                            "Player.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "=",
+                            "Player.ZOrder()-1"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -5293,6 +7352,28 @@
                         "SlopeFactor",
                         "=",
                         "0.125*60"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "XOffset",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "YOffset",
+                        "=",
+                        "0"
                       ]
                     }
                   ]
@@ -5899,7 +7980,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Hitboxes",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5928,6 +8008,35 @@
                             "HeightRadius",
                             "=",
                             "20"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Character",
+                            "=",
+                            "\"Tails\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "HeightRadius",
+                            "=",
+                            "16"
                           ]
                         }
                       ]
@@ -12013,6 +14122,37 @@
                                         ""
                                       ]
                                     }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Character",
+                                            "=",
+                                            "\"Tails\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Direction",
+                                            "=",
+                                            "-Player.Direction"
+                                          ]
+                                        }
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -12167,26 +14307,6 @@
                                 },
                                 {
                                   "type": {
-                                    "value": "MettreX"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "-",
-                                    "5 * sin(ToRad(Player.SensorAngle))"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "MettreY"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "+",
-                                    "5 * cos(ToRad(Player.SensorAngle))"
-                                  ]
-                                },
-                                {
-                                  "type": {
                                     "value": "PlaySound"
                                   },
                                   "parameters": [
@@ -12270,6 +14390,17 @@
                                     "=",
                                     "\"Skidding\""
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "TailsTails",
+                                    "Animation",
+                                    "=",
+                                    "\"Jumping\""
+                                  ]
                                 }
                               ]
                             },
@@ -12324,6 +14455,17 @@
                                   },
                                   "parameters": [
                                     "PlayerSkin",
+                                    "Animation",
+                                    "=",
+                                    "\"Idle\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "TailsTails",
                                     "Animation",
                                     "=",
                                     "\"Idle\""
@@ -12557,6 +14699,39 @@
                                         "True",
                                         "="
                                       ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "\"Jumping\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "TailsTails",
+                                        "XOffset",
+                                        "=",
+                                        "8"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "TailsTails",
+                                        "YOffset",
+                                        "=",
+                                        "5"
+                                      ]
                                     }
                                   ]
                                 },
@@ -12597,6 +14772,17 @@
                                       },
                                       "parameters": [
                                         "PlayerSkin",
+                                        "Animation",
+                                        "=",
+                                        "\"Idle\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "TailsTails",
                                         "Animation",
                                         "=",
                                         "\"Idle\""
@@ -12677,6 +14863,17 @@
                                         "=",
                                         "\"Walking\""
                                       ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "\"Void\""
+                                      ]
                                     }
                                   ]
                                 },
@@ -12704,6 +14901,17 @@
                                         "Animation",
                                         "=",
                                         "\"Running\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "\"Void\""
                                       ]
                                     }
                                   ]
@@ -12809,6 +15017,87 @@
                           "value": false
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                              },
+                              "parameters": [
+                                "PlayerSkin",
+                                "Animation",
+                                "=",
+                                "\"Skidding\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                              },
+                              "parameters": [
+                                "PlayerSkin",
+                                "Animation",
+                                "=",
+                                "\"Balancing\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "XOffset",
+                            "=",
+                            "8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "YOffset",
+                            "=",
+                            "5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "parameters": []
@@ -12859,6 +15148,17 @@
                             "Animation",
                             "=",
                             "1 / (floor(max(0, 4 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
                           ]
                         }
                       ],
@@ -13218,6 +15518,17 @@
                             "=",
                             "1 / (floor(max(0, 4 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
                         }
                       ],
                       "events": [
@@ -13396,6 +15707,17 @@
                         },
                         {
                           "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Idle\""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
@@ -13553,6 +15875,17 @@
                         },
                         {
                           "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Idle\""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
@@ -13706,6 +16039,17 @@
                             "Animation",
                             "=",
                             "\"Hurt\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Void\""
                           ]
                         },
                         {
@@ -13953,6 +16297,17 @@
                         },
                         {
                           "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Void\""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
@@ -14118,6 +16473,39 @@
                             "Input.AllowDirectionalMovement",
                             "False",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "XOffset",
+                            "=",
+                            "4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "YOffset",
+                            "=",
+                            "4"
                           ]
                         }
                       ],
@@ -14429,6 +16817,16 @@
                         "Flippable",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "Flippable",
+                        ""
+                      ]
                     }
                   ]
                 },
@@ -14454,6 +16852,16 @@
                       },
                       "parameters": [
                         "PlayerSkin",
+                        "Flippable",
+                        "yes"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "TailsTails",
                         "Flippable",
                         "yes"
                       ]
@@ -14558,6 +16966,108 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipY"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "Flippable",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "TailsSkin",
+                        "Animation",
+                        "=",
+                        "\"Jumping\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Arret"
+                      },
+                      "parameters": [
+                        "TailsTails"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "=",
+                        "round(AngleBetweenPositions(0, 0, Player.ForceX(), Player.ForceY())/45.0)*45.0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "Flippable",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "Player.ForceX()",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "FlippableCapability::FlippableBehavior::FlipY"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Flippable",
+                            "yes"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -14615,6 +17125,24 @@
                         "Player",
                         "=",
                         "Player.SensorAngle"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "=",
+                        "Player.X()+TailsTails.XOffset*Player.Direction",
+                        "=",
+                        "Player.Y()+TailsTails.YOffset"
                       ]
                     }
                   ]
