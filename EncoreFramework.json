@@ -677,6 +677,33 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Dead.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Dead",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Fade.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "Fade",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Fade.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Fade.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -902,7 +929,6 @@
           ]
         },
         {
-          "folded": true,
           "name": "Collision",
           "type": "structure",
           "children": [
@@ -1132,6 +1158,12 @@
             },
             {
               "folded": true,
+              "name": "Enable",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "folded": true,
               "name": "FloorCentre",
               "type": "structure",
               "children": [
@@ -1314,7 +1346,12 @@
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Player",
+          "type": "HelperExtension::Player"
+        }
+      ],
       "animations": [
         {
           "name": "Idle",
@@ -2852,6 +2889,55 @@
           ]
         },
         {
+          "name": "Dead",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Dead",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 16,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 13
+                      },
+                      {
+                        "x": 45,
+                        "y": 52
+                      },
+                      {
+                        "x": 16,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Spindash",
           "useMultipleDirections": false,
           "directions": [
@@ -3352,6 +3438,71 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "FadeObject",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Fade",
+          "type": "HelperExtension::Fade"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Fade.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": false,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -3365,6 +3516,9 @@
       },
       {
         "objectName": "Spikes"
+      },
+      {
+        "objectName": "FadeObject"
       }
     ]
   },
@@ -3378,7 +3532,7 @@
       ]
     },
     {
-      "name": "Collision",
+      "name": "CollisionGroup",
       "objects": [
         {
           "name": "TilemapCollision"
@@ -3429,6 +3583,12 @@
       "name": "LevelHeight",
       "type": "number",
       "value": 1024
+    },
+    {
+      "folded": true,
+      "name": "CameraMode",
+      "type": "string",
+      "value": "Moving"
     },
     {
       "folded": true,
@@ -3485,7 +3645,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": false,
+        "grid": true,
         "gridType": "rectangular",
         "gridWidth": 8,
         "gridHeight": 8,
@@ -3493,8 +3653,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.6522987871358754,
+        "snap": true,
+        "zoomFactor": 1.1089079381309876,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3739,6 +3899,10 @@
           "type": "EffectCapability::EffectBehavior"
         },
         {
+          "name": "Fade",
+          "type": "HelperExtension::Fade"
+        },
+        {
           "name": "Flippable",
           "type": "FlippableCapability::FlippableBehavior"
         },
@@ -3747,16 +3911,16 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "Player",
+          "type": "HelperExtension::Player"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "Text",
-          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     },
@@ -3780,7 +3944,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.0377419597320443,
+        "zoomFactor": 0.7448328138085095,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4875,6 +5039,41 @@
                 "=",
                 "Tilemap.Height()"
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+              },
+              "parameters": [
+                "",
+                "\"HUD\"",
+                "0",
+                "0",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "HelperExtension::Fade::FadeIn"
+              },
+              "parameters": [
+                "FadeObject",
+                "Fade",
+                ""
+              ]
             }
           ]
         },
@@ -4883,6 +5082,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Player Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5318,6 +5518,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6758,11 +6959,35 @@
                           "type": "BuiltinCommonInstructions::Repeat",
                           "repeatExpression": "VariableChildCount(SensorsData)/5",
                           "conditions": [],
-                          "actions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "Collision[SensorsData[ArrayIndex+0]].Collision",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Sonic",
+                                    "Collision.Enable",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
                               "actions": [
                                 {
                                   "type": {
@@ -6970,7 +7195,7 @@
                                         "value": "Raycast"
                                       },
                                       "parameters": [
-                                        "Collision",
+                                        "CollisionGroup",
                                         "CentreX",
                                         "CentreY",
                                         "Angle",
@@ -7026,23 +7251,6 @@
                                 },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetBooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Sonic",
-                                        "Collision[SensorsData[ArrayIndex+0]].Collision",
-                                        "False",
-                                        ""
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
                                       "type": {
@@ -7087,22 +7295,6 @@
                                         "Collision[SensorsData[ArrayIndex+0]].Y",
                                         "=",
                                         "CollisionY"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberVariable"
-                                      },
-                                      "parameters": [
-                                        "ArrayIndex",
-                                        "+",
-                                        "5"
                                       ]
                                     }
                                   ]
@@ -7155,6 +7347,22 @@
                                   "name": "CollisionY",
                                   "type": "number",
                                   "value": 0
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "ArrayIndex",
+                                    "+",
+                                    "5"
+                                  ]
                                 }
                               ]
                             }
@@ -10834,11 +11042,11 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "HelperExtension::PlayerStanding"
+                            "value": "HelperExtension::Player::PlayerLanding"
                           },
                           "parameters": [
-                            "",
                             "Sonic",
+                            "Player",
                             "Spikes",
                             ""
                           ]
@@ -11065,6 +11273,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -11104,7 +11313,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "folded": true,
-                  "name": "Stand",
+                  "name": "Stand - Standing, walking, running, skidding",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -12230,7 +12439,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "folded": true,
-                  "name": "Jump",
+                  "name": "Jump - Jumping and air roll",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -12895,6 +13104,17 @@
                                 "True",
                                 ""
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "JumpFlag",
+                                "True",
+                                ""
+                              ]
                             }
                           ]
                         }
@@ -13129,6 +13349,17 @@
                             "False",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Dead\""
+                          ]
                         }
                       ],
                       "events": [
@@ -13297,6 +13528,143 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
+                  "name": "Dead",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Dead\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Animation",
+                            "=",
+                            "\"Dead\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Collision.Enable",
+                            "False",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "CameraMode",
+                            "=",
+                            "\"Stop\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "XSpeed",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Sonic",
+                                "YSpeed",
+                                "=",
+                                "-7*60"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "HelperExtension::Fade::FadeOut"
+                              },
+                              "parameters": [
+                                "FadeObject",
+                                "Fade",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Wait"
+                              },
+                              "parameters": [
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Scene"
+                              },
+                              "parameters": [
+                                "",
+                                "CurrentSceneName()",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
                   "name": "Spindash",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -13901,6 +14269,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Camera",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13936,6 +14305,16 @@
                     "CameraY",
                     "=",
                     "Sonic.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "CameraMode",
+                    "=",
+                    "\"Moving\""
                   ]
                 }
               ]
@@ -14034,91 +14413,36 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "X"
+              "comment": "Mode \"Moving\" - Camera follows the player"
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "value": "NumberVariable"
+                    "value": "StringVariable"
                   },
                   "parameters": [
-                    "CameraTargetX",
-                    "<",
-                    "CameraX-16"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "CameraX",
+                    "CameraMode",
                     "=",
-                    "max(CameraX-16, CameraTargetX+16)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "NumberVariable"
-                  },
-                  "parameters": [
-                    "CameraTargetX",
-                    ">",
-                    "CameraX"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "CameraX",
-                    "=",
-                    "min(CameraX+16, CameraTargetX)"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Y"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Sonic",
-                    "Ground",
-                    "=",
-                    ""
+                    "\"Moving\""
                   ]
                 }
               ],
               "actions": [],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "X"
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -14127,9 +14451,9 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "CameraTargetY",
+                        "CameraTargetX",
                         "<",
-                        "CameraY-32"
+                        "CameraX-16"
                       ]
                     }
                   ],
@@ -14139,9 +14463,9 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "CameraY",
+                        "CameraX",
                         "=",
-                        "CameraTargetY+32"
+                        "max(CameraX-16, CameraTargetX+16)"
                       ]
                     }
                   ]
@@ -14154,9 +14478,9 @@
                         "value": "NumberVariable"
                       },
                       "parameters": [
-                        "CameraTargetY",
+                        "CameraTargetX",
                         ">",
-                        "CameraY+32"
+                        "CameraX"
                       ]
                     }
                   ],
@@ -14166,55 +14490,94 @@
                         "value": "SetNumberVariable"
                       },
                       "parameters": [
-                        "CameraY",
+                        "CameraX",
                         "=",
-                        "CameraTargetY-32"
+                        "min(CameraX+16, CameraTargetX)"
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
-                  "type": {
-                    "value": "BooleanObjectVariable"
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
                   },
-                  "parameters": [
-                    "Sonic",
-                    "Ground",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
+                  "comment": "Y"
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "NumberVariable"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "CameraTargetY",
-                        ">",
-                        "CameraY"
+                        "Sonic",
+                        "Ground",
+                        "=",
+                        ""
                       ]
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "CameraY",
-                        "=",
-                        "min(CameraY+8*60*TimeDelta(), CameraTargetY)"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "CameraTargetY",
+                            "<",
+                            "CameraY-32"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraY",
+                            "=",
+                            "CameraTargetY+32"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "CameraTargetY",
+                            ">",
+                            "CameraY+32"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraY",
+                            "=",
+                            "CameraTargetY-32"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -14224,51 +14587,298 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "NumberVariable"
+                        "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "CameraTargetY",
-                        "<",
-                        "CameraY"
+                        "Sonic",
+                        "Ground",
+                        "True",
+                        ""
                       ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "CameraTargetY",
+                            ">",
+                            "CameraY"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraY",
+                            "=",
+                            "min(CameraY+8*60*TimeDelta(), CameraTargetY)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "CameraTargetY",
+                            "<",
+                            "CameraY"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraY",
+                            "=",
+                            "max(CameraY-8*60*TimeDelta(), CameraTargetY)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Looking up"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"LookUp\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Duck\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "ResetTimer"
                       },
                       "parameters": [
-                        "CameraY",
-                        "=",
-                        "max(CameraY-8*60*TimeDelta(), CameraTargetY)"
+                        "",
+                        "\"CameraWait\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"CameraWait\""
                       ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Looking up"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"CameraWait\"",
+                        ">=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"LookUp\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraOffsetY",
+                            "=",
+                            "max(CameraOffsetY-2*60*TimeDelta(),-88)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Sonic",
+                            "Action",
+                            "=",
+                            "\"Duck\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraOffsetY",
+                            "=",
+                            "min(CameraOffsetY+2*60*TimeDelta(),88)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"CameraWait\"",
+                        "<",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "CameraOffsetY",
+                            ">",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraOffsetY",
+                            "=",
+                            "max(CameraOffsetY-2*60*TimeDelta(),0)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "CameraOffsetY",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "CameraOffsetY",
+                            "=",
+                            "min(CameraOffsetY+2*60*TimeDelta(),0)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
                       "type": {
                         "value": "StringObjectVariable"
@@ -14276,7 +14886,7 @@
                       "parameters": [
                         "Sonic",
                         "Action",
-                        "=",
+                        "!=",
                         "\"LookUp\""
                       ]
                     },
@@ -14287,96 +14897,7 @@
                       "parameters": [
                         "Sonic",
                         "Action",
-                        "=",
-                        "\"Duck\""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"CameraWait\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "UnPauseTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"CameraWait\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CompareTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"CameraWait\"",
-                    ">=",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Action",
-                        "=",
-                        "\"LookUp\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "CameraOffsetY",
-                        "=",
-                        "max(CameraOffsetY-2*60*TimeDelta(),-88)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "StringObjectVariable"
-                      },
-                      "parameters": [
-                        "Sonic",
-                        "Action",
-                        "=",
+                        "!=",
                         "\"Duck\""
                       ]
                     }
@@ -14384,12 +14905,20 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "SetNumberVariable"
+                        "value": "ResetTimer"
                       },
                       "parameters": [
-                        "CameraOffsetY",
-                        "=",
-                        "min(CameraOffsetY+2*60*TimeDelta(),88)"
+                        "",
+                        "\"CameraWait\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"CameraWait\""
                       ]
                     }
                   ]
@@ -14397,124 +14926,16 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CompareTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"CameraWait\"",
-                    "<",
-                    "2"
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "CameraOffsetY",
-                        ">",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "CameraOffsetY",
-                        "=",
-                        "max(CameraOffsetY-2*60*TimeDelta(),0)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "CameraOffsetY",
-                        "<",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "CameraOffsetY",
-                        "=",
-                        "min(CameraOffsetY+2*60*TimeDelta(),0)"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "Sonic",
-                    "Action",
-                    "!=",
-                    "\"LookUp\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "StringObjectVariable"
-                  },
-                  "parameters": [
-                    "Sonic",
-                    "Action",
-                    "!=",
-                    "\"Duck\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"CameraWait\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PauseTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"CameraWait\""
-                  ]
-                }
-              ]
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Mode \"Stop\" - No code required"
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -14592,33 +15013,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "p"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetStringObjectVariable"
-              },
-              "parameters": [
-                "Sonic",
-                "Action",
-                "=",
-                "\"Hurt\""
-              ]
-            }
-          ]
         }
       ]
     }
@@ -14641,141 +15035,7 @@
       "dependencies": [],
       "globalVariables": [],
       "sceneVariables": [],
-      "eventsFunctions": [
-        {
-          "description": "Check if the player's sensor is in collision with an object",
-          "fullName": "Sensor is in collision with object",
-          "functionType": "Condition",
-          "group": "Player Sensors",
-          "name": "SensorCollision",
-          "sentence": "Sensor _PARAM2_ of _PARAM1_ is in collision with _PARAM3_",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "PlayerObject",
-                    "Collision[SensorName].Collision",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "CollisionPoint"
-                  },
-                  "parameters": [
-                    "TestObject",
-                    "PlayerObject.Collision[SensorName].X",
-                    "PlayerObject.Collision[SensorName].Y"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnBoolean"
-                  },
-                  "parameters": [
-                    "True"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "The player object",
-              "name": "PlayerObject",
-              "type": "objectList"
-            },
-            {
-              "description": "Sensor name",
-              "name": "SensorName",
-              "type": "string"
-            },
-            {
-              "description": "",
-              "name": "TestObject",
-              "type": "objectList"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "description": "Check if the player is about to stand on an object",
-          "fullName": "Player is about to stand on object",
-          "functionType": "Condition",
-          "group": "Player Sensors",
-          "name": "PlayerStanding",
-          "sentence": "Player _PARAM1_ is about to stand on _PARAM2_",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "HelperExtension::SensorCollision"
-                      },
-                      "parameters": [
-                        "",
-                        "Player",
-                        "\"FloorLeft\"",
-                        "TestObject",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "HelperExtension::SensorCollision"
-                      },
-                      "parameters": [
-                        "",
-                        "Player",
-                        "\"FloorRight\"",
-                        "TestObject",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnBoolean"
-                  },
-                  "parameters": [
-                    "True"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "",
-              "name": "Player",
-              "type": "objectList"
-            },
-            {
-              "description": "",
-              "name": "TestObject",
-              "type": "objectList"
-            }
-          ],
-          "objectGroups": []
-        }
-      ],
+      "eventsFunctions": [],
       "eventsBasedBehaviors": [
         {
           "description": "",
@@ -14794,9 +15054,11 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Once"
+                        "value": "DepartScene"
                       },
-                      "parameters": []
+                      "parameters": [
+                        ""
+                      ]
                     }
                   ],
                   "actions": [
@@ -14897,11 +15159,543 @@
             }
           ],
           "sharedPropertyDescriptors": []
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "name": "Player",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "Check if the player's sensor is in collision with an object",
+              "fullName": "Sensor is in collision with object",
+              "functionType": "Condition",
+              "name": "SensorCollision",
+              "sentence": "Sensor _PARAM2_ of _PARAM0_ is in collision with _PARAM3_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Collision[SensorName].Collision",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CollisionPoint"
+                      },
+                      "parameters": [
+                        "TestObject",
+                        "Object.Collision[SensorName].X",
+                        "Object.Collision[SensorName].Y"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Player",
+                  "type": "behavior"
+                },
+                {
+                  "description": "",
+                  "name": "SensorName",
+                  "type": "string"
+                },
+                {
+                  "description": "",
+                  "name": "TestObject",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if the player is about to land on an object",
+              "fullName": "Player is about to land on object",
+              "functionType": "Condition",
+              "name": "PlayerLanding",
+              "sentence": "Player _PARAM0_ is about to land on _PARAM2_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "HelperExtension::Player::SensorCollision"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "\"FloorLeft\"",
+                            "TestObject",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "HelperExtension::Player::SensorCollision"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "\"FloorRight\"",
+                            "TestObject",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Player",
+                  "type": "behavior"
+                },
+                {
+                  "description": "",
+                  "name": "TestObject",
+                  "type": "objectList"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [],
+          "sharedPropertyDescriptors": []
+        },
+        {
+          "description": "",
+          "fullName": "Fade",
+          "name": "Fade",
+          "objectType": "Sprite",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "HelperExtension::Fade::PropertyFadingType"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "\"Fading in\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Opacity",
+                        "=",
+                        "max(0, Object.Opacity::Value()-FadingSpeed*TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::Value"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Opacity",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "HelperExtension::Fade::SetPropertyFadingType"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "\"No fading\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "HelperExtension::Fade::PropertyFadingType"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "\"Fading out\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Opacity",
+                        "=",
+                        "min(255, Object.Opacity::Value()+FadingSpeed*TimeDelta())"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::Value"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Opacity",
+                            "=",
+                            "255"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "HelperExtension::Fade::SetPropertyFadingType"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior",
+                            "=",
+                            "\"No fading\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Fade",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onCreated",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Resizable",
+                        "=",
+                        "SceneWindowWidth()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Resizable",
+                        "=",
+                        "SceneWindowHeight()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Opacity",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Fade",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Fade out",
+              "fullName": "Fade out",
+              "functionType": "Action",
+              "name": "FadeOut",
+              "sentence": "_PARAM0_: Fade out",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Opacity",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HelperExtension::Fade::SetPropertyFadingType"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "\"Fading out\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Fade",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Fade in",
+              "fullName": "Fade in",
+              "functionType": "Action",
+              "name": "FadeIn",
+              "sentence": "_PARAM0_: Fade in",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Opacity",
+                        "=",
+                        "255"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HelperExtension::Fade::SetPropertyFadingType"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "\"Fading in\""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "Sprite",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "HelperExtension::Fade",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Choice",
+              "label": "Fading type",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "No fading",
+                "Fading in",
+                "Fading out"
+              ],
+              "hidden": true,
+              "name": "FadingType"
+            },
+            {
+              "value": "256",
+              "type": "Number",
+              "label": "Fading speed",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "name": "FadingSpeed"
+            }
+          ],
+          "sharedPropertyDescriptors": []
         }
       ],
       "eventsBasedObjects": []
     }
   ],
-  "externalLayouts": [],
+  "externalLayouts": [
+    {
+      "associatedLayout": "LevelBase",
+      "name": "HUD",
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "HUD",
+          "name": "FadeObject",
+          "persistentUuid": "7ac990d9-f460-4d7b-b828-4425cab6dcb8",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "editionSettings": {
+        "grid": true,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": true,
+        "zoomFactor": 1.3466976286678998,
+        "windowMask": false
+      }
+    }
+  ],
   "externalSourceFiles": []
 }
