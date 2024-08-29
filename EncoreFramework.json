@@ -1061,7 +1061,7 @@
         {
           "name": "Character",
           "type": "string",
-          "value": "Tails"
+          "value": "Sonic"
         },
         {
           "folded": true,
@@ -13495,7 +13495,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Hurting",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13654,7 +13653,15 @@
                             "value": "Cache"
                           },
                           "parameters": [
-                            "Player"
+                            "PlayerSkin"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "TailsTails"
                           ]
                         }
                       ]
@@ -13679,7 +13686,16 @@
                             "value": "Montre"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "TailsTails",
                             ""
                           ]
                         }
@@ -13737,7 +13753,16 @@
                             "value": "Montre"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "TailsTails",
                             ""
                           ]
                         }
@@ -16009,7 +16034,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Hurt",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -16083,17 +16107,6 @@
                             "ControlLock",
                             "False",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetStringObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Action",
-                            "=",
-                            "\"Dead\""
                           ]
                         }
                       ],
@@ -17007,11 +17020,32 @@
                     },
                     {
                       "type": {
-                        "inverted": true,
-                        "value": "Arret"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "TailsTails"
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "XSpeed",
+                            "!=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "YSpeed",
+                            "!=",
+                            "0"
+                          ]
+                        }
                       ]
                     }
                   ],
