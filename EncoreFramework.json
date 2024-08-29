@@ -1364,12 +1364,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Idle",
+                  "image": "assets\\Fade.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 32,
-                    "y": 32
+                    "x": 16,
+                    "y": 16
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1380,1928 +1380,20 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 16,
-                        "y": 13
+                        "x": 0,
+                        "y": 0
                       },
                       {
-                        "x": 45,
-                        "y": 13
+                        "x": 32,
+                        "y": 0
                       },
                       {
-                        "x": 45,
-                        "y": 52
+                        "x": 32,
+                        "y": 32
                       },
                       {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Waiting1",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.4,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Waiting2",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Waiting",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Waiting",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Waiting2",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.4,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Waiting2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Waiting3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Walking",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.016667,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Walking",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Walking2",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Walking3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Walking4",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Walking5",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Walking6",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Running",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.016667,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Running",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Running2",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Running3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Running4",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Jumping",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.016666666666666666,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Jumping",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Jumping2",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Jumping3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Jumping4",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Jumping5",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "LookUp",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "LookUp",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Duck",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Duck",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Pushing",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.016666666666666666,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Pushing",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Pushing2",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Pushing3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Pushing4",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Skidding",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.133333333,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Skidding3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Skidding4",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Balancing",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.3333333333333333,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Balancing1",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Balancing2",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Balancing3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Balancing4.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "BackBalancing",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.3333333333333333,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing1.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/BackBalancing4.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Hurt",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Hurt",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Dead",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": false,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Dead",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Spindash",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.016667,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash2.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash4.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash5.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Spindash6.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 16,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 13
-                      },
-                      {
-                        "x": 45,
-                        "y": 52
-                      },
-                      {
-                        "x": 16,
-                        "y": 52
+                        "x": 0,
+                        "y": 32
                       }
                     ]
                   ]
@@ -5501,10 +3593,10 @@
   },
   "objectsGroups": [
     {
-      "name": "PlayerGroup",
+      "name": "PlayerSkin",
       "objects": [
         {
-          "name": "Player"
+          "name": "SonicSkin"
         }
       ]
     },
@@ -5631,7 +3723,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.7066137524909974,
+        "zoomFactor": 1.3530499759729666,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5659,8 +3751,8 @@
           "name": "Player",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 131,
-          "y": 146,
+          "x": 120,
+          "y": 128,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -5921,7 +4013,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.795911750572337,
+        "zoomFactor": 1.5449914068559412,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5949,8 +4041,8 @@
           "name": "Player",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 68,
-          "y": 492,
+          "x": 104,
+          "y": 496,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -7027,7 +5119,7 @@
               },
               "parameters": [
                 "",
-                "\"HUD\"",
+                "\"Essential level objects\"",
                 "0",
                 "0",
                 "0"
@@ -7072,11 +5164,45 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Setup",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "SonicSkin",
+                        "Player.X()",
+                        "Player.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "Player"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
@@ -7763,6 +5889,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -7872,6 +5999,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -13516,7 +11644,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13774,7 +11901,7 @@
                                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                       },
                                       "parameters": [
-                                        "Player",
+                                        "PlayerSkin",
                                         "Animation",
                                         "=",
                                         "\"Balancing\""
@@ -13870,7 +11997,7 @@
                                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                       },
                                       "parameters": [
-                                        "Player",
+                                        "PlayerSkin",
                                         "Animation",
                                         "=",
                                         "\"BackBalancing\""
@@ -14110,29 +12237,17 @@
                                 },
                                 {
                                   "type": {
-                                    "inverted": true,
                                     "value": "AnimatableCapability::AnimatableBehavior::Name"
                                   },
                                   "parameters": [
-                                    "Player",
+                                    "PlayerSkin",
                                     "Animation",
-                                    "=",
+                                    "!=",
                                     "\"Skidding\""
                                   ]
                                 }
                               ],
                               "actions": [
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Animation",
-                                    "=",
-                                    "\"Skidding\""
-                                  ]
-                                },
                                 {
                                   "type": {
                                     "value": "PlaySound"
@@ -14143,6 +12258,17 @@
                                     "",
                                     "",
                                     ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin",
+                                    "Animation",
+                                    "=",
+                                    "\"Skidding\""
                                   ]
                                 }
                               ]
@@ -14155,7 +12281,7 @@
                                     "value": "AnimatableCapability::AnimatableBehavior::Name"
                                   },
                                   "parameters": [
-                                    "Player",
+                                    "PlayerSkin",
                                     "Animation",
                                     "=",
                                     "\"Skidding\""
@@ -14197,7 +12323,7 @@
                                     "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                   },
                                   "parameters": [
-                                    "Player",
+                                    "PlayerSkin",
                                     "Animation",
                                     "=",
                                     "\"Idle\""
@@ -14224,13 +12350,12 @@
                           "conditions": [
                             {
                               "type": {
-                                "inverted": true,
                                 "value": "AnimatableCapability::AnimatableBehavior::Name"
                               },
                               "parameters": [
-                                "Player",
+                                "PlayerSkin",
                                 "Animation",
-                                "=",
+                                "!=",
                                 "\"Skidding\""
                               ]
                             }
@@ -14406,7 +12531,7 @@
                                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                       },
                                       "parameters": [
-                                        "Player",
+                                        "PlayerSkin",
                                         "Animation",
                                         "=",
                                         "\"Pushing\""
@@ -14417,7 +12542,7 @@
                                         "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
                                       },
                                       "parameters": [
-                                        "Player",
+                                        "PlayerSkin",
                                         "Animation",
                                         "=",
                                         "1 / (floor(max(0, 8 - abs(Player.SavedGroundSpeed / 60.0)) * 4) + 1)"
@@ -14471,7 +12596,7 @@
                                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                       },
                                       "parameters": [
-                                        "Player",
+                                        "PlayerSkin",
                                         "Animation",
                                         "=",
                                         "\"Idle\""
@@ -14509,7 +12634,7 @@
                                     "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
                                   },
                                   "parameters": [
-                                    "Player",
+                                    "PlayerSkin",
                                     "Animation",
                                     "=",
                                     "1 / (floor(max(0, 8 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
@@ -14547,7 +12672,7 @@
                                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                       },
                                       "parameters": [
-                                        "Player",
+                                        "PlayerSkin",
                                         "Animation",
                                         "=",
                                         "\"Walking\""
@@ -14575,7 +12700,7 @@
                                         "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                       },
                                       "parameters": [
-                                        "Player",
+                                        "PlayerSkin",
                                         "Animation",
                                         "=",
                                         "\"Running\""
@@ -14588,6 +12713,18 @@
                           ]
                         },
                         {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Waiting animation"
+                        },
+                        {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -14595,7 +12732,7 @@
                                 "value": "AnimatableCapability::AnimatableBehavior::Name"
                               },
                               "parameters": [
-                                "Player",
+                                "SonicSkin",
                                 "Animation",
                                 "=",
                                 "\"Idle\""
@@ -14606,7 +12743,7 @@
                                 "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
                               },
                               "parameters": [
-                                "Player",
+                                "SonicSkin",
                                 "Animation"
                               ]
                             }
@@ -14617,7 +12754,7 @@
                                 "value": "AnimatableCapability::AnimatableBehavior::SetName"
                               },
                               "parameters": [
-                                "Player",
+                                "SonicSkin",
                                 "Animation",
                                 "=",
                                 "\"Waiting1\""
@@ -14633,7 +12770,7 @@
                                 "value": "AnimatableCapability::AnimatableBehavior::Name"
                               },
                               "parameters": [
-                                "Player",
+                                "SonicSkin",
                                 "Animation",
                                 "=",
                                 "\"Waiting1\""
@@ -14644,7 +12781,7 @@
                                 "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
                               },
                               "parameters": [
-                                "Player",
+                                "SonicSkin",
                                 "Animation"
                               ]
                             }
@@ -14655,7 +12792,7 @@
                                 "value": "AnimatableCapability::AnimatableBehavior::SetName"
                               },
                               "parameters": [
-                                "Player",
+                                "SonicSkin",
                                 "Animation",
                                 "=",
                                 "\"Waiting2\""
@@ -14707,7 +12844,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Jumping\""
@@ -14718,7 +12855,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "1 / (floor(max(0, 4 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
@@ -15065,10 +13202,21 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Jumping\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "1 / (floor(max(0, 4 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
                           ]
                         }
                       ],
@@ -15240,7 +13388,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"LookUp\""
@@ -15397,7 +13545,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Duck\""
@@ -15554,7 +13702,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Hurt\""
@@ -15797,7 +13945,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Dead\""
@@ -15933,10 +14081,21 @@
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Spindash\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "1"
                           ]
                         },
                         {
@@ -16125,7 +14284,7 @@
                                 "value": "ChangeSprite"
                               },
                               "parameters": [
-                                "Player",
+                                "PlayerSkin",
                                 "=",
                                 "0"
                               ]
@@ -16266,7 +14425,7 @@
                         "value": "FlippableCapability::FlippableBehavior::FlipX"
                       },
                       "parameters": [
-                        "Player",
+                        "PlayerSkin",
                         "Flippable",
                         ""
                       ]
@@ -16294,7 +14453,7 @@
                         "value": "FlippableCapability::FlippableBehavior::FlipX"
                       },
                       "parameters": [
-                        "Player",
+                        "PlayerSkin",
                         "Flippable",
                         "yes"
                       ]
@@ -16322,7 +14481,7 @@
                         "value": "SetAngle"
                       },
                       "parameters": [
-                        "Player",
+                        "PlayerSkin",
                         "=",
                         "0"
                       ]
@@ -16343,7 +14502,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::Name"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Walking\""
@@ -16354,7 +14513,7 @@
                             "value": "AnimatableCapability::AnimatableBehavior::Name"
                           },
                           "parameters": [
-                            "Player",
+                            "PlayerSkin",
                             "Animation",
                             "=",
                             "\"Running\""
@@ -16391,9 +14550,71 @@
                         "value": "SetAngle"
                       },
                       "parameters": [
-                        "Player",
+                        "PlayerSkin",
                         "=",
                         "round(Player.GroundAngle / 45.0) * 45.0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Skins"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "PlayerSkin",
+                        "=",
+                        "Player.X()",
+                        "=",
+                        "Player.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Resizable",
+                        "=",
+                        "Player.WidthRadius*2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Resizable",
+                        "=",
+                        "Player.HeightRadius*2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "Player",
+                        "=",
+                        "Player.SensorAngle"
                       ]
                     }
                   ]
@@ -21459,7 +19680,7 @@
   "externalLayouts": [
     {
       "associatedLayout": "LevelBase",
-      "name": "HUD",
+      "name": "Essential level objects",
       "instances": [
         {
           "angle": 0,
@@ -21488,7 +19709,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.3466976286678998,
+        "zoomFactor": 1.1409189865007867,
         "windowMask": false
       }
     }
