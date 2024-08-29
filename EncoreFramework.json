@@ -218,7 +218,7 @@
         "alwaysLoaded": false,
         "file": "assets/NewSprite3.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite3.png\"}",
         "name": "NewSprite3",
         "smoothed": false,
         "userAdded": true
@@ -1046,6 +1046,69 @@
         "name": "Pushing8",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpindashDust.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpindashDust",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpindashDust2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpindashDust2",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpindashDust3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpindashDust3",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpindashDust4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpindashDust4",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpindashDust5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpindashDust5",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpindashDust6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpindashDust6",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/SpindashDust7.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SpindashDust7",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1061,7 +1124,7 @@
         {
           "name": "Character",
           "type": "string",
-          "value": "Sonic"
+          "value": "Tails"
         },
         {
           "folded": true,
@@ -5575,6 +5638,283 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "SpindashDust",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "SpindashDust",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.05,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpindashDust",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 52
+                      },
+                      {
+                        "x": 4,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpindashDust2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 52
+                      },
+                      {
+                        "x": 4,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpindashDust3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 52
+                      },
+                      {
+                        "x": 4,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpindashDust4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 52
+                      },
+                      {
+                        "x": 4,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpindashDust5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 52
+                      },
+                      {
+                        "x": 4,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpindashDust6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 52
+                      },
+                      {
+                        "x": 4,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SpindashDust7",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 42
+                      },
+                      {
+                        "x": 36,
+                        "y": 52
+                      },
+                      {
+                        "x": 4,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -5600,6 +5940,9 @@
       },
       {
         "objectName": "FadeObject"
+      },
+      {
+        "objectName": "SpindashDust"
       }
     ]
   },
@@ -5630,7 +5973,7 @@
       "name": "CollisionLayer0",
       "objects": [
         {
-          "name": "FloorObj2"
+          "name": "TilemapCollision0"
         }
       ]
     },
@@ -5638,7 +5981,7 @@
       "name": "CollisionLayer1",
       "objects": [
         {
-          "name": "FloorObj3"
+          "name": "TilemapCollision1"
         }
       ]
     }
@@ -6028,7 +6371,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.5449914068559412,
+        "zoomFactor": 0.6522987871358794,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -6056,7 +6399,7 @@
           "name": "Player",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 104,
+          "x": 72,
           "y": 496,
           "zOrder": 1,
           "numberProperties": [],
@@ -6349,6 +6692,54 @@
           "x": 240,
           "y": 496,
           "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "LayerSwapper",
+          "persistentUuid": "63432731-06c5-4a9a-8342-68c707b00d1f",
+          "width": 0,
+          "x": 1528,
+          "y": 384,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "TilemapCollision0",
+          "persistentUuid": "c6782b2f-b4a2-4029-abe2-634ead35e4a6",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": -4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "TilemapCollision1",
+          "persistentUuid": "73f872f0-52a9-4719-be63-0d38f4426eec",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": -3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6771,6 +7162,44 @@
               "XSpeed": 0
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "TilemapCollision0",
+          "type": "TileMap::CollisionMask",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "tilemapJsonFile": "layouts/testlevel.json",
+            "tilesetJsonFile": "layouts/tileset.json",
+            "collisionMaskTag": "layer0",
+            "debugMode": false,
+            "fillColor": "255;0;0",
+            "outlineColor": "255;255;255",
+            "fillOpacity": 64,
+            "outlineOpacity": 128,
+            "outlineSize": 1
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "TilemapCollision1",
+          "type": "TileMap::CollisionMask",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "tilemapJsonFile": "layouts/testlevel.json",
+            "tilesetJsonFile": "layouts/tileset.json",
+            "collisionMaskTag": "layer1",
+            "debugMode": false,
+            "fillColor": "0;0;255",
+            "outlineColor": "255;255;255",
+            "fillOpacity": 64,
+            "outlineOpacity": 128,
+            "outlineSize": 1
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -6819,6 +7248,12 @@
           },
           {
             "objectName": "TilemapCollision"
+          },
+          {
+            "objectName": "TilemapCollision0"
+          },
+          {
+            "objectName": "TilemapCollision1"
           }
         ]
       },
@@ -7138,6 +7573,17 @@
                 "0",
                 "0",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Gamepads::A_Set_deadzone"
+              },
+              "parameters": [
+                "",
+                "1",
+                "0.3",
+                ""
               ]
             }
           ]
@@ -7980,6 +8426,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Hitboxes",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8834,6 +9281,28 @@
                                   "parameters": [
                                     "Player",
                                     "Ground",
+                                    "True",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.FloorLeft.Collision",
+                                    "True",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.FloorRight.Collision",
                                     "True",
                                     ""
                                   ]
@@ -13456,7 +13925,7 @@
                           "parameters": [
                             "Player",
                             "PositionRecord",
-                            ">=",
+                            ">",
                             "60*2"
                           ]
                         }
@@ -13495,6 +13964,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Hurting",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13778,6 +14248,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -16034,6 +16505,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Hurt",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -16568,6 +17040,48 @@
                                 "=",
                                 "0"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "SpindashDust",
+                                "Player.X()",
+                                "Player.Collision.FloorCentre.Y-16",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Direction",
+                                    "=",
+                                    "-1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                                  },
+                                  "parameters": [
+                                    "SpindashDust",
+                                    "Flippable",
+                                    "yes"
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -16772,6 +17286,15 @@
                                 "CameraLagTimer",
                                 "=",
                                 "(32 - Player.SpinDashRev) / 60"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "SpindashDust",
+                                ""
                               ]
                             }
                           ]
@@ -17009,13 +17532,13 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                        "value": "StringObjectVariable"
                       },
                       "parameters": [
-                        "TailsSkin",
-                        "Animation",
+                        "Player",
+                        "Action",
                         "=",
-                        "\"Jumping\""
+                        "\"Roll\""
                       ]
                     },
                     {
@@ -17026,22 +17549,20 @@
                       "subInstructions": [
                         {
                           "type": {
-                            "value": "NumberObjectVariable"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "Player",
-                            "XSpeed",
+                            "Player.ForceX()",
                             "!=",
                             "0"
                           ]
                         },
                         {
                           "type": {
-                            "value": "NumberObjectVariable"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "Player",
-                            "YSpeed",
+                            "Player.ForceY()",
                             "!=",
                             "0"
                           ]
@@ -17081,6 +17602,74 @@
                           },
                           "parameters": [
                             "Player.ForceX()",
+                            "<",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "FlippableCapability::FlippableBehavior::FlipY"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Flippable",
+                            "yes"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Action",
+                        "=",
+                        "\"Jump\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "=",
+                        "round(AngleBetweenPositions(0, 0, Player.XSpeed, Player.YSpeed)/45.0)*45.0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "FlippableCapability::FlippableBehavior::FlipX"
+                      },
+                      "parameters": [
+                        "TailsTails",
+                        "Flippable",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "XSpeed",
                             "<",
                             "0"
                           ]
@@ -17192,7 +17781,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Layer changing",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -17234,12 +17822,12 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "IsTotalForceAngleAround"
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "Player",
-                        "0",
-                        "45"
+                        "Player.ForceX()",
+                        "<",
+                        "0"
                       ]
                     }
                   ],
@@ -17262,12 +17850,12 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "IsTotalForceAngleAround"
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
                       },
                       "parameters": [
-                        "Player",
-                        "180",
-                        "45"
+                        "Player.ForceX()",
+                        ">",
+                        "0"
                       ]
                     }
                   ],
@@ -17404,7 +17992,7 @@
                   "parameters": [
                     "CameraTargetX",
                     "=",
-                    "Player.PositionRecord[floor((2 - CameraLagTimer) * 60 / 2) * 2]"
+                    "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(CameraLagTimer*60)*2-2]"
                   ]
                 },
                 {
@@ -17414,7 +18002,7 @@
                   "parameters": [
                     "CameraTargetY",
                     "=",
-                    "Player.PositionRecord[floor((2 - CameraLagTimer) * 60 / 2) * 2 + 1]"
+                    "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(CameraLagTimer*60)*2-1]"
                   ]
                 },
                 {
