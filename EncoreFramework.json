@@ -1152,6 +1152,15 @@
         "name": "assets\\HUD\\numbers.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/RedSpring.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpring",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -6643,7 +6652,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 8,
         "gridHeight": 8,
@@ -6651,8 +6660,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": true,
-        "zoomFactor": 0.6522987871358794,
+        "snap": false,
+        "zoomFactor": 0.21122368404886055,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -6680,7 +6689,7 @@
           "name": "Player",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 72,
+          "x": 136,
           "y": 496,
           "zOrder": 1,
           "numberProperties": [],
@@ -7455,7 +7464,7 @@
             "tilemapJsonFile": "layouts/testlevel.json",
             "tilesetJsonFile": "layouts/tileset.json",
             "collisionMaskTag": "layer0",
-            "debugMode": false,
+            "debugMode": true,
             "fillColor": "255;0;0",
             "outlineColor": "255;255;255",
             "fillOpacity": 64,
@@ -7781,6 +7790,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
@@ -8697,6 +8710,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8835,6 +8849,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -9562,6 +9577,17 @@
                                     "Ground",
                                     "True",
                                     ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "StringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Action",
+                                    "=",
+                                    "\"Roll\""
                                   ]
                                 }
                               ],
@@ -13518,6 +13544,7 @@
                       "actions": [],
                       "events": [
                         {
+                          "disabled": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -13583,11 +13610,10 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberObjectVariable"
+                                "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Player",
-                                "GroundAngle",
+                                "NewGroundAngle",
                                 "=",
                                 "LeftAngle"
                               ]
@@ -13643,11 +13669,10 @@
                             },
                             {
                               "type": {
-                                "value": "SetNumberObjectVariable"
+                                "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "Player",
-                                "GroundAngle",
+                                "NewGroundAngle",
                                 "=",
                                 "RightAngle"
                               ]
@@ -13713,7 +13738,7 @@
                                   },
                                   "parameters": [
                                     "LeftDistance",
-                                    "<=",
+                                    "<",
                                     "RightDistance"
                                   ]
                                 }
@@ -13721,11 +13746,10 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberObjectVariable"
+                                    "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "GroundAngle",
+                                    "NewGroundAngle",
                                     "=",
                                     "LeftAngle"
                                   ]
@@ -13741,7 +13765,7 @@
                                   },
                                   "parameters": [
                                     "LeftDistance",
-                                    ">",
+                                    ">=",
                                     "RightDistance"
                                   ]
                                 }
@@ -13749,15 +13773,31 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberObjectVariable"
+                                    "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "GroundAngle",
+                                    "NewGroundAngle",
                                     "=",
                                     "RightAngle"
                                   ]
                                 }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "GroundAngle",
+                                "+",
+                                "AngleDifference(NewGroundAngle, Player.GroundAngle)*3/2"
                               ]
                             }
                           ]
@@ -13843,6 +13883,12 @@
                         {
                           "folded": true,
                           "name": "RightDistance",
+                          "type": "number",
+                          "value": 0
+                        },
+                        {
+                          "folded": true,
+                          "name": "NewGroundAngle",
                           "type": "number",
                           "value": 0
                         }
@@ -14530,7 +14576,7 @@
                         "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
                       },
                       "parameters": [
-                        "Player",
+                        "PlayerSkin",
                         "Animation",
                         "=",
                         "1"
@@ -14544,7 +14590,7 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "folded": true,
-                  "name": "Stand - Standing, walking, running, skidding",
+                  "name": "Stand - Standing, walking, running",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -14582,6 +14628,18 @@
                           ],
                           "actions": [],
                           "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Jump"
+                            },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
@@ -14645,31 +14703,8 @@
                               ]
                             },
                             {
-                              "type": "BuiltinCommonInstructions::Comment",
-                              "color": {
-                                "b": 109,
-                                "g": 230,
-                                "r": 255,
-                                "textB": 0,
-                                "textG": 0,
-                                "textR": 0
-                              },
-                              "comment": "Balancing"
-                            },
-                            {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Collision.FloorCentre.Collision",
-                                    "=",
-                                    "0"
-                                  ]
-                                },
                                 {
                                   "type": {
                                     "value": "NumberObjectVariable"
@@ -14685,281 +14720,29 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
-                                      },
-                                      "parameters": [],
-                                      "subInstructions": [
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Direction",
-                                                "=",
-                                                "1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Collision.FloorLeft.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Direction",
-                                                "=",
-                                                "-1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Collision.FloorRight.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin",
-                                        "Animation",
-                                        "=",
-                                        "\"Balancing\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetBooleanVariable"
-                                      },
-                                      "parameters": [
-                                        "Balancing",
-                                        "True",
-                                        ""
-                                      ]
-                                    }
-                                  ]
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Balancing"
                                 },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
                                       "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
-                                      },
-                                      "parameters": [],
-                                      "subInstructions": [
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Direction",
-                                                "=",
-                                                "-1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Collision.FloorLeft.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::And"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Direction",
-                                                "=",
-                                                "1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Collision.FloorRight.Collision",
-                                                "True",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin",
-                                        "Animation",
-                                        "=",
-                                        "\"BackBalancing\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetBooleanVariable"
-                                      },
-                                      "parameters": [
-                                        "Balancing",
-                                        "True",
-                                        ""
-                                      ]
-                                    }
-                                  ],
-                                  "events": [
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "StringObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Character",
-                                            "=",
-                                            "\"Tails\""
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Direction",
-                                            "=",
-                                            "-Player.Direction"
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Comment",
-                              "color": {
-                                "b": 109,
-                                "g": 230,
-                                "r": 255,
-                                "textB": 0,
-                                "textG": 0,
-                                "textR": 0
-                              },
-                              "comment": ""
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "XSpeed",
-                                    "=",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BooleanVariable"
-                                  },
-                                  "parameters": [
-                                    "Balancing",
-                                    "=",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
+                                        "value": "BooleanObjectVariable"
                                       },
                                       "parameters": [
                                         "Player",
-                                        "Input.YAxis",
+                                        "Collision.FloorCentre.Collision",
                                         "=",
-                                        "-1"
+                                        "0"
                                       ]
                                     }
                                   ],
@@ -14972,10 +14755,22 @@
                                         "Player",
                                         "Action",
                                         "=",
-                                        "\"LookUp\""
+                                        "\"Balancing\""
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Look up/Duck"
                                 },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
@@ -15005,6 +14800,35 @@
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Input.YAxis",
+                                        "=",
+                                        "-1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetStringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Action",
+                                        "=",
+                                        "\"LookUp\""
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -15025,6 +14849,16 @@
                               "conditions": [
                                 {
                                   "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "abs(Player.XSpeed / 60)",
+                                    ">=",
+                                    "0.5"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
@@ -15032,16 +14866,6 @@
                                     "Input.YAxis",
                                     "=",
                                     "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "abs(Player.XSpeed / 60)",
-                                    ">=",
-                                    "0.5"
                                   ]
                                 }
                               ],
@@ -15106,17 +14930,6 @@
                                     "=",
                                     "-Player.Direction"
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                  },
-                                  "parameters": [
-                                    "PlayerSkin",
-                                    "Animation",
-                                    "!=",
-                                    "\"Skidding\""
-                                  ]
                                 }
                               ],
                               "actions": [
@@ -15134,24 +14947,65 @@
                                 },
                                 {
                                   "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                    "value": "SetStringObjectVariable"
                                   },
                                   "parameters": [
-                                    "PlayerSkin",
-                                    "Animation",
+                                    "Player",
+                                    "Action",
                                     "=",
                                     "\"Skidding\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Pushing"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.WallLeft.Collision",
+                                    "True",
+                                    ""
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "TailsTails",
-                                    "Animation",
+                                    "Player",
+                                    "Input.XAxis",
                                     "=",
-                                    "\"Jumping\""
+                                    "-1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetStringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Action",
+                                    "=",
+                                    "\"Pushing\""
                                   ]
                                 }
                               ]
@@ -15161,66 +15015,37 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                    "value": "BooleanObjectVariable"
                                   },
                                   "parameters": [
-                                    "PlayerSkin",
-                                    "Animation",
-                                    "=",
-                                    "\"Skidding\""
+                                    "Player",
+                                    "Collision.WallRight.Collision",
+                                    "True",
+                                    ""
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "BuiltinCommonInstructions::Or"
+                                    "value": "NumberObjectVariable"
                                   },
-                                  "parameters": [],
-                                  "subInstructions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                                      },
-                                      "parameters": [
-                                        "Player.XSpeed * Player.Direction",
-                                        "<=",
-                                        "0"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Input.XAxis",
-                                        "=",
-                                        "Player.Direction"
-                                      ]
-                                    }
+                                  "parameters": [
+                                    "Player",
+                                    "Input.XAxis",
+                                    "=",
+                                    "1"
                                   ]
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                    "value": "SetStringObjectVariable"
                                   },
                                   "parameters": [
-                                    "PlayerSkin",
-                                    "Animation",
+                                    "Player",
+                                    "Action",
                                     "=",
-                                    "\"Idle\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                  },
-                                  "parameters": [
-                                    "TailsTails",
-                                    "Animation",
-                                    "=",
-                                    "\"Idle\""
+                                    "\"Pushing\""
                                   ]
                                 }
                               ]
@@ -15244,428 +15069,250 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "XSpeed",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.XAxis",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "XSpeed",
+                                "<",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.XAxis",
+                                "=",
+                                "-1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "-1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "SavedGroundSpeed",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
                               },
                               "parameters": [
                                 "PlayerSkin",
                                 "Animation",
-                                "!=",
-                                "\"Skidding\""
+                                "=",
+                                "\"Idle\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "TailsTails",
+                                "Animation",
+                                "=",
+                                "\"Idle\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                              },
+                              "parameters": [
+                                "PlayerSkin",
+                                "Animation",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "abs(Player.SavedGroundSpeed)",
+                                ">",
+                                "0"
                               ]
                             }
                           ],
-                          "actions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                              },
+                              "parameters": [
+                                "PlayerSkin",
+                                "Animation",
+                                "=",
+                                "1 / (floor(max(0, 8 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
+                              ]
+                            }
+                          ],
                           "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "XSpeed",
+                                    "abs(Player.SavedGroundSpeed)",
                                     ">",
                                     "0"
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "Input.XAxis",
-                                    "=",
-                                    "1"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Direction",
-                                    "=",
-                                    "1"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "XSpeed",
+                                    "abs(Player.SavedGroundSpeed)",
                                     "<",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Input.XAxis",
-                                    "=",
-                                    "-1"
+                                    "Player.TopSpeed"
                                   ]
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Direction",
-                                    "=",
-                                    "-1"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "abs(Player.SavedGroundSpeed)",
-                                    "=",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Input.AllowDirectionalMovement",
-                                        "True",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Input.XAxis",
-                                        "!=",
-                                        "0"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "BooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Ground",
-                                        "True",
-                                        "0"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
-                                      },
-                                      "parameters": [],
-                                      "subInstructions": [
-                                        {
-                                          "type": {
-                                            "value": "BooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Collision.WallLeft.Collision",
-                                            "True",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Collision.WallRight.Collision",
-                                            "True",
-                                            ""
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin",
-                                        "Animation",
-                                        "=",
-                                        "\"Pushing\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin",
-                                        "Animation",
-                                        "=",
-                                        "1 / (floor(max(0, 8 - abs(Player.SavedGroundSpeed / 60.0)) * 4) + 1)"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetBooleanVariable"
-                                      },
-                                      "parameters": [
-                                        "Pushing",
-                                        "True",
-                                        "="
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "TailsTails",
-                                        "Animation",
-                                        "=",
-                                        "\"Jumping\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "TailsTails",
-                                        "XOffset",
-                                        "=",
-                                        "8"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "TailsTails",
-                                        "YOffset",
-                                        "=",
-                                        "5"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BooleanVariable"
-                                      },
-                                      "parameters": [
-                                        "Pushing",
-                                        "=",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "BooleanVariable"
-                                      },
-                                      "parameters": [
-                                        "Balancing",
-                                        "=",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Once"
-                                      },
-                                      "parameters": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin",
-                                        "Animation",
-                                        "=",
-                                        "\"Idle\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "TailsTails",
-                                        "Animation",
-                                        "=",
-                                        "\"Idle\""
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
-                              "variables": [
-                                {
-                                  "folded": true,
-                                  "name": "Pushing",
-                                  "type": "boolean",
-                                  "value": false
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                                  },
-                                  "parameters": [
-                                    "abs(Player.SavedGroundSpeed)",
-                                    ">",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                   },
                                   "parameters": [
                                     "PlayerSkin",
                                     "Animation",
                                     "=",
-                                    "1 / (floor(max(0, 8 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                                      },
-                                      "parameters": [
-                                        "abs(Player.SavedGroundSpeed)",
-                                        ">",
-                                        "0"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                                      },
-                                      "parameters": [
-                                        "abs(Player.SavedGroundSpeed)",
-                                        "<",
-                                        "Player.TopSpeed"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin",
-                                        "Animation",
-                                        "=",
-                                        "\"Walking\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "TailsTails",
-                                        "Animation",
-                                        "=",
-                                        "\"Void\""
-                                      ]
-                                    }
+                                    "\"Walking\""
                                   ]
                                 },
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                                      },
-                                      "parameters": [
-                                        "abs(Player.SavedGroundSpeed)",
-                                        ">=",
-                                        "Player.TopSpeed"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin",
-                                        "Animation",
-                                        "=",
-                                        "\"Running\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                      },
-                                      "parameters": [
-                                        "TailsTails",
-                                        "Animation",
-                                        "=",
-                                        "\"Void\""
-                                      ]
-                                    }
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "TailsTails",
+                                    "Animation",
+                                    "=",
+                                    "\"Void\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "abs(Player.SavedGroundSpeed)",
+                                    ">=",
+                                    "Player.TopSpeed"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin",
+                                    "Animation",
+                                    "=",
+                                    "\"Running\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "TailsTails",
+                                    "Animation",
+                                    "=",
+                                    "\"Void\""
                                   ]
                                 }
                               ]
@@ -15758,95 +15405,6 @@
                                 "\"Waiting2\""
                               ]
                             }
-                          ]
-                        }
-                      ],
-                      "variables": [
-                        {
-                          "folded": true,
-                          "name": "Balancing",
-                          "type": "boolean",
-                          "value": false
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Or"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::Name"
-                              },
-                              "parameters": [
-                                "PlayerSkin",
-                                "Animation",
-                                "=",
-                                "\"Skidding\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::Name"
-                              },
-                              "parameters": [
-                                "PlayerSkin",
-                                "Animation",
-                                "=",
-                                "\"Balancing\""
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "TailsTails",
-                            "Animation",
-                            "=",
-                            "\"Jumping\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "TailsTails",
-                            "XOffset",
-                            "=",
-                            "8"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SetNumberObjectVariable"
-                          },
-                          "parameters": [
-                            "TailsTails",
-                            "YOffset",
-                            "=",
-                            "5"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
-                          },
-                          "parameters": [
-                            "PlayerSkin",
-                            "Animation",
-                            "=",
-                            "1"
                           ]
                         }
                       ]
@@ -16044,385 +15602,6 @@
                                 "\"Jump\""
                               ]
                             }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Jump - Jumping and air roll",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Action",
-                            "=",
-                            "\"Jump\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "PlayerSkin",
-                            "Animation",
-                            "=",
-                            "\"Jumping\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
-                          },
-                          "parameters": [
-                            "PlayerSkin",
-                            "Animation",
-                            "=",
-                            "1 / (floor(max(0, 4 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "TailsTails",
-                            "Animation",
-                            "=",
-                            "\"Jumping\""
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "Perform jump"
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "JumpFlag",
-                                "True",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [],
-                          "events": [
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Ground",
-                                    "True",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "XSpeed",
-                                    "=",
-                                    "Player.XSpeed*cos(ToRad(Player.GroundAngle)) -Player.JumpForce * sin(ToRad(Player.GroundAngle))"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "YSpeed",
-                                    "=",
-                                    "Player.JumpForce * cos(ToRad(Player.GroundAngle))"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Ground",
-                                    "False",
-                                    "Player.JumpForce"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PlaySound"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "audio/sfx/jump.wav",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "DebuggerTools::ConsoleLog"
-                                  },
-                                  "parameters": [
-                                    "ToString(Player.XSpeed)",
-                                    "\"info\"",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 109,
-                            "g": 230,
-                            "r": 255,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": ""
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Ground",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Action",
-                                "=",
-                                "\"Stand\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "ControlLock",
-                                "False",
-                                "\"Stand\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreX"
-                              },
-                              "parameters": [
-                                "Player",
-                                "+",
-                                "5 * sin(ToRad(Player.SensorAngle))"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreY"
-                              },
-                              "parameters": [
-                                "Player",
-                                "-",
-                                "5 * cos(ToRad(Player.SensorAngle))"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Input.A",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "YSpeed",
-                                "<",
-                                "-4*60"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "JumpFlag",
-                                "True",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "YSpeed",
-                                "=",
-                                "-4*60"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "ControlLock",
-                                "=",
-                                "1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Input.XAxis",
-                                "!=",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Direction",
-                                "=",
-                                "Player.Input.XAxis"
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "JumpFlag",
-                            "True",
-                            "\"Jump\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Action",
-                            "!=",
-                            "\"Jump\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "JumpFlag",
-                            "False",
-                            ""
                           ]
                         }
                       ]
@@ -17162,6 +16341,660 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "folded": true,
+                  "name": "Balancing",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Action",
+                            "=",
+                            "\"Balancing\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "XOffset",
+                            "=",
+                            "8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "YOffset",
+                            "=",
+                            "5"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.FloorRight.Collision",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "BalancingDirection",
+                                "=",
+                                "-1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Character",
+                                "=",
+                                "\"Tails\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "BalancingDirection"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "BalancingDirection"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "PlayerSkin",
+                                "Animation",
+                                "=",
+                                "\"Balancing\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "!=",
+                                "BalancingDirection"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "PlayerSkin",
+                                "Animation",
+                                "=",
+                                "\"BackBalancing\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.APressed",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.CeilingLeft.Collision",
+                                "=",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.CeilingRight.Collision",
+                                "=",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Jump\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "JumpFlag",
+                                "True",
+                                "\"Jump\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "XSpeed",
+                                "!=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Stand\""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "BalancingDirection",
+                          "type": "number",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Skidding",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Action",
+                            "=",
+                            "\"Skidding\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "\"Skidding\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "XOffset",
+                            "=",
+                            "8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "YOffset",
+                            "=",
+                            "5"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.APressed",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.CeilingLeft.Collision",
+                                "=",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.CeilingRight.Collision",
+                                "=",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Jump\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "JumpFlag",
+                                "True",
+                                "\"Jump\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "!=",
+                                "sign(Player.XSpeed)"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Stand\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "Player.Input.XAxis"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Stand\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Pushing",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Action",
+                            "=",
+                            "\"Pushing\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "\"Pushing\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "1 / (floor(max(0, 8 - abs(Player.SavedGroundSpeed / 60.0)) * 4) + 1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "XOffset",
+                            "=",
+                            "8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "YOffset",
+                            "=",
+                            "5"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.APressed",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.CeilingLeft.Collision",
+                                "=",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.CeilingRight.Collision",
+                                "=",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Jump\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "JumpFlag",
+                                "True",
+                                "\"Jump\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "Player.Direction*Player.Input.XAxis",
+                                "<=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Stand\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
                   "name": "Spindash",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -17563,6 +17396,385 @@
                                 ""
                               ]
                             }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "folded": true,
+                  "name": "Jump - Jumping and air roll",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Action",
+                            "=",
+                            "\"Jump\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "Animation",
+                            "=",
+                            "1 / (floor(max(0, 4 - abs(Player.SavedGroundSpeed / 60.0))) + 1)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "TailsTails",
+                            "Animation",
+                            "=",
+                            "\"Jumping\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Perform jump"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "JumpFlag",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Ground",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "XSpeed",
+                                    "=",
+                                    "Player.XSpeed*cos(ToRad(Player.GroundAngle)) -Player.JumpForce * sin(ToRad(Player.GroundAngle))"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "YSpeed",
+                                    "=",
+                                    "Player.JumpForce * cos(ToRad(Player.GroundAngle))"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Ground",
+                                    "False",
+                                    "Player.JumpForce"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "audio/sfx/jump.wav",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "ToString(Player.XSpeed)",
+                                    "\"info\"",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Ground",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Stand\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "ControlLock",
+                                "False",
+                                "\"Stand\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "Player",
+                                "+",
+                                "5 * sin(ToRad(Player.SensorAngle))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "Player",
+                                "-",
+                                "5 * cos(ToRad(Player.SensorAngle))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.A",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "YSpeed",
+                                "<",
+                                "-4*60"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "JumpFlag",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "YSpeed",
+                                "=",
+                                "-4*60"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "ControlLock",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.XAxis",
+                                "!=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Direction",
+                                "=",
+                                "Player.Input.XAxis"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "JumpFlag",
+                            "True",
+                            "\"Jump\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Action",
+                            "!=",
+                            "\"Jump\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "JumpFlag",
+                            "False",
+                            ""
                           ]
                         }
                       ]
@@ -18047,6 +18259,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Layer changing",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -22707,6 +22920,17 @@
                             ""
                           ]
                         }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "YSpeed",
+                        ">=",
+                        "0"
                       ]
                     }
                   ],
