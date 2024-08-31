@@ -6704,7 +6704,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 8,
         "gridHeight": 8,
@@ -6712,8 +6712,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": true,
-        "zoomFactor": 1.1849543171285568,
+        "snap": false,
+        "zoomFactor": 0.8791724881241376,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -6741,7 +6741,7 @@
           "name": "Player",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 80,
+          "x": 96,
           "y": 496,
           "zOrder": 1,
           "numberProperties": [],
@@ -7096,7 +7096,7 @@
           "name": "LayerSwapper",
           "persistentUuid": "3f632f45-1e5f-4e04-adc5-d01981ffaa63",
           "width": 8,
-          "x": 1704,
+          "x": 1712,
           "y": 512,
           "zOrder": 14,
           "numberProperties": [],
@@ -7996,7 +7996,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Player Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8797,7 +8796,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8936,7 +8934,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -9595,13 +9592,13 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "StringObjectVariable"
+                                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "Action",
+                                    "PlayerSkin",
+                                    "Animation",
                                     "=",
-                                    "\"Roll\""
+                                    "\"Jumping\""
                                   ]
                                 }
                               ],
@@ -10013,6 +10010,33 @@
                             },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "abs(AngleDifference(Player.GroundAngle, 0))",
+                                    ">",
+                                    "5"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "SensorHeight",
+                                    "=",
+                                    "-Player.HeightRadius"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
                                 {
@@ -10039,7 +10063,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "-Player.HeightRadius"
+                                    "SensorHeight"
                                   ]
                                 },
                                 {
@@ -10099,7 +10123,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "-Player.HeightRadius"
+                                    "SensorHeight"
                                   ]
                                 },
                                 {
@@ -10159,7 +10183,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "-Player.HeightRadius"
+                                    "SensorHeight"
                                   ]
                                 },
                                 {
@@ -10219,7 +10243,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "-Player.HeightRadius"
+                                    "SensorHeight"
                                   ]
                                 },
                                 {
@@ -10450,6 +10474,12 @@
                               "name": "Offset",
                               "type": "number",
                               "value": 64
+                            },
+                            {
+                              "folded": true,
+                              "name": "SensorHeight",
+                              "type": "number",
+                              "value": 0
                             }
                           ]
                         },
@@ -15020,7 +15050,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -18014,6 +18043,24 @@
                           "actions": [],
                           "events": [
                             {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "AddForceXY"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Player.XSpeed * cos(ToRad(Player.GroundAngle))",
+                                    "Player.XSpeed * sin(ToRad(Player.GroundAngle))",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -18037,7 +18084,7 @@
                                     "Player",
                                     "XSpeed",
                                     "=",
-                                    "Player.XSpeed*cos(ToRad(Player.GroundAngle)) -Player.JumpForce * sin(ToRad(Player.GroundAngle))"
+                                    "Player.SavedGroundSpeed * cos(ToRad(Player.GroundAngle))-Player.JumpForce * sin(ToRad(Player.GroundAngle))"
                                   ]
                                 },
                                 {
@@ -18048,7 +18095,7 @@
                                     "Player",
                                     "YSpeed",
                                     "=",
-                                    "Player.JumpForce * cos(ToRad(Player.GroundAngle))"
+                                    "Player.SavedGroundSpeed * sin(ToRad(Player.GroundAngle))+Player.JumpForce * cos(ToRad(Player.GroundAngle))"
                                   ]
                                 },
                                 {
@@ -18071,6 +18118,16 @@
                                     "audio/sfx/jump.wav",
                                     "",
                                     "",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "ToString(-Player.XSpeed*sin(ToRad(Player.GroundAngle)))",
+                                    "\"info\"",
                                     ""
                                   ]
                                 }
