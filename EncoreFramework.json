@@ -6713,7 +6713,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.8791724881241376,
+        "zoomFactor": 1.0377419597320539,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -6741,7 +6741,7 @@
           "name": "Player",
           "persistentUuid": "7ffcc90d-c7d9-4110-8cff-5eede2d98085",
           "width": 0,
-          "x": 96,
+          "x": 112,
           "y": 496,
           "zOrder": 1,
           "numberProperties": [],
@@ -7550,7 +7550,7 @@
             "tilemapJsonFile": "layouts/testlevel.json",
             "tilesetJsonFile": "layouts/tileset.json",
             "collisionMaskTag": "layer0",
-            "debugMode": true,
+            "debugMode": false,
             "fillColor": "255;0;0",
             "outlineColor": "255;255;255",
             "fillOpacity": 64,
@@ -7962,7 +7962,7 @@
               "parameters": [
                 "",
                 "1",
-                "0.3",
+                "0.5",
                 ""
               ]
             }
@@ -8241,7 +8241,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8516,222 +8515,240 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Button_pressed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Up\"",
-                                    "\"Up\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Axis_pushed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Left\"",
-                                    "\"Up\"",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Input.YAxis",
-                                "=",
-                                "-1"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Button_pressed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Down\"",
-                                    "\"Up\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Axis_pushed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Left\"",
-                                    "\"Down\"",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Input.YAxis",
-                                "=",
-                                "1"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Button_pressed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Left\"",
-                                    "\"Up\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Axis_pushed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Left\"",
-                                    "\"Left\"",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Input.XAxis",
-                                "=",
-                                "-1"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Button_pressed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Right\"",
-                                    "\"Up\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Gamepads::C_Axis_pushed"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "1",
-                                    "\"Left\"",
-                                    "\"Right\"",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Input.XAxis",
-                                "=",
-                                "1"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "Gamepads::C_Button_pressed"
+                                "value": "Gamepads::C_Controller_X_is_connected"
                               },
                               "parameters": [
                                 "",
                                 "1",
-                                "\"A\"",
                                 ""
                               ]
                             }
                           ],
-                          "actions": [
+                          "actions": [],
+                          "events": [
                             {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Input.A",
-                                "=",
-                                "1"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Button_pressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Up\"",
+                                        "\"Up\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Axis_pushed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Left\"",
+                                        "\"Up\"",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Input.YAxis",
+                                    "=",
+                                    "-1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Button_pressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Down\"",
+                                        "\"Up\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Axis_pushed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Left\"",
+                                        "\"Down\"",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Input.YAxis",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Button_pressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Left\"",
+                                        "\"Up\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Axis_pushed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Left\"",
+                                        "\"Left\"",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Input.XAxis",
+                                    "=",
+                                    "-1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Button_pressed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Right\"",
+                                        "\"Up\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Gamepads::C_Axis_pushed"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "1",
+                                        "\"Left\"",
+                                        "\"Right\"",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Input.XAxis",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Gamepads::C_Button_pressed"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "1",
+                                    "\"A\"",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Input.A",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
                               ]
                             }
                           ]
@@ -8796,6 +8813,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Movement",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8934,6 +8952,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Sensors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10333,7 +10352,7 @@
                                   },
                                   "parameters": [
                                     "SensorsData",
-                                    "Player.HeightRadius+Offset"
+                                    "Player.HeightRadius+32"
                                   ]
                                 },
                                 {
@@ -11749,6 +11768,17 @@
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.AngleCeilingCentre.Collision",
+                                "True",
+                                ""
+                              ]
                             }
                           ],
                           "actions": [],
@@ -11762,68 +11792,103 @@
                                   },
                                   "parameters": [
                                     "Player",
-                                    "Collision.AngleCeilingCentre.Collision",
+                                    "Collision.AngleCeilingLeft.Collision",
                                     "True",
                                     ""
                                   ]
                                 }
                               ],
-                              "actions": [],
-                              "events": [
+                              "actions": [
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Collision.AngleCeilingLeft.Collision",
-                                        "True",
-                                        ""
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberVariable"
-                                      },
-                                      "parameters": [
-                                        "CeilingAngle",
-                                        "=",
-                                        "clamp(AngleBetweenPositions(Player.Collision.AngleCeilingCentre.X, Player.Collision.AngleCeilingCentre.Y, Player.Collision.AngleCeilingRight.X, Player.Collision.AngleCeilingRight.Y), 0, 360)"
-                                      ]
-                                    }
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "CeilingAngle",
+                                    "=",
+                                    "AngleBetweenPositions(Player.Collision.AngleCeilingCentre.X, Player.Collision.AngleCeilingCentre.Y, Player.Collision.AngleCeilingRight.X, Player.Collision.AngleCeilingRight.Y)"
                                   ]
-                                },
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Collision.AngleCeilingRight.Collision",
-                                        "True",
-                                        ""
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberVariable"
-                                      },
-                                      "parameters": [
-                                        "CeilingAngle",
-                                        "=",
-                                        "clamp(AngleBetweenPositions(Player.Collision.AngleCeilingCentre.X, Player.Collision.AngleCeilingCentre.Y, Player.Collision.AngleCeilingRight.X, Player.Collision.AngleCeilingRight.Y) + 180, 0, 360)"
-                                      ]
-                                    }
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.AngleCeilingRight.Collision",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "CeilingAngle",
+                                    "=",
+                                    "AngleBetweenPositions(Player.Collision.AngleCeilingCentre.X, Player.Collision.AngleCeilingCentre.Y, Player.Collision.AngleCeilingRight.X, Player.Collision.AngleCeilingRight.Y) + 180"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "CeilingAngle",
+                                    "<",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "CeilingAngle",
+                                    "+",
+                                    "360"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "CeilingAngle",
+                                    ">=",
+                                    "360"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "CeilingAngle",
+                                    "-",
+                                    "360"
                                   ]
                                 }
                               ]
@@ -11876,7 +11941,7 @@
                                   "parameters": [
                                     "Player",
                                     "YSpeed",
-                                    "!=",
+                                    "<",
                                     "0"
                                   ]
                                 }
@@ -15050,6 +15115,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -18120,16 +18186,6 @@
                                     "",
                                     ""
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "DebuggerTools::ConsoleLog"
-                                  },
-                                  "parameters": [
-                                    "ToString(-Player.XSpeed*sin(ToRad(Player.GroundAngle)))",
-                                    "\"info\"",
-                                    ""
-                                  ]
                                 }
                               ]
                             }
@@ -18739,55 +18795,129 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Skins"
+                  "comment": "Skins\nI made that offset value so the character skins better stick to the floor on slopes\nThat offset value function gets closer to 0 on angles like 0, 90, 180, 270, and reaches its maximum value on angles between those"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "value": "MettreXY"
-                      },
-                      "parameters": [
-                        "PlayerSkin",
-                        "=",
-                        "Player.X()",
-                        "=",
-                        "Player.Y()"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Angle"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "!=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "AngleSin",
+                            "=",
+                            "sin(ToRad(PlayerSkin.Angle()))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "AngleCos",
+                            "=",
+                            "cos(ToRad(PlayerSkin.Angle()))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "OffsetValue",
+                            "=",
+                            "abs(AngleSin*AngleCos)*2"
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
-                      },
-                      "parameters": [
-                        "Player",
-                        "Resizable",
-                        "=",
-                        "Player.WidthRadius*2"
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "PlayerSkin",
+                            "=",
+                            "Player.X()-AngleSin*OffsetValue",
+                            "=",
+                            "Player.Y()+AngleCos*OffsetValue"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Resizable",
+                            "=",
+                            "Player.WidthRadius*2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                          },
+                          "parameters": [
+                            "Player",
+                            "Resizable",
+                            "=",
+                            "Player.HeightRadius*2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetAngle"
+                          },
+                          "parameters": [
+                            "Player",
+                            "=",
+                            "Player.SensorAngle"
+                          ]
+                        }
                       ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "folded": true,
+                      "name": "OffsetValue",
+                      "type": "number",
+                      "value": 0
                     },
                     {
-                      "type": {
-                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
-                      },
-                      "parameters": [
-                        "Player",
-                        "Resizable",
-                        "=",
-                        "Player.HeightRadius*2"
-                      ]
+                      "folded": true,
+                      "name": "AngleSin",
+                      "type": "number",
+                      "value": 0
                     },
                     {
-                      "type": {
-                        "value": "SetAngle"
-                      },
-                      "parameters": [
-                        "Player",
-                        "=",
-                        "Player.SensorAngle"
-                      ]
+                      "folded": true,
+                      "name": "AngleCos",
+                      "type": "number",
+                      "value": 0
                     }
                   ]
                 },
@@ -19667,75 +19797,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "XSpeed",
-                "=",
-                "-15*60"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "Ground",
-                "True",
-                "360-90"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetStringObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "Action",
-                "=",
-                "\"Roll\""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "GroundAngle",
-                "=",
-                "90"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangeTimeScale"
-              },
-              "parameters": [
-                "",
-                "1"
-              ]
-            }
-          ]
         }
       ]
     }
