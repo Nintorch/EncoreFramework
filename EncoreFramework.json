@@ -6327,6 +6327,12 @@
   "variables": [
     {
       "folded": true,
+      "name": "RotationSnap",
+      "type": "number",
+      "value": 45
+    },
+    {
+      "folded": true,
       "name": "PlayingMusic",
       "type": "string",
       "value": ""
@@ -6713,7 +6719,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.0377419597320539,
+        "zoomFactor": 0.571260690735804,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -7910,7 +7916,7 @@
               "parameters": [
                 "",
                 "yes",
-                "yes"
+                ""
               ]
             },
             {
@@ -8241,6 +8247,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Input",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15115,7 +15122,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Actions and animations",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15483,6 +15489,17 @@
                                     "abs(Player.XSpeed / 60)",
                                     ">=",
                                     "4"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Input.XAxis",
+                                    "=",
+                                    "-sign(Player.XSpeed)"
                                   ]
                                 },
                                 {
@@ -17268,6 +17285,84 @@
                           "conditions": [
                             {
                               "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.WallRight.Collision",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.XAxis",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "PushingDirection",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.WallLeft.Collision",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Input.XAxis",
+                                "=",
+                                "-1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "PushingDirection",
+                                "=",
+                                "-1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
                                 "value": "NumberObjectVariable"
                               },
                               "parameters": [
@@ -17330,12 +17425,30 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "Player.Direction*Player.Input.XAxis",
-                                "<=",
-                                "0"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "Player.Direction*Player.Input.XAxis",
+                                    "<=",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                  },
+                                  "parameters": [
+                                    "Player.Direction*PushingDirection",
+                                    "<=",
+                                    "0"
+                                  ]
+                                }
                               ]
                             }
                           ],
@@ -17353,6 +17466,14 @@
                             }
                           ]
                         }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "PushingDirection",
+                          "type": "number",
+                          "value": 0
+                        }
                       ]
                     }
                   ],
@@ -17363,7 +17484,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Spindash",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -17629,17 +17749,6 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "SpinDashRev",
-                                "+",
-                                "2"
-                              ]
-                            },
-                            {
-                              "type": {
                                 "value": "PlaySoundCanal"
                               },
                               "parameters": [
@@ -17659,7 +17768,18 @@
                                 "",
                                 "1",
                                 "=",
-                                "1 + Player.SpinDashRev / 16"
+                                "1 + Player.SpinDashRev / 10"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "SpinDashRev",
+                                "+",
+                                "2"
                               ]
                             },
                             {
@@ -18559,28 +18679,6 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "GroundAngle",
-                        "<",
-                        "330"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "NumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Player",
-                        "GroundAngle",
-                        ">",
-                        "30"
-                      ]
                     }
                   ],
                   "actions": [
@@ -18591,7 +18689,7 @@
                       "parameters": [
                         "PlayerSkin",
                         "=",
-                        "round(Player.GroundAngle / 45.0) * 45.0"
+                        "round(Player.GroundAngle / RotationSnap) * RotationSnap"
                       ]
                     }
                   ]
@@ -18673,7 +18771,7 @@
                       "parameters": [
                         "TailsTails",
                         "=",
-                        "round(AngleBetweenPositions(0, 0, Player.ForceX(), Player.ForceY())/45.0)*45.0"
+                        "round(AngleBetweenPositions(0, 0, Player.ForceX(), Player.ForceY())/RotationSnap)*RotationSnap"
                       ]
                     },
                     {
@@ -18740,7 +18838,7 @@
                       "parameters": [
                         "TailsTails",
                         "=",
-                        "round(AngleBetweenPositions(0, 0, Player.XSpeed, Player.YSpeed)/45.0)*45.0"
+                        "round(AngleBetweenPositions(0, 0, Player.XSpeed, Player.YSpeed)/RotationSnap)*RotationSnap"
                       ]
                     },
                     {
@@ -18844,7 +18942,7 @@
                           "parameters": [
                             "OffsetValue",
                             "=",
-                            "abs(AngleSin*AngleCos)*2"
+                            "round(abs(AngleSin*AngleCos)*2)"
                           ]
                         }
                       ]
