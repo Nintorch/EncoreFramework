@@ -1400,6 +1400,12 @@
         },
         {
           "folded": true,
+          "name": "FlashTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
           "name": "Input",
           "type": "structure",
           "children": [
@@ -5717,7 +5723,14 @@
       "name": "SpindashDust",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "folded": true,
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -8207,6 +8220,10 @@
           "type": "AnimatableCapability::AnimatableBehavior"
         },
         {
+          "name": "BitmapCounter",
+          "type": "HelperExtension::BitmapCounter"
+        },
+        {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
         },
@@ -8358,6 +8375,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8367,6 +8385,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8382,6 +8401,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Setup",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -15603,7 +15623,7 @@
                           "colorR": 74,
                           "creationTime": 0,
                           "folded": true,
-                          "name": "Check for Being Hurt",
+                          "name": "Hurting",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
@@ -15660,6 +15680,17 @@
                                         "DamageX",
                                         "=",
                                         "Spikes.X()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "JumpFlag",
+                                        "=",
+                                        "0"
                                       ]
                                     },
                                     {
@@ -15732,22 +15763,17 @@
                               "events": [
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Once"
-                                      },
-                                      "parameters": []
-                                    }
-                                  ],
+                                  "conditions": [],
                                   "actions": [
                                     {
                                       "type": {
-                                        "value": "ResetObjectTimer"
+                                        "value": "SetNumberObjectVariable"
                                       },
                                       "parameters": [
                                         "Player",
-                                        "\"PlayerFlashing\""
+                                        "FlashTimer",
+                                        "+",
+                                        "TimeDelta()"
                                       ]
                                     }
                                   ]
@@ -15782,7 +15808,7 @@
                                         "value": "BuiltinCommonInstructions::CompareNumbers"
                                       },
                                       "parameters": [
-                                        "mod(floor(Player.ObjectTimerElapsedTime(\"PlayerFlashing\") * 60), 8)",
+                                        "mod(floor(Player.FlashTimer * 60), 8)",
                                         ">=",
                                         "4"
                                       ]
@@ -15849,11 +15875,13 @@
                                     },
                                     {
                                       "type": {
-                                        "value": "RemoveObjectTimer"
+                                        "value": "SetNumberObjectVariable"
                                       },
                                       "parameters": [
                                         "Player",
-                                        "\"PlayerFlashing\""
+                                        "FlashTimer",
+                                        "=",
+                                        "0"
                                       ]
                                     },
                                     {
@@ -15921,36 +15949,11 @@
                               ]
                             },
                             {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "StringObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Character",
-                                    "!=",
-                                    "\"Tails\""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "Cache"
-                                  },
-                                  "parameters": [
-                                    "TailsTails"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
                               "colorB": 228,
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -15980,7 +15983,19 @@
                                           ]
                                         }
                                       ],
-                                      "actions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "JumpFlag",
+                                            "=",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
                                       "events": [
                                         {
                                           "type": "BuiltinCommonInstructions::Standard",
@@ -16538,6 +16553,29 @@
                                                 "SavedGroundSpeed",
                                                 "=",
                                                 "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin",
+                                                "Animation",
+                                                "!=",
+                                                "\"Idle\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "inverted": true,
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin",
+                                                "Animation",
+                                                "contains",
+                                                "\"Waiting\""
                                               ]
                                             }
                                           ],
@@ -17097,6 +17135,17 @@
                                             },
                                             {
                                               "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "JumpFlag",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
                                                 "value": "SetStringObjectVariable"
                                               },
                                               "parameters": [
@@ -17212,12 +17261,28 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "BuiltinCommonInstructions::Once"
+                                                "value": "NumberObjectVariable"
                                               },
-                                              "parameters": []
+                                              "parameters": [
+                                                "Player",
+                                                "JumpFlag",
+                                                "=",
+                                                "0"
+                                              ]
                                             }
                                           ],
                                           "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "JumpFlag",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
                                             {
                                               "type": {
                                                 "value": "SetNumberObjectVariable"
@@ -17325,6 +17390,17 @@
                                                 "Action",
                                                 "=",
                                                 "\"Stand\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "JumpFlag",
+                                                "=",
+                                                "0"
                                               ]
                                             },
                                             {
@@ -18383,9 +18459,14 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "BuiltinCommonInstructions::Once"
+                                                "value": "NumberObjectVariable"
                                               },
-                                              "parameters": []
+                                              "parameters": [
+                                                "Player",
+                                                "JumpFlag",
+                                                "=",
+                                                "0"
+                                              ]
                                             }
                                           ],
                                           "actions": [
@@ -18426,6 +18507,17 @@
                                             },
                                             {
                                               "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "JumpFlag",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
                                                 "value": "Create"
                                               },
                                               "parameters": [
@@ -18434,6 +18526,17 @@
                                                 "Player.X()",
                                                 "Player.BoundingBoxBottom()-16",
                                                 ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "SpindashDust",
+                                                "PlayerID",
+                                                "=",
+                                                "Player.PlayerID"
                                               ]
                                             }
                                           ],
@@ -18613,6 +18716,17 @@
                                                 "True",
                                                 ""
                                               ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "SpindashDust",
+                                                "PlayerID",
+                                                "=",
+                                                "Player.PlayerID"
+                                              ]
                                             }
                                           ],
                                           "actions": [
@@ -18678,6 +18792,17 @@
                                               "parameters": [
                                                 "SpindashDust",
                                                 ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "JumpFlag",
+                                                "=",
+                                                "0"
                                               ]
                                             }
                                           ]
@@ -18932,6 +19057,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Jump - Jumping and air roll",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -19254,46 +19380,6 @@
                                                 "Player.Input.XAxis"
                                               ]
                                             }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "NumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "JumpFlag",
-                                            ">",
-                                            "0"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "StringObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Action",
-                                            "!=",
-                                            "\"Jump\""
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "JumpFlag",
-                                            "=",
-                                            "0"
                                           ]
                                         }
                                       ]
@@ -19819,6 +19905,32 @@
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Character",
+                                        "!=",
+                                        "\"Tails\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "Cache"
+                                      },
+                                      "parameters": [
+                                        "TailsTails"
+                                      ]
+                                    }
+                                  ]
                                 }
                               ],
                               "parameters": []
@@ -19954,6 +20066,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -20722,6 +20835,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
