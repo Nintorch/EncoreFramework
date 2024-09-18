@@ -28082,13 +28082,7 @@
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "Character",
-              "type": "string",
-              "value": "Knuckles"
-            }
-          ]
+          "initialVariables": []
         },
         {
           "angle": 0,
@@ -28105,6 +28099,34 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player",
+          "persistentUuid": "6fdfa5cd-9267-4602-b197-ad1654e14b08",
+          "width": 0,
+          "x": 48,
+          "y": 496,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "folded": true,
+              "name": "PlayerID",
+              "type": "number",
+              "value": 1
+            },
+            {
+              "name": "Character",
+              "type": "string",
+              "value": "Tails"
+            }
+          ]
         }
       ],
       "editionSettings": {
@@ -28117,7 +28139,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.6280580275180548,
+        "zoomFactor": 0.9991773419720652,
         "windowMask": false
       }
     },
