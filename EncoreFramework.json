@@ -9094,76 +9094,101 @@
       "value": 45
     },
     {
-      "folded": true,
-      "name": "PlayingMusic",
-      "type": "string",
-      "value": ""
+      "name": "Level",
+      "type": "structure",
+      "children": [
+        {
+          "folded": true,
+          "name": "CharacterMain",
+          "type": "string",
+          "value": "Sonic"
+        },
+        {
+          "folded": true,
+          "name": "CharacterPartner",
+          "type": "string",
+          "value": "Tails"
+        },
+        {
+          "folded": true,
+          "name": "CurrentLevel",
+          "type": "string",
+          "value": "TestLevel"
+        },
+        {
+          "folded": true,
+          "name": "LevelHeight",
+          "type": "number",
+          "value": 1024
+        },
+        {
+          "folded": true,
+          "name": "LevelWidth",
+          "type": "number",
+          "value": 5000
+        },
+        {
+          "folded": true,
+          "name": "PlayingMusic",
+          "type": "string",
+          "value": ""
+        }
+      ]
     },
     {
       "folded": true,
-      "name": "CurrentLevel",
-      "type": "string",
-      "value": "TestLevel"
-    },
-    {
-      "folded": true,
-      "name": "LevelWidth",
-      "type": "number",
-      "value": 5000
-    },
-    {
-      "folded": true,
-      "name": "LevelHeight",
-      "type": "number",
-      "value": 1024
-    },
-    {
-      "folded": true,
-      "name": "CameraMode",
-      "type": "string",
-      "value": "Moving"
-    },
-    {
-      "folded": true,
-      "name": "CameraX",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "CameraY",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "CameraOffsetX",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "CameraOffsetY",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "CameraTargetX",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "CameraTargetY",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "folded": true,
-      "name": "CameraLagTimer",
-      "type": "number",
-      "value": 0
+      "name": "Camera",
+      "type": "structure",
+      "children": [
+        {
+          "folded": true,
+          "name": "LagTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "Mode",
+          "type": "string",
+          "value": "Moving"
+        },
+        {
+          "folded": true,
+          "name": "OffsetX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "OffsetY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "TargetX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "TargetY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "X",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "folded": true,
+          "name": "Y",
+          "type": "number",
+          "value": 0
+        }
+      ]
     },
     {
       "folded": true,
@@ -10396,16 +10421,6 @@
                 "0",
                 "0"
               ]
-            },
-            {
-              "type": {
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "\"dsadas\"",
-                "\"info\"",
-                ""
-              ]
             }
           ]
         },
@@ -10421,7 +10436,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -10434,7 +10448,7 @@
                     "value": "StringVariable"
                   },
                   "parameters": [
-                    "PlayingMusic",
+                    "Level.PlayingMusic",
                     "=",
                     "\"Level\""
                   ]
@@ -10698,7 +10712,7 @@
                 "value": "SetStringVariable"
               },
               "parameters": [
-                "PlayingMusic",
+                "Level.PlayingMusic",
                 "=",
                 "\"Level\""
               ]
@@ -10708,7 +10722,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "LevelWidth",
+                "Level.LevelWidth",
                 "=",
                 "Tilemap.Width()"
               ]
@@ -10718,7 +10732,7 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
-                "LevelHeight",
+                "Level.LevelHeight",
                 "=",
                 "Tilemap.Height()"
               ]
@@ -10800,7 +10814,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Setup",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -10828,6 +10841,93 @@
                             }
                           ],
                           "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerID",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetStringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Character",
+                                    "=",
+                                    "Level.CharacterMain"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "PlayerID",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetStringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Character",
+                                    "=",
+                                    "Level.CharacterPartner"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Character",
+                                        "=",
+                                        "\"\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "Delete"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "BuiltinCommonInstructions::Comment",
                               "color": {
@@ -11224,6 +11324,58 @@
                                 "JumpForce",
                                 "=",
                                 "-6*60"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Speed Shoes"
+                        },
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Acceleration",
+                                "=",
+                                "0.09375*60*60*TimeDelta()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Friction",
+                                "=",
+                                "Player.Acceleration"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "TopSpeed",
+                                "=",
+                                "12*60"
                               ]
                             }
                           ]
@@ -19941,7 +20093,7 @@
                                             "value": "SetStringVariable"
                                           },
                                           "parameters": [
-                                            "CameraMode",
+                                            "Camera.Mode",
                                             "=",
                                             "\"Stop\""
                                           ]
@@ -21214,7 +21366,7 @@
                                                 "value": "SetNumberVariable"
                                               },
                                               "parameters": [
-                                                "CameraLagTimer",
+                                                "Camera.LagTimer",
                                                 "=",
                                                 "(32 - Player.SpinDashRev) / 60"
                                               ]
@@ -22540,7 +22692,7 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "CameraX",
+                            "Camera.X",
                             "=",
                             "Player.X()"
                           ]
@@ -22550,7 +22702,7 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "CameraY",
+                            "Camera.Y",
                             "=",
                             "Player.Y()"
                           ]
@@ -22560,7 +22712,7 @@
                             "value": "SetStringVariable"
                           },
                           "parameters": [
-                            "CameraMode",
+                            "Camera.Mode",
                             "=",
                             "\"Moving\""
                           ]
@@ -22575,7 +22727,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "CameraLagTimer",
+                            "Camera.LagTimer",
                             "=",
                             "0"
                           ]
@@ -22587,7 +22739,7 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "CameraTargetX",
+                            "Camera.TargetX",
                             "=",
                             "Player.X()"
                           ]
@@ -22597,7 +22749,7 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "CameraTargetY",
+                            "Camera.TargetY",
                             "=",
                             "Player.Y()+16"
                           ]
@@ -22612,7 +22764,7 @@
                             "value": "NumberVariable"
                           },
                           "parameters": [
-                            "CameraLagTimer",
+                            "Camera.LagTimer",
                             ">",
                             "0"
                           ]
@@ -22624,9 +22776,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "CameraTargetX",
+                            "Camera.TargetX",
                             "=",
-                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(CameraLagTimer*60)*2-2]"
+                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Camera.LagTimer*60)*2-2]"
                           ]
                         },
                         {
@@ -22634,9 +22786,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "CameraTargetY",
+                            "Camera.TargetY",
                             "=",
-                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(CameraLagTimer*60)*2-1]+16"
+                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Camera.LagTimer*60)*2-1]+16"
                           ]
                         },
                         {
@@ -22644,9 +22796,9 @@
                             "value": "SetNumberVariable"
                           },
                           "parameters": [
-                            "CameraLagTimer",
+                            "Camera.LagTimer",
                             "=",
-                            "max(0, CameraLagTimer-TimeDelta())"
+                            "max(0, Camera.LagTimer-TimeDelta())"
                           ]
                         }
                       ]
@@ -22671,7 +22823,7 @@
                             "value": "StringVariable"
                           },
                           "parameters": [
-                            "CameraMode",
+                            "Camera.Mode",
                             "=",
                             "\"Moving\""
                           ]
@@ -22699,9 +22851,9 @@
                                 "value": "NumberVariable"
                               },
                               "parameters": [
-                                "CameraTargetX",
+                                "Camera.TargetX",
                                 "<",
-                                "CameraX-16"
+                                "Camera.X-16"
                               ]
                             }
                           ],
@@ -22711,9 +22863,9 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "CameraX",
+                                "Camera.X",
                                 "=",
-                                "max(CameraX-16, CameraTargetX+16)"
+                                "max(Camera.X-16, Camera.TargetX+16)"
                               ]
                             }
                           ]
@@ -22726,9 +22878,9 @@
                                 "value": "NumberVariable"
                               },
                               "parameters": [
-                                "CameraTargetX",
+                                "Camera.TargetX",
                                 ">",
-                                "CameraX"
+                                "Camera.X"
                               ]
                             }
                           ],
@@ -22738,9 +22890,9 @@
                                 "value": "SetNumberVariable"
                               },
                               "parameters": [
-                                "CameraX",
+                                "Camera.X",
                                 "=",
-                                "min(CameraX+16, CameraTargetX)"
+                                "min(Camera.X+16, Camera.TargetX)"
                               ]
                             }
                           ]
@@ -22782,9 +22934,9 @@
                                     "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraTargetY",
+                                    "Camera.TargetY",
                                     "<",
-                                    "CameraY-32"
+                                    "Camera.Y-32"
                                   ]
                                 }
                               ],
@@ -22794,9 +22946,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraY",
+                                    "Camera.Y",
                                     "=",
-                                    "CameraTargetY+32"
+                                    "Camera.TargetY+32"
                                   ]
                                 }
                               ]
@@ -22809,9 +22961,9 @@
                                     "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraTargetY",
+                                    "Camera.TargetY",
                                     ">",
-                                    "CameraY+32"
+                                    "Camera.Y+32"
                                   ]
                                 }
                               ],
@@ -22821,9 +22973,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraY",
+                                    "Camera.Y",
                                     "=",
-                                    "CameraTargetY-32"
+                                    "Camera.TargetY-32"
                                   ]
                                 }
                               ]
@@ -22855,9 +23007,9 @@
                                     "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraTargetY",
+                                    "Camera.TargetY",
                                     ">",
-                                    "CameraY"
+                                    "Camera.Y"
                                   ]
                                 }
                               ],
@@ -22867,9 +23019,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraY",
+                                    "Camera.Y",
                                     "=",
-                                    "min(CameraY+8*60*TimeDelta(), CameraTargetY)"
+                                    "min(Camera.Y+8*60*TimeDelta(), Camera.TargetY)"
                                   ]
                                 }
                               ]
@@ -22882,9 +23034,9 @@
                                     "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraTargetY",
+                                    "Camera.TargetY",
                                     "<",
-                                    "CameraY"
+                                    "Camera.Y"
                                   ]
                                 }
                               ],
@@ -22894,9 +23046,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraY",
+                                    "Camera.Y",
                                     "=",
-                                    "max(CameraY-8*60*TimeDelta(), CameraTargetY)"
+                                    "max(Camera.Y-8*60*TimeDelta(), Camera.TargetY)"
                                   ]
                                 }
                               ]
@@ -23014,9 +23166,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraOffsetY",
+                                    "Camera.OffsetY",
                                     "=",
-                                    "max(CameraOffsetY-2*60*TimeDelta(),-104)"
+                                    "max(Camera.OffsetY-2*60*TimeDelta(),-104)"
                                   ]
                                 }
                               ]
@@ -23042,9 +23194,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraOffsetY",
+                                    "Camera.OffsetY",
                                     "=",
-                                    "min(CameraOffsetY+2*60*TimeDelta(),88)"
+                                    "min(Camera.OffsetY+2*60*TimeDelta(),88)"
                                   ]
                                 }
                               ]
@@ -23076,7 +23228,7 @@
                                     "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraOffsetY",
+                                    "Camera.OffsetY",
                                     ">",
                                     "0"
                                   ]
@@ -23088,9 +23240,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraOffsetY",
+                                    "Camera.OffsetY",
                                     "=",
-                                    "max(CameraOffsetY-2*60*TimeDelta(),0)"
+                                    "max(Camera.OffsetY-2*60*TimeDelta(),0)"
                                   ]
                                 }
                               ]
@@ -23103,7 +23255,7 @@
                                     "value": "NumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraOffsetY",
+                                    "Camera.OffsetY",
                                     "<",
                                     "0"
                                   ]
@@ -23115,9 +23267,9 @@
                                     "value": "SetNumberVariable"
                                   },
                                   "parameters": [
-                                    "CameraOffsetY",
+                                    "Camera.OffsetY",
                                     "=",
-                                    "min(CameraOffsetY+2*60*TimeDelta(),0)"
+                                    "min(Camera.OffsetY+2*60*TimeDelta(),0)"
                                   ]
                                 }
                               ]
@@ -23208,7 +23360,7 @@
                           "parameters": [
                             "",
                             "=",
-                            "CameraX+CameraOffsetX",
+                            "Camera.X+Camera.OffsetX",
                             "",
                             "0"
                           ]
@@ -23220,7 +23372,7 @@
                           "parameters": [
                             "",
                             "=",
-                            "CameraY+CameraOffsetY",
+                            "Camera.Y+Camera.OffsetY",
                             "",
                             "0"
                           ]
@@ -23251,8 +23403,8 @@
                             "",
                             "0",
                             "0",
-                            "LevelWidth",
-                            "LevelHeight",
+                            "Level.LevelWidth",
+                            "Level.LevelHeight",
                             "",
                             ""
                           ]
