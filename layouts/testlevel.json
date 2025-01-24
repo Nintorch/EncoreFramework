@@ -1150,6 +1150,10 @@
       "type": "HelperExtension::Parallax"
     },
     {
+      "name": "Platform",
+      "type": "PlatformBehavior::PlatformBehavior"
+    },
+    {
       "name": "Player",
       "type": "HelperExtension::Player",
       "Property": 0
@@ -1165,6 +1169,10 @@
     {
       "name": "Text",
       "type": "TextContainerCapability::TextContainerBehavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
     }
   ]
 }

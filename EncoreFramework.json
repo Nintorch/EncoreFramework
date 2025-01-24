@@ -476,14 +476,6 @@
       },
       {
         "disablePreload": false,
-        "file": "layouts/testlevel.json",
-        "kind": "tilemap",
-        "metadata": "",
-        "name": "layouts/testlevel.json",
-        "userAdded": false
-      },
-      {
-        "disablePreload": false,
         "file": "layouts/tileset.json",
         "kind": "tileset",
         "metadata": "",
@@ -1388,6 +1380,184 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Monitor.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Monitor.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorBroken.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorBroken.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorIcon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorIcon.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorIcon2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorIcon2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorIcon4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorIcon4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorIcon3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorIcon3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Explosion.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Explosion",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Explosion2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Explosion2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Explosion3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Explosion3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Explosion4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Explosion4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Explosion5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Explosion5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorExtraLife.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorExtraLife.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorExtraLife2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorExtraLife2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorExtraLife3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorExtraLife3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "audio/sfx/destroy.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\sfx\\destroy.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorTemplate10Rings.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "MonitorTemplate10Rings",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorTemplateShield.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "MonitorTemplateShield",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorTemplateInvincibility.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "MonitorTemplateInvincibility",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorTemplateSpeedShoes.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "MonitorTemplateSpeedShoes",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorTemplateExtraLife.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "MonitorTemplateExtraLife",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorStatic.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorStatic.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/MonitorStatic2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\MonitorStatic2.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2008,6 +2178,11 @@
           "name": "Hurt",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Attacking",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -2136,7 +2311,14 @@
       "name": "Spikes",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "CollisionIfNotAttacking",
+          "persistentUuid": "0eb11472-cca5-4d2a-aaa4-459cab941dc0",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -4246,7 +4428,15 @@
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "canBeGrabbed": true,
+          "name": "Platform",
+          "platformType": "NormalPlatform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "Idle",
@@ -6811,7 +7001,15 @@
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "canBeGrabbed": true,
+          "name": "Platform",
+          "platformType": "NormalPlatform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "yGrabOffset": 0
+        }
+      ],
       "animations": [
         {
           "name": "Idle",
@@ -9261,6 +9459,1177 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Explosion",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Main",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Explosion",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 20,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 28
+                      },
+                      {
+                        "x": 10,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Explosion2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 20,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 28
+                      },
+                      {
+                        "x": 10,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Explosion3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 20,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 28
+                      },
+                      {
+                        "x": 10,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Explosion4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 20,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 28
+                      },
+                      {
+                        "x": 10,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Explosion5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 20,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 10,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 12
+                      },
+                      {
+                        "x": 30,
+                        "y": 28
+                      },
+                      {
+                        "x": 10,
+                        "y": 28
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MonitorBase",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Icon",
+          "type": "string",
+          "value": "10 Rings"
+        },
+        {
+          "name": "Setup",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Moving",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "YSpeed",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Main",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\Monitor.png",
+                  "points": [
+                    {
+                      "name": "Icon",
+                      "x": 16,
+                      "y": 14
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 32
+                      },
+                      {
+                        "x": 1,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MonitorBroken",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "CollisionIfNotAttacking",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Main",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorBroken.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 16
+                      },
+                      {
+                        "x": 32,
+                        "y": 16
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MonitorIcon",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "State",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Animation",
+          "type": "string",
+          "value": "0"
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "10 Rings",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorIcon.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Shield",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorIcon2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Invincibility",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorIcon3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Speed Shoes",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorIcon4.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Extra Life Sonic",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorExtraLife.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Extra Life Tails",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorExtraLife2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Extra Life Knuckles",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorExtraLife3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Static",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorStatic.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\MonitorStatic2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 7
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 14
+                      },
+                      {
+                        "x": 0,
+                        "y": 14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Monitor10Rings",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Icon",
+          "type": "string",
+          "value": "10 Rings"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Main",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "MonitorTemplate10Rings",
+                  "points": [
+                    {
+                      "name": "Icon",
+                      "x": 16,
+                      "y": 14
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 32
+                      },
+                      {
+                        "x": 1,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MonitorShield",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Icon",
+          "type": "string",
+          "value": "Shield"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "MonitorTemplateShield",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "MonitorTemplateShield",
+                  "points": [
+                    {
+                      "name": "Icon",
+                      "x": 16,
+                      "y": 14
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 32
+                      },
+                      {
+                        "x": 1,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MonitorInvincibility",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Icon",
+          "type": "string",
+          "value": "Invincibility"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "MonitorTemplateInvincibility",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "MonitorTemplateInvincibility",
+                  "points": [
+                    {
+                      "name": "Icon",
+                      "x": 16,
+                      "y": 14
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 32
+                      },
+                      {
+                        "x": 1,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MonitorSpeedShoes",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Icon",
+          "type": "string",
+          "value": "Speed Shoes"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "MonitorTemplateSpeedShoes",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "MonitorTemplateSpeedShoes",
+                  "points": [
+                    {
+                      "name": "Icon",
+                      "x": 16,
+                      "y": 14
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 32
+                      },
+                      {
+                        "x": 1,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "MonitorExtraLife",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Icon",
+          "type": "string",
+          "value": "Extra Life"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "MonitorTemplateExtraLife",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "MonitorTemplateExtraLife",
+                  "points": [
+                    {
+                      "name": "Icon",
+                      "x": 16,
+                      "y": 14
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 2
+                      },
+                      {
+                        "x": 31,
+                        "y": 32
+                      },
+                      {
+                        "x": 1,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -9276,13 +10645,13 @@
             "objectName": "SonicSkin"
           },
           {
-            "objectName": "KnucklesSkin"
-          },
-          {
             "objectName": "TailsSkin"
           },
           {
             "objectName": "TailsTails"
+          },
+          {
+            "objectName": "KnucklesSkin"
           },
           {
             "objectName": "Act2StartPosition"
@@ -9292,6 +10661,40 @@
       {
         "folderName": "Level objects",
         "children": [
+          {
+            "folderName": "Monitors",
+            "children": [
+              {
+                "folderName": "Base",
+                "children": [
+                  {
+                    "objectName": "MonitorBroken"
+                  },
+                  {
+                    "objectName": "MonitorBase"
+                  },
+                  {
+                    "objectName": "MonitorIcon"
+                  }
+                ]
+              },
+              {
+                "objectName": "Monitor10Rings"
+              },
+              {
+                "objectName": "MonitorShield"
+              },
+              {
+                "objectName": "MonitorInvincibility"
+              },
+              {
+                "objectName": "MonitorSpeedShoes"
+              },
+              {
+                "objectName": "MonitorExtraLife"
+              }
+            ]
+          },
           {
             "objectName": "Ring"
           },
@@ -9306,6 +10709,9 @@
       {
         "folderName": "Effects",
         "children": [
+          {
+            "objectName": "Explosion"
+          },
           {
             "objectName": "SpindashDust"
           }
@@ -9377,6 +10783,9 @@
         },
         {
           "name": "TilemapCollision_2"
+        },
+        {
+          "name": "MonitorBase"
         }
       ]
     },
@@ -9399,6 +10808,26 @@
         },
         {
           "name": "TilemapCollision1_2"
+        }
+      ]
+    },
+    {
+      "name": "MonitorTemplates",
+      "objects": [
+        {
+          "name": "Monitor10Rings"
+        },
+        {
+          "name": "MonitorShield"
+        },
+        {
+          "name": "MonitorInvincibility"
+        },
+        {
+          "name": "MonitorSpeedShoes"
+        },
+        {
+          "name": "MonitorExtraLife"
         }
       ]
     },
@@ -9550,10 +10979,6 @@
     }
   ],
   "layouts": [
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/layouts/levelbase"
-    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/testlevel"

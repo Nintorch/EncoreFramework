@@ -154,51 +154,36 @@
           "sentence": "Sensor _PARAM2_ of _PARAM0_ is in collision with _PARAM3_",
           "events": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Collision[SensorName].Collision",
-                    "True"
-                  ]
-                }
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const player = eventsFunctionContext.getObjects(\"Object\")[0];\r",
+                "const testObject = eventsFunctionContext.getObjects(\"TestObject\")[0];\r",
+                "if (player === undefined\r",
+                "    || testObject === undefined\r",
+                "    || !player.getVariables().has(\"Collision\"))\r",
+                "    return;\r",
+                "\r",
+                "const collision = player.getVariables().get(\"Collision\").getAllChildren();\r",
+                "/** @type {string} */\r",
+                "const sensorName = eventsFunctionContext.getArgument(\"SensorName\");\r",
+                "if (!(sensorName in collision))\r",
+                "    return;\r",
+                "\r",
+                "const sensor = collision[sensorName];\r",
+                "if (!sensor.hasChild(\"X\")\r",
+                "    || !sensor.hasChild(\"Y\")\r",
+                "    || !sensor.hasChild(\"Collision\")\r",
+                "    || !sensor.getChild(\"Collision\").getAsBoolean())\r",
+                "    return;\r",
+                "\r",
+                "const sensorX = sensor.getChild(\"X\").getAsNumber();\r",
+                "const sensorY = sensor.getChild(\"Y\").getAsNumber();\r",
+                "\r",
+                "eventsFunctionContext.returnValue = testObject.isCollidingWithPoint(sensorX, sensorY);"
               ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": [
-                    "const player = eventsFunctionContext.getObjects(\"Object\")[0];\r",
-                    "const testObject = eventsFunctionContext.getObjects(\"TestObject\")[0];\r",
-                    "if (player === undefined\r",
-                    "    || testObject === undefined\r",
-                    "    || !player.getVariables().has(\"Collision\"))\r",
-                    "    return;\r",
-                    "\r",
-                    "const collision = player.getVariables().get(\"Collision\").getAllChildren();\r",
-                    "/** @type {string} */\r",
-                    "const sensorName = eventsFunctionContext.getArgument(\"SensorName\");\r",
-                    "if (!(sensorName in collision))\r",
-                    "    return;\r",
-                    "\r",
-                    "const sensor = collision[sensorName];\r",
-                    "if (!sensor.hasChild(\"X\") || !sensor.hasChild(\"Y\"))\r",
-                    "    return;\r",
-                    "\r",
-                    "const sensorX = sensor.getChild(\"X\").getAsNumber();\r",
-                    "const sensorY = sensor.getChild(\"Y\").getAsNumber();\r",
-                    "\r",
-                    "eventsFunctionContext.returnValue = testObject.isCollidingWithPoint(sensorX, sensorY);"
-                  ],
-                  "parameterObjects": "",
-                  "useStrict": true,
-                  "eventsSheetExpanded": true
-                }
-              ]
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
             }
           ],
           "parameters": [
