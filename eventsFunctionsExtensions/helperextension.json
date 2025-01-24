@@ -1,0 +1,897 @@
+{
+  "author": "",
+  "category": "",
+  "extensionNamespace": "",
+  "fullName": "Helper Extension",
+  "helpPath": "",
+  "iconUrl": "",
+  "name": "HelperExtension",
+  "previewIconUrl": "",
+  "shortDescription": "",
+  "version": "",
+  "description": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "globalVariables": [],
+  "sceneVariables": [],
+  "eventsFunctions": [],
+  "eventsBasedBehaviors": [
+    {
+      "description": "",
+      "fullName": "Parallax",
+      "name": "Parallax",
+      "objectType": "TiledSpriteObject::TiledSprite",
+      "eventsFunctions": [
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "doStepPreEvents",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::Parallax::SetPropertyYInit"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.Y()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TiledSpriteObject::XOffset"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "CameraBorderLeft()*XFactor+TimeFromStart()*XSpeed*60"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "YInit-CameraBorderTop()*YFactor"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "TiledSpriteObject::TiledSprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Parallax",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "name": "XFactor"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "name": "YFactor"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "name": "XSpeed"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "YInit"
+        }
+      ],
+      "sharedPropertyDescriptors": []
+    },
+    {
+      "description": "",
+      "fullName": "",
+      "name": "Player",
+      "objectType": "",
+      "eventsFunctions": [
+        {
+          "description": "Check if the player's sensor is in collision with an object",
+          "fullName": "Sensor is in collision with object",
+          "functionType": "Condition",
+          "name": "SensorCollision",
+          "sentence": "Sensor _PARAM2_ of _PARAM0_ is in collision with _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Collision[SensorName].Collision",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": [
+                    "const player = eventsFunctionContext.getObjects(\"Object\")[0];\r",
+                    "const testObject = eventsFunctionContext.getObjects(\"TestObject\")[0];\r",
+                    "if (player === undefined\r",
+                    "    || testObject === undefined\r",
+                    "    || !player.getVariables().has(\"Collision\"))\r",
+                    "    return;\r",
+                    "\r",
+                    "const collision = player.getVariables().get(\"Collision\").getAllChildren();\r",
+                    "/** @type {string} */\r",
+                    "const sensorName = eventsFunctionContext.getArgument(\"SensorName\");\r",
+                    "if (!(sensorName in collision))\r",
+                    "    return;\r",
+                    "\r",
+                    "const sensor = collision[sensorName];\r",
+                    "if (!sensor.hasChild(\"X\") || !sensor.hasChild(\"Y\"))\r",
+                    "    return;\r",
+                    "\r",
+                    "const sensorX = sensor.getChild(\"X\").getAsNumber();\r",
+                    "const sensorY = sensor.getChild(\"Y\").getAsNumber();\r",
+                    "\r",
+                    "eventsFunctionContext.returnValue = testObject.isCollidingWithPoint(sensorX, sensorY);"
+                  ],
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Player",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "SensorName",
+              "type": "string"
+            },
+            {
+              "description": "",
+              "name": "TestObject",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the player is about to land on an object",
+          "fullName": "Player is about to land on object",
+          "functionType": "Condition",
+          "name": "PlayerLanding",
+          "sentence": "_PARAM0_ is about to land on _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "HelperExtension::Player::SensorCollision"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "\"GroundLeft\"",
+                        "TestObject",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HelperExtension::Player::SensorCollision"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "\"GroundRight\"",
+                        "TestObject",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Object",
+                    "YSpeed",
+                    ">=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Player",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "TestObject",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [],
+      "sharedPropertyDescriptors": []
+    },
+    {
+      "description": "",
+      "fullName": "Fade",
+      "name": "Fade",
+      "objectType": "Sprite",
+      "eventsFunctions": [
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "doStepPreEvents",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::Fade::PropertyFadingType"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "!=",
+                    "\"No fading\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "100"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::Fade::PropertyFadingType"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "\"Fading in\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Opacity",
+                    "=",
+                    "max(0, Object.Opacity::Value()-FadingSpeed*TimeDelta())"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::Value"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Opacity",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HelperExtension::Fade::SetPropertyFadingType"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "\"No fading\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::Fade::PropertyFadingType"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "\"Fading out\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Opacity",
+                    "=",
+                    "min(255, Object.Opacity::Value()+FadingSpeed*TimeDelta())"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "OpacityCapability::OpacityBehavior::Value"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Opacity",
+                        "=",
+                        "255"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "HelperExtension::Fade::SetPropertyFadingType"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "=",
+                        "\"No fading\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Fade",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onCreated",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Resizable",
+                    "=",
+                    "SceneWindowWidth()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Resizable",
+                    "=",
+                    "SceneWindowHeight()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Fade",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Fade out",
+          "fullName": "Fade out",
+          "functionType": "Action",
+          "name": "FadeOut",
+          "sentence": "_PARAM0_: Fade out",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HelperExtension::Fade::SetPropertyFadingType"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "\"Fading out\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Fade",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Fade in",
+          "fullName": "Fade in",
+          "functionType": "Action",
+          "name": "FadeIn",
+          "sentence": "_PARAM0_: Fade in",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HelperExtension::Fade::SetPropertyFadingType"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "\"Fading in\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Fade",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "",
+          "type": "Choice",
+          "label": "Fading type",
+          "description": "",
+          "group": "",
+          "extraInformation": [
+            "No fading",
+            "Fading in",
+            "Fading out"
+          ],
+          "hidden": true,
+          "name": "FadingType"
+        },
+        {
+          "value": "256",
+          "type": "Number",
+          "label": "Fading speed",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "name": "FadingSpeed"
+        }
+      ],
+      "sharedPropertyDescriptors": []
+    },
+    {
+      "description": "",
+      "fullName": "",
+      "name": "BitmapCounter",
+      "objectType": "BitmapText::BitmapTextObject",
+      "eventsFunctions": [
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "doStepPreEvents",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::BitmapCounter::PropertyValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "!=",
+                    "PrevValue"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::BitmapCounter::SetPropertyPrevValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Value"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Text",
+                    "=",
+                    "ToString(Value)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Text",
+                    "=",
+                    "StrRepeat(FillerCharacter, RequiredLength-StrLength(Object.Text())) + Object.Text()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "BitmapText::BitmapTextObject",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::BitmapCounter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the value of the object.",
+          "fullName": "Value",
+          "functionType": "ExpressionAndCondition",
+          "group": "BitmapCounter configuration",
+          "name": "Value",
+          "sentence": "the value",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Value"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "BitmapText::BitmapTextObject",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::BitmapCounter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Value",
+          "name": "SetValue",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::BitmapCounter::SetPropertyValue"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Value"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "BitmapText::BitmapTextObject",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::BitmapCounter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "name": "Value"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "PrevValue"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "name": "RequiredLength"
+        },
+        {
+          "value": " ",
+          "type": "String",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "name": "FillerCharacter"
+        }
+      ],
+      "sharedPropertyDescriptors": []
+    }
+  ],
+  "eventsBasedObjects": []
+}
