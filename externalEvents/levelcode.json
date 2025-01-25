@@ -98,6 +98,7 @@
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2548,7 +2549,7 @@
                                       },
                                       "parameters": [
                                         "SensorsData",
-                                        "WallSensorsHeight+2"
+                                        "WallSensorsHeight + 2"
                                       ]
                                     },
                                     {
@@ -2566,7 +2567,7 @@
                                       },
                                       "parameters": [
                                         "SensorsData",
-                                        "Player.PushRadius - Player.XSpeed / 60 + 1"
+                                        "Player.PushRadius - Player.XSpeed / 60 + 6"
                                       ]
                                     },
                                     {
@@ -2608,7 +2609,7 @@
                                       },
                                       "parameters": [
                                         "SensorsData",
-                                        "WallSensorsHeight+2"
+                                        "WallSensorsHeight + 2"
                                       ]
                                     },
                                     {
@@ -2626,7 +2627,127 @@
                                       },
                                       "parameters": [
                                         "SensorsData",
-                                        "Player.PushRadius + Player.XSpeed / 60"
+                                        "Player.PushRadius + Player.XSpeed / 60 + 5"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "SensorAngle"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PushString"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "\"Wall3Left\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "WallSensorsHeight"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "180"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "Player.PushRadius - Player.XSpeed / 60 + 6"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "SensorAngle"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PushString"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "\"Wall3Right\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "WallSensorsHeight"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PushNumber"
+                                      },
+                                      "parameters": [
+                                        "SensorsData",
+                                        "Player.PushRadius + Player.XSpeed / 60 + 5"
                                       ]
                                     },
                                     {
@@ -2646,7 +2767,7 @@
                                   "folded": true,
                                   "name": "WallSensorsHeight",
                                   "type": "number",
-                                  "value": 8
+                                  "value": 10
                                 }
                               ]
                             },
@@ -3269,6 +3390,17 @@
                                     "False",
                                     ""
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision[SensorsData[ArrayIndex+0]].Ignore",
+                                    "False",
+                                    ""
+                                  ]
                                 }
                               ],
                               "events": [
@@ -3753,10 +3885,216 @@
                       "colorR": 74,
                       "creationTime": 0,
                       "folded": true,
+                      "name": "Special collision cases",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::ForEachChildVariable",
+                              "iterableVariableName": "Sensors",
+                              "valueIteratorVariableName": "Child",
+                              "keyIteratorVariableName": "",
+                              "conditions": [],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Attacking",
+                                        "True",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "HelperExtension::Player::SensorCollision"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Player",
+                                        "Child",
+                                        "MonitorBase",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Collision[Child].Ignore",
+                                        "True",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "variables": [
+                            {
+                              "name": "Sensors",
+                              "type": "array",
+                              "children": [
+                                {
+                                  "type": "string",
+                                  "value": "GroundLeft"
+                                },
+                                {
+                                  "type": "string",
+                                  "value": "GroundRight"
+                                },
+                                {
+                                  "type": "string",
+                                  "value": "CeilingLeft"
+                                },
+                                {
+                                  "type": "string",
+                                  "value": "CeilingRight"
+                                },
+                                {
+                                  "type": "string",
+                                  "value": "WallLeft"
+                                },
+                                {
+                                  "type": "string",
+                                  "value": "WallRight"
+                                },
+                                {
+                                  "type": "string",
+                                  "value": "Wall2Left"
+                                },
+                                {
+                                  "type": "string",
+                                  "value": "Wall2Right"
+                                }
+                              ]
+                            },
+                            {
+                              "name": "Child",
+                              "type": "string",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "HelperExtension::Player::SensorCollision"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Player",
+                                "\"GroundLeft\"",
+                                "Spring",
+                                "Spring"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.GroundLeft.Ignore",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "HelperExtension::Player::SensorCollision"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Player",
+                                "\"GroundRight\"",
+                                "Spring",
+                                "Spring"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Collision.GroundRight.Ignore",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
                       "name": "Wall collision",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
+                        {
+                          "disabled": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "HelperExtension::Player::SensorWall"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Player",
+                                "\"Any\"",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "GroundAngle",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
@@ -3797,6 +4135,28 @@
                                     "<=",
                                     "0"
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.WallLeft.Ignore",
+                                    "False",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.Wall2Left.Ignore",
+                                    "False",
+                                    ""
+                                  ]
                                 }
                               ],
                               "actions": [
@@ -3812,55 +4172,6 @@
                                 }
                               ],
                               "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Attacking",
-                                        "True",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "CollisionPoint"
-                                      },
-                                      "parameters": [
-                                        "MonitorBase",
-                                        "Player.Collision.WallLeft.X",
-                                        "Player.Collision.WallLeft.Y"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "YSpeed",
-                                        ">=",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberVariable"
-                                      },
-                                      "parameters": [
-                                        "AngleDifference",
-                                        "=",
-                                        "0"
-                                      ]
-                                    }
-                                  ]
-                                },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
@@ -3995,6 +4306,28 @@
                                     ">=",
                                     "0"
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.WallRight.Ignore",
+                                    "False",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.Wall2Right.Ignore",
+                                    "False",
+                                    ""
+                                  ]
                                 }
                               ],
                               "actions": [
@@ -4010,55 +4343,6 @@
                                 }
                               ],
                               "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "BooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Attacking",
-                                        "True",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "CollisionPoint"
-                                      },
-                                      "parameters": [
-                                        "MonitorBase",
-                                        "Player.Collision.WallRight.X",
-                                        "Player.Collision.WallRight.Y"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "YSpeed",
-                                        ">=",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberVariable"
-                                      },
-                                      "parameters": [
-                                        "AngleDifference",
-                                        "=",
-                                        "0"
-                                      ]
-                                    }
-                                  ]
-                                },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
@@ -4176,7 +4460,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Angle calculation",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -4259,6 +4542,35 @@
                                   "parameters": [
                                     "ShouldCalculate",
                                     "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "HelperExtension::Player::SensorWall"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Player",
+                                    "\"Any\"",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "ShouldCalculate",
+                                    "False",
                                     ""
                                   ]
                                 }
@@ -4560,6 +4872,55 @@
                                 },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Collision.AngleLeft2.Collision",
+                                        "True",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Collision.AngleRight1.Collision",
+                                        "True",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                                      },
+                                      "parameters": [
+                                        "abs(AngleDifference(AngleBetweenPositions(Player.Collision.AngleLeft2.X, Player.Collision.AngleLeft2.Y, Player.Collision.AngleRight1.X, Player.Collision.AngleRight1.Y), 0))",
+                                        "<",
+                                        "5"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "NewGroundAngle",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
                                     {
@@ -4608,6 +4969,35 @@
                                   "value": 0
                                 }
                               ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "ShouldCalculate",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "CalculatedAngle",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
                             }
                           ],
                           "variables": [
@@ -4616,6 +5006,11 @@
                               "name": "ShouldCalculate",
                               "type": "boolean",
                               "value": false
+                            },
+                            {
+                              "name": "WallAngle",
+                              "type": "number",
+                              "value": 0
                             }
                           ]
                         }
@@ -4627,6 +5022,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Air movement",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -4900,39 +5296,40 @@
                               "comment": "Collisions"
                             },
                             {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Floor collision"
+                            },
+                            {
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
-                              "actions": [],
-                              "events": [
+                              "conditions": [
                                 {
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
+                                  "type": {
+                                    "value": "NumberObjectVariable"
                                   },
-                                  "comment": "Floor collision"
+                                  "parameters": [
+                                    "Player",
+                                    "YSpeed",
+                                    ">",
+                                    "0"
+                                  ]
                                 },
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
                                     {
                                       "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "YSpeed",
-                                        ">",
-                                        "0"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
+                                        "value": "BuiltinCommonInstructions::And"
                                       },
                                       "parameters": [],
                                       "subInstructions": [
@@ -4953,124 +5350,179 @@
                                           },
                                           "parameters": [
                                             "Player",
-                                            "Collision.GroundRight.Collision",
-                                            "True",
-                                            ""
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [],
-                                  "events": [
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "BooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Attacking",
-                                            "True",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::Or"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "CollisionPoint"
-                                              },
-                                              "parameters": [
-                                                "MonitorBase",
-                                                "Player.Collision.GroundLeft.X",
-                                                "Player.Collision.GroundLeft.Y"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "CollisionPoint"
-                                              },
-                                              "parameters": [
-                                                "MonitorBase",
-                                                "Player.Collision.GroundRight.X",
-                                                "Player.Collision.GroundRight.Y"
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetBooleanVariable"
-                                          },
-                                          "parameters": [
-                                            "MonitorCollision",
-                                            "True",
+                                            "Collision.GroundLeft.Ignore",
+                                            "False",
                                             ""
                                           ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
                                         {
                                           "type": {
-                                            "value": "BooleanVariable"
-                                          },
-                                          "parameters": [
-                                            "MonitorCollision",
-                                            "=",
-                                            ""
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetBooleanObjectVariable"
+                                            "value": "BooleanObjectVariable"
                                           },
                                           "parameters": [
                                             "Player",
-                                            "Ground",
+                                            "Collision.GroundRight.Collision",
                                             "True",
                                             ""
                                           ]
                                         },
                                         {
                                           "type": {
-                                            "value": "SetBooleanObjectVariable"
+                                            "value": "BooleanObjectVariable"
                                           },
                                           "parameters": [
                                             "Player",
-                                            "Landed",
-                                            "True",
+                                            "Collision.GroundRight.Ignore",
+                                            "False",
                                             ""
                                           ]
                                         }
                                       ]
                                     }
                                   ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Ground",
+                                    "True",
+                                    ""
+                                  ]
                                 },
                                 {
-                                  "type": "BuiltinCommonInstructions::Comment",
-                                  "color": {
-                                    "b": 109,
-                                    "g": 230,
-                                    "r": 255,
-                                    "textB": 0,
-                                    "textG": 0,
-                                    "textR": 0
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
                                   },
-                                  "comment": "Ceiling collision"
+                                  "parameters": [
+                                    "Player",
+                                    "Landed",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Ceiling collision"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "YSpeed",
+                                    "<",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Collision.CeilingLeft.Collision",
+                                        "True",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Collision.CeilingRight.Collision",
+                                        "True",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.CeilingLeft.Ignore",
+                                    "False",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Collision.CeilingRight.Ignore",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Landed",
+                                        "True",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "GroundAngle",
+                                        "=",
+                                        "Player.CalculatedAngle"
+                                      ]
+                                    }
+                                  ]
                                 },
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
@@ -5081,39 +5533,71 @@
                                       },
                                       "parameters": [
                                         "Player",
-                                        "YSpeed",
-                                        "<",
+                                        "CalculatedAngle",
+                                        ">=",
+                                        "135"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "CalculatedAngle",
+                                        "<=",
+                                        "225"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Landed",
+                                        "False",
                                         "0"
                                       ]
                                     },
                                     {
                                       "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
+                                        "value": "SetNumberObjectVariable"
                                       },
-                                      "parameters": [],
-                                      "subInstructions": [
-                                        {
-                                          "type": {
-                                            "value": "BooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Collision.CeilingLeft.Collision",
-                                            "True",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Collision.CeilingRight.Collision",
-                                            "True",
-                                            ""
-                                          ]
-                                        }
+                                      "parameters": [
+                                        "Player",
+                                        "YSpeed",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "GroundAngle",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Collision.CeilingLeft.Collision",
+                                        "True",
+                                        ""
                                       ]
                                     }
                                   ],
@@ -5128,49 +5612,21 @@
                                           },
                                           "parameters": [
                                             "Player",
-                                            "Attacking",
+                                            "SensorsHorizontal",
                                             "True",
                                             ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BuiltinCommonInstructions::Or"
-                                          },
-                                          "parameters": [],
-                                          "subInstructions": [
-                                            {
-                                              "type": {
-                                                "value": "CollisionPoint"
-                                              },
-                                              "parameters": [
-                                                "MonitorBase",
-                                                "Player.Collision.CeilingLeft.X",
-                                                "Player.Collision.CeilingLeft.Y-1"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "CollisionPoint"
-                                              },
-                                              "parameters": [
-                                                "MonitorBase",
-                                                "Player.Collision.CeilingRight.X",
-                                                "Player.Collision.CeilingRight.Y-1"
-                                              ]
-                                            }
                                           ]
                                         }
                                       ],
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "SetBooleanVariable"
+                                            "value": "MettreY"
                                           },
                                           "parameters": [
-                                            "MonitorCollision",
-                                            "True",
-                                            ""
+                                            "Player",
+                                            "=",
+                                            "Player.Collision.CeilingLeft.Y + Player.HeightRadius * cos(ToRad(Player.SensorAngle))"
                                           ]
                                         }
                                       ]
@@ -5180,267 +5636,105 @@
                                       "conditions": [
                                         {
                                           "type": {
-                                            "value": "BooleanVariable"
+                                            "value": "BooleanObjectVariable"
                                           },
                                           "parameters": [
-                                            "MonitorCollision",
-                                            "=",
+                                            "Player",
+                                            "SensorsHorizontal",
+                                            "False",
                                             ""
                                           ]
                                         }
                                       ],
-                                      "actions": [],
-                                      "events": [
+                                      "actions": [
                                         {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetBooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Landed",
-                                                "True",
-                                                "0"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "GroundAngle",
-                                                "=",
-                                                "Player.CalculatedAngle"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "CalculatedAngle",
-                                                ">=",
-                                                "135"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "CalculatedAngle",
-                                                "<=",
-                                                "225"
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetBooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Landed",
-                                                "False",
-                                                "0"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "YSpeed",
-                                                "=",
-                                                "0"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "GroundAngle",
-                                                "=",
-                                                "0"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Collision.CeilingLeft.Collision",
-                                                "True",
-                                                ""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [],
-                                          "events": [
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "SensorsHorizontal",
-                                                    "True",
-                                                    ""
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "MettreY"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "=",
-                                                    "Player.Collision.CeilingLeft.Y + Player.HeightRadius * cos(ToRad(Player.SensorAngle))"
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "SensorsHorizontal",
-                                                    "False",
-                                                    ""
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "MettreX"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "=",
-                                                    "Player.Collision.CeilingLeft.X - Player.HeightRadius * sin(ToRad(Player.SensorAngle))"
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player",
-                                                "Collision.CeilingRight.Collision",
-                                                "True",
-                                                ""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [],
-                                          "events": [
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "SensorsHorizontal",
-                                                    "True",
-                                                    ""
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "MettreY"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "=",
-                                                    "Player.Collision.CeilingRight.Y + Player.HeightRadius * cos(ToRad(Player.SensorAngle))"
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "SensorsHorizontal",
-                                                    "False",
-                                                    ""
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "MettreX"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "=",
-                                                    "Player.Collision.CeilingRight.X - Player.HeightRadius * sin(ToRad(Player.SensorAngle))"
-                                                  ]
-                                                }
-                                              ]
-                                            }
+                                          "type": {
+                                            "value": "MettreX"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "=",
+                                            "Player.Collision.CeilingLeft.X - Player.HeightRadius * sin(ToRad(Player.SensorAngle))"
                                           ]
                                         }
                                       ]
                                     }
                                   ]
-                                }
-                              ],
-                              "variables": [
+                                },
                                 {
-                                  "name": "MonitorCollision",
-                                  "type": "boolean",
-                                  "value": false
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Collision.CeilingRight.Collision",
+                                        "True",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "SensorsHorizontal",
+                                            "True",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "MettreY"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "=",
+                                            "Player.Collision.CeilingRight.Y + Player.HeightRadius * cos(ToRad(Player.SensorAngle))"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "SensorsHorizontal",
+                                            "False",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "MettreX"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "=",
+                                            "Player.Collision.CeilingRight.X - Player.HeightRadius * sin(ToRad(Player.SensorAngle))"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -5483,7 +5777,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Ground movement",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -13203,6 +13496,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Monitors",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -14061,6 +14355,118 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Springs",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "YSpeed",
+                                ">",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "HelperExtension::Player::Sensor2Collision"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Player",
+                                "\"GroundLeft\"",
+                                "\"GroundRight\"",
+                                "Spring",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "HelperExtension::Player::SensorCollision"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Player",
+                                "\"GroundCentre\"",
+                                "Spring",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "Ground",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "YSpeed",
+                        "=",
+                        "-16*60"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player",
+                        "JumpFlag",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -14073,6 +14479,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Interface and post-processing methods",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -14894,6 +15301,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Effects",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",

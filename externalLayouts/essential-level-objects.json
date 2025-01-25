@@ -1,5 +1,5 @@
 {
-  "associatedLayout": "LevelBase",
+  "associatedLayout": "TestLevel",
   "name": "Essential level objects",
   "instances": [
     {
@@ -191,7 +191,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.4875763601874619,
+    "zoomFactor": 1.2191606102366443,
     "windowMask": false
   }
 }

@@ -126,8 +126,8 @@
       "name": "Player",
       "persistentUuid": "8a6adf87-8fb5-4e2f-9f69-08c442bc4ed4",
       "width": 0,
-      "x": 96,
-      "y": 496,
+      "x": 1296,
+      "y": 624,
       "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
@@ -148,34 +148,6 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
-      "name": "Player",
-      "persistentUuid": "6fdfa5cd-9267-4602-b197-ad1654e14b08",
-      "width": 0,
-      "x": 48,
-      "y": 496,
-      "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": [
-        {
-          "folded": true,
-          "name": "PlayerID",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "name": "Character",
-          "type": "string",
-          "value": "Tails"
-        }
-      ]
     },
     {
       "angle": 0,
@@ -282,7 +254,7 @@
       "name": "Monitor10Rings",
       "persistentUuid": "2c71123d-8402-489c-a79a-d58be5f5f469",
       "width": 0,
-      "x": 336,
+      "x": 304,
       "y": 432,
       "zOrder": 9,
       "numberProperties": [],
@@ -347,7 +319,7 @@
       "persistentUuid": "67363788-ab13-4a13-bd91-1bf434bcc79f",
       "width": 0,
       "x": 48,
-      "y": 400,
+      "y": 384,
       "zOrder": 13,
       "numberProperties": [],
       "stringProperties": [],
@@ -432,6 +404,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Monitor10Rings",
+      "persistentUuid": "cb10478c-71bb-4f4a-a967-57edf589de69",
+      "width": 0,
+      "x": 336,
+      "y": 432,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Spring",
+      "persistentUuid": "0d8423ee-5124-40b3-ab13-57ebb821f638",
+      "width": 0,
+      "x": 1328,
+      "y": 624,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -444,7 +448,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9350535038333053,
+    "zoomFactor": 0.671128815588704,
     "windowMask": false
   }
 }
