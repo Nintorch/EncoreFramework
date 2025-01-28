@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.6970319512520962,
+    "zoomFactor": 0.590523789789282,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -292,7 +292,12 @@
       "type": "TileMap::CollisionMask",
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "LightObstacleBehavior",
+          "type": "Lighting::LightObstacleBehavior"
+        }
+      ],
       "content": {
         "tilemapJsonFile": "levellayouts\\testlevel.json",
         "tilesetJsonFile": "levellayouts\\tileset.json",
@@ -1140,6 +1145,10 @@
     {
       "name": "Flippable",
       "type": "FlippableCapability::FlippableBehavior"
+    },
+    {
+      "name": "LightObstacleBehavior",
+      "type": "Lighting::LightObstacleBehavior"
     },
     {
       "name": "Opacity",
