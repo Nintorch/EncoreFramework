@@ -1,5 +1,5 @@
 {
-  "firstLayout": "TestLevel",
+  "firstLayout": "WebPressStart",
   "gdVersion": {
     "build": 223,
     "major": 5,
@@ -1688,6 +1688,198 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "assets\\RedSpringRightTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonal.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringDiagonal",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonalBounce.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringDiagonalBounce",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonalBounce2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringDiagonalBounce2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YelloSpringDiagonal.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YelloSpringDiagonal",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YelloSpringDiagonalBounce.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YelloSpringDiagonalBounce",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YelloSpringDiagonalBounce2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YelloSpringDiagonalBounce2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonal2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringDiagonal2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonalBounce3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringDiagonalBounce3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonalBounce4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringDiagonalBounce4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonal.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\RedSpringDiagonal.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonal2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\RedSpringDiagonal2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringUpRightTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/RedSpringUpRightTemplate.png\"}",
+        "name": "RedSpringUpRightTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringUpLeftTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringUpLeftTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDownRightTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/RedSpringDownRightTemplate.png\"}",
+        "name": "RedSpringDownRightTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDownLeftTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "RedSpringDownLeftTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YellowSpringUpRightTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YellowSpringUpRightTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YellowSpringUpLeftTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YellowSpringUpLeftTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YellowSpringDownRightTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YellowSpringDownRightTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YellowSpringDownLeftTemplate.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YellowSpringDownLeftTemplate",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YellowSpringDiagonal.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YellowSpringDiagonal",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonalBounce3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\RedSpringDiagonalBounce3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/RedSpringDiagonalBounce4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\RedSpringDiagonalBounce4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YellowSpringDiagonalBounce.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YellowSpringDiagonalBounce",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/YellowSpringDiagonalBounce2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "YellowSpringDiagonalBounce2",
         "smoothed": false,
         "userAdded": false
       }
@@ -10963,7 +11155,7 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "Spring",
       "type": "Sprite",
@@ -11049,7 +11241,7 @@
             {
               "looping": false,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.09,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -11090,6 +11282,144 @@
                 {
                   "hasCustomCollisionMask": true,
                   "image": "RedSpringUpBounce2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 16
+                      },
+                      {
+                        "x": 32,
+                        "y": 16
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RedSpringDiagonal",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "RedSpringDiagonal2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 17
+                      },
+                      {
+                        "x": 13,
+                        "y": 17
+                      },
+                      {
+                        "x": 33,
+                        "y": 37
+                      },
+                      {
+                        "x": 33,
+                        "y": 49
+                      },
+                      {
+                        "x": 1,
+                        "y": 49
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RedSpringDiagonalBounce",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.09,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "RedSpringDiagonalBounce3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 16
+                      },
+                      {
+                        "x": 32,
+                        "y": 16
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "RedSpringDiagonalBounce4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -11183,7 +11513,7 @@
             {
               "looping": false,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.09,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -11253,6 +11583,144 @@
                       {
                         "x": 0,
                         "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "YellowSpringDiagonal",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "YellowSpringDiagonal",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1,
+                        "y": 17
+                      },
+                      {
+                        "x": 13,
+                        "y": 17
+                      },
+                      {
+                        "x": 33,
+                        "y": 37
+                      },
+                      {
+                        "x": 33,
+                        "y": 49
+                      },
+                      {
+                        "x": 1,
+                        "y": 49
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "YellowSpringDiagonalBounce",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "YellowSpringDiagonalBounce",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1.5,
+                        "y": 19.5
+                      },
+                      {
+                        "x": 18.5,
+                        "y": 29.5
+                      },
+                      {
+                        "x": 29,
+                        "y": 49
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "YellowSpringDiagonalBounce2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 1.5,
+                        "y": 19.5
+                      },
+                      {
+                        "x": 18.5,
+                        "y": 29.5
+                      },
+                      {
+                        "x": 29,
+                        "y": 49
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
                       }
                     ]
                   ]
@@ -11836,6 +12304,582 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "RedSpringUpRight",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Red"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "RedSpringUpRightTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "RedSpringUpRightTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -1,
+                    "y": -17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "RedSpringUpLeft",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Red"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "RedSpringUpLeftTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "RedSpringUpLeftTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -17,
+                    "y": -17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "RedSpringDownRight",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Red"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "RedSpringDownRightTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "RedSpringDownRightTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -1,
+                    "y": -1
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "RedSpringDownLeft",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 7
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Red"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "RedSpringDownLeftTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "RedSpringDownLeftTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -17,
+                    "y": -1
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "YellowSpringUpRight",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Yellow"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "YellowSpringUpRightTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "YellowSpringUpRightTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -1,
+                    "y": -17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "YellowSpringUpLeft",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Yellow"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "YellowSpringUpLeftTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "YellowSpringUpLeftTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -17,
+                    "y": -17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "YellowSpringDownRight",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 6
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Yellow"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "YellowSpringDownRightTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "YellowSpringDownRightTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -1,
+                    "y": -1
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "YellowSpringDownLeft",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 7
+        },
+        {
+          "name": "Type",
+          "type": "string",
+          "value": "Yellow"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "YellowSpringDownLeftTemplate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "YellowSpringDownLeftTemplate",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": -17,
+                    "y": -1
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -11914,32 +12958,56 @@
                     "objectName": "Spring"
                   }
                 ]
+              },
+              {
+                "objectName": "RedSpringUp"
+              },
+              {
+                "objectName": "RedSpringDown"
+              },
+              {
+                "objectName": "RedSpringLeft"
+              },
+              {
+                "objectName": "RedSpringRight"
+              },
+              {
+                "objectName": "RedSpringUpRight"
+              },
+              {
+                "objectName": "RedSpringUpLeft"
+              },
+              {
+                "objectName": "RedSpringDownRight"
+              },
+              {
+                "objectName": "RedSpringDownLeft"
+              },
+              {
+                "objectName": "YellowSpringUp"
+              },
+              {
+                "objectName": "YellowSpringDown"
+              },
+              {
+                "objectName": "YellowSpringLeft"
+              },
+              {
+                "objectName": "YellowSpringRight"
+              },
+              {
+                "objectName": "YellowSpringUpRight"
+              },
+              {
+                "objectName": "YellowSpringUpLeft"
+              },
+              {
+                "objectName": "YellowSpringDownRight"
+              },
+              {
+                "objectName": "YellowSpringDownLeft"
               }
             ]
-          },
-          {
-            "objectName": "RedSpringUp"
-          },
-          {
-            "objectName": "RedSpringDown"
-          },
-          {
-            "objectName": "RedSpringLeft"
-          },
-          {
-            "objectName": "RedSpringRight"
-          },
-          {
-            "objectName": "YellowSpringUp"
-          },
-          {
-            "objectName": "YellowSpringDown"
-          },
-          {
-            "objectName": "YellowSpringLeft"
-          },
-          {
-            "objectName": "YellowSpringRight"
           },
           {
             "objectName": "LayerSwapper"
@@ -12103,6 +13171,30 @@
         },
         {
           "name": "RedSpringRight"
+        },
+        {
+          "name": "RedSpringUpRight"
+        },
+        {
+          "name": "RedSpringUpLeft"
+        },
+        {
+          "name": "RedSpringDownRight"
+        },
+        {
+          "name": "RedSpringDownLeft"
+        },
+        {
+          "name": "YellowSpringUpRight"
+        },
+        {
+          "name": "YellowSpringDownRight"
+        },
+        {
+          "name": "YellowSpringUpLeft"
+        },
+        {
+          "name": "YellowSpringDownLeft"
         }
       ]
     },
@@ -12254,6 +13346,10 @@
     }
   ],
   "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/webpressstart"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/testlevel"
