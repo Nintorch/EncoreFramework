@@ -1882,6 +1882,262 @@
         "name": "YellowSpringDiagonalBounce2",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/TailsSpring.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsSpring",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TailsSpring2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "TailsSpring2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesPushing.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesPushing",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesPushing2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesPushing2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesPushing3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesPushing3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesPushing4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesPushing4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSkidding.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesSkidding.png\"}",
+        "name": "KnucklesSkidding",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSkidding2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesSkidding2.png\"}",
+        "name": "KnucklesSkidding2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSkidding3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSkidding3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSkidding4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSkidding4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesBalancing.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesBalancing",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesBalancing2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesBalancing2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesBalancing3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesBalancing3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesBalancing4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesBalancing4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesBalancing5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesBalancing5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesHurt.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesHurt",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesDead.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesDead",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSpindash.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSpindash",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSpindash2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSpindash2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSpindash3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSpindash3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSpindash4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSpindash4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSpindash5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSpindash5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSpindash6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSpindash6",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesSpring.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesSpring",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGliding.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGliding",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingFall.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGlidingFall",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingFall2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGlidingFall2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingSlide.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGlidingSlide",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingSlide2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGlidingSlide2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingTurn.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGlidingTurn",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingTurn2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGlidingTurn2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingTurn3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGlidingTurn3",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -6216,9 +6472,83 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
-              "sprites": []
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.15,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsSpring",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "TailsSpring2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -8608,7 +8938,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Pushing",
+                  "image": "KnucklesPushing",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8644,7 +8974,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Pushing2",
+                  "image": "KnucklesPushing2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8680,7 +9010,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Pushing3",
+                  "image": "KnucklesPushing3",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8716,7 +9046,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Pushing4",
+                  "image": "KnucklesPushing4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8759,13 +9089,13 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.133333333,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Skidding3",
+                  "image": "KnucklesSkidding",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8801,7 +9131,79 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Skidding4",
+                  "image": "KnucklesSkidding2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesSkidding3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesSkidding4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8844,13 +9246,13 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": true,
+              "looping": false,
               "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.3333333333333333,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Balancing1",
+                  "image": "KnucklesBalancing",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8886,7 +9288,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Balancing2",
+                  "image": "KnucklesBalancing2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8922,7 +9324,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/Balancing3.png",
+                  "image": "KnucklesBalancing3",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -8958,55 +9360,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/Balancing4.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 20,
-                        "y": 12
-                      },
-                      {
-                        "x": 46,
-                        "y": 12
-                      },
-                      {
-                        "x": 46,
-                        "y": 52
-                      },
-                      {
-                        "x": 20,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "BackBalancing",
-          "useMultipleDirections": false,
-          "directions": [
-            {
-              "looping": true,
-              "timeBetweenFrames": 0.3333333333333333,
-              "sprites": [
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/BackBalancing1.png",
+                  "image": "KnucklesBalancing4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9042,7 +9396,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/BackBalancing2.png",
+                  "image": "KnucklesBalancing4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9078,43 +9432,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/BackBalancing3.png",
-                  "points": [],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 32,
-                    "y": 32
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 20,
-                        "y": 12
-                      },
-                      {
-                        "x": 46,
-                        "y": 12
-                      },
-                      {
-                        "x": 46,
-                        "y": 52
-                      },
-                      {
-                        "x": 20,
-                        "y": 52
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/BackBalancing4.png",
+                  "image": "KnucklesBalancing5",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9163,7 +9481,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Hurt",
+                  "image": "KnucklesHurt",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9212,7 +9530,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Dead",
+                  "image": "KnucklesDead",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9261,7 +9579,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
+                  "image": "KnucklesSpindash",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9297,7 +9615,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/Spindash2.png",
+                  "image": "KnucklesSpindash2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9333,7 +9651,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
+                  "image": "KnucklesSpindash",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9369,7 +9687,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/Spindash3.png",
+                  "image": "KnucklesSpindash3",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9405,7 +9723,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
+                  "image": "KnucklesSpindash",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9441,7 +9759,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/Spindash4.png",
+                  "image": "KnucklesSpindash4",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9477,7 +9795,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
+                  "image": "KnucklesSpindash",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9513,7 +9831,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/Spindash5.png",
+                  "image": "KnucklesSpindash5",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9549,7 +9867,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Spindash3",
+                  "image": "KnucklesSpindash",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9585,7 +9903,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets/Characters/Sonic/Spindash6.png",
+                  "image": "KnucklesSpindash6",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -9629,8 +9947,386 @@
           "directions": [
             {
               "looping": false,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.08,
-              "sprites": []
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesSpring",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Gliding",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGliding",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GlidingFall",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGlidingFall",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGlidingFall2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GlidingSlide",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGlidingSlide",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGlidingSlide2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "GlidingTurn",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGlidingTurn",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGlidingTurn2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGlidingTurn3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -11399,20 +12095,24 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 16
+                        "x": 1,
+                        "y": 23
                       },
                       {
-                        "x": 32,
-                        "y": 16
+                        "x": 7,
+                        "y": 23
                       },
                       {
-                        "x": 32,
-                        "y": 32
+                        "x": 27,
+                        "y": 43
                       },
                       {
-                        "x": 0,
-                        "y": 32
+                        "x": 27,
+                        "y": 49
+                      },
+                      {
+                        "x": 1,
+                        "y": 49
                       }
                     ]
                   ]
@@ -11435,20 +12135,24 @@
                   "customCollisionMask": [
                     [
                       {
-                        "x": 0,
-                        "y": 16
+                        "x": 1,
+                        "y": 23
                       },
                       {
-                        "x": 32,
-                        "y": 16
+                        "x": 7,
+                        "y": 23
                       },
                       {
-                        "x": 32,
-                        "y": 32
+                        "x": 27,
+                        "y": 43
                       },
                       {
-                        "x": 0,
-                        "y": 32
+                        "x": 27,
+                        "y": 49
+                      },
+                      {
+                        "x": 1,
+                        "y": 49
                       }
                     ]
                   ]
@@ -13237,7 +13941,7 @@
           "folded": true,
           "name": "CharacterMain",
           "type": "string",
-          "value": "Sonic"
+          "value": "Knuckles"
         },
         {
           "folded": true,

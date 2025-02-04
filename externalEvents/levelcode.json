@@ -149,7 +149,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Player",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -676,6 +675,68 @@
                             "JumpForce",
                             "=",
                             "-6*60"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Action",
+                                "=",
+                                "\"Gliding\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player",
+                                "Gravity",
+                                "=",
+                                "0.125*60*60*TimeDelta()"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "YSpeed",
+                                    ">",
+                                    "0.5*60"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Gravity",
+                                    "=",
+                                    "-Player.Gravity"
+                                  ]
+                                }
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -8918,7 +8979,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Actions and Animations",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -8968,7 +9028,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Common Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -9099,6 +9158,17 @@
                                                 "JumpFlag",
                                                 "=",
                                                 "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "Input.APressed",
+                                                "=",
+                                                "0"
                                               ]
                                             }
                                           ]
@@ -12476,7 +12546,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Jump - Jumping and air roll",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -12808,6 +12877,399 @@
                                             "Direction",
                                             "=",
                                             "Player.Input.XAxis"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "Special abilities"
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Input.APressed",
+                                            "=",
+                                            "1"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Comment",
+                                          "color": {
+                                            "b": 109,
+                                            "g": 230,
+                                            "r": 255,
+                                            "textB": 0,
+                                            "textG": 0,
+                                            "textR": 0
+                                          },
+                                          "comment": "Knuckles' Gliding"
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "Character",
+                                                "=",
+                                                "\"Knuckles\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "Action",
+                                                "=",
+                                                "\"Gliding\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "XSpeed",
+                                                "=",
+                                                "4*60*Player.Direction"
+                                              ]
+                                            }
+                                          ],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "YSpeed",
+                                                    "<",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "YSpeed",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Knuckles Actions",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Gliding",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Action",
+                                        "=",
+                                        "\"Gliding\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "KnucklesSkin",
+                                        "Animation",
+                                        "=",
+                                        "\"Gliding\""
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "(Gravity is changed in \"Physics Values\" group)"
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "XSpeed",
+                                            "+",
+                                            "0.015625*60*60*TimeDelta()*Player.Direction"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "XSpeed",
+                                                ">",
+                                                "TopSpeed*60"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "XSpeed",
+                                                "=",
+                                                "TopSpeed*60"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "XSpeed",
+                                                "<",
+                                                "-TopSpeed*60"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "XSpeed",
+                                                "=",
+                                                "-TopSpeed*60"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "variables": [
+                                        {
+                                          "name": "TopSpeed",
+                                          "type": "number",
+                                          "value": 24
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Input.A",
+                                            "=",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetStringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Action",
+                                            "=",
+                                            "\"GlidingFall\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "XSpeed",
+                                            "=",
+                                            "Player.XSpeed*0.25"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
+                                  "comment": "Falling"
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Action",
+                                        "=",
+                                        "\"GlidingFall\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "KnucklesSkin",
+                                        "Animation",
+                                        "=",
+                                        "\"GlidingFall\""
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Ground",
+                                            "True",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "XSpeed",
+                                            "=",
+                                            "0"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetStringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Action",
+                                            "=",
+                                            "\"Stand\""
                                           ]
                                         }
                                       ]
@@ -13483,6 +13945,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Common Objects",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -14855,6 +15318,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Springs",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15300,556 +15764,34 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Collision with the player\nVertical springs"
-                    },
-                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::Or"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::And"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "HelperExtension::Player::Sensor2Collision"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Player",
-                                    "\"GroundLeft\"",
-                                    "\"GroundRight\"",
-                                    "Spring",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::And"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "HelperExtension::Player::Sensor2Collision"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Player",
-                                    "\"CeilingLeft\"",
-                                    "\"CeilingRight\"",
-                                    "Spring",
-                                    ""
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Spring",
-                                "Direction",
-                                "=",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpringDirection",
-                                "=",
-                                "-1"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetStringObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Action",
-                                "=",
-                                "\"Spring\""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Ground",
-                                "False",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "YSpeed",
-                                "=",
-                                "SpringDirection*Spring.Force*60"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "JumpFlag",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "ControlLock",
-                                "False",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreY"
-                              },
-                              "parameters": [
-                                "Player",
-                                "=",
-                                "Spring.Y()+SpringDirection*Player.HeightRadius"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                              },
-                              "parameters": [
-                                "Spring",
-                                "Animation",
-                                "=",
-                                "Spring.Type + \"Spring\" + Spring.DirectionAnimation + \"Bounce\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PlaySound"
-                              },
-                              "parameters": [
-                                "",
-                                "audio\\sfx\\spring.wav",
-                                "",
-                                "",
-                                ""
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "variables": [
-                        {
-                          "name": "SpringDirection",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Horizontal springs"
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BuiltinCommonInstructions::Or"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::And"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "2"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "HelperExtension::Player::SensorCollision"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Player",
-                                    "\"WallRight\"",
-                                    "Spring",
-                                    "Spring"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::And"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "3"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "HelperExtension::Player::SensorCollision"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Player",
-                                    "\"WallLeft\"",
-                                    "Spring",
-                                    "Spring"
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Spring",
-                                "Direction",
-                                "=",
-                                "2"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpringDirection",
-                                "=",
-                                "-1"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "XSpeed",
-                                "=",
-                                "SpringDirection*Spring.Force*60"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetBooleanObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "ControlLock",
-                                "False",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "MettreX"
-                              },
-                              "parameters": [
-                                "Player",
-                                "=",
-                                "Spring.X()+SpringDirection*Player.WidthRadius*3"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                              },
-                              "parameters": [
-                                "Spring",
-                                "Animation",
-                                "=",
-                                "Spring.Type + \"Spring\" + Spring.DirectionAnimation + \"Bounce\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PlaySound"
-                              },
-                              "parameters": [
-                                "",
-                                "audio\\sfx\\spring.wav",
-                                "",
-                                "",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberObjectVariable"
-                              },
-                              "parameters": [
-                                "Player",
-                                "Direction",
-                                "=",
-                                "SpringDirection"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "variables": [
-                        {
-                          "name": "SpringDirection",
-                          "type": "number",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Diagonal springs"
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberObjectVariable"
+                            "inverted": true,
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
                           },
                           "parameters": [
                             "Spring",
-                            "Direction",
-                            ">=",
-                            "4"
+                            "Animation",
+                            "endsWith",
+                            "\"Bounce\""
                           ]
                         }
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "ArrayOffset",
-                            "=",
-                            "Spring.Direction-4"
-                          ]
-                        }
-                      ],
+                      "actions": [],
                       "events": [
                         {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "5"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "7"
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "DirX",
-                                "=",
-                                "-1"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "6"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Spring",
-                                    "Direction",
-                                    "=",
-                                    "7"
-                                  ]
-                                }
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "DirY",
-                                "=",
-                                "1"
-                              ]
-                            }
-                          ]
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Collision with the player\nVertical springs"
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
@@ -15868,12 +15810,13 @@
                                   "subInstructions": [
                                     {
                                       "type": {
-                                        "value": "NumberVariable"
+                                        "value": "NumberObjectVariable"
                                       },
                                       "parameters": [
-                                        "DirY",
+                                        "Spring",
+                                        "Direction",
                                         "=",
-                                        "-1"
+                                        "0"
                                       ]
                                     },
                                     {
@@ -15899,10 +15842,11 @@
                                   "subInstructions": [
                                     {
                                       "type": {
-                                        "value": "NumberVariable"
+                                        "value": "NumberObjectVariable"
                                       },
                                       "parameters": [
-                                        "DirY",
+                                        "Spring",
+                                        "Direction",
                                         "=",
                                         "1"
                                       ]
@@ -15932,16 +15876,27 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "DirY",
+                                    "Spring",
+                                    "Direction",
                                     "=",
-                                    "-1"
+                                    "0"
                                   ]
                                 }
                               ],
                               "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "SpringDirection",
+                                    "=",
+                                    "-1"
+                                  ]
+                                },
                                 {
                                   "type": {
                                     "value": "SetStringObjectVariable"
@@ -15976,20 +15931,9 @@
                                   },
                                   "parameters": [
                                     "Player",
-                                    "XSpeed",
-                                    "=",
-                                    "DirX*Spring.Force/sqrt(2)*60"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
                                     "YSpeed",
                                     "=",
-                                    "DirY*Spring.Force/sqrt(2)*60"
+                                    "SpringDirection*Spring.Force*60"
                                   ]
                                 },
                                 {
@@ -16005,17 +15949,6 @@
                                 },
                                 {
                                   "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "Direction",
-                                    "=",
-                                    "DirX"
-                                  ]
-                                },
-                                {
-                                  "type": {
                                     "value": "SetBooleanObjectVariable"
                                   },
                                   "parameters": [
@@ -16027,22 +15960,12 @@
                                 },
                                 {
                                   "type": {
-                                    "value": "MettreX"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "=",
-                                    "Spring.CenterX()+DirX*Player.WidthRadius*2"
-                                  ]
-                                },
-                                {
-                                  "type": {
                                     "value": "MettreY"
                                   },
                                   "parameters": [
                                     "Player",
                                     "=",
-                                    "Spring.CenterY()+DirY*Player.HeightRadius*2"
+                                    "Spring.Y()+SpringDirection*Player.HeightRadius"
                                   ]
                                 },
                                 {
@@ -16070,24 +15993,585 @@
                                 }
                               ]
                             }
+                          ],
+                          "variables": [
+                            {
+                              "name": "SpringDirection",
+                              "type": "number",
+                              "value": 1
+                            }
                           ]
-                        }
-                      ],
-                      "variables": [
-                        {
-                          "name": "ArrayOffset",
-                          "type": "number",
-                          "value": 0
                         },
                         {
-                          "name": "DirX",
-                          "type": "number",
-                          "value": 1
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Horizontal springs"
                         },
                         {
-                          "name": "DirY",
-                          "type": "number",
-                          "value": -1
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Spring",
+                                        "Direction",
+                                        "=",
+                                        "2"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "HelperExtension::Player::SensorCollision"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Player",
+                                        "\"WallRight\"",
+                                        "Spring",
+                                        "Spring"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::And"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Spring",
+                                        "Direction",
+                                        "=",
+                                        "3"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "HelperExtension::Player::SensorCollision"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Player",
+                                        "\"WallLeft\"",
+                                        "Spring",
+                                        "Spring"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Spring",
+                                    "Direction",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "SpringDirection",
+                                    "=",
+                                    "-1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "XSpeed",
+                                    "=",
+                                    "SpringDirection*Spring.Force*60"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "ControlLock",
+                                    "False",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MettreX"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "=",
+                                    "Spring.X()+SpringDirection*Player.WidthRadius*3"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                  },
+                                  "parameters": [
+                                    "Spring",
+                                    "Animation",
+                                    "=",
+                                    "Spring.Type + \"Spring\" + Spring.DirectionAnimation + \"Bounce\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "audio\\sfx\\spring.wav",
+                                    "",
+                                    "",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player",
+                                    "Direction",
+                                    "=",
+                                    "SpringDirection"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "variables": [
+                            {
+                              "name": "SpringDirection",
+                              "type": "number",
+                              "value": 1
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Diagonal springs"
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Spring",
+                                "Direction",
+                                ">=",
+                                "4"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "ArrayOffset",
+                                "=",
+                                "Spring.Direction-4"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Spring",
+                                        "Direction",
+                                        "=",
+                                        "5"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Spring",
+                                        "Direction",
+                                        "=",
+                                        "7"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "DirX",
+                                    "=",
+                                    "-1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Spring",
+                                        "Direction",
+                                        "=",
+                                        "6"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Spring",
+                                        "Direction",
+                                        "=",
+                                        "7"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "DirY",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Or"
+                                  },
+                                  "parameters": [],
+                                  "subInstructions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "DirY",
+                                            "=",
+                                            "-1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "HelperExtension::Player::Sensor2Collision"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Player",
+                                            "\"GroundLeft\"",
+                                            "\"GroundRight\"",
+                                            "Spring",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::And"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "DirY",
+                                            "=",
+                                            "1"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "HelperExtension::Player::Sensor2Collision"
+                                          },
+                                          "parameters": [
+                                            "Player",
+                                            "Player",
+                                            "\"CeilingLeft\"",
+                                            "\"CeilingRight\"",
+                                            "Spring",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberVariable"
+                                      },
+                                      "parameters": [
+                                        "DirY",
+                                        "=",
+                                        "-1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetStringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Action",
+                                        "=",
+                                        "\"Spring\""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Ground",
+                                        "False",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "XSpeed",
+                                        "=",
+                                        "DirX*Spring.Force/sqrt(2)*60"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "YSpeed",
+                                        "=",
+                                        "DirY*Spring.Force/sqrt(2)*60"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "JumpFlag",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "Direction",
+                                        "=",
+                                        "DirX"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "ControlLock",
+                                        "False",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MettreX"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "=",
+                                        "Spring.CenterX()+DirX*Player.WidthRadius*2"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MettreY"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "=",
+                                        "Spring.CenterY()+DirY*Player.HeightRadius*2"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "Spring",
+                                        "Animation",
+                                        "=",
+                                        "Spring.Type + \"Spring\" + Spring.DirectionAnimation + \"Bounce\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PlaySound"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "audio\\sfx\\spring.wav",
+                                        "",
+                                        "",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "variables": [
+                            {
+                              "name": "ArrayOffset",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "name": "DirX",
+                              "type": "number",
+                              "value": 1
+                            },
+                            {
+                              "name": "DirY",
+                              "type": "number",
+                              "value": -1
+                            }
+                          ]
                         }
                       ]
                     },
