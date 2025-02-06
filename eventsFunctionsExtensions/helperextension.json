@@ -465,6 +465,16 @@
                         "Collision.Wall3Left.Collision",
                         "True"
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Collision.WallLeft.Ignore",
+                        "False"
+                      ]
                     }
                   ],
                   "actions": [
@@ -539,6 +549,16 @@
                         "Object",
                         "Collision.Wall3Right.Collision",
                         "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Collision.WallIgnore.Ignore",
+                        "False"
                       ]
                     }
                   ],

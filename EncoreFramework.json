@@ -1,7 +1,7 @@
 {
   "firstLayout": "WebPressStart",
   "gdVersion": {
-    "build": 223,
+    "build": 224,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -1692,54 +1692,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/RedSpringDiagonal.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "RedSpringDiagonal",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RedSpringDiagonalBounce.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "RedSpringDiagonalBounce",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RedSpringDiagonalBounce2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "RedSpringDiagonalBounce2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/YelloSpringDiagonal.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "YelloSpringDiagonal",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/YelloSpringDiagonalBounce.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "YelloSpringDiagonalBounce",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/YelloSpringDiagonalBounce2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "YelloSpringDiagonalBounce2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/RedSpringDiagonal2.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -1760,22 +1712,6 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "RedSpringDiagonalBounce4",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RedSpringDiagonal.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\RedSpringDiagonal.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RedSpringDiagonal2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\RedSpringDiagonal2.png",
         "smoothed": false,
         "userAdded": false
       },
@@ -1848,22 +1784,6 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "YellowSpringDiagonal",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RedSpringDiagonalBounce3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\RedSpringDiagonalBounce3.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/RedSpringDiagonalBounce4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\RedSpringDiagonalBounce4.png",
         "smoothed": false,
         "userAdded": false
       },
@@ -2076,14 +1996,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/KnucklesGliding.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "KnucklesGliding",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/KnucklesGlidingFall.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -2108,34 +2020,122 @@
         "userAdded": false
       },
       {
-        "file": "assets/KnucklesGlidingSlide2.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "KnucklesGlidingSlide2",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/KnucklesGlidingTurn.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "KnucklesGlidingTurn",
+        "metadata": "",
+        "name": "assets\\KnucklesGlidingTurn.png",
         "smoothed": false,
         "userAdded": false
       },
       {
         "file": "assets/KnucklesGlidingTurn2.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "KnucklesGlidingTurn2",
+        "metadata": "",
+        "name": "assets\\KnucklesGlidingTurn2.png",
         "smoothed": false,
         "userAdded": false
       },
       {
         "file": "assets/KnucklesGlidingTurn3.png",
         "kind": "image",
+        "metadata": "",
+        "name": "assets\\KnucklesGlidingTurn3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGliding2.png",
+        "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "KnucklesGlidingTurn3",
+        "name": "KnucklesGliding2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGliding3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "KnucklesGliding3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesGlidingSlide2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\KnucklesGlidingSlide2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbing.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbing.png\"}",
+        "name": "KnucklesClimbing",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbing2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbing2.png\"}",
+        "name": "KnucklesClimbing2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbing3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbing3.png\"}",
+        "name": "KnucklesClimbing3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbing4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbing4.png\"}",
+        "name": "KnucklesClimbing4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbing5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbing5.png\"}",
+        "name": "KnucklesClimbing5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbing6.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbing6.png\"}",
+        "name": "KnucklesClimbing6",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbingUp.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbingUp.png\"}",
+        "name": "KnucklesClimbingUp",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbingUp2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbingUp2.png\"}",
+        "name": "KnucklesClimbingUp2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/KnucklesClimbingUp3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/KnucklesClimbingUp3.png\"}",
+        "name": "KnucklesClimbingUp3",
         "smoothed": false,
         "userAdded": false
       }
@@ -7840,6 +7840,26 @@
           "name": "PlayerID",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "TurnAngle",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TurnTargetAngle",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TurnXSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ClimbingFrame",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -9991,17 +10011,161 @@
           ]
         },
         {
-          "name": "Gliding",
+          "name": "KnucklesGliding",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 36,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "KnucklesGliding",
+                  "image": "KnucklesGliding2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\KnucklesGlidingTurn.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\KnucklesGlidingTurn2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\KnucklesGlidingTurn3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesGliding3",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -10125,7 +10289,7 @@
           ]
         },
         {
-          "name": "GlidingSlide",
+          "name": "Sliding",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -10168,10 +10332,22 @@
                       }
                     ]
                   ]
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SlidingStandUp",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "KnucklesGlidingSlide2",
+                  "image": "assets\\KnucklesGlidingSlide2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -10210,17 +10386,17 @@
           ]
         },
         {
-          "name": "GlidingTurn",
+          "name": "Climbing",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": false,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 1,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "KnucklesGlidingTurn",
+                  "image": "KnucklesClimbing",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -10256,7 +10432,7 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "KnucklesGlidingTurn2",
+                  "image": "KnucklesClimbing2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -10292,7 +10468,249 @@
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "KnucklesGlidingTurn3",
+                  "image": "KnucklesClimbing3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesClimbing4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesClimbing5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesClimbing6",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "KnucklesClimbingUp",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.2,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesClimbingUp",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesClimbingUp2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 20,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 12
+                      },
+                      {
+                        "x": 46,
+                        "y": 52
+                      },
+                      {
+                        "x": 20,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "KnucklesClimbingUp2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.2,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "KnucklesClimbingUp3",
                   "points": [],
                   "originPoint": {
                     "name": "origine",

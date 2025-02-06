@@ -318,8 +318,8 @@
       "name": "Monitor10Rings",
       "persistentUuid": "cb10478c-71bb-4f4a-a967-57edf589de69",
       "width": 0,
-      "x": 368,
-      "y": 432,
+      "x": 400,
+      "y": 368,
       "zOrder": 9,
       "numberProperties": [],
       "stringProperties": [],
@@ -464,7 +464,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7921750756870125,
+    "zoomFactor": 0.7663340389421611,
     "windowMask": false
   }
 }
