@@ -3,6 +3,7 @@
   "category": "",
   "extensionNamespace": "",
   "fullName": "Helper Extension",
+  "gdevelopVersion": "",
   "helpPath": "",
   "iconUrl": "",
   "name": "HelperExtension",
@@ -256,7 +257,7 @@
           "fullName": "Player has landed on object",
           "functionType": "Condition",
           "name": "PlayerLanding",
-          "sentence": "_PARAM0_ has landed on _PARAM2_",
+          "sentence": "_PARAM0_ (_PARAM3_) has landed on _PARAM2_",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -266,7 +267,7 @@
                     "value": "VarObjet"
                   },
                   "parameters": [
-                    "Object",
+                    "Player_MovementValues",
                     "YSpeed",
                     ">=",
                     "0"
@@ -313,6 +314,11 @@
             {
               "description": "",
               "name": "TestObject",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "Player_MovementValues",
               "type": "objectList"
             }
           ],
@@ -408,7 +414,7 @@
           "fullName": "Player wall sensors are facing a wall",
           "functionType": "Condition",
           "name": "SensorWall",
-          "sentence": "_PARAM2_ wall sensors of _PARAM0_ are facing a wall",
+          "sentence": "_PARAM2_ wall sensors of _PARAM0_ (_PARAM3_) are facing a wall",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -485,7 +491,7 @@
                       "parameters": [
                         "WallAngle",
                         "=",
-                        "AngleDifference(Object.Variable(GroundAngle), AngleBetweenPositions(Object.Variable(Collision.Wall2Left.X), Object.Variable(Collision.Wall2Left.Y), Object.Variable(Collision.Wall3Left.X), Object.Variable(Collision.Wall3Left.Y)))"
+                        "AngleDifference(Player_MovementValues.Variable(Angle), AngleBetweenPositions(Object.Variable(Collision.Wall2Left.X), Object.Variable(Collision.Wall2Left.Y), Object.Variable(Collision.Wall3Left.X), Object.Variable(Collision.Wall3Left.Y)))"
                       ]
                     },
                     {
@@ -570,7 +576,7 @@
                       "parameters": [
                         "WallAngle",
                         "=",
-                        "AngleDifference(Object.Variable(GroundAngle), AngleBetweenPositions(Object.Variable(Collision.Wall2Right.X), Object.Variable(Collision.Wall2Right.Y), Object.Variable(Collision.Wall3Right.X), Object.Variable(Collision.Wall3Right.Y)))"
+                        "AngleDifference(Player_MovementValues.Variable(Angle), AngleBetweenPositions(Object.Variable(Collision.Wall2Right.X), Object.Variable(Collision.Wall2Right.Y), Object.Variable(Collision.Wall3Right.X), Object.Variable(Collision.Wall3Right.Y)))"
                       ]
                     },
                     {
@@ -662,6 +668,11 @@
               "name": "Sensor",
               "supplementaryInformation": "[\"Left\",\"Right\",\"Any\"]",
               "type": "stringWithSelector"
+            },
+            {
+              "description": "",
+              "name": "Player_MovementValues",
+              "type": "objectList"
             }
           ],
           "objectGroups": []

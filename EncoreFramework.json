@@ -1,7 +1,7 @@
 {
   "firstLayout": "WebPressStart",
   "gdVersion": {
-    "build": 224,
+    "build": 231,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -2138,6 +2138,38 @@
         "name": "KnucklesClimbingUp3",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Player_MovementValues.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_MovementValues",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_Input.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_Input",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Idle2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Idle2.png\"}",
+        "name": "Idle2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_ActionValues.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_ActionValues",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2151,180 +2183,7 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "folded": true,
           "name": "PlayerID",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "Character",
-          "type": "string",
-          "value": "Sonic"
-        },
-        {
-          "folded": true,
-          "name": "XSpeed",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "YSpeed",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "GroundAngle",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "CalculatedAngle",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Ground",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "folded": true,
-          "name": "Landed",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "Acceleration",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Deceleration",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "RollDeceleration",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Friction",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "TopSpeed",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Gravity",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "WidthRadius",
-          "type": "number",
-          "value": 10
-        },
-        {
-          "folded": true,
-          "name": "HeightRadius",
-          "type": "number",
-          "value": 20
-        },
-        {
-          "folded": true,
-          "name": "PushRadius",
-          "type": "number",
-          "value": 11
-        },
-        {
-          "folded": true,
-          "name": "Action",
-          "type": "string",
-          "value": "Stand"
-        },
-        {
-          "folded": true,
-          "name": "JumpForce",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Direction",
-          "type": "number",
-          "value": 1
-        },
-        {
-          "folded": true,
-          "name": "SavedGroundSpeed",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "SensorAngle",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "SensorsHorizontal",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "folded": true,
-          "name": "CollisionLayer",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "SlopeFactor",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "ControlLock",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "folded": true,
-          "name": "ControlLockTimer",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "JumpFlag",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "SpinDashRev",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "DamageX",
           "type": "number",
           "value": 0
         },
@@ -2345,45 +2204,6 @@
           "name": "FlashTimer",
           "type": "number",
           "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Input",
-          "type": "structure",
-          "children": [
-            {
-              "name": "A",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "folded": true,
-              "name": "APressed",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "folded": true,
-              "name": "AllowDirectionalMovement",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "name": "HasInput",
-              "type": "boolean",
-              "value": false
-            },
-            {
-              "name": "XAxis",
-              "type": "number",
-              "value": 0
-            },
-            {
-              "name": "YAxis",
-              "type": "number",
-              "value": 0
-            }
-          ]
         },
         {
           "name": "Collision",
@@ -2876,21 +2696,6 @@
           "name": "PositionRecord",
           "type": "array",
           "children": []
-        },
-        {
-          "name": "InputRecord",
-          "type": "array",
-          "children": []
-        },
-        {
-          "name": "Hurt",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "Attacking",
-          "type": "boolean",
-          "value": false
         }
       ],
       "effects": [],
@@ -2902,7 +2707,7 @@
       ],
       "animations": [
         {
-          "name": "Idle",
+          "name": "Player",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -2912,7 +2717,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Fade.png",
+                  "image": "Idle2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -3148,7 +2953,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "SonicSkin",
+      "name": "PlayerSkin_Sonic",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -5173,7 +4978,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "TailsSkin",
+      "name": "PlayerSkin_Tails",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -6557,7 +6362,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "TailsTails",
+      "name": "PlayerSkin_TailsTails",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -7438,7 +7243,8 @@
         "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
         "textureAtlasResourceName": "assets\\HUD\\numbers.png",
         "align": "left",
-        "wordWrap": true
+        "wordWrap": true,
+        "verticalTextAlignment": "top"
       }
     },
     {
@@ -7550,7 +7356,8 @@
         "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
         "textureAtlasResourceName": "assets\\HUD\\numbers.png",
         "align": "left",
-        "wordWrap": true
+        "wordWrap": true,
+        "verticalTextAlignment": "top"
       }
     },
     {
@@ -7578,7 +7385,8 @@
         "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
         "textureAtlasResourceName": "assets\\HUD\\numbers.png",
         "align": "left",
-        "wordWrap": true
+        "wordWrap": true,
+        "verticalTextAlignment": "top"
       }
     },
     {
@@ -7606,7 +7414,8 @@
         "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
         "textureAtlasResourceName": "assets\\HUD\\numbers.png",
         "align": "left",
-        "wordWrap": true
+        "wordWrap": true,
+        "verticalTextAlignment": "top"
       }
     },
     {
@@ -7831,7 +7640,7 @@
     {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
-      "name": "KnucklesSkin",
+      "name": "PlayerSkin_Knuckles",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -14002,6 +13811,557 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_MovementValues",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Character",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "XSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TopXSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "MaxXSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "XAcceleration",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SlopeFactor",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "YSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "MaxYSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "YAcceleration",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LandingConversionFactor",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Landed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Ground",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Action",
+          "type": "string",
+          "value": "Stand"
+        },
+        {
+          "name": "Angle",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Layer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Direction",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Hurt",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FlagAllowCommonInput",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "FlagAllowX",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "FlagAllowLanding",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "LandingSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FloatX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FloatY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Attacking",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Deceleration",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RollDeceleration",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SensorAngle",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "WidthRadius",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "HeightRadius",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PushRadius",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SensorsHorizontal",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "CalculatedAngle",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SavedGroundSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ControlLockTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_MovementValues",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_MovementValues",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_Input",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "KeyUp",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyDown",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyLeft",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyRight",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionA",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionB",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionC",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionStart",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyUpPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyDownPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyLeftPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyRightPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionAPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionBPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionCPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "KeyActionStartPressed",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "IgnoreInput",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "InputRecord",
+          "type": "array",
+          "children": []
+        },
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_Input",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_Input",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_ActionValues",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "JumpStrength",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "JumpReleaseStrength",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "JumpVariable",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LookUpTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LookUpShiftAmount",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CrouchDownTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CrouchDownShiftAmount",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SkidMinimumAmount",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SkidRate",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpindashRev",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpindashRevCharge",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpindashMinSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpindashMaxSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RollingDeceleration",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RollingBraking",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RollingSlopeUpFactor",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RollingSlopeDownFactor",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "RollingConversionFactor",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_ActionValues",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_ActionValues",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -14011,19 +14371,28 @@
         "folderName": "Player",
         "children": [
           {
+            "objectName": "Player_MovementValues"
+          },
+          {
+            "objectName": "Player_Input"
+          },
+          {
+            "objectName": "Player_ActionValues"
+          },
+          {
             "objectName": "Player"
           },
           {
-            "objectName": "SonicSkin"
+            "objectName": "PlayerSkin_Sonic"
           },
           {
-            "objectName": "TailsSkin"
+            "objectName": "PlayerSkin_Tails"
           },
           {
-            "objectName": "TailsTails"
+            "objectName": "PlayerSkin_TailsTails"
           },
           {
-            "objectName": "KnucklesSkin"
+            "objectName": "PlayerSkin_Knuckles"
           },
           {
             "objectName": "Act2StartPosition"
@@ -14195,13 +14564,27 @@
       "name": "PlayerSkin",
       "objects": [
         {
-          "name": "SonicSkin"
+          "name": "PlayerSkin_Sonic"
         },
         {
-          "name": "TailsSkin"
+          "name": "PlayerSkin_Tails"
         },
         {
-          "name": "KnucklesSkin"
+          "name": "PlayerSkin_Knuckles"
+        }
+      ]
+    },
+    {
+      "name": "PlayerVariablesSensors",
+      "objects": [
+        {
+          "name": "Player_MovementValues"
+        },
+        {
+          "name": "Player_Input"
+        },
+        {
+          "name": "Player_ActionValues"
         }
       ]
     },
@@ -14349,7 +14732,7 @@
       "folded": true,
       "name": "RotationSnap",
       "type": "number",
-      "value": 45
+      "value": 1
     },
     {
       "name": "Level",
@@ -14359,7 +14742,7 @@
           "folded": true,
           "name": "CharacterMain",
           "type": "string",
-          "value": "Knuckles"
+          "value": "Sonic"
         },
         {
           "folded": true,
