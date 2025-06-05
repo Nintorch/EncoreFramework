@@ -921,7 +921,7 @@
                                     "Player_ActionValues",
                                     "RollingBraking",
                                     "=",
-                                    "0.12"
+                                    "0.0234375"
                                   ]
                                 },
                                 {
@@ -1150,19 +1150,30 @@
                               "comment": "Speed Shoes"
                             },
                             {
-                              "disabled": true,
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakers",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
                               "actions": [
                                 {
                                   "type": {
                                     "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "Acceleration",
+                                    "Player_MovementValues",
+                                    "XAcceleration",
                                     "=",
-                                    "0.09375*60*60*TimeDelta()"
+                                    "0.09375"
                                   ]
                                 },
                                 {
@@ -1170,10 +1181,10 @@
                                     "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "Friction",
+                                    "Player_MovementValues",
+                                    "TopXSpeed",
                                     "=",
-                                    "Player.Acceleration"
+                                    "12"
                                   ]
                                 },
                                 {
@@ -1181,10 +1192,10 @@
                                     "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Player",
-                                    "TopSpeed",
+                                    "Player_ActionValues",
+                                    "RollingBraking",
                                     "=",
-                                    "12*60"
+                                    "0.046875"
                                   ]
                                 }
                               ]
@@ -4306,7 +4317,7 @@
                                       "parameters": [
                                         "Offset",
                                         "=",
-                                        "Player_MovementValues.YSpeed+10"
+                                        "Player_MovementValues.YSpeed+5"
                                       ]
                                     }
                                   ],
@@ -5407,6 +5418,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Movement Routines",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -7444,7 +7456,7 @@
                                                 "Player_MovementValues",
                                                 "XSpeed",
                                                 "=",
-                                                "max(0, Player_MovementValues.XSpeed - Player_MovementValues.XAcceleration*60*TimeDelta()/2)"
+                                                "max(0, Player_MovementValues.XSpeed - Player_ActionValues.RollingBraking*60*TimeDelta()/2)"
                                               ]
                                             }
                                           ]
@@ -7473,7 +7485,7 @@
                                                 "Player_MovementValues",
                                                 "XSpeed",
                                                 "=",
-                                                "min(0, Player_MovementValues.XSpeed + Player_MovementValues.XAcceleration*60*TimeDelta()/2)"
+                                                "min(0, Player_MovementValues.XSpeed + Player_ActionValues.RollingBraking*60*TimeDelta()/2)"
                                               ]
                                             }
                                           ]
@@ -10368,6 +10380,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Actions and Animations",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11576,7 +11589,7 @@
                                                       "parameters": [
                                                         "abs(Player_MovementValues.SavedGroundSpeed)",
                                                         "<",
-                                                        "Player_MovementValues.TopXSpeed"
+                                                        "6"
                                                       ]
                                                     }
                                                   ],
@@ -11615,7 +11628,7 @@
                                                       "parameters": [
                                                         "abs(Player_MovementValues.SavedGroundSpeed)",
                                                         ">=",
-                                                        "Player_MovementValues.TopXSpeed"
+                                                        "6"
                                                       ]
                                                     }
                                                   ],
@@ -17367,7 +17380,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Monitors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -17956,58 +17968,110 @@
                                   ],
                                   "events": [
                                     {
-                                      "type": "BuiltinCommonInstructions::Comment",
-                                      "color": {
-                                        "b": 109,
-                                        "g": 230,
-                                        "r": 255,
-                                        "textB": 0,
-                                        "textG": 0,
-                                        "textR": 0
-                                      },
-                                      "comment": "Icon results"
-                                    },
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Icon Results",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
                                         {
-                                          "type": {
-                                            "value": "StringObjectVariable"
+                                          "type": "BuiltinCommonInstructions::Comment",
+                                          "color": {
+                                            "b": 109,
+                                            "g": 230,
+                                            "r": 255,
+                                            "textB": 0,
+                                            "textG": 0,
+                                            "textR": 0
                                           },
-                                          "parameters": [
-                                            "MonitorBase",
-                                            "Icon",
-                                            "=",
-                                            "\"10 Rings\""
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
+                                          "comment": "10 Rings"
+                                        },
                                         {
-                                          "type": {
-                                            "value": "PlaySound"
-                                          },
-                                          "parameters": [
-                                            "",
-                                            "audio\\sfx\\ring_collect.wav",
-                                            "",
-                                            "",
-                                            ""
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "MonitorIcon",
+                                                "Animation",
+                                                "=",
+                                                "\"10 Rings\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "PlaySound"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "audio\\sfx\\ring_collect.wav",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "HelperExtension::BitmapCounter::SetValue"
+                                              },
+                                              "parameters": [
+                                                "RingsCounter",
+                                                "BitmapCounter",
+                                                "+",
+                                                "10",
+                                                ""
+                                              ]
+                                            }
                                           ]
                                         },
                                         {
-                                          "type": {
-                                            "value": "HelperExtension::BitmapCounter::SetValue"
-                                          },
-                                          "parameters": [
-                                            "RingsCounter",
-                                            "BitmapCounter",
-                                            "+",
-                                            "10",
-                                            ""
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "MonitorIcon",
+                                                "Animation",
+                                                "=",
+                                                "\"Speed Shoes\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "SpeedSneakers",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "ModPitchMusicChannel"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "32",
+                                                "=",
+                                                "1.3"
+                                              ]
+                                            }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "parameters": []
                                     }
                                   ]
                                 }

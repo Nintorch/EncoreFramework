@@ -315,22 +315,6 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "Monitor10Rings",
-      "persistentUuid": "cb10478c-71bb-4f4a-a967-57edf589de69",
-      "width": 0,
-      "x": 400,
-      "y": 368,
-      "zOrder": 9,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
       "name": "Player",
       "persistentUuid": "35e5470a-9499-4375-82ad-afeae03db5fc",
       "width": 0,
@@ -474,6 +458,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MonitorSpeedShoes",
+      "persistentUuid": "f2feb22c-48e2-4e4c-ac64-4fd294246080",
+      "width": 0,
+      "x": 400,
+      "y": 368,
+      "zOrder": 30,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Monitor10Rings",
+      "persistentUuid": "8c4a2010-2107-4092-9d64-d0054f4ff74a",
+      "width": 0,
+      "x": 272,
+      "y": 432,
+      "zOrder": 31,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -486,7 +502,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7921750756870152,
+    "zoomFactor": 0.7413359461380419,
     "windowMask": false
   }
 }
