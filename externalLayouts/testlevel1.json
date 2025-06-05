@@ -334,12 +334,18 @@
       "name": "Player",
       "persistentUuid": "35e5470a-9499-4375-82ad-afeae03db5fc",
       "width": 0,
-      "x": 1104,
-      "y": 560,
+      "x": 64,
+      "y": 496,
       "zOrder": 5,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 1
+        }
+      ]
     },
     {
       "angle": 0,
@@ -452,6 +458,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Player",
+      "persistentUuid": "f83d8d19-149a-44cf-87b2-c2006e40eb0d",
+      "width": 0,
+      "x": 144,
+      "y": 496,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -464,7 +486,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.1793911513204238,
+    "zoomFactor": 0.7921750756870152,
     "windowMask": false
   }
 }

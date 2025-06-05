@@ -2170,6 +2170,14 @@
         "name": "Player_ActionValues",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Player_Others.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_Others",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3023,7 +3031,7 @@
             {
               "looping": false,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.4,
+              "timeBetweenFrames": 0.533,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -3143,7 +3151,7 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.4,
+              "timeBetweenFrames": 0.8,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
@@ -14362,6 +14370,138 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_Others",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "SuperForm",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "Shield",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Invincibility",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "InvincibilityTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpeedSneakers",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpeedSneakersTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Underwater",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Combo",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Air",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PreviousX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PreviousY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PreviousAction",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "AnimationTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_Others",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_Others",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -14378,6 +14518,9 @@
           },
           {
             "objectName": "Player_ActionValues"
+          },
+          {
+            "objectName": "Player_Others"
           },
           {
             "objectName": "Player"
@@ -14585,6 +14728,9 @@
         },
         {
           "name": "Player_ActionValues"
+        },
+        {
+          "name": "Player_Others"
         }
       ]
     },
