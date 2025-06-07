@@ -468,8 +468,8 @@
       "name": "MonitorSpeedShoes",
       "persistentUuid": "f2feb22c-48e2-4e4c-ac64-4fd294246080",
       "width": 0,
-      "x": 400,
-      "y": 368,
+      "x": 368,
+      "y": 432,
       "zOrder": 30,
       "numberProperties": [],
       "stringProperties": [],
@@ -502,7 +502,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7413359461380419,
+    "zoomFactor": 0.9045517212191588,
     "windowMask": false
   }
 }
