@@ -16,7 +16,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Scene Setup",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -46,26 +45,6 @@
                 },
                 {
                   "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "Level.LevelWidth",
-                    "=",
-                    "Tilemap.Width()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "Level.LevelHeight",
-                    "=",
-                    "Tilemap.Height()"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
                   },
                   "parameters": [
@@ -85,6 +64,38 @@
                     "1",
                     "0.4",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Master_Level",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Master_Camera",
+                    "0",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "LevelValueObjects"
                   ]
                 }
               ],
@@ -149,6 +160,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -158,6 +170,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2737,6 +2750,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Partner AI",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -5168,7 +5182,7 @@
                                               "parameters": [
                                                 "CentreX",
                                                 "=",
-                                                "Player_MovementValues.FloatX +SensorsData[ArrayIndex+1]*cos(ToRad(AngleOffset))\n-SensorsData[ArrayIndex+2]*sin(ToRad(AngleOffset))"
+                                                "clamp(Player_MovementValues.FloatX +SensorsData[ArrayIndex+1]*cos(ToRad(AngleOffset))\n-SensorsData[ArrayIndex+2]*sin(ToRad(AngleOffset)), Master_Camera.CameraMinimumX, Master_Camera.CameraMaximumX)"
                                               ]
                                             },
                                             {
@@ -5178,7 +5192,7 @@
                                               "parameters": [
                                                 "CentreY",
                                                 "=",
-                                                "Player_MovementValues.FloatY\n+SensorsData[ArrayIndex+1]*sin(ToRad(AngleOffset))\n+SensorsData[ArrayIndex+2]*cos(ToRad(AngleOffset))"
+                                                "clamp(Player_MovementValues.FloatY\n+SensorsData[ArrayIndex+1]*sin(ToRad(AngleOffset))\n+SensorsData[ArrayIndex+2]*cos(ToRad(AngleOffset)), Master_Camera.CameraMinimumY, Master_Camera.CameraMaximumY)"
                                               ]
                                             },
                                             {
@@ -5457,6 +5471,33 @@
                                                     "Collision[SensorsData[ArrayIndex+0]].Y",
                                                     "=",
                                                     "CollisionY"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "ArrayIndex",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "DebuggerTools::ConsoleLog"
+                                                  },
+                                                  "parameters": [
+                                                    "ToString(CentreY)",
+                                                    "\"info\"",
+                                                    ""
                                                   ]
                                                 }
                                               ]
@@ -6654,7 +6695,7 @@
                                           "parameters": [
                                             "AngleDifference",
                                             "=",
-                                            "abs(AngleDifference(AngleBetweenPositions(\nPlayer.Collision.WallLeft.X,\nPlayer.Collision.WallLeft.Y,\nPlayer.Collision.Wall2Left.X,\nPlayer.Collision.Wall2Left.Y), Player_MovementValues.Angle))"
+                                            "abs(AngleDifference(AngleBetweenPositions(\nPlayer.Collision.WallLeft.X,\nPlayer.Collision.WallLeft.Y,\nPlayer.Collision.Wall2Left.X,\nPlayer.Collision.Wall2Left.Y-1), Player_MovementValues.Angle))"
                                           ]
                                         }
                                       ],
@@ -6780,6 +6821,17 @@
                                           },
                                           "parameters": [
                                             "Player",
+                                            "Collision.WallRight.Ignore",
+                                            "False",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player",
                                             "Collision.Wall2Right.Collision",
                                             "True",
                                             ""
@@ -6794,17 +6846,6 @@
                                             "XSpeed",
                                             ">=",
                                             "0"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "BooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Collision.WallRight.Ignore",
-                                            "False",
-                                            ""
                                           ]
                                         }
                                       ],
@@ -10047,6 +10088,18 @@
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Hurt by spikes"
+                            },
+                            {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -10103,6 +10156,58 @@
                                         ""
                                       ]
                                     }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Falling under the bottom level boundary"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "FloatY",
+                                    ">",
+                                    "Master_Camera.CameraMaximumY"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Master_Camera",
+                                    "CameraSetup",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Hurt",
+                                    "=",
+                                    "2"
                                   ]
                                 }
                               ]
@@ -10545,6 +10650,17 @@
                                     "Hurt",
                                     "=",
                                     "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "StringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Action",
+                                    "!=",
+                                    "\"Dead\""
                                   ]
                                 }
                               ],
@@ -12580,6 +12696,39 @@
                                                 "=",
                                                 "\"Void\""
                                               ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FlagAllowCommonInput",
+                                                "False",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FlagAllowX",
+                                                "False",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "Collision.Enable",
+                                                "False",
+                                                "0"
+                                              ]
                                             }
                                           ],
                                           "events": [
@@ -12599,28 +12748,6 @@
                                                 }
                                               ],
                                               "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "SetBooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player",
-                                                    "Collision.Enable",
-                                                    "False",
-                                                    "0"
-                                                  ]
-                                                },
-                                                {
-                                                  "type": {
-                                                    "value": "SetBooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_MovementValues",
-                                                    "FlagAllowX",
-                                                    "False",
-                                                    "1"
-                                                  ]
-                                                },
                                                 {
                                                   "type": {
                                                     "value": "SetNumberObjectVariable"
@@ -12695,10 +12822,11 @@
                                                   "actions": [
                                                     {
                                                       "type": {
-                                                        "value": "SetStringVariable"
+                                                        "value": "SetStringObjectVariable"
                                                       },
                                                       "parameters": [
-                                                        "Camera.Mode",
+                                                        "Master_Camera",
+                                                        "CameraMode",
                                                         "=",
                                                         "\"Stop\""
                                                       ]
@@ -13992,10 +14120,11 @@
                                                 },
                                                 {
                                                   "type": {
-                                                    "value": "SetNumberVariable"
+                                                    "value": "SetNumberObjectVariable"
                                                   },
                                                   "parameters": [
-                                                    "Camera.LagTimer",
+                                                    "Master_Camera",
+                                                    "CameraLagTimer",
                                                     "=",
                                                     "(32 - Player_ActionValues.SpindashRev) / 60"
                                                   ]
@@ -19994,6 +20123,18 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "We want the camera to follow the main character"
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -20036,32 +20177,35 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.X",
+                            "Master_Camera",
+                            "CameraX",
                             "=",
                             "Player_MovementValues.FloatX"
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.Y",
+                            "Master_Camera",
+                            "CameraY",
                             "=",
                             "Player_MovementValues.FloatY"
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetStringVariable"
+                            "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
-                            "Camera.Mode",
-                            "=",
-                            "\"Moving\""
+                            "Master_Camera",
+                            "CameraSetup",
+                            "True",
+                            "Player_MovementValues.FloatY"
                           ]
                         }
                       ]
@@ -20071,10 +20215,11 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "NumberVariable"
+                            "value": "NumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.LagTimer",
+                            "Master_Camera",
+                            "CameraLagTimer",
                             "=",
                             "0"
                           ]
@@ -20083,20 +20228,22 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.TargetX",
+                            "Master_Camera",
+                            "CameraTargetX",
                             "=",
                             "Player_MovementValues.FloatX"
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.TargetY",
+                            "Master_Camera",
+                            "CameraTargetY",
                             "=",
                             "Player_MovementValues.FloatY+16"
                           ]
@@ -20108,10 +20255,11 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "NumberVariable"
+                            "value": "NumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.LagTimer",
+                            "Master_Camera",
+                            "CameraLagTimer",
                             ">",
                             "0"
                           ]
@@ -20120,32 +20268,35 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.TargetX",
+                            "Master_Camera",
+                            "CameraTargetX",
                             "=",
-                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Camera.LagTimer*60)*2-2]"
+                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Master_Camera.CameraLagTimer*60)*2-2]"
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.TargetY",
+                            "Master_Camera",
+                            "CameraTargetY",
                             "=",
-                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Camera.LagTimer*60)*2-1]+16"
+                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Master_Camera.CameraLagTimer*60)*2-1]+16"
                           ]
                         },
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.LagTimer",
+                            "Master_Camera",
+                            "CameraLagTimer",
                             "=",
-                            "max(0, Camera.LagTimer-TimeDelta())"
+                            "max(0, Master_Camera.CameraLagTimer-TimeDelta())"
                           ]
                         }
                       ]
@@ -20160,19 +20311,100 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "Mode \"Moving\" - Camera follows the player"
+                      "comment": "Action 0 - Level boundaries"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "StringVariable"
+                            "value": "NumberObjectVariable"
                           },
                           "parameters": [
-                            "Camera.Mode",
+                            "Master_Camera",
+                            "CameraAction",
                             "=",
-                            "\"Moving\""
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Camera",
+                            "CameraMinimumX",
+                            "=",
+                            "LevelLeftBoundary.BoundingBoxRight()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Camera",
+                            "CameraMinimumY",
+                            "=",
+                            "LevelTopBoundary.BoundingBoxBottom()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Camera",
+                            "CameraMaximumX",
+                            "=",
+                            "LevelRightBoundary.BoundingBoxLeft()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Camera",
+                            "CameraMaximumY",
+                            "=",
+                            "LevelBottomBoundary.BoundingBoxTop()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Mode \"Normal\" - Camera follows the player"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "StringObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Camera",
+                            "CameraMode",
+                            "=",
+                            "\"Normal\""
                           ]
                         }
                       ],
@@ -20195,24 +20427,26 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "NumberVariable"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "Camera.TargetX",
+                                "Master_Camera",
+                                "CameraTargetX",
                                 "<",
-                                "Camera.X-16"
+                                "Master_Camera.CameraX-16"
                               ]
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "value": "SetNumberVariable"
+                                "value": "SetNumberObjectVariable"
                               },
                               "parameters": [
-                                "Camera.X",
+                                "Master_Camera",
+                                "CameraX",
                                 "=",
-                                "max(Camera.X-16, Camera.TargetX+16)"
+                                "max(Master_Camera.CameraX-16, Master_Camera.CameraTargetX+16)"
                               ]
                             }
                           ]
@@ -20222,24 +20456,26 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "NumberVariable"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "Camera.TargetX",
+                                "Master_Camera",
+                                "CameraTargetX",
                                 ">",
-                                "Camera.X"
+                                "Master_Camera.CameraX"
                               ]
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "value": "SetNumberVariable"
+                                "value": "SetNumberObjectVariable"
                               },
                               "parameters": [
-                                "Camera.X",
+                                "Master_Camera",
+                                "CameraX",
                                 "=",
-                                "min(Camera.X+16, Camera.TargetX)"
+                                "min(Master_Camera.CameraX+16, Master_Camera.CameraTargetX)"
                               ]
                             }
                           ]
@@ -20278,24 +20514,26 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.TargetY",
+                                    "Master_Camera",
+                                    "CameraTargetY",
                                     "<",
-                                    "Camera.Y-32"
+                                    "Master_Camera.CameraY-32"
                                   ]
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.Y",
+                                    "Master_Camera",
+                                    "CameraY",
                                     "=",
-                                    "Camera.TargetY+32"
+                                    "Master_Camera.CameraTargetY+32"
                                   ]
                                 }
                               ]
@@ -20305,24 +20543,26 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.TargetY",
+                                    "Master_Camera",
+                                    "CameraTargetY",
                                     ">",
-                                    "Camera.Y+32"
+                                    "Master_Camera.CameraY+32"
                                   ]
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.Y",
+                                    "Master_Camera",
+                                    "CameraY",
                                     "=",
-                                    "Camera.TargetY-32"
+                                    "Master_Camera.CameraTargetY-32"
                                   ]
                                 }
                               ]
@@ -20351,24 +20591,26 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.TargetY",
+                                    "Master_Camera",
+                                    "CameraTargetY",
                                     ">",
-                                    "Camera.Y"
+                                    "Master_Camera.CameraY"
                                   ]
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.Y",
+                                    "Master_Camera",
+                                    "CameraY",
                                     "=",
-                                    "min(Camera.Y+8*60*TimeDelta(), Camera.TargetY)"
+                                    "min(Master_Camera.CameraY+8*60*TimeDelta(), Master_Camera.CameraTargetY)"
                                   ]
                                 }
                               ]
@@ -20378,24 +20620,26 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.TargetY",
+                                    "Master_Camera",
+                                    "CameraTargetY",
                                     "<",
-                                    "Camera.Y"
+                                    "Master_Camera.CameraY"
                                   ]
                                 }
                               ],
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.Y",
+                                    "Master_Camera",
+                                    "CameraY",
                                     "=",
-                                    "max(Camera.Y-8*60*TimeDelta(), Camera.TargetY)"
+                                    "max(Master_Camera.CameraY-8*60*TimeDelta(), Master_Camera.CameraTargetY)"
                                   ]
                                 }
                               ]
@@ -20510,12 +20754,13 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.OffsetY",
+                                    "Master_Camera",
+                                    "CameraShiftY",
                                     "=",
-                                    "max(Camera.OffsetY-2*60*TimeDelta(),-104)"
+                                    "max(Master_Camera.CameraShiftY-2*60*TimeDelta(),-104)"
                                   ]
                                 }
                               ]
@@ -20538,12 +20783,13 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.OffsetY",
+                                    "Master_Camera",
+                                    "CameraShiftY",
                                     "=",
-                                    "min(Camera.OffsetY+2*60*TimeDelta(),88)"
+                                    "min(Master_Camera.CameraShiftY+2*60*TimeDelta(),88)"
                                   ]
                                 }
                               ]
@@ -20572,10 +20818,11 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.OffsetY",
+                                    "Master_Camera",
+                                    "CameraShiftY",
                                     ">",
                                     "0"
                                   ]
@@ -20584,12 +20831,13 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.OffsetY",
+                                    "Master_Camera",
+                                    "CameraShiftY",
                                     "=",
-                                    "max(Camera.OffsetY-2*60*TimeDelta(),0)"
+                                    "max(Master_Camera.CameraShiftY-2*60*TimeDelta(),0)"
                                   ]
                                 }
                               ]
@@ -20599,10 +20847,11 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberVariable"
+                                    "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.OffsetY",
+                                    "Master_Camera",
+                                    "CameraShiftY",
                                     "<",
                                     "0"
                                   ]
@@ -20611,12 +20860,13 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "SetNumberVariable"
+                                    "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Camera.OffsetY",
+                                    "Master_Camera",
+                                    "CameraShiftY",
                                     "=",
-                                    "min(Camera.OffsetY+2*60*TimeDelta(),0)"
+                                    "min(Master_Camera.CameraShiftY+2*60*TimeDelta(),0)"
                                   ]
                                 }
                               ]
@@ -20707,7 +20957,7 @@
                           "parameters": [
                             "",
                             "=",
-                            "Camera.X+Camera.OffsetX",
+                            "Master_Camera.CameraX+Master_Camera.CameraShiftX",
                             "",
                             "0"
                           ]
@@ -20719,7 +20969,7 @@
                           "parameters": [
                             "",
                             "=",
-                            "Camera.Y+Camera.OffsetY",
+                            "Master_Camera.CameraY+Master_Camera.CameraShiftY",
                             "",
                             "0"
                           ]
@@ -20748,10 +20998,10 @@
                           },
                           "parameters": [
                             "",
-                            "0",
-                            "0",
-                            "Level.LevelWidth",
-                            "Level.LevelHeight",
+                            "Master_Camera.CameraMinimumX",
+                            "Master_Camera.CameraMinimumY",
+                            "Master_Camera.CameraMaximumX",
+                            "Master_Camera.CameraMaximumY",
                             "",
                             ""
                           ]

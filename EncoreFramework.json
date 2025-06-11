@@ -2178,6 +2178,30 @@
         "name": "Player_Others",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Master_Level.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Master_Level",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Master_Camera.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Master_Camera",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/LevelBoundary.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "LevelBoundary",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -14502,6 +14526,324 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Master_Level",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Water",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "WaterLevel",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "StageClear",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Boss",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "GameTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "LevelName",
+          "type": "string",
+          "value": "0"
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Master_Level",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Master_Level",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Master_Camera",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "CameraX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraTargetX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraTargetY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraMinimumX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraMinimumY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraMaximumX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraMaximumY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraShiftX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraShiftY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraMarginL",
+          "type": "number",
+          "value": -16
+        },
+        {
+          "name": "CameraMarginR",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraMarginT",
+          "type": "number",
+          "value": -32
+        },
+        {
+          "name": "CameraMarginB",
+          "type": "number",
+          "value": 32
+        },
+        {
+          "name": "CameraMode",
+          "type": "string",
+          "value": "Normal"
+        },
+        {
+          "name": "CameraAction",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TimerLook_Up",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TimerLook_Down",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TimerExpire",
+          "type": "number",
+          "value": 120
+        },
+        {
+          "name": "CameraLagTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "WindowMidWidth",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "WindowMidHeight",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraShake",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraSetup",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Master_Camera",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Master_Camera",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 0
+                      },
+                      {
+                        "x": 24,
+                        "y": 24
+                      },
+                      {
+                        "x": 0,
+                        "y": 24
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "LevelLeftBoundary",
+      "texture": "LevelBoundary",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "LevelRightBoundary",
+      "texture": "LevelBoundary",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "LevelTopBoundary",
+      "texture": "LevelBoundary",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "LevelBottomBoundary",
+      "texture": "LevelBoundary",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -14545,6 +14887,29 @@
       {
         "folderName": "Level objects",
         "children": [
+          {
+            "folderName": "Level boundaries",
+            "children": [
+              {
+                "objectName": "LevelLeftBoundary"
+              },
+              {
+                "objectName": "LevelRightBoundary"
+              },
+              {
+                "objectName": "LevelTopBoundary"
+              },
+              {
+                "objectName": "LevelBottomBoundary"
+              }
+            ]
+          },
+          {
+            "objectName": "Master_Level"
+          },
+          {
+            "objectName": "Master_Camera"
+          },
           {
             "objectName": "Ring"
           },
@@ -14871,6 +15236,17 @@
           "name": "LayerSwapper"
         }
       ]
+    },
+    {
+      "name": "LevelValueObjects",
+      "objects": [
+        {
+          "name": "Master_Level"
+        },
+        {
+          "name": "Master_Camera"
+        }
+      ]
     }
   ],
   "variables": [
@@ -14919,60 +15295,6 @@
           "name": "PlayingMusic",
           "type": "string",
           "value": ""
-        }
-      ]
-    },
-    {
-      "name": "Camera",
-      "type": "structure",
-      "children": [
-        {
-          "folded": true,
-          "name": "LagTimer",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Mode",
-          "type": "string",
-          "value": "Moving"
-        },
-        {
-          "folded": true,
-          "name": "OffsetX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "OffsetY",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "TargetX",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "TargetY",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "X",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Y",
-          "type": "number",
-          "value": 0
         }
       ]
     },
