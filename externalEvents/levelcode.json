@@ -185,6 +185,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Player Initialization",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -315,6 +316,150 @@
                                 },
                                 {
                                   "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorLeft2",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorRight2",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorLeft3",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorRight3",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorAngleLeft1",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorAngleLeft2",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorAngleRight1",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorAngleRight2",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorGroundLeft",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorGroundRight",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorCeilingLeft",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Player_SensorCeilingRight",
+                                    "0",
+                                    "0",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "Cache"
                                   },
                                   "parameters": [
@@ -353,16 +498,6 @@
                                     "=",
                                     "Player.Y()"
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "PlayerVariablesSensors",
-                                    "=",
-                                    "3821313"
-                                  ]
                                 }
                               ]
                             },
@@ -375,35 +510,18 @@
                                     "value": "Montre"
                                   },
                                   "parameters": [
-                                    "Player_SensorTop",
+                                    "PlayerSensors",
                                     ""
                                   ]
                                 },
                                 {
                                   "type": {
-                                    "value": "Montre"
+                                    "value": "ChangePlan"
                                   },
                                   "parameters": [
-                                    "Player_SensorBottom",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Montre"
-                                  },
-                                  "parameters": [
-                                    "Player_SensorLeft",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Montre"
-                                  },
-                                  "parameters": [
-                                    "Player_SensorRight",
-                                    ""
+                                    "PlayerSensors",
+                                    "=",
+                                    "3821313"
                                   ]
                                 }
                               ]
@@ -3983,79 +4101,11 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Ceiling/Top Sensors",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "PushString"
-                                          },
-                                          "parameters": [
-                                            "SensorsData",
-                                            "\"CeilingLeft\""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PushNumber"
-                                          },
-                                          "parameters": [
-                                            "SensorsData",
-                                            "-Player_MovementValues.WidthRadius"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PushNumber"
-                                          },
-                                          "parameters": [
-                                            "SensorsData",
-                                            "0"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PushNumber"
-                                          },
-                                          "parameters": [
-                                            "SensorsData",
-                                            "-90"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PushNumber"
-                                          },
-                                          "parameters": [
-                                            "SensorsData",
-                                            "Player_MovementValues.HeightRadius"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PushNumber"
-                                          },
-                                          "parameters": [
-                                            "SensorsData",
-                                            "SensorAngle"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "PushString"
-                                          },
-                                          "parameters": [
-                                            "SensorsData",
-                                            "\"\""
-                                          ]
-                                        }
-                                      ]
-                                    },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
@@ -4135,6 +4185,75 @@
                                           },
                                           "parameters": [
                                             "SensorsData",
+                                            "\"CeilingLeft\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PushNumber"
+                                          },
+                                          "parameters": [
+                                            "SensorsData",
+                                            "-Player_MovementValues.WidthRadius"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PushNumber"
+                                          },
+                                          "parameters": [
+                                            "SensorsData",
+                                            "0"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PushNumber"
+                                          },
+                                          "parameters": [
+                                            "SensorsData",
+                                            "-90"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PushNumber"
+                                          },
+                                          "parameters": [
+                                            "SensorsData",
+                                            "Player_MovementValues.HeightRadius"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PushNumber"
+                                          },
+                                          "parameters": [
+                                            "SensorsData",
+                                            "SensorAngle"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "PushString"
+                                          },
+                                          "parameters": [
+                                            "SensorsData",
+                                            "\"Player_SensorCeilingLeft\""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "PushString"
+                                          },
+                                          "parameters": [
+                                            "SensorsData",
                                             "\"CeilingRight\""
                                           ]
                                         },
@@ -4189,7 +4308,7 @@
                                           },
                                           "parameters": [
                                             "SensorsData",
-                                            "\"\""
+                                            "\"Player_SensorCeilingRight\""
                                           ]
                                         }
                                       ]
@@ -4202,7 +4321,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Wall/Left/Right Sensors",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -4313,7 +4431,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius - Player_MovementValues.XSpeed + 1"
+                                                "Player_MovementValues.PushRadius + 1"
                                               ]
                                             },
                                             {
@@ -4382,7 +4500,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius + Player_MovementValues.XSpeed "
+                                                "Player_MovementValues.PushRadius"
                                               ]
                                             },
                                             {
@@ -4451,7 +4569,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius - Player_MovementValues.XSpeed  + 6"
+                                                "Player_MovementValues.PushRadius  + 6"
                                               ]
                                             },
                                             {
@@ -4469,7 +4587,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorLeft2\""
                                               ]
                                             }
                                           ]
@@ -4520,7 +4638,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius + Player_MovementValues.XSpeed  + 5"
+                                                "Player_MovementValues.PushRadius  + 5"
                                               ]
                                             },
                                             {
@@ -4538,7 +4656,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorRight2\""
                                               ]
                                             }
                                           ]
@@ -4589,7 +4707,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius - Player_MovementValues.XSpeed  + 6"
+                                                "Player_MovementValues.PushRadius  + 6"
                                               ]
                                             },
                                             {
@@ -4607,7 +4725,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorLeft3\""
                                               ]
                                             }
                                           ]
@@ -4658,7 +4776,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius + Player_MovementValues.XSpeed + 5"
+                                                "Player_MovementValues.PushRadius + 5"
                                               ]
                                             },
                                             {
@@ -4676,7 +4794,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorRight3\""
                                               ]
                                             }
                                           ]
@@ -4727,7 +4845,7 @@
                                           "parameters": [
                                             "Offset",
                                             "=",
-                                            "Player_MovementValues.YSpeed+5"
+                                            "5"
                                           ]
                                         }
                                       ],
@@ -4848,7 +4966,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "-Player_MovementValues.WidthRadius + Player_MovementValues.XSpeed"
+                                                "-Player_MovementValues.WidthRadius"
                                               ]
                                             },
                                             {
@@ -4893,7 +5011,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorGroundLeft\""
                                               ]
                                             }
                                           ]
@@ -4917,7 +5035,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.WidthRadius + Player_MovementValues.XSpeed"
+                                                "Player_MovementValues.WidthRadius"
                                               ]
                                             },
                                             {
@@ -4962,7 +5080,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorGroundRight\""
                                               ]
                                             }
                                           ]
@@ -5149,7 +5267,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorAngleLeft1\""
                                               ]
                                             }
                                           ]
@@ -5218,7 +5336,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorAngleLeft2\""
                                               ]
                                             }
                                           ]
@@ -5287,7 +5405,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorAngleRight1\""
                                               ]
                                             }
                                           ]
@@ -5356,7 +5474,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "\"\""
+                                                "\"Player_SensorAngleRight2\""
                                               ]
                                             }
                                           ]
@@ -5403,7 +5521,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Sensor Processing",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -5482,7 +5599,7 @@
                                               "parameters": [
                                                 "CentreX",
                                                 "=",
-                                                "clamp(Player_MovementValues.FloatX +SensorsData[ArrayIndex+1]*cos(ToRad(AngleOffset))\n-SensorsData[ArrayIndex+2]*sin(ToRad(AngleOffset)), Master_Camera.CameraMinimumX, Master_Camera.CameraMaximumX)"
+                                                "clamp(Player_MovementValues.FloatX + SensorsData[ArrayIndex+1]*cos(ToRad(AngleOffset))\n-SensorsData[ArrayIndex+2]*sin(ToRad(AngleOffset)), Master_Camera.CameraMinimumX, Master_Camera.CameraMaximumX)"
                                               ]
                                             },
                                             {
@@ -5492,7 +5609,7 @@
                                               "parameters": [
                                                 "CentreY",
                                                 "=",
-                                                "clamp(Player_MovementValues.FloatY\n+SensorsData[ArrayIndex+1]*sin(ToRad(AngleOffset))\n+SensorsData[ArrayIndex+2]*cos(ToRad(AngleOffset)), Master_Camera.CameraMinimumY, Master_Camera.CameraMaximumY)"
+                                                "clamp(Player_MovementValues.FloatY \n+ SensorsData[ArrayIndex+1]*sin(ToRad(AngleOffset))\n+SensorsData[ArrayIndex+2]*cos(ToRad(AngleOffset)), Master_Camera.CameraMinimumY, Master_Camera.CameraMaximumY)"
                                               ]
                                             },
                                             {
@@ -5517,6 +5634,82 @@
                                             }
                                           ],
                                           "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Ground",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "CentreX",
+                                                    "+",
+                                                    "Player_MovementValues.XSpeed*cos(ToRad(Player_MovementValues.Angle))"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "CentreY",
+                                                    "+",
+                                                    "Player_MovementValues.XSpeed*sin(ToRad(Player_MovementValues.Angle))"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Ground",
+                                                    "False",
+                                                    ""
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "CentreX",
+                                                    "+",
+                                                    "Player_MovementValues.XSpeed"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "CentreY",
+                                                    "+",
+                                                    "Player_MovementValues.YSpeed"
+                                                  ]
+                                                }
+                                              ]
+                                            },
                                             {
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
@@ -5783,7 +5976,7 @@
                                                     "value": "AnimatableCapability::AnimatableBehavior::Name"
                                                   },
                                                   "parameters": [
-                                                    "PlayerVariablesSensors",
+                                                    "PlayerSensors",
                                                     "Animation",
                                                     "=",
                                                     "SensorsData[ArrayIndex+6]"
@@ -5812,11 +6005,22 @@
                                                         "value": "MettreXY"
                                                       },
                                                       "parameters": [
-                                                        "PlayerVariablesSensors",
+                                                        "PlayerSensors",
                                                         "=",
                                                         "CollisionX",
                                                         "=",
                                                         "CollisionY"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "SetBooleanObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "PlayerSensors",
+                                                        "Collision",
+                                                        "True",
+                                                        ""
                                                       ]
                                                     }
                                                   ]
@@ -5841,11 +6045,22 @@
                                                         "value": "MettreXY"
                                                       },
                                                       "parameters": [
-                                                        "PlayerVariablesSensors",
+                                                        "PlayerSensors",
                                                         "=",
                                                         "CentreX+cos(ToRad(Angle))*Length",
                                                         "=",
                                                         "CentreY+sin(ToRad(Angle))*Length"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "SetBooleanObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "PlayerSensors",
+                                                        "Collision",
+                                                        "False",
+                                                        ""
                                                       ]
                                                     }
                                                   ]
