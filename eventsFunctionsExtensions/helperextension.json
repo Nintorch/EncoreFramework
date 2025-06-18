@@ -148,273 +148,11 @@
       "objectType": "",
       "eventsFunctions": [
         {
-          "description": "Check if the player's sensor is in collision with an object",
-          "fullName": "Sensor is in collision with object",
-          "functionType": "Condition",
-          "name": "SensorCollision",
-          "sentence": "Sensor _PARAM2_ of _PARAM0_ is in collision with _PARAM3_",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::ForEach",
-              "object": "Object",
-              "conditions": [],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "TestObject",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Collision[SensorName].Collision",
-                        "True"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "CollisionPoint"
-                          },
-                          "parameters": [
-                            "TestObject",
-                            "Object.Variable(Collision[SensorName].X)",
-                            "Object.Variable(Collision[SensorName].Y)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CollisionPoint"
-                          },
-                          "parameters": [
-                            "TestObject",
-                            "Object.Variable(Collision[SensorName].X)",
-                            "Object.Variable(Collision[SensorName].Y)-1"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CollisionPoint"
-                          },
-                          "parameters": [
-                            "TestObject",
-                            "Object.Variable(Collision[SensorName].X)-1",
-                            "Object.Variable(Collision[SensorName].Y)"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetReturnBoolean"
-                      },
-                      "parameters": [
-                        "True"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "HelperExtension::Player",
-              "type": "behavior"
-            },
-            {
-              "description": "",
-              "name": "SensorName",
-              "type": "string"
-            },
-            {
-              "description": "",
-              "name": "TestObject",
-              "type": "objectList"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "description": "Check if the player has landed on an object",
-          "fullName": "Player has landed on object",
-          "functionType": "Condition",
-          "name": "PlayerLanding",
-          "sentence": "_PARAM0_ (_PARAM3_) has landed on _PARAM2_",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "Player_MovementValues",
-                    "YSpeed",
-                    ">=",
-                    "0"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "HelperExtension::Player::Sensor2Collision"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "\"GroundLeft\"",
-                    "\"GroundRight\"",
-                    "TestObject",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnBoolean"
-                  },
-                  "parameters": [
-                    "True"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "HelperExtension::Player",
-              "type": "behavior"
-            },
-            {
-              "description": "",
-              "name": "TestObject",
-              "type": "objectList"
-            },
-            {
-              "description": "",
-              "name": "Player_MovementValues",
-              "type": "objectList"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "description": "Check if any of the 2 sensors are colliding with an object ",
-          "fullName": "2 sensors are in collision with object",
-          "functionType": "Condition",
-          "name": "Sensor2Collision",
-          "sentence": "Sensor _PARAM2_ or _PARAM3_ of _PARAM0_ are in collision with _PARAM4_",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Or"
-                  },
-                  "parameters": [],
-                  "subInstructions": [
-                    {
-                      "type": {
-                        "value": "HelperExtension::Player::SensorCollision"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "Sensor1",
-                        "TestObject",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "HelperExtension::Player::SensorCollision"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior",
-                        "Sensor2",
-                        "TestObject",
-                        ""
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnBoolean"
-                  },
-                  "parameters": [
-                    "True"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "HelperExtension::Player",
-              "type": "behavior"
-            },
-            {
-              "description": "",
-              "name": "Sensor1",
-              "type": "string"
-            },
-            {
-              "description": "",
-              "name": "Sensor2",
-              "type": "string"
-            },
-            {
-              "description": "",
-              "name": "TestObject",
-              "type": "objectList"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
           "description": "Check if player's wall sensors are facing a wall",
           "fullName": "Player wall sensors are facing a wall",
           "functionType": "Condition",
           "name": "SensorWall",
-          "sentence": "_PARAM2_ wall sensors of _PARAM0_ (_PARAM3_) are facing a wall",
+          "sentence": "Wall sensors (_PARAM2_, _PARAM3_ and _PARAM4_) of _PARAM0_ (_PARAM5_) are facing a wall",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -426,39 +164,11 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "CompareArgumentAsString"
-                          },
-                          "parameters": [
-                            "\"Sensor\"",
-                            "=",
-                            "\"Left\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareArgumentAsString"
-                          },
-                          "parameters": [
-                            "\"Sensor\"",
-                            "=",
-                            "\"Any\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "Object",
-                        "Collision.Wall2Left.Collision",
+                        "Wall2",
+                        "Collision",
                         "True"
                       ]
                     },
@@ -467,8 +177,8 @@
                         "value": "ObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "Object",
-                        "Collision.Wall3Left.Collision",
+                        "Wall3",
+                        "Collision",
                         "True"
                       ]
                     },
@@ -477,8 +187,8 @@
                         "value": "ObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "Object",
-                        "Collision.WallLeft.Ignore",
+                        "Wall1",
+                        "Ignore",
                         "False"
                       ]
                     }
@@ -491,92 +201,7 @@
                       "parameters": [
                         "WallAngle",
                         "=",
-                        "AngleDifference(Player_MovementValues.Variable(Angle), AngleBetweenPositions(Object.Variable(Collision.Wall2Left.X), Object.Variable(Collision.Wall2Left.Y), Object.Variable(Collision.Wall3Left.X), Object.Variable(Collision.Wall3Left.Y)))"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "WallCheck",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Or"
-                      },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "value": "CompareArgumentAsString"
-                          },
-                          "parameters": [
-                            "\"Sensor\"",
-                            "=",
-                            "\"Right\""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "CompareArgumentAsString"
-                          },
-                          "parameters": [
-                            "\"Sensor\"",
-                            "=",
-                            "\"Any\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Collision.Wall2Right.Collision",
-                        "True"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Collision.Wall3Right.Collision",
-                        "True"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Collision.WallIgnore.Ignore",
-                        "False"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "WallAngle",
-                        "=",
-                        "AngleDifference(Player_MovementValues.Variable(Angle), AngleBetweenPositions(Object.Variable(Collision.Wall2Right.X), Object.Variable(Collision.Wall2Right.Y), Object.Variable(Collision.Wall3Right.X), Object.Variable(Collision.Wall3Right.Y)))"
+                        "AngleDifference(Player_MovementValues.Variable(Angle), AngleBetweenPositions(Wall2.X(), Wall2.Y(), Wall3.X(), Wall3.Y()))"
                       ]
                     },
                     {
@@ -665,9 +290,18 @@
             },
             {
               "description": "",
-              "name": "Sensor",
-              "supplementaryInformation": "[\"Left\",\"Right\",\"Any\"]",
-              "type": "stringWithSelector"
+              "name": "Wall1",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "Wall2",
+              "type": "objectList"
+            },
+            {
+              "description": "",
+              "name": "Wall3",
+              "type": "objectList"
             },
             {
               "description": "",

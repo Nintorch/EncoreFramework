@@ -2204,38 +2204,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/Player_SensorBottom.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_SensorBottom",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player_SensorLeft.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_SensorLeft",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player_SensorRight.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_SensorRight",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Player_SensorTop.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_SensorTop",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/Player_SensorAngle.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -2244,34 +2212,66 @@
         "userAdded": false
       },
       {
-        "file": "assets/Player_SensorGround.png",
+        "file": "assets/Player_SensorTop.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_SensorGround",
+        "name": "Player_SensorTop2",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/Player_SensorGround2.png",
+        "file": "assets/Player_SensorBottom.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_SensorGround2",
+        "name": "Player_SensorBottom2",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/Player_SensorGround2.png",
+        "file": "assets/Player_SensorLeft.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_SensorLeft2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorRight.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_SensorRight2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorLeft.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\Player_SensorGround2.png",
+        "name": "assets\\Player_SensorLeft2.png",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/Player_SensorCeiling.png",
+        "file": "assets/Player_SensorRight.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "Player_SensorCeiling",
+        "metadata": "",
+        "name": "assets\\Player_SensorRight2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorBottom.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Player_SensorBottom2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorTop.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Player_SensorTop2.png",
         "smoothed": false,
         "userAdded": false
       }
@@ -2308,491 +2308,6 @@
           "name": "FlashTimer",
           "type": "number",
           "value": 0
-        },
-        {
-          "name": "Collision",
-          "type": "structure",
-          "children": [
-            {
-              "folded": true,
-              "name": "AngleLeft1",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "AngleLeft2",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "AngleRight1",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "AngleRight2",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "CeilingCentre",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "CeilingLeft",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "CeilingRight",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "Enable",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "folded": true,
-              "name": "GroundCentre",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "GroundLeft",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "GroundRight",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "Wall2Left",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "Wall2Right",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "Wall3Left",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "Wall3Right",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "WallLeft",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "folded": true,
-              "name": "WallRight",
-              "type": "structure",
-              "children": [
-                {
-                  "folded": true,
-                  "name": "Collision",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "name": "Ignore",
-                  "type": "boolean",
-                  "value": false
-                },
-                {
-                  "folded": true,
-                  "name": "X",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "folded": true,
-                  "name": "Y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            }
-          ]
         },
         {
           "folded": true,
@@ -14093,6 +13608,21 @@
           "value": 0
         },
         {
+          "name": "EnableCollision",
+          "type": "boolean",
+          "value": true
+        },
+        {
+          "name": "LandingAction",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "LandingSpeed2",
+          "type": "number",
+          "value": 0
+        },
+        {
           "name": "PlayerID",
           "type": "number",
           "value": 0
@@ -14934,7 +14464,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -14958,18 +14488,18 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorBottom",
+                  "image": "Player_SensorBottom2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
                     "name": "centre",
-                    "x": 0,
-                    "y": 0
+                    "x": 2,
+                    "y": 1.5
                   },
                   "customCollisionMask": [
                     [
@@ -14978,16 +14508,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15011,7 +14541,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15035,12 +14565,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorLeft",
+                  "image": "Player_SensorLeft2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15055,16 +14585,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15088,7 +14618,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15112,12 +14642,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorRight",
+                  "image": "Player_SensorRight2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15132,16 +14662,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15165,7 +14695,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15189,12 +14719,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorTop",
+                  "image": "Player_SensorTop2",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15209,16 +14739,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15242,7 +14772,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15319,7 +14849,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15396,7 +14926,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15473,7 +15003,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15550,7 +15080,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15574,12 +15104,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorGround2",
+                  "image": "assets\\Player_SensorBottom2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15594,16 +15124,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15627,7 +15157,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15651,12 +15181,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "assets\\Player_SensorGround2.png",
+                  "image": "assets\\Player_SensorBottom2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15671,16 +15201,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15704,7 +15234,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15728,12 +15258,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorCeiling",
+                  "image": "assets\\Player_SensorTop2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15748,16 +15278,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15781,7 +15311,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15805,12 +15335,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorCeiling",
+                  "image": "assets\\Player_SensorTop2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15825,16 +15355,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15858,7 +15388,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15882,12 +15412,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorLeft",
+                  "image": "assets\\Player_SensorLeft2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15902,16 +15432,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -15935,7 +15465,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -15959,12 +15489,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorLeft",
+                  "image": "assets\\Player_SensorLeft2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -15979,16 +15509,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -16012,7 +15542,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -16036,12 +15566,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorRight",
+                  "image": "assets\\Player_SensorRight2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -16056,16 +15586,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]
@@ -16089,7 +15619,7 @@
           "value": 0
         },
         {
-          "name": "Enabled",
+          "name": "Ignore",
           "type": "boolean",
           "value": false
         },
@@ -16113,12 +15643,12 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Player_SensorRight",
+                  "image": "assets\\Player_SensorRight2.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 4.5,
-                    "y": 4.5
+                    "x": 1.5,
+                    "y": 1.5
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -16133,16 +15663,16 @@
                         "y": 0
                       },
                       {
-                        "x": 9,
+                        "x": 3,
                         "y": 0
                       },
                       {
-                        "x": 9,
-                        "y": 9
+                        "x": 3,
+                        "y": 3
                       },
                       {
                         "x": 0,
-                        "y": 9
+                        "y": 3
                       }
                     ]
                   ]

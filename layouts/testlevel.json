@@ -941,10 +941,11 @@
           "conditions": [
             {
               "type": {
-                "value": "StringVariable"
+                "value": "StringObjectVariable"
               },
               "parameters": [
-                "Level.PlayingMusic",
+                "Master_Level",
+                "PlayingMusic",
                 "=",
                 "\"Level\""
               ]
