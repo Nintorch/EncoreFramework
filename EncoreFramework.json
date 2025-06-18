@@ -2202,6 +2202,38 @@
         "name": "LevelBoundary",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorBottom.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_SensorBottom",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorLeft.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_SensorLeft",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorRight.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_SensorRight",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Player_SensorTop.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Player_SensorTop",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2385,6 +2417,35 @@
                 },
                 {
                   "folded": true,
+                  "name": "Y",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "name": "CeilingCentre",
+              "type": "structure",
+              "children": [
+                {
+                  "folded": true,
+                  "name": "Collision",
+                  "type": "boolean",
+                  "value": false
+                },
+                {
+                  "name": "Ignore",
+                  "type": "boolean",
+                  "value": false
+                },
+                {
+                  "folded": true,
+                  "name": "X",
+                  "type": "number",
+                  "value": 0
+                },
+                {
                   "name": "Y",
                   "type": "number",
                   "value": 0
@@ -14563,6 +14624,11 @@
           "name": "LevelName",
           "type": "string",
           "value": "0"
+        },
+        {
+          "name": "PlayingMusic",
+          "type": "string",
+          "value": ""
         }
       ],
       "effects": [],
@@ -14844,6 +14910,274 @@
       "variables": [],
       "effects": [],
       "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_SensorBottom",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_SensorBottom",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_SensorBottom",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 4.5,
+                    "y": 4.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 9
+                      },
+                      {
+                        "x": 0,
+                        "y": 9
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_SensorLeft",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_SensorLeft",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_SensorLeft",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 4.5,
+                    "y": 4.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 9
+                      },
+                      {
+                        "x": 0,
+                        "y": 9
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_SensorRight",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_SensorRight",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_SensorRight",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 4.5,
+                    "y": 4.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 9
+                      },
+                      {
+                        "x": 0,
+                        "y": 9
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "Player_SensorTop",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Player_SensorTop",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Player_SensorTop",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 4.5,
+                    "y": 4.5
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 0
+                      },
+                      {
+                        "x": 9,
+                        "y": 9
+                      },
+                      {
+                        "x": 0,
+                        "y": 9
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -14852,6 +15186,23 @@
       {
         "folderName": "Player",
         "children": [
+          {
+            "folderName": "Sensors",
+            "children": [
+              {
+                "objectName": "Player_SensorTop"
+              },
+              {
+                "objectName": "Player_SensorBottom"
+              },
+              {
+                "objectName": "Player_SensorLeft"
+              },
+              {
+                "objectName": "Player_SensorRight"
+              }
+            ]
+          },
           {
             "objectName": "Player_MovementValues"
           },
@@ -15096,6 +15447,18 @@
         },
         {
           "name": "Player_Others"
+        },
+        {
+          "name": "Player_SensorBottom"
+        },
+        {
+          "name": "Player_SensorTop"
+        },
+        {
+          "name": "Player_SensorLeft"
+        },
+        {
+          "name": "Player_SensorRight"
         }
       ]
     },
