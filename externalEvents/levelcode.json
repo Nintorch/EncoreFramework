@@ -502,31 +502,6 @@
                               ]
                             },
                             {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "Montre"
-                                  },
-                                  "parameters": [
-                                    "PlayerSensors",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "PlayerSensors",
-                                    "=",
-                                    "3821313"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
                               "type": "BuiltinCommonInstructions::Comment",
                               "color": {
                                 "b": 109,
@@ -950,17 +925,6 @@
                                   },
                                   "parameters": [
                                     "Player_MovementValues",
-                                    "MaxXSpeed",
-                                    "=",
-                                    "15"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
                                     "TopXSpeed",
                                     "=",
                                     "6"
@@ -994,31 +958,9 @@
                                   },
                                   "parameters": [
                                     "Player_MovementValues",
-                                    "MaxYSpeed",
-                                    "=",
-                                    "15"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
                                     "YAcceleration",
                                     "=",
                                     "0.21875"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "LandingConversionFactor",
-                                    "=",
-                                    "1.5"
                                   ]
                                 },
                                 {
@@ -1084,18 +1026,7 @@
                                     "Player_ActionValues",
                                     "SkidMinimumAmount",
                                     "=",
-                                    "3.4"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_ActionValues",
-                                    "SkidRate",
-                                    "=",
-                                    "0.5"
+                                    "4"
                                   ]
                                 },
                                 {
@@ -1151,39 +1082,6 @@
                                     "RollingBraking",
                                     "=",
                                     "0.0234375"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_ActionValues",
-                                    "RollingSlopeUpFactor",
-                                    "=",
-                                    "0.035"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_ActionValues",
-                                    "RollingSlopeDownFactor",
-                                    "=",
-                                    "0.25"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_ActionValues",
-                                    "RollingConversionFactor",
-                                    "=",
-                                    "0.7"
                                   ]
                                 }
                               ]
@@ -3888,6 +3786,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Sensors",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -5413,6 +5312,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Sensor Processing",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -5459,7 +5359,7 @@
                                     },
                                     {
                                       "type": "BuiltinCommonInstructions::Repeat",
-                                      "repeatExpression": "VariableChildCount(SensorsData)/7",
+                                      "repeatExpression": "VariableChildCount(SensorsData)/6",
                                       "conditions": [],
                                       "actions": [],
                                       "events": [
@@ -10897,7 +10797,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Actions and Animations",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11035,6 +10934,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "\"Stand\" - Standing, walking, running",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -11062,6 +10962,28 @@
                                               "parameters": [
                                                 "Player_ActionValues",
                                                 "JumpVariable",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_ActionValues",
+                                                "LookUpTimer",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_ActionValues",
+                                                "CrouchDownTimer",
                                                 "=",
                                                 "0"
                                               ]
@@ -11374,7 +11296,7 @@
                                                       "parameters": [
                                                         "abs(Player_MovementValues.XSpeed)",
                                                         ">=",
-                                                        "4"
+                                                        "Player_ActionValues.SkidMinimumAmount"
                                                       ]
                                                     },
                                                     {
@@ -12313,6 +12235,17 @@
                                                 "False",
                                                 ""
                                               ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_ActionValues",
+                                                "LookUpTimer",
+                                                "+",
+                                                "1*60*TimeDelta()"
+                                              ]
                                             }
                                           ],
                                           "events": [
@@ -12352,6 +12285,17 @@
                                                     "FlagAllowX",
                                                     "True",
                                                     ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_ActionValues",
+                                                    "LookUpTimer",
+                                                    "=",
+                                                    "0"
                                                   ]
                                                 }
                                               ]
@@ -12414,6 +12358,17 @@
                                                     "FlagAllowX",
                                                     "True",
                                                     ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_ActionValues",
+                                                    "LookUpTimer",
+                                                    "=",
+                                                    "0"
                                                   ]
                                                 }
                                               ]
@@ -12481,6 +12436,17 @@
                                                 "False",
                                                 ""
                                               ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_ActionValues",
+                                                "CrouchDownTimer",
+                                                "+",
+                                                "1*60*TimeDelta()"
+                                              ]
                                             }
                                           ],
                                           "events": [
@@ -12520,6 +12486,17 @@
                                                     "FlagAllowX",
                                                     "True",
                                                     ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_ActionValues",
+                                                    "CrouchDownTimer",
+                                                    "=",
+                                                    "0"
                                                   ]
                                                 }
                                               ]
@@ -12593,6 +12570,17 @@
                                                     "FlagAllowX",
                                                     "True",
                                                     ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_ActionValues",
+                                                    "CrouchDownTimer",
+                                                    "=",
+                                                    "0"
                                                   ]
                                                 }
                                               ]
@@ -12841,6 +12829,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "\"Dead\" - Death",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -13078,6 +13067,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "\"Balance\" - Standing on an edge",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -13357,6 +13347,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "\"Skid\" - Skidding",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -13553,6 +13544,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "\"Push\" - Pushing",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -14344,6 +14336,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "\"Roll\" - Rolling on the floor",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -14997,7 +14990,7 @@
                                                     "Player_MovementValues",
                                                     "YSpeed",
                                                     "<",
-                                                    "-4"
+                                                    "Player_ActionValues.JumpReleaseStrength"
                                                   ]
                                                 },
                                                 {
@@ -15021,7 +15014,7 @@
                                                     "Player_MovementValues",
                                                     "YSpeed",
                                                     "=",
-                                                    "-4"
+                                                    "Player_ActionValues.JumpReleaseStrength"
                                                   ]
                                                 }
                                               ]
@@ -20452,7 +20445,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -20462,7 +20454,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -20540,6 +20531,28 @@
                             "CameraY",
                             "=",
                             "Player_MovementValues.FloatY"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Camera",
+                            "WindowMidWidth",
+                            "=",
+                            "SceneWindowWidth()/2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Camera",
+                            "WindowMidHeight",
+                            "=",
+                            "SceneWindowHeight()/2"
                           ]
                         },
                         {
@@ -21008,74 +21021,13 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "BuiltinCommonInstructions::Or"
-                              },
-                              "parameters": [],
-                              "subInstructions": [
-                                {
-                                  "type": {
-                                    "value": "StringObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "Action",
-                                    "=",
-                                    "\"LookUp\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "StringObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "Action",
-                                    "=",
-                                    "\"Duck\""
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "BuiltinCommonInstructions::Once"
-                              },
-                              "parameters": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ResetTimer"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "",
-                                "\"CameraWait\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "UnPauseTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"CameraWait\""
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "CompareTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"CameraWait\"",
+                                "Player_ActionValues",
+                                "LookUpTimer",
                                 ">=",
-                                "2"
+                                "Master_Camera.TimerExpire"
                               ]
                             }
                           ],
@@ -21105,11 +21057,30 @@
                                     "Master_Camera",
                                     "CameraShiftY",
                                     "=",
-                                    "max(Master_Camera.CameraShiftY-2*60*TimeDelta(),-104)"
+                                    "max(Master_Camera.CameraShiftY-2*60*TimeDelta(),Player_ActionValues.LookUpShiftAmount)"
                                   ]
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_ActionValues",
+                                "CrouchDownTimer",
+                                ">=",
+                                "Master_Camera.TimerExpire"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
@@ -21134,7 +21105,7 @@
                                     "Master_Camera",
                                     "CameraShiftY",
                                     "=",
-                                    "min(Master_Camera.CameraShiftY+2*60*TimeDelta(),88)"
+                                    "min(Master_Camera.CameraShiftY+2*60*TimeDelta(),Player_ActionValues.CrouchDownShiftAmount)"
                                   ]
                                 }
                               ]
@@ -21146,13 +21117,24 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "CompareTimer"
+                                "value": "NumberObjectVariable"
                               },
                               "parameters": [
-                                "",
-                                "\"CameraWait\"",
+                                "Player_ActionValues",
+                                "LookUpTimer",
                                 "<",
-                                "2"
+                                "Master_Camera.TimerExpire"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_ActionValues",
+                                "CrouchDownTimer",
+                                "<",
+                                "Master_Camera.TimerExpire"
                               ]
                             }
                           ],
@@ -21217,53 +21199,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "StringObjectVariable"
-                              },
-                              "parameters": [
-                                "Player_MovementValues",
-                                "Action",
-                                "!=",
-                                "\"LookUp\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "StringObjectVariable"
-                              },
-                              "parameters": [
-                                "Player_MovementValues",
-                                "Action",
-                                "!=",
-                                "\"Duck\""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ResetTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"CameraWait\""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PauseTimer"
-                              },
-                              "parameters": [
-                                "",
-                                "\"CameraWait\""
-                              ]
-                            }
-                          ]
                         }
                       ]
                     },
@@ -21289,6 +21224,82 @@
                         "textG": 0,
                         "textR": 0
                       },
+                      "comment": "Camera Shake"
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "folded": true,
+                      "name": "Basic Camera Shake",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Master_Camera",
+                                "CameraShake",
+                                ">",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Master_Camera",
+                                "CameraShakeResultX",
+                                "=",
+                                "RandomInRange(-2,2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Master_Camera",
+                                "CameraShakeResultY",
+                                "=",
+                                "RandomInRange(-2,2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Master_Camera",
+                                "CameraShake",
+                                "=",
+                                "max(Master_Camera.CameraShake-60*TimeDelta(), 0)"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
                       "comment": "Moving the camera"
                     },
                     {
@@ -21302,7 +21313,7 @@
                           "parameters": [
                             "",
                             "=",
-                            "Master_Camera.CameraX+Master_Camera.CameraShiftX",
+                            "Master_Camera.CameraX+Master_Camera.CameraShiftX+Master_Camera.CameraShakeResultX",
                             "",
                             "0"
                           ]
@@ -21314,7 +21325,7 @@
                           "parameters": [
                             "",
                             "=",
-                            "Master_Camera.CameraY+Master_Camera.CameraShiftY",
+                            "Master_Camera.CameraY+Master_Camera.CameraShiftY+Master_Camera.CameraShakeResultY",
                             "",
                             "0"
                           ]
@@ -21444,6 +21455,39 @@
         }
       ],
       "parameters": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "KeyFromTextPressed"
+          },
+          "parameters": [
+            "",
+            "\"h\""
+          ]
+        },
+        {
+          "type": {
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "SetNumberObjectVariable"
+          },
+          "parameters": [
+            "Master_Camera",
+            "CameraShake",
+            "=",
+            "60"
+          ]
+        }
+      ]
     }
   ]
 }

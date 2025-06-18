@@ -2150,7 +2150,7 @@
       {
         "file": "assets/Player_Input.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Player_Input.png\"}",
         "name": "Player_Input",
         "smoothed": false,
         "userAdded": false
@@ -2272,6 +2272,14 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\Player_SensorTop2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Master_Input.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Master_Input",
         "smoothed": false,
         "userAdded": false
       }
@@ -13453,11 +13461,6 @@
           "value": 0
         },
         {
-          "name": "MaxXSpeed",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "XAcceleration",
           "type": "number",
           "value": 0
@@ -13473,17 +13476,7 @@
           "value": 0
         },
         {
-          "name": "MaxYSpeed",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "YAcceleration",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "LandingConversionFactor",
           "type": "number",
           "value": 0
         },
@@ -13529,11 +13522,6 @@
         },
         {
           "name": "FlagAllowX",
-          "type": "boolean",
-          "value": true
-        },
-        {
-          "name": "FlagAllowLanding",
           "type": "boolean",
           "value": true
         },
@@ -13616,11 +13604,6 @@
           "name": "LandingAction",
           "type": "string",
           "value": "0"
-        },
-        {
-          "name": "LandingSpeed2",
-          "type": "number",
-          "value": 0
         },
         {
           "name": "PlayerID",
@@ -13887,11 +13870,6 @@
           "value": 0
         },
         {
-          "name": "SkidRate",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "SpindashRev",
           "type": "number",
           "value": 0
@@ -13918,21 +13896,6 @@
         },
         {
           "name": "RollingBraking",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "RollingSlopeUpFactor",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "RollingSlopeDownFactor",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "RollingConversionFactor",
           "type": "number",
           "value": 0
         },
@@ -14064,6 +14027,11 @@
           "value": "0"
         },
         {
+          "name": "Animation",
+          "type": "string",
+          "value": ""
+        },
+        {
           "name": "AnimationTimer",
           "type": "number",
           "value": 0
@@ -14136,16 +14104,6 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "name": "Water",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "WaterLevel",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "StageClear",
           "type": "number",
           "value": 0
@@ -14156,14 +14114,9 @@
           "value": 0
         },
         {
-          "name": "GameTimer",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "LevelName",
           "type": "string",
-          "value": "0"
+          "value": ""
         },
         {
           "name": "PlayingMusic",
@@ -14313,16 +14266,6 @@
           "value": 0
         },
         {
-          "name": "TimerLook_Up",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "TimerLook_Down",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "TimerExpire",
           "type": "number",
           "value": 120
@@ -14344,6 +14287,16 @@
         },
         {
           "name": "CameraShake",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraShakeResultX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "CameraShakeResultY",
           "type": "number",
           "value": 0
         },
