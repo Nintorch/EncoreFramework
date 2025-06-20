@@ -13900,6 +13900,11 @@
           "value": 0
         },
         {
+          "name": "TriggerOnceVariable",
+          "type": "number",
+          "value": 0
+        },
+        {
           "name": "PlayerID",
           "type": "number",
           "value": 0
