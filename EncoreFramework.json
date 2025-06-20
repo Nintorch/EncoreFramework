@@ -2322,6 +2322,22 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/InvincibilityStar.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "InvincibilityStar",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/InvincibilityStar2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "InvincibilityStar2",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -13628,6 +13644,16 @@
           "value": "0"
         },
         {
+          "name": "PositionXRecord",
+          "type": "array",
+          "children": []
+        },
+        {
+          "name": "PositionYRecord",
+          "type": "array",
+          "children": []
+        },
+        {
           "name": "PlayerID",
           "type": "number",
           "value": 0
@@ -14149,6 +14175,274 @@
           "name": "PlayingMusic",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "StarPositionOffsetsX",
+          "type": "array",
+          "children": [
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 14
+            },
+            {
+              "type": "number",
+              "value": 13
+            },
+            {
+              "type": "number",
+              "value": 11
+            },
+            {
+              "type": "number",
+              "value": 8
+            },
+            {
+              "type": "number",
+              "value": 6
+            },
+            {
+              "type": "number",
+              "value": 3
+            },
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": -3
+            },
+            {
+              "type": "number",
+              "value": -6
+            },
+            {
+              "type": "number",
+              "value": -8
+            },
+            {
+              "type": "number",
+              "value": -11
+            },
+            {
+              "type": "number",
+              "value": -13
+            },
+            {
+              "type": "number",
+              "value": -14
+            },
+            {
+              "type": "number",
+              "value": -15
+            },
+            {
+              "type": "number",
+              "value": -16
+            },
+            {
+              "type": "number",
+              "value": -15
+            },
+            {
+              "type": "number",
+              "value": -14
+            },
+            {
+              "type": "number",
+              "value": -13
+            },
+            {
+              "type": "number",
+              "value": -11
+            },
+            {
+              "type": "number",
+              "value": -8
+            },
+            {
+              "type": "number",
+              "value": -6
+            },
+            {
+              "type": "number",
+              "value": -3
+            },
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": 3
+            },
+            {
+              "type": "number",
+              "value": 6
+            },
+            {
+              "type": "number",
+              "value": 8
+            },
+            {
+              "type": "number",
+              "value": 11
+            },
+            {
+              "type": "number",
+              "value": 13
+            },
+            {
+              "type": "number",
+              "value": 14
+            },
+            {
+              "type": "number",
+              "value": 15
+            }
+          ]
+        },
+        {
+          "name": "StarPositionOffsetsY",
+          "type": "array",
+          "children": [
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": 3
+            },
+            {
+              "type": "number",
+              "value": 6
+            },
+            {
+              "type": "number",
+              "value": 8
+            },
+            {
+              "type": "number",
+              "value": 11
+            },
+            {
+              "type": "number",
+              "value": 13
+            },
+            {
+              "type": "number",
+              "value": 14
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 16
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 14
+            },
+            {
+              "type": "number",
+              "value": 13
+            },
+            {
+              "type": "number",
+              "value": 11
+            },
+            {
+              "type": "number",
+              "value": 8
+            },
+            {
+              "type": "number",
+              "value": 6
+            },
+            {
+              "type": "number",
+              "value": 3
+            },
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": -4
+            },
+            {
+              "type": "number",
+              "value": -7
+            },
+            {
+              "type": "number",
+              "value": -8
+            },
+            {
+              "type": "number",
+              "value": -12
+            },
+            {
+              "type": "number",
+              "value": -14
+            },
+            {
+              "type": "number",
+              "value": -15
+            },
+            {
+              "type": "number",
+              "value": -16
+            },
+            {
+              "type": "number",
+              "value": -16
+            },
+            {
+              "type": "number",
+              "value": -16
+            },
+            {
+              "type": "number",
+              "value": -15
+            },
+            {
+              "type": "number",
+              "value": -14
+            },
+            {
+              "type": "number",
+              "value": -12
+            },
+            {
+              "type": "number",
+              "value": -9
+            },
+            {
+              "type": "number",
+              "value": -7
+            },
+            {
+              "type": "number",
+              "value": -4
+            }
+          ]
         }
       ],
       "effects": [],
@@ -15662,6 +15956,93 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "InvincibilityStar",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "PlayerID",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TableOffset",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "StarPairID",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "StarID",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "StarTableOffset",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "InvincibilityStar",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "InvincibilityStar2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -15890,6 +16271,9 @@
       {
         "folderName": "Effects",
         "children": [
+          {
+            "objectName": "InvincibilityStar"
+          },
           {
             "objectName": "Explosion"
           },

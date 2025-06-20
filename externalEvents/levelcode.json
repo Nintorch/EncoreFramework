@@ -10006,7 +10006,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Post-movement Code",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -10032,6 +10031,26 @@
                                   "parameters": [
                                     "Player",
                                     "PositionRecord",
+                                    "Player_MovementValues.FloatY"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumberToObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "PositionXRecord",
+                                    "Player_MovementValues.FloatX"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PushNumberToObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "PositionYRecord",
                                     "Player_MovementValues.FloatY"
                                   ]
                                 }
@@ -10070,6 +10089,44 @@
                                   "parameters": [
                                     "Player",
                                     "PositionRecord",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "ObjectVariableChildCount"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "PositionXRecord",
+                                    ">",
+                                    "60"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ObjectVariableRemoveAt"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "PositionXRecord",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ObjectVariableRemoveAt"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "PositionYRecord",
                                     "0"
                                   ]
                                 }
@@ -10335,6 +10392,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Check for Being Hurt",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -10958,6 +11016,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -15949,6 +16008,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -21858,7 +21918,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -22789,11 +22848,406 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Effects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Invincibility stars",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PlayerID",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "PlayerVariablesSensors",
+                            "PlayerID",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player_Others",
+                            "Invincibility",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "3*2",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "InvincibilityStar",
+                                "Player_MovementValues.FloatX",
+                                "Player_MovementValues.FloatY",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "InvincibilityStar",
+                                "PlayerID",
+                                "=",
+                                "Player.PlayerID"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "InvincibilityStar",
+                                "StarPairID",
+                                "=",
+                                "floor(StarID/2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "InvincibilityStar",
+                                "TableOffset",
+                                "=",
+                                "InvincibilityStar.StarPairID*3"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "InvincibilityStar",
+                                "StarID",
+                                "=",
+                                "mod(StarID, 2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "StarID",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarPairID",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarTableOffset",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarPairID",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarTableOffset",
+                                    "=",
+                                    "22"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarPairID",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarTableOffset",
+                                    "=",
+                                    "44"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "name": "StarID",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "InvincibilityStar",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player",
+                            "PlayerID",
+                            "=",
+                            "InvincibilityStar.PlayerID"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "PlayerVariablesSensors",
+                            "PlayerID",
+                            "=",
+                            "InvincibilityStar.PlayerID"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "CenterX",
+                                "=",
+                                "Player_MovementValues.PositionXRecord[round(Player_MovementValues.VariableChildCount(PositionXRecord)-1-InvincibilityStar.TableOffset)]"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "CenterY",
+                                "=",
+                                "Player_MovementValues.PositionYRecord[round(Player_MovementValues.VariableChildCount(PositionXRecord)-1-InvincibilityStar.TableOffset)]"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "MettreXY"
+                              },
+                              "parameters": [
+                                "InvincibilityStar",
+                                "=",
+                                "CenterX+Master_Level.StarPositionOffsetsX[mod(round(InvincibilityStar.StarTableOffset+16*InvincibilityStar.StarID), 32)]",
+                                "=",
+                                "CenterY+Master_Level.StarPositionOffsetsY[mod(round(InvincibilityStar.StarTableOffset+16*InvincibilityStar.StarID), 32)]"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarPairID",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarTableOffset",
+                                    "+",
+                                    "6*60*TimeDelta()*Player_MovementValues.Direction"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarPairID",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "InvincibilityStar",
+                                    "StarTableOffset",
+                                    "+",
+                                    "1*60*TimeDelta()*Player_MovementValues.Direction"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "variables": [
+                            {
+                              "name": "CenterX",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "name": "CenterY",
+                              "type": "number",
+                              "value": 0
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Others",
+                                "Invincibility",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "InvincibilityStar",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
