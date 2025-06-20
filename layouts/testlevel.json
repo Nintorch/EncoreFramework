@@ -949,63 +949,25 @@
                 "=",
                 "\"Level\""
               ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PlayMusicCanal"
-                  },
-                  "parameters": [
-                    "",
-                    "audio/music/testlevel.ogg",
-                    "32",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "MusicChannelPlayingOffset"
-                  },
-                  "parameters": [
-                    "",
-                    "32",
-                    ">=",
-                    "41.796"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ModPlayingOffsetMusicChannel"
-                  },
-                  "parameters": [
-                    "",
-                    "32",
-                    "=",
-                    "11.75+(MusicChannelPlayingOffset(32)-41.796)"
-                  ]
-                }
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "HelperExtension::playMusicIntroLoop"
+              },
+              "parameters": [
+                "",
+                "audio\\music\\testlevel_intro.ogg",
+                "audio\\music\\testlevel_loop.ogg",
+                "32",
+                ""
               ]
             }
           ]

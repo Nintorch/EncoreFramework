@@ -465,27 +465,11 @@
       "height": 0,
       "keepRatio": true,
       "layer": "",
-      "name": "MonitorSpeedShoes",
-      "persistentUuid": "f2feb22c-48e2-4e4c-ac64-4fd294246080",
-      "width": 0,
-      "x": 368,
-      "y": 432,
-      "zOrder": 30,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "keepRatio": true,
-      "layer": "",
       "name": "Monitor10Rings",
       "persistentUuid": "8c4a2010-2107-4092-9d64-d0054f4ff74a",
       "width": 0,
-      "x": 208,
-      "y": 496,
+      "x": 368,
+      "y": 432,
       "zOrder": 31,
       "numberProperties": [],
       "stringProperties": [],
@@ -558,6 +542,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MonitorInvincibility",
+      "persistentUuid": "eb070154-c5bc-40e6-a6e5-fea8574bd3bc",
+      "width": 0,
+      "x": 208,
+      "y": 496,
+      "zOrder": 36,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -570,7 +570,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.26516748752324154,
+    "zoomFactor": 0.8188874807205243,
     "windowMask": false
   }
 }

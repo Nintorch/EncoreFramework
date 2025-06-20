@@ -16,7 +16,54 @@
   "dependencies": [],
   "globalVariables": [],
   "sceneVariables": [],
-  "eventsFunctions": [],
+  "eventsFunctions": [
+    {
+      "fullName": "Play music with intro and loop",
+      "functionType": "Action",
+      "name": "playMusicIntroLoop",
+      "sentence": "Play music (as sound) on channel _PARAM3_: _PARAM1_ (intro), _PARAM2_ (loop)",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": [
+            "let sound = runtimeScene.getSoundManager();",
+            "let intro = eventsFunctionContext.getArgument(\"Intro\");",
+            "let loop = eventsFunctionContext.getArgument(\"Loop\");",
+            "let channel = eventsFunctionContext.getArgument(\"Channel\");",
+            "",
+            "// sound.loadAudio(intro, false);",
+            "sound.loadAudio(loop, false);",
+            "",
+            "sound.playSoundOnChannel(intro, channel, false, 100, 1);",
+            "sound.getSoundOnChannel(channel).once(\"end\", () => {",
+            "    sound.playSoundOnChannel(loop, channel, true, 100, 1);",
+            "});"
+          ],
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ],
+      "parameters": [
+        {
+          "description": "",
+          "name": "Intro",
+          "type": "audioResource"
+        },
+        {
+          "description": "",
+          "name": "Loop",
+          "type": "audioResource"
+        },
+        {
+          "description": "",
+          "name": "Channel",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
   "eventsBasedBehaviors": [
     {
       "description": "",

@@ -2282,6 +2282,46 @@
         "name": "Master_Input",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "audio/music/invincibility_intro.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\music\\invincibility_intro.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audio/music/invincibility_loop.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\music\\invincibility_loop.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audio/music/testlevel_intro.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\music\\testlevel_intro.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audio/music/testlevel_loop.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\music\\testlevel_loop.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2296,24 +2336,6 @@
       "variables": [
         {
           "name": "PlayerID",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "Invulnerable",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "folded": true,
-          "name": "InvulnerableTimer",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "folded": true,
-          "name": "FlashTimer",
           "type": "number",
           "value": 0
         },

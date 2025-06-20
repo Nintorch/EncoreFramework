@@ -10201,6 +10201,140 @@
                           "colorR": 74,
                           "creationTime": 0,
                           "folded": true,
+                          "name": "Invincibility and Speed Sneakers",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Invincibility",
+                                    ">",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "InvincibilityTimer",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "InvincibilityTimer",
+                                    "-",
+                                    "60*TimeDelta()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Invincibility",
+                                    ">",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "InvincibilityTimer",
+                                    "<=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Invincibility",
+                                    "=",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "InvincibilityTimer",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "PlayerID",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetStringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "PlayingMusic",
+                                        "=",
+                                        "\"Level\""
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
                           "name": "Check for Being Hurt",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -10267,6 +10401,58 @@
                                 "textG": 0,
                                 "textR": 0
                               },
+                              "comment": "The character can not be hurt if they're invincible"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Invincibility",
+                                    ">",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Hurt",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Hurt",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
                               "comment": "Hurt types:\n1 - Just a hurt\n2 - Death"
                             },
                             {
@@ -10298,6 +10484,17 @@
                                         "Hurt",
                                         "=",
                                         "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "Action",
+                                        "!=",
+                                        "\"Hurt\""
                                       ]
                                     }
                                   ],
@@ -10761,7 +10958,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -10811,7 +11007,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -11788,6 +11983,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Duck\" - Looking down",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -11988,6 +12184,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Hurt\" - Getting hurt",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -12016,17 +12213,6 @@
                                             "Player_MovementValues",
                                             "FlagAllowX",
                                             "False",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetBooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Invulnerable",
-                                            "True",
                                             ""
                                           ]
                                         },
@@ -12181,10 +12367,21 @@
                                                 "value": "SetNumberObjectVariable"
                                               },
                                               "parameters": [
-                                                "Player",
-                                                "InvulnerableTimer",
+                                                "Player_Others",
+                                                "Invincibility",
                                                 "=",
                                                 "2"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "InvincibilityTimer",
+                                                "=",
+                                                "2*60"
                                               ]
                                             },
                                             {
@@ -12210,6 +12407,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Dead\" - Death",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -12436,6 +12634,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Balance\" - Standing on an edge",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -12652,6 +12851,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Skid\" - Skidding",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -12815,6 +13015,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Push\" - Pushing",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -13052,6 +13253,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Spindash\" - Spindash",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -13553,6 +13755,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Roll\" - Rolling on the floor",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -13811,6 +14014,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Jump\" - Jumping and air roll",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -15745,7 +15949,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -18113,58 +18316,18 @@
                                   "conditions": [
                                     {
                                       "type": {
-                                        "value": "BooleanObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "Invulnerable",
-                                        "True",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
                                         "value": "NumberObjectVariable"
                                       },
                                       "parameters": [
-                                        "Player",
-                                        "InvulnerableTimer",
-                                        ">",
-                                        "0"
+                                        "Player_Others",
+                                        "Invincibility",
+                                        "=",
+                                        "2"
                                       ]
                                     }
                                   ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "InvulnerableTimer",
-                                        "-",
-                                        "TimeDelta()"
-                                      ]
-                                    }
-                                  ],
+                                  "actions": [],
                                   "events": [
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "FlashTimer",
-                                            "+",
-                                            "TimeDelta()"
-                                          ]
-                                        }
-                                      ]
-                                    },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
@@ -18195,7 +18358,7 @@
                                             "value": "BuiltinCommonInstructions::CompareNumbers"
                                           },
                                           "parameters": [
-                                            "mod(floor(Player.FlashTimer * 60), 8)",
+                                            "mod(floor(Player_Others.InvincibilityTimer), 8)",
                                             ">=",
                                             "4"
                                           ]
@@ -18221,100 +18384,67 @@
                                           ]
                                         }
                                       ]
-                                    },
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
                                     {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "NumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "InvulnerableTimer",
-                                            "<=",
-                                            "0"
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetBooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "Invulnerable",
-                                            "False",
-                                            "0"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "InvulnerableTimer",
-                                            "=",
-                                            "0"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player",
-                                            "FlashTimer",
-                                            "=",
-                                            "0"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "Montre"
-                                          },
-                                          "parameters": [
-                                            "PlayerSkin",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "Montre"
-                                          },
-                                          "parameters": [
-                                            "PlayerSkin_TailsTails",
-                                            ""
-                                          ]
-                                        }
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "Invincibility",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "Montre"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin",
+                                        ""
                                       ]
                                     },
                                     {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "NumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player_MovementValues",
-                                            "Character",
-                                            "!=",
-                                            "1"
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "Cache"
-                                          },
-                                          "parameters": [
-                                            "PlayerSkin_TailsTails"
-                                          ]
-                                        }
+                                      "type": {
+                                        "value": "Montre"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_TailsTails",
+                                        ""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "Character",
+                                        "!=",
+                                        "1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "Cache"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_TailsTails"
                                       ]
                                     }
                                   ]
@@ -18496,6 +18626,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Common Objects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -18527,17 +18658,6 @@
                         },
                         {
                           "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Invulnerable",
-                            "=",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "AnimatableCapability::AnimatableBehavior::Name"
                           },
                           "parameters": [
@@ -18556,6 +18676,28 @@
                             "Timer",
                             "=",
                             "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "PlayerVariablesSensors",
+                            "PlayerID",
+                            "=",
+                            "Player.PlayerID"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player_Others",
+                            "Invincibility",
+                            "!=",
+                            "2"
                           ]
                         }
                       ],
@@ -19205,114 +19347,9 @@
                           "actions": [],
                           "events": [
                             {
-                              "type": "BuiltinCommonInstructions::Standard",
+                              "type": "BuiltinCommonInstructions::ForEach",
+                              "object": "Player",
                               "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "YSpeed",
-                                    "<",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Or"
-                                  },
-                                  "parameters": [],
-                                  "subInstructions": [
-                                    {
-                                      "type": {
-                                        "value": "CollisionNP"
-                                      },
-                                      "parameters": [
-                                        "Player_SensorCeilingLeft",
-                                        "MonitorBase",
-                                        "",
-                                        "",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "CollisionNP"
-                                      },
-                                      "parameters": [
-                                        "Player_SensorCeilingRight",
-                                        "MonitorBase",
-                                        "",
-                                        "",
-                                        ""
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "MonitorBase",
-                                    "Moving",
-                                    "True",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "MonitorBase",
-                                    "YSpeed",
-                                    "=",
-                                    "-1.5*60"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "MettreY"
-                                  },
-                                  "parameters": [
-                                    "MonitorBase",
-                                    "=",
-                                    "MonitorBase.Y()-10"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "YSpeed",
-                                    "=",
-                                    "0"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "disabled": true,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "CollisionNP"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "MonitorBase",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
-                                },
                                 {
                                   "type": {
                                     "value": "NumberObjectVariable"
@@ -19330,6 +19367,271 @@
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "YSpeed",
+                                        "<",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "CollisionNP"
+                                          },
+                                          "parameters": [
+                                            "Player_SensorCeilingLeft",
+                                            "MonitorBase",
+                                            "",
+                                            "",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "CollisionNP"
+                                          },
+                                          "parameters": [
+                                            "Player_SensorCeilingRight",
+                                            "MonitorBase",
+                                            "",
+                                            "",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "MonitorBase",
+                                        "Moving",
+                                        "True",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "MonitorBase",
+                                        "YSpeed",
+                                        "=",
+                                        "-1.5*60"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "MettreY"
+                                      },
+                                      "parameters": [
+                                        "MonitorBase",
+                                        "=",
+                                        "MonitorBase.Y()-10"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "YSpeed",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "disabled": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "MonitorBase",
+                                        "",
+                                        "",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "PlayerVariablesSensors",
+                                        "PlayerID",
+                                        "=",
+                                        "Player.PlayerID"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "Action",
+                                            "=",
+                                            "\"Jump\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "YSpeed",
+                                            ">=",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetBooleanVariable"
+                                          },
+                                          "parameters": [
+                                            "ShouldBreak",
+                                            "True",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "Action",
+                                            "=",
+                                            "\"Roll\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetBooleanVariable"
+                                          },
+                                          "parameters": [
+                                            "ShouldBreak",
+                                            "True",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "Action",
+                                            "=",
+                                            "\"Glide\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "FloatY",
+                                            ">=",
+                                            "MonitorBase.BoundingBoxTop()"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetBooleanVariable"
+                                          },
+                                          "parameters": [
+                                            "ShouldBreak",
+                                            "True",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "CollisionNP"
+                                      },
+                                      "parameters": [
+                                        "Player_SensorBottom",
+                                        "MonitorBase",
+                                        "",
+                                        "",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "PlayerVariablesSensors",
+                                        "PlayerID",
+                                        "=",
+                                        "Player_SensorBottom.PlayerID"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin",
+                                        "PlayerID",
+                                        "=",
+                                        "Player.PlayerID"
+                                      ]
+                                    },
                                     {
                                       "type": {
                                         "value": "StringObjectVariable"
@@ -19363,67 +19665,59 @@
                                         "True",
                                         ""
                                       ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
+                                    },
                                     {
                                       "type": {
-                                        "value": "StringObjectVariable"
+                                        "value": "SetNumberObjectVariable"
                                       },
                                       "parameters": [
                                         "Player_MovementValues",
-                                        "Action",
+                                        "YSpeed",
                                         "=",
-                                        "\"Roll\""
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetBooleanVariable"
-                                      },
-                                      "parameters": [
-                                        "ShouldBreak",
-                                        "True",
-                                        ""
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "StringObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player_MovementValues",
-                                        "Action",
-                                        "=",
-                                        "\"Glide\""
+                                        "-Player_MovementValues.YSpeed"
                                       ]
                                     },
                                     {
                                       "type": {
-                                        "value": "NumberObjectVariable"
+                                        "value": "SetBooleanObjectVariable"
                                       },
                                       "parameters": [
                                         "Player_MovementValues",
-                                        "FloatY",
-                                        ">=",
-                                        "MonitorBase.BoundingBoxTop()"
+                                        "Ground",
+                                        "False",
+                                        "-Player_MovementValues.LandingSpeed"
                                       ]
-                                    }
-                                  ],
-                                  "actions": [
+                                    },
                                     {
                                       "type": {
-                                        "value": "SetBooleanVariable"
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_ActionValues",
+                                        "JumpVariable",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin",
+                                        "Animation",
+                                        "=",
+                                        "\"Jumping\""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BooleanVariable"
                                       },
                                       "parameters": [
                                         "ShouldBreak",
@@ -19431,364 +19725,303 @@
                                         ""
                                       ]
                                     }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "CollisionNP"
-                                  },
-                                  "parameters": [
-                                    "Player_SensorBottom",
-                                    "MonitorBase",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "PlayerVariablesSensors",
-                                    "PlayerID",
-                                    "=",
-                                    "Player_SensorBottom.PlayerID"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "PlayerSkin",
-                                    "PlayerID",
-                                    "=",
-                                    "Player.PlayerID"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "StringObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "Action",
-                                    "=",
-                                    "\"Jump\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "YSpeed",
-                                    ">=",
-                                    "0"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetBooleanVariable"
-                                  },
-                                  "parameters": [
-                                    "ShouldBreak",
-                                    "True",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "YSpeed",
-                                    "=",
-                                    "-Player_MovementValues.YSpeed"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "Ground",
-                                    "False",
-                                    "-Player_MovementValues.LandingSpeed"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_ActionValues",
-                                    "JumpVariable",
-                                    "=",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                                  },
-                                  "parameters": [
-                                    "PlayerSkin",
-                                    "Animation",
-                                    "=",
-                                    "\"Jumping\""
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BooleanVariable"
-                                  },
-                                  "parameters": [
-                                    "ShouldBreak",
-                                    "True",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "PlaySound"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "audio\\sfx\\destroy.wav",
-                                    "",
-                                    "",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_ActionValues",
-                                    "JumpVariable",
-                                    "=",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Create"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "MonitorBroken",
-                                    "MonitorBase.X()",
-                                    "MonitorBase.Y()",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "MonitorBroken",
-                                    "=",
-                                    "PlayerSkin.ZOrder()-10"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Create"
-                                  },
-                                  "parameters": [
-                                    "",
-                                    "Explosion",
-                                    "MonitorBase.X()",
-                                    "MonitorBase.Y()",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "Explosion",
-                                    "=",
-                                    "MonitorBase.ZOrder()"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Delete"
-                                  },
-                                  "parameters": [
-                                    "MonitorBase",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Tween::TweenBehavior::AddObjectPositionTween2"
-                                  },
-                                  "parameters": [
-                                    "MonitorIcon",
-                                    "Tween",
-                                    "\"Moving\"",
-                                    "MonitorIcon.X()",
-                                    "MonitorIcon.Y()-32",
-                                    "\"linear\"",
-                                    "0.3",
-                                    ""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ChangePlan"
-                                  },
-                                  "parameters": [
-                                    "MonitorIcon",
-                                    "=",
-                                    "MonitorBroken.ZOrder()"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "RemoveObjectTimer"
-                                  },
-                                  "parameters": [
-                                    "MonitorIcon",
-                                    "\"Static\""
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "MonitorIcon",
-                                    "State",
-                                    "=",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Wait"
-                                  },
-                                  "parameters": [
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "Delete"
-                                  },
-                                  "parameters": [
-                                    "MonitorIcon",
-                                    ""
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "colorB": 228,
-                                  "colorG": 176,
-                                  "colorR": 74,
-                                  "creationTime": 0,
-                                  "name": "Icon Results",
-                                  "source": "",
-                                  "type": "BuiltinCommonInstructions::Group",
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "PlaySound"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "audio\\sfx\\destroy.wav",
+                                        "",
+                                        "",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_ActionValues",
+                                        "JumpVariable",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "MonitorBroken",
+                                        "MonitorBase.X()",
+                                        "MonitorBase.Y()",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "MonitorBroken",
+                                        "=",
+                                        "PlayerSkin.ZOrder()-10"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Explosion",
+                                        "MonitorBase.X()",
+                                        "MonitorBase.Y()",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "Explosion",
+                                        "=",
+                                        "MonitorBase.ZOrder()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Delete"
+                                      },
+                                      "parameters": [
+                                        "MonitorBase",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Tween::TweenBehavior::AddObjectPositionTween2"
+                                      },
+                                      "parameters": [
+                                        "MonitorIcon",
+                                        "Tween",
+                                        "\"Moving\"",
+                                        "MonitorIcon.X()",
+                                        "MonitorIcon.Y()-32",
+                                        "\"linear\"",
+                                        "0.3",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "MonitorIcon",
+                                        "=",
+                                        "MonitorBroken.ZOrder()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "RemoveObjectTimer"
+                                      },
+                                      "parameters": [
+                                        "MonitorIcon",
+                                        "\"Static\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "MonitorIcon",
+                                        "State",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Wait"
+                                      },
+                                      "parameters": [
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "Delete"
+                                      },
+                                      "parameters": [
+                                        "MonitorIcon",
+                                        ""
+                                      ]
+                                    }
+                                  ],
                                   "events": [
                                     {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Icon Results",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
                                         {
-                                          "type": {
-                                            "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                          },
-                                          "parameters": [
-                                            "MonitorIcon",
-                                            "Animation",
-                                            "=",
-                                            "\"10 Rings\""
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "PlaySound"
-                                          },
-                                          "parameters": [
-                                            "",
-                                            "audio\\sfx\\ring_collect.wav",
-                                            "",
-                                            "",
-                                            ""
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "MonitorIcon",
+                                                "Animation",
+                                                "=",
+                                                "\"10 Rings\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "PlaySound"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "audio\\sfx\\ring_collect.wav",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "HelperExtension::BitmapCounter::SetValue"
+                                              },
+                                              "parameters": [
+                                                "RingsCounter",
+                                                "BitmapCounter",
+                                                "+",
+                                                "10",
+                                                ""
+                                              ]
+                                            }
                                           ]
                                         },
                                         {
-                                          "type": {
-                                            "value": "HelperExtension::BitmapCounter::SetValue"
-                                          },
-                                          "parameters": [
-                                            "RingsCounter",
-                                            "BitmapCounter",
-                                            "+",
-                                            "10",
-                                            ""
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "MonitorIcon",
+                                                "Animation",
+                                                "=",
+                                                "\"Speed Shoes\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "SpeedSneakers",
+                                                "=",
+                                                "1"
+                                              ]
+                                            }
                                           ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
+                                        },
                                         {
-                                          "type": {
-                                            "value": "AnimatableCapability::AnimatableBehavior::Name"
-                                          },
-                                          "parameters": [
-                                            "MonitorIcon",
-                                            "Animation",
-                                            "=",
-                                            "\"Speed Shoes\""
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "MonitorIcon",
+                                                "Animation",
+                                                "=",
+                                                "\"Invincibility\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "AjoutObjConcern"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "PlayerVariablesSensors"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerVariablesSensors",
+                                                "PlayerID",
+                                                "=",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Master_Level",
+                                                "PlayingMusic",
+                                                "=",
+                                                "\"Invincibility\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Invincibility",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "InvincibilityTimer",
+                                                "=",
+                                                "20*60"
+                                              ]
+                                            }
                                           ]
                                         }
                                       ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player_Others",
-                                            "SpeedSneakers",
-                                            "=",
-                                            "1"
-                                          ]
-                                        }
-                                      ]
+                                      "parameters": []
                                     }
-                                  ],
-                                  "parameters": []
+                                  ]
                                 }
                               ]
                             },
@@ -21465,6 +21698,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Spikes",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -21473,17 +21707,6 @@
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "Player",
                       "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Player",
-                            "Invulnerable",
-                            "=",
-                            ""
-                          ]
-                        },
                         {
                           "type": {
                             "value": "NumberObjectVariable"
@@ -21503,12 +21726,34 @@
                           "conditions": [
                             {
                               "type": {
+                                "value": "StringObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_MovementValues",
+                                "Action",
+                                "!=",
+                                "\"Dead\""
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "NumberObjectVariable"
                               },
                               "parameters": [
                                 "Player_MovementValues",
                                 "YSpeed",
                                 ">=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Others",
+                                "Invincibility",
+                                "=",
                                 "0"
                               ]
                             },
@@ -21613,6 +21858,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -22618,6 +22864,54 @@
                 }
               ],
               "parameters": []
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Music",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "PlayingMusic",
+                    "=",
+                    "\"Invincibility\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::playMusicIntroLoop"
+                  },
+                  "parameters": [
+                    "",
+                    "audio\\music\\invincibility_intro.ogg",
+                    "audio\\music\\invincibility_loop.ogg",
+                    "32",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
