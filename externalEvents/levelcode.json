@@ -23132,14 +23132,24 @@
                             },
                             {
                               "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Angle",
+                                "=",
+                                "mod(round(InvincibilityStar.StarTableOffset+16*InvincibilityStar.StarID), 32)*2*Pi()/32"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "MettreXY"
                               },
                               "parameters": [
                                 "InvincibilityStar",
                                 "=",
-                                "CenterX+Master_Level.StarPositionOffsetsX[mod(round(InvincibilityStar.StarTableOffset+16*InvincibilityStar.StarID), 32)]",
+                                "CenterX+cos(Angle)*16",
                                 "=",
-                                "CenterY+Master_Level.StarPositionOffsetsY[mod(round(InvincibilityStar.StarTableOffset+16*InvincibilityStar.StarID), 32)]"
+                                "CenterY+sin(Angle)*16"
                               ]
                             }
                           ],
@@ -23211,6 +23221,11 @@
                             },
                             {
                               "name": "CenterY",
+                              "type": "number",
+                              "value": 0
+                            },
+                            {
+                              "name": "Angle",
                               "type": "number",
                               "value": 0
                             }
