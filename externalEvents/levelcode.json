@@ -185,14 +185,12 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Player Initialization",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "type": "BuiltinCommonInstructions::ForEach",
-                          "object": "Player",
+                          "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
@@ -3820,6 +3818,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Sensors",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -4692,6 +4691,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Bottom/Ground Sensors",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -8920,39 +8920,102 @@
                                     },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "inverted": true,
-                                            "value": "CollisionNP"
-                                          },
-                                          "parameters": [
-                                            "Player_SensorGroundLeft",
-                                            "Spring",
-                                            "",
-                                            "",
-                                            ""
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "inverted": true,
-                                            "value": "CollisionNP"
-                                          },
-                                          "parameters": [
-                                            "Player_SensorGroundRight",
-                                            "Spring",
-                                            "",
-                                            "",
-                                            ""
-                                          ]
-                                        }
-                                      ],
+                                      "conditions": [],
                                       "actions": [],
                                       "events": [
                                         {
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "CollisionNP"
+                                              },
+                                              "parameters": [
+                                                "Player_SensorGroundLeft",
+                                                "Spring",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Spring",
+                                                "Direction",
+                                                "<=",
+                                                "1"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "ShouldStick",
+                                                "False",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "CollisionNP"
+                                              },
+                                              "parameters": [
+                                                "Player_SensorGroundRight",
+                                                "Spring",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Spring",
+                                                "Direction",
+                                                "<=",
+                                                "1"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "ShouldStick",
+                                                "False",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "ShouldStick",
+                                                "True",
+                                                ""
+                                              ]
+                                            },
                                             {
                                               "type": {
                                                 "value": "BooleanObjectVariable"
@@ -9643,6 +9706,13 @@
                                               ]
                                             }
                                           ]
+                                        }
+                                      ],
+                                      "variables": [
+                                        {
+                                          "name": "ShouldStick",
+                                          "type": "boolean",
+                                          "value": true
                                         }
                                       ]
                                     },
@@ -11126,6 +11196,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11175,6 +11246,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -13951,6 +14023,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Roll\" - Rolling on the floor",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -19447,7 +19520,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Monitors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -19615,7 +19687,7 @@
                                     "MonitorIcon",
                                     "Animation",
                                     "=",
-                                    "\"Extra Life \" + PlayerAnimations[Player_MovementValues.Character]"
+                                    "PlayerAnimations[Player_MovementValues.Character]"
                                   ]
                                 }
                               ],
