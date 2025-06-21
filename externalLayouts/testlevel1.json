@@ -318,7 +318,7 @@
       "name": "Player",
       "persistentUuid": "35e5470a-9499-4375-82ad-afeae03db5fc",
       "width": 0,
-      "x": 80,
+      "x": 672,
       "y": 496,
       "zOrder": 5,
       "numberProperties": [],
@@ -452,7 +452,7 @@
       "name": "Player",
       "persistentUuid": "f83d8d19-149a-44cf-87b2-c2006e40eb0d",
       "width": 0,
-      "x": 112,
+      "x": 704,
       "y": 496,
       "zOrder": 5,
       "numberProperties": [],
@@ -558,6 +558,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "RedSpringUp",
+      "persistentUuid": "a1a78a6a-3094-4f58-9371-190b7ca83c2c",
+      "width": 0,
+      "x": 800,
+      "y": 480,
+      "zOrder": 37,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "YellowSpringLeft",
+      "persistentUuid": "defe1876-6566-4e1f-8faf-21be567cf0bc",
+      "width": 0,
+      "x": 320,
+      "y": 416,
+      "zOrder": 38,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -570,7 +602,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.8188874807205243,
+    "zoomFactor": 0.7413359461380463,
     "windowMask": false
   }
 }

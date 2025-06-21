@@ -14585,6 +14585,11 @@
           "name": "Collision",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "WallCollision",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -14660,6 +14665,11 @@
         },
         {
           "name": "Collision",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "WallCollision",
           "type": "boolean",
           "value": false
         }
