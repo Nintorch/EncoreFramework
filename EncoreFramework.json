@@ -2132,7 +2132,7 @@
       {
         "file": "assets/Player_MovementValues.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Player_MovementValues.png\"}",
         "name": "Player_MovementValues",
         "smoothed": false,
         "userAdded": false
@@ -2156,7 +2156,7 @@
       {
         "file": "assets/Player_ActionValues.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Player_ActionValues.png\"}",
         "name": "Player_ActionValues",
         "smoothed": false,
         "userAdded": false
@@ -2164,7 +2164,7 @@
       {
         "file": "assets/Player_Others.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Player_Others.png\"}",
         "name": "Player_Others",
         "smoothed": false,
         "userAdded": false
