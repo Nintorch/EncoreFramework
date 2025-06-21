@@ -388,7 +388,7 @@
       "name": "RedSpringUpLeft",
       "persistentUuid": "188f5fc2-0f74-4382-bcdd-9e55203ed24e",
       "width": 0,
-      "x": 2063,
+      "x": 2047,
       "y": 463,
       "zOrder": 26,
       "numberProperties": [],
@@ -602,7 +602,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9665838166252663,
+    "zoomFactor": 0.4816985180708976,
     "windowMask": false
   }
 }
