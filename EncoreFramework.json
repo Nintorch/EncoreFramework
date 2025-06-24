@@ -2172,7 +2172,7 @@
       {
         "file": "assets/Master_Level.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Master_Level.png\"}",
         "name": "Master_Level",
         "smoothed": false,
         "userAdded": false
@@ -2180,7 +2180,7 @@
       {
         "file": "assets/Master_Camera.png",
         "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Master_Camera.png\"}",
         "name": "Master_Camera",
         "smoothed": false,
         "userAdded": false
