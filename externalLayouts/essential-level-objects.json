@@ -85,23 +85,6 @@
     },
     {
       "angle": 0,
-      "customSize": true,
-      "depth": 1,
-      "height": 240,
-      "keepRatio": true,
-      "layer": "",
-      "name": "NewShapePainter",
-      "persistentUuid": "50245661-3082-43b0-88c9-cf0b60723a2d",
-      "width": 424,
-      "x": 0,
-      "y": 0,
-      "zOrder": 2,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
       "customSize": false,
       "height": 0,
       "keepRatio": true,

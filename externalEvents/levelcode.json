@@ -3845,6 +3845,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Sensors",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -5370,7 +5371,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Sensor Processing",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -5465,7 +5465,7 @@
                                               "parameters": [
                                                 "CentreX",
                                                 "=",
-                                                "clamp(Player_MovementValues.FloatX + SensorsData[ArrayIndex+1]*cos(ToRad(AngleOffset))\n-SensorsData[ArrayIndex+2]*sin(ToRad(AngleOffset)), Master_Camera.CameraMinimumX, Master_Camera.CameraMaximumX)"
+                                                "Player_MovementValues.FloatX + SensorsData[ArrayIndex+1]*cos(ToRad(AngleOffset))\n-SensorsData[ArrayIndex+2]*sin(ToRad(AngleOffset))"
                                               ]
                                             },
                                             {
@@ -6070,6 +6070,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Movement Routines",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -6769,6 +6770,17 @@
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_SensorBottom",
+                                            "Collision",
+                                            "True",
+                                            ""
+                                          ]
+                                        },
                                         {
                                           "type": {
                                             "value": "BuiltinCommonInstructions::Or"
@@ -7783,6 +7795,17 @@
                                                 "Landed",
                                                 "True",
                                                 "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "LandingSpeed",
+                                                "=",
+                                                "Player_MovementValues.YSpeed"
                                               ]
                                             },
                                             {
@@ -10404,37 +10427,96 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "BooleanObjectVariable"
                                   },
                                   "parameters": [
-                                    "Player_MovementValues",
-                                    "FloatX",
-                                    "<",
-                                    "16"
+                                    "Master_Camera",
+                                    "CameraSetup",
+                                    "True",
+                                    ""
                                   ]
                                 }
                               ],
-                              "actions": [
+                              "actions": [],
+                              "events": [
                                 {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "FloatX",
-                                    "=",
-                                    "16"
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "FloatX",
+                                        "<",
+                                        "Master_Camera.CameraMinimumX+16"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "FloatX",
+                                        "=",
+                                        "Master_Camera.CameraMinimumX+16"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "XSpeed",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
                                   ]
                                 },
                                 {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "XSpeed",
-                                    "=",
-                                    "0"
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "FloatX",
+                                        ">=",
+                                        "Master_Camera.CameraMaximumX-16"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "FloatX",
+                                        "=",
+                                        "Master_Camera.CameraMaximumX-16"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "XSpeed",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -11458,6 +11540,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11507,6 +11590,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -13781,6 +13865,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Spindash\" - Spindash",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -19273,6 +19358,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Common Objects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -19931,7 +20017,7 @@
                                     "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Player",
+                                    "PlayerVariablesSensors",
                                     "PlayerID",
                                     "=",
                                     "0"
@@ -20006,6 +20092,17 @@
                                     "=",
                                     "Player.PlayerID"
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin",
+                                    "PlayerID",
+                                    "=",
+                                    "Player.PlayerID"
+                                  ]
                                 }
                               ],
                               "actions": [],
@@ -20013,17 +20110,6 @@
                                 {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player_MovementValues",
-                                        "YSpeed",
-                                        "<",
-                                        "0"
-                                      ]
-                                    },
                                     {
                                       "type": {
                                         "value": "BuiltinCommonInstructions::Or"
@@ -20054,6 +20140,17 @@
                                             ""
                                           ]
                                         }
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "LandingSpeed",
+                                        "<",
+                                        "0"
                                       ]
                                     }
                                   ],
@@ -22630,6 +22727,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",

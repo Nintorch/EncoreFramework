@@ -270,48 +270,6 @@
   "objects": [
     {
       "assetStoreId": "",
-      "name": "Tilemap",
-      "type": "TileMap::TileMap",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "content": {
-        "tilemapJsonFile": "levellayouts\\testlevel.json",
-        "tilesetJsonFile": "levellayouts\\tileset.json",
-        "tilemapAtlasImage": "levellayouts\\tileset.png",
-        "displayMode": "visible",
-        "layerIndex": 0,
-        "levelIndex": 0,
-        "animationSpeedScale": 1,
-        "animationFps": 4
-      }
-    },
-    {
-      "assetStoreId": "",
-      "name": "TilemapCollision",
-      "type": "TileMap::CollisionMask",
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "LightObstacleBehavior",
-          "type": "Lighting::LightObstacleBehavior"
-        }
-      ],
-      "content": {
-        "tilemapJsonFile": "levellayouts\\testlevel.json",
-        "tilesetJsonFile": "levellayouts\\tileset.json",
-        "collisionMaskTag": "main",
-        "debugMode": false,
-        "fillColor": "255;255;255",
-        "outlineColor": "255;255;255",
-        "fillOpacity": 64,
-        "outlineOpacity": 128,
-        "outlineSize": 1
-      }
-    },
-    {
-      "assetStoreId": "",
       "height": 16,
       "name": "BG1",
       "texture": "assets/backgrounds/testlevel/bg1.png",
@@ -692,116 +650,337 @@
     },
     {
       "assetStoreId": "",
-      "name": "TilemapCollision0",
-      "type": "TileMap::CollisionMask",
+      "height": 128,
+      "name": "LevelTile1",
+      "texture": "assets\\levels\\TestLevel\\leveltile1.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
+    },
+    {
+      "adaptCollisionMaskAutomatically": false,
+      "assetStoreId": "",
+      "name": "LevelTile2",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "content": {
-        "tilemapJsonFile": "levellayouts\\testlevel.json",
-        "tilesetJsonFile": "levellayouts\\tileset.json",
-        "collisionMaskTag": "layer0",
-        "debugMode": false,
-        "fillColor": "255;0;0",
-        "outlineColor": "255;255;255",
-        "fillOpacity": 64,
-        "outlineOpacity": 128,
-        "outlineSize": 1
-      }
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\levels\\TestLevel\\leveltile2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 22.5
+                      },
+                      {
+                        "x": 8.5,
+                        "y": 48.5
+                      },
+                      {
+                        "x": 22.5,
+                        "y": 73.5
+                      },
+                      {
+                        "x": 50.5,
+                        "y": 103
+                      },
+                      {
+                        "x": 77,
+                        "y": 118
+                      },
+                      {
+                        "x": 97.5,
+                        "y": 124
+                      },
+                      {
+                        "x": 128,
+                        "y": 128
+                      },
+                      {
+                        "x": 0,
+                        "y": 128
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "LevelTile3",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\levels\\TestLevel\\leveltile3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 64
+                      },
+                      {
+                        "x": 128,
+                        "y": 64
+                      },
+                      {
+                        "x": 128,
+                        "y": 128
+                      },
+                      {
+                        "x": 0,
+                        "y": 128
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "assetStoreId": "",
-      "name": "TilemapCollision1",
-      "type": "TileMap::CollisionMask",
+      "height": 128,
+      "name": "LevelTile4",
+      "texture": "assets\\levels\\TestLevel\\leveltile4.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 128,
       "variables": [],
       "effects": [],
-      "behaviors": [],
-      "content": {
-        "tilemapJsonFile": "levellayouts\\testlevel.json",
-        "tilesetJsonFile": "levellayouts\\tileset.json",
-        "collisionMaskTag": "layer1",
-        "debugMode": false,
-        "fillColor": "0;0;255",
-        "outlineColor": "255;255;255",
-        "fillOpacity": 64,
-        "outlineOpacity": 128,
-        "outlineSize": 1
-      }
+      "behaviors": []
     },
     {
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "Tilemap2",
-      "type": "TileMap::TileMap",
+      "name": "LevelTile2_0",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "content": {
-        "tilemapJsonFile": "layouts\\testlevel2.json",
-        "tilesetJsonFile": "layouts/tileset.json",
-        "tilemapAtlasImage": "layouts/tileset.png",
-        "displayMode": "visible",
-        "layerIndex": 0,
-        "levelIndex": 0,
-        "animationSpeedScale": 1,
-        "animationFps": 4
-      }
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\levels\\TestLevel\\leveltile2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 22.5
+                      },
+                      {
+                        "x": 8.5,
+                        "y": 48.5
+                      },
+                      {
+                        "x": 22.5,
+                        "y": 73.5
+                      },
+                      {
+                        "x": 50.5,
+                        "y": 103
+                      },
+                      {
+                        "x": 77,
+                        "y": 118
+                      },
+                      {
+                        "x": 97.5,
+                        "y": 124
+                      },
+                      {
+                        "x": 128,
+                        "y": 128
+                      },
+                      {
+                        "x": 0,
+                        "y": 128
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
-      "name": "TilemapCollision_2",
-      "type": "TileMap::CollisionMask",
+      "name": "LevelTile2_1",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "content": {
-        "tilemapJsonFile": "layouts\\testlevel2.json",
-        "tilesetJsonFile": "layouts/tileset.json",
-        "collisionMaskTag": "main",
-        "debugMode": false,
-        "fillColor": "255;255;255",
-        "outlineColor": "255;255;255",
-        "fillOpacity": 64,
-        "outlineOpacity": 128,
-        "outlineSize": 1
-      }
-    },
-    {
-      "assetStoreId": "",
-      "name": "TilemapCollision0_2",
-      "type": "TileMap::CollisionMask",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "content": {
-        "tilemapJsonFile": "layouts\\testlevel2.json",
-        "tilesetJsonFile": "layouts/tileset.json",
-        "collisionMaskTag": "layer0",
-        "debugMode": false,
-        "fillColor": "255;0;0",
-        "outlineColor": "255;255;255",
-        "fillOpacity": 64,
-        "outlineOpacity": 128,
-        "outlineSize": 1
-      }
-    },
-    {
-      "assetStoreId": "",
-      "name": "TilemapCollision1_2",
-      "type": "TileMap::CollisionMask",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "content": {
-        "tilemapJsonFile": "layouts\\testlevel2.json",
-        "tilesetJsonFile": "layouts/tileset.json",
-        "collisionMaskTag": "layer1",
-        "debugMode": false,
-        "fillColor": "0;0;255",
-        "outlineColor": "255;255;255",
-        "fillOpacity": 64,
-        "outlineOpacity": 128,
-        "outlineSize": 1
-      }
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\levels\\TestLevel\\leveltile2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 0
+                      },
+                      {
+                        "x": 1,
+                        "y": 22.5
+                      },
+                      {
+                        "x": 8.5,
+                        "y": 48.5
+                      },
+                      {
+                        "x": 22.5,
+                        "y": 73.5
+                      },
+                      {
+                        "x": 50.5,
+                        "y": 103
+                      },
+                      {
+                        "x": 77,
+                        "y": 118
+                      },
+                      {
+                        "x": 97.5,
+                        "y": 124
+                      },
+                      {
+                        "x": 128,
+                        "y": 128
+                      },
+                      {
+                        "x": 0,
+                        "y": 128
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -849,35 +1028,27 @@
         "folderName": "Act1",
         "children": [
           {
-            "objectName": "TilemapCollision1"
+            "objectName": "LevelTile1"
           },
           {
-            "objectName": "TilemapCollision0"
+            "objectName": "LevelTile2"
           },
           {
-            "objectName": "TilemapCollision"
+            "objectName": "LevelTile2_0"
           },
           {
-            "objectName": "Tilemap"
+            "objectName": "LevelTile2_1"
+          },
+          {
+            "objectName": "LevelTile3"
+          },
+          {
+            "objectName": "LevelTile4"
           }
         ]
       },
       {
-        "folderName": "Act2",
-        "children": [
-          {
-            "objectName": "TilemapCollision_2"
-          },
-          {
-            "objectName": "TilemapCollision1_2"
-          },
-          {
-            "objectName": "TilemapCollision0_2"
-          },
-          {
-            "objectName": "Tilemap2"
-          }
-        ]
+        "folderName": "Act2"
       }
     ]
   },
@@ -1021,6 +1192,39 @@
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "isLocked": false,
+      "name": "Base background layer",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": [
+        {
+          "effectType": "Scene3D::HemisphereLight",
+          "name": "3D Light",
+          "doubleParameters": {
+            "elevation": 45,
+            "intensity": 1,
+            "rotation": 0
+          },
+          "stringParameters": {
+            "groundColor": "64;64;64",
+            "skyColor": "255;255;255",
+            "top": "Y-"
+          },
+          "booleanParameters": {}
+        }
+      ]
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
       "name": "",
       "renderingType": "",
       "visibility": true,
@@ -1108,10 +1312,6 @@
     {
       "name": "Flippable",
       "type": "FlippableCapability::FlippableBehavior"
-    },
-    {
-      "name": "LightObstacleBehavior",
-      "type": "Lighting::LightObstacleBehavior"
     },
     {
       "name": "Opacity",

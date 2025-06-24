@@ -473,14 +473,6 @@
         "userAdded": false
       },
       {
-        "file": "layouts/tileset.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "layouts/tileset.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/backgrounds/testlevel/bg1.png",
         "kind": "image",
         "metadata": "",
@@ -1271,30 +1263,6 @@
         "metadata": "",
         "name": "assets\\HUD\\KnucklesLives.png",
         "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "disablePreload": false,
-        "file": "levellayouts/testlevel.json",
-        "kind": "tilemap",
-        "metadata": "",
-        "name": "levellayouts\\testlevel.json",
-        "userAdded": false
-      },
-      {
-        "file": "levellayouts/tileset.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "levellayouts\\tileset.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "disablePreload": false,
-        "file": "levellayouts/tileset.json",
-        "kind": "tileset",
-        "metadata": "",
-        "name": "levellayouts\\tileset.json",
         "userAdded": false
       },
       {
@@ -2367,6 +2335,38 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/TestLevel/leveltile1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/TestLevel/leveltile2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/TestLevel/leveltile3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/TestLevel/leveltile4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile4.png",
+        "smoothed": false,
         "userAdded": false
       }
     ],
@@ -6939,30 +6939,6 @@
         "align": "left",
         "wordWrap": true,
         "verticalTextAlignment": "top"
-      }
-    },
-    {
-      "assetStoreId": "",
-      "name": "NewShapePainter",
-      "type": "PrimitiveDrawing::Drawer",
-      "variables": [],
-      "effects": [],
-      "behaviors": [],
-      "fillOpacity": 255,
-      "outlineSize": 0,
-      "outlineOpacity": 255,
-      "absoluteCoordinates": false,
-      "clearBetweenFrames": true,
-      "antialiasing": "none",
-      "fillColor": {
-        "r": 255,
-        "g": 0,
-        "b": 0
-      },
-      "outlineColor": {
-        "r": 0,
-        "g": 0,
-        "b": 0
       }
     },
     {
@@ -18236,9 +18212,6 @@
         ]
       },
       {
-        "objectName": "NewShapePainter"
-      },
-      {
         "folderName": "Interface",
         "children": [
           {
@@ -18418,13 +18391,22 @@
           "name": "Spikes"
         },
         {
-          "name": "TilemapCollision_2"
-        },
-        {
           "name": "MonitorBase"
         },
         {
           "name": "Spring"
+        },
+        {
+          "name": "LevelTile1"
+        },
+        {
+          "name": "LevelTile2"
+        },
+        {
+          "name": "LevelTile3"
+        },
+        {
+          "name": "LevelTile4"
         }
       ]
     },
@@ -18432,10 +18414,7 @@
       "name": "CollisionLayer0",
       "objects": [
         {
-          "name": "TilemapCollision0"
-        },
-        {
-          "name": "TilemapCollision0_2"
+          "name": "LevelTile2_0"
         }
       ]
     },
@@ -18443,10 +18422,7 @@
       "name": "CollisionLayer1",
       "objects": [
         {
-          "name": "TilemapCollision1"
-        },
-        {
-          "name": "TilemapCollision1_2"
+          "name": "LevelTile2_1"
         }
       ]
     },
