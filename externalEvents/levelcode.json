@@ -3178,6 +3178,45 @@
                                         "=",
                                         "0"
                                       ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_ActionValues",
+                                        "CarryPlayerID",
+                                        ">",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "PartnerAIOffset",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player",
+                                        "PlayerID",
+                                        "=",
+                                        "0"
+                                      ]
                                     }
                                   ],
                                   "actions": [
@@ -3188,7 +3227,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetX",
                                         "=",
-                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(16*60*TimeDelta())*2-2]"
+                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset*60*TimeDelta())*2-2]"
                                       ]
                                     },
                                     {
@@ -3198,7 +3237,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetY",
                                         "=",
-                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(16*60*TimeDelta())*2-1]"
+                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset*60*TimeDelta())*2-1]"
                                       ]
                                     },
                                     {
@@ -3208,7 +3247,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetInput",
                                         "=",
-                                        "Player_Input.InputRecord[Player_Input.VariableChildCount(InputRecord)-floor(16*60*TimeDelta())-1]"
+                                        "Player_Input.InputRecord[Player_Input.VariableChildCount(InputRecord)-floor(PartnerAIOffset*60*TimeDelta())-1]"
                                       ]
                                     }
                                   ]
@@ -3759,12 +3798,13 @@
                                       "conditions": [
                                         {
                                           "type": {
-                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                            "value": "NumberObjectVariable"
                                           },
                                           "parameters": [
-                                            "abs(CPUPlayerTargetX-Player_MovementValues.FloatX)",
-                                            ">",
-                                            "16"
+                                            "Player_ActionValues",
+                                            "CarryPlayerID",
+                                            "<",
+                                            "0"
                                           ]
                                         },
                                         {
@@ -3776,6 +3816,16 @@
                                             "SensorAngle",
                                             "=",
                                             "0"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                          },
+                                          "parameters": [
+                                            "abs(CPUPlayerTargetX-Player_MovementValues.FloatX)",
+                                            ">",
+                                            "16"
                                           ]
                                         }
                                       ],
@@ -3862,6 +3912,13 @@
                                       ]
                                     }
                                   ]
+                                }
+                              ],
+                              "variables": [
+                                {
+                                  "name": "PartnerAIOffset",
+                                  "type": "number",
+                                  "value": 16
                                 }
                               ]
                             }
@@ -7857,7 +7914,19 @@
                                     },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [],
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "FlagAllowY",
+                                            "True",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
                                       "actions": [
                                         {
                                           "type": {
@@ -11876,7 +11945,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11915,7 +11983,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -15356,6 +15423,55 @@
                                                     "=",
                                                     "1"
                                                   ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BuiltinCommonInstructions::Or"
+                                                  },
+                                                  "parameters": [],
+                                                  "subInstructions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_MovementValues",
+                                                        "PlayerID",
+                                                        "=",
+                                                        "0"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "BuiltinCommonInstructions::And"
+                                                      },
+                                                      "parameters": [],
+                                                      "subInstructions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "NumberObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_MovementValues",
+                                                            "PlayerID",
+                                                            ">",
+                                                            "0"
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "BooleanObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_Input",
+                                                            "KeyUp",
+                                                            "True",
+                                                            "1"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
                                                 }
                                               ],
                                               "actions": [
@@ -15511,6 +15627,279 @@
                                               ]
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Comment",
+                                          "color": {
+                                            "b": 109,
+                                            "g": 230,
+                                            "r": 255,
+                                            "textB": 0,
+                                            "textG": 0,
+                                            "textR": 0
+                                          },
+                                          "comment": "Check for being carried"
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_ActionValues",
+                                                "CarryPlayerID",
+                                                "<",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "AjoutObjConcern"
+                                                  },
+                                                  "parameters": [
+                                                    "",
+                                                    "Player"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Comment",
+                                                  "color": {
+                                                    "b": 109,
+                                                    "g": 230,
+                                                    "r": 255,
+                                                    "textB": 0,
+                                                    "textG": 0,
+                                                    "textR": 0
+                                                  },
+                                                  "comment": "If there is a Tails character that's currently flying, set the variables"
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::ForEach",
+                                                  "object": "Player",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "AjoutObjConcern"
+                                                      },
+                                                      "parameters": [
+                                                        "",
+                                                        "PlayerVariablesSensors"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "PlayerVariablesSensors",
+                                                        "PlayerID",
+                                                        "=",
+                                                        "Player.PlayerID"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_MovementValues",
+                                                        "Character",
+                                                        "=",
+                                                        "1"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "StringObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_MovementValues",
+                                                        "Action",
+                                                        "=",
+                                                        "\"Fly\""
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SetNumberVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "TailsCarryPlayerID",
+                                                        "=",
+                                                        "Player_MovementValues.PlayerID"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "SetNumberVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "TailsCarryX",
+                                                        "=",
+                                                        "Player_MovementValues.FloatX"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "SetNumberVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "TailsCarryY",
+                                                        "=",
+                                                        "Player_MovementValues.FloatY+16"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "SetBooleanVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "TailsCarryFlag",
+                                                        "True",
+                                                        "Player_MovementValues.FloatY+16"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "TailsCarryFlag",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                  },
+                                                  "parameters": [
+                                                    "DistanceBetweenPositions(Player_SensorTop.X(), Player_SensorTop.Y(), TailsCarryX, TailsCarryY)",
+                                                    "<",
+                                                    "16"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetStringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Action",
+                                                    "=",
+                                                    "\"Carried\""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_ActionValues",
+                                                    "CarryPlayerID",
+                                                    "=",
+                                                    "TailsCarryPlayerID"
+                                                  ]
+                                                }
+                                              ],
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Comment",
+                                                  "color": {
+                                                    "b": 109,
+                                                    "g": 230,
+                                                    "r": 255,
+                                                    "textB": 0,
+                                                    "textG": 0,
+                                                    "textR": 0
+                                                  },
+                                                  "comment": "Set Tails' CarryPlayerID too"
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "AjoutObjConcern"
+                                                      },
+                                                      "parameters": [
+                                                        "",
+                                                        "PlayerVariablesSensors"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "PlayerVariablesSensors",
+                                                        "PlayerID",
+                                                        "=",
+                                                        "TailsCarryPlayerID"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SetNumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_ActionValues",
+                                                        "CarryPlayerID",
+                                                        "=",
+                                                        "TailsCarryPlayerID"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "variables": [
+                                            {
+                                              "name": "TailsCarryPlayerID",
+                                              "type": "number",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "TailsCarryX",
+                                              "type": "number",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "TailsCarryY",
+                                              "type": "number",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "TailsCarryFlag",
+                                              "type": "boolean",
+                                              "value": false
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -15525,7 +15914,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Tails Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -17699,6 +18087,298 @@
                                 }
                               ],
                               "parameters": []
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Special actions",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "\"Carried\" - Being carried by flying Tails",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "Action",
+                                            "=",
+                                            "\"Carried\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetBooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "FlagAllowX",
+                                            "False",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetBooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "FlagAllowY",
+                                            "False",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetBooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "FlagAllowCommonInput",
+                                            "False",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "TailsCarryPlayerID",
+                                            "=",
+                                            "Player_ActionValues.CarryPlayerID"
+                                          ]
+                                        }
+                                      ],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "AjoutObjConcern"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "PlayerVariablesSensors"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "PlayerID",
+                                                "=",
+                                                "TailsCarryPlayerID"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "TailsCarryX",
+                                                "=",
+                                                "Player_MovementValues.FloatX"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "TailsCarryY",
+                                                "=",
+                                                "Player_MovementValues.FloatY+16"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FloatX",
+                                                "=",
+                                                "TailsCarryX"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FloatY",
+                                                "=",
+                                                "TailsCarryY"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Ground",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Action",
+                                                "=",
+                                                "\"Stand\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_ActionValues",
+                                                "CarryPlayerID",
+                                                "=",
+                                                "-1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FlagAllowX",
+                                                "True",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FlagAllowY",
+                                                "True",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FlagAllowCommonInput",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "AjoutObjConcern"
+                                                  },
+                                                  "parameters": [
+                                                    "",
+                                                    "PlayerVariablesSensors"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "PlayerID",
+                                                    "=",
+                                                    "TailsCarryPlayerID"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_ActionValues",
+                                                    "CarryPlayerID",
+                                                    "=",
+                                                    "-1"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "variables": [
+                                        {
+                                          "name": "TailsCarryPlayerID",
+                                          "type": "number",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "TailsCarryX",
+                                          "type": "number",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "TailsCarryY",
+                                          "type": "number",
+                                          "value": 0
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
+                                }
+                              ],
+                              "parameters": []
                             }
                           ],
                           "parameters": []
@@ -17708,6 +18388,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
