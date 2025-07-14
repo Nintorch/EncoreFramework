@@ -16,7 +16,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Scene Setup",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4184,7 +4183,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Sensors",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -4211,6 +4209,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Change Sensor Angle",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -4667,6 +4666,90 @@
                                           ]
                                         },
                                         {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Ground",
+                                                "False",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "WallSensorsHeight",
+                                                "=",
+                                                "0"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "XSpeed",
+                                                "<",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "LeftWallLengthOffset",
+                                                "=",
+                                                "-Player_MovementValues.XSpeed"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "XSpeed",
+                                                ">",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "RightWallLengthOffset",
+                                                "=",
+                                                "Player_MovementValues.XSpeed"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
                                           "type": "BuiltinCommonInstructions::Comment",
                                           "color": {
                                             "b": 109,
@@ -4724,7 +4807,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius + 1"
+                                                "Player_MovementValues.PushRadius + 1 + LeftWallLengthOffset"
                                               ]
                                             },
                                             {
@@ -4784,7 +4867,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius"
+                                                "Player_MovementValues.PushRadius + RightWallLengthOffset"
                                               ]
                                             },
                                             {
@@ -4844,7 +4927,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius  + 6"
+                                                "Player_MovementValues.PushRadius  + 6 + LeftWallLengthOffset"
                                               ]
                                             },
                                             {
@@ -4904,7 +4987,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius  + 5"
+                                                "Player_MovementValues.PushRadius  + 5 + RightWallLengthOffset"
                                               ]
                                             },
                                             {
@@ -4964,7 +5047,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius  + 6"
+                                                "Player_MovementValues.PushRadius  + 6 + LeftWallLengthOffset*2"
                                               ]
                                             },
                                             {
@@ -5024,7 +5107,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius + 5"
+                                                "Player_MovementValues.PushRadius + 5 + RightWallLengthOffset"
                                               ]
                                             },
                                             {
@@ -5045,6 +5128,16 @@
                                           "name": "WallSensorsHeight",
                                           "type": "number",
                                           "value": 10
+                                        },
+                                        {
+                                          "name": "LeftWallLengthOffset",
+                                          "type": "number",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "RightWallLengthOffset",
+                                          "type": "number",
+                                          "value": 0
                                         }
                                       ]
                                     }
@@ -5327,6 +5420,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Angle Sensors",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -5708,6 +5802,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Sensor Processing",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -10644,6 +10739,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "- Landing",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
