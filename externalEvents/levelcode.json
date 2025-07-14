@@ -1049,6 +1049,17 @@
                                     "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
+                                    "Player_MovementValues",
+                                    "AirAngleRotation",
+                                    "=",
+                                    "2.8125"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
                                     "Player_ActionValues",
                                     "JumpReleaseStrength",
                                     "=",
@@ -1162,6 +1173,16 @@
                               "actions": [
                                 {
                                   "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "RotationSnap",
+                                    "=",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
                                     "value": "SetNumberObjectVariable"
                                   },
                                   "parameters": [
@@ -1191,6 +1212,28 @@
                                     "Deceleration",
                                     "=",
                                     "0.056875*3"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "AirAngleRotation",
+                                    "=",
+                                    "4"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_ActionValues",
+                                    "SkidMinimumAmount",
+                                    "=",
+                                    "3.4"
                                   ]
                                 }
                               ]
@@ -4183,6 +4226,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Sensors",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -6502,6 +6546,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Movement Routines",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -7737,7 +7782,19 @@
                                       ]
                                     }
                                   ],
-                                  "actions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "Angle",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
                                   "events": [
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
@@ -7892,7 +7949,7 @@
                                             "Player_MovementValues",
                                             "SmoothAngle",
                                             "-",
-                                            "2.8125*60*TimeDelta()"
+                                            "Player_MovementValues.AirAngleRotation*60*TimeDelta()"
                                           ]
                                         }
                                       ]
@@ -7920,7 +7977,7 @@
                                             "Player_MovementValues",
                                             "SmoothAngle",
                                             "+",
-                                            "2.8125*60*TimeDelta()"
+                                            "Player_MovementValues.AirAngleRotation*60*TimeDelta()"
                                           ]
                                         }
                                       ]
@@ -7935,7 +7992,7 @@
                                           "parameters": [
                                             "abs(AngleDifference(Player_MovementValues.SmoothAngle, 0))",
                                             "<",
-                                            "1"
+                                            "Player_MovementValues.AirAngleRotation / 2"
                                           ]
                                         }
                                       ],
@@ -9631,279 +9688,215 @@
                                       ]
                                     },
                                     {
-                                      "type": "BuiltinCommonInstructions::Comment",
-                                      "color": {
-                                        "b": 109,
-                                        "g": 230,
-                                        "r": 255,
-                                        "textB": 0,
-                                        "textG": 0,
-                                        "textR": 0
-                                      },
-                                      "comment": "Stick to the ground"
-                                    },
-                                    {
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [],
-                                      "actions": [],
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "folded": true,
+                                      "name": "Stick to the ground",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
                                       "events": [
                                         {
                                           "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "CollisionNP"
-                                              },
-                                              "parameters": [
-                                                "Player_SensorGroundLeft",
-                                                "Spring",
-                                                "",
-                                                "",
-                                                ""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Spring",
-                                                "Direction",
-                                                "<=",
-                                                "1"
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetBooleanVariable"
-                                              },
-                                              "parameters": [
-                                                "ShouldStick",
-                                                "False",
-                                                ""
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "CollisionNP"
-                                              },
-                                              "parameters": [
-                                                "Player_SensorGroundRight",
-                                                "Spring",
-                                                "",
-                                                "",
-                                                ""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Spring",
-                                                "Direction",
-                                                "<=",
-                                                "1"
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetBooleanVariable"
-                                              },
-                                              "parameters": [
-                                                "ShouldStick",
-                                                "False",
-                                                ""
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_MovementValues",
-                                                "Landed",
-                                                "False",
-                                                ""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_SensorBottom",
-                                                "Collision",
-                                                "True",
-                                                ""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "NumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_MovementValues",
-                                                "HeightRadius",
-                                                "<=",
-                                                "Player_SensorBottom.Y()-Player_MovementValues.FloatY"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BuiltinCommonInstructions::Or"
-                                              },
-                                              "parameters": [],
-                                              "subInstructions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_SensorLeft",
-                                                    "WallCollision",
-                                                    "True",
-                                                    ""
-                                                  ]
-                                                },
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_SensorRight",
-                                                    "WallCollision",
-                                                    "True",
-                                                    ""
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetBooleanVariable"
-                                              },
-                                              "parameters": [
-                                                "ShouldStick",
-                                                "False",
-                                                ""
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "BooleanVariable"
-                                              },
-                                              "parameters": [
-                                                "ShouldStick",
-                                                "True",
-                                                ""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_MovementValues",
-                                                "SensorsHorizontal",
-                                                "True",
-                                                ""
-                                              ]
-                                            }
-                                          ],
+                                          "conditions": [],
                                           "actions": [],
                                           "events": [
                                             {
                                               "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [],
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "CollisionNP"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_SensorGroundLeft",
+                                                    "Spring",
+                                                    "",
+                                                    "",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Spring",
+                                                    "Direction",
+                                                    "<=",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetBooleanVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "ShouldStick",
+                                                    "False",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "CollisionNP"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_SensorGroundRight",
+                                                    "Spring",
+                                                    "",
+                                                    "",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Spring",
+                                                    "Direction",
+                                                    "<=",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetBooleanVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "ShouldStick",
+                                                    "False",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Landed",
+                                                    "False",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_SensorBottom",
+                                                    "Collision",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "HeightRadius",
+                                                    "<=",
+                                                    "Player_SensorBottom.Y()-Player_MovementValues.FloatY"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BuiltinCommonInstructions::Or"
+                                                  },
+                                                  "parameters": [],
+                                                  "subInstructions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "BooleanObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_SensorLeft",
+                                                        "WallCollision",
+                                                        "True",
+                                                        ""
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "BooleanObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_SensorRight",
+                                                        "WallCollision",
+                                                        "True",
+                                                        ""
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetBooleanVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "ShouldStick",
+                                                    "False",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "ShouldStick",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "SensorsHorizontal",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                }
+                                              ],
                                               "actions": [],
                                               "events": [
                                                 {
                                                   "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
+                                                  "conditions": [],
+                                                  "actions": [],
+                                                  "events": [
                                                     {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundLeft",
-                                                        "Collision",
-                                                        "True",
-                                                        ""
-                                                      ]
-                                                    }
-                                                  ],
-                                                  "actions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "LeftColY",
-                                                        "=",
-                                                        "Player_SensorGroundLeft.Y()"
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundRight",
-                                                        "Collision",
-                                                        "True",
-                                                        ""
-                                                      ]
-                                                    }
-                                                  ],
-                                                  "actions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "RightColY",
-                                                        "=",
-                                                        "Player_SensorGroundRight.Y()"
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "BuiltinCommonInstructions::Or"
-                                                      },
-                                                      "parameters": [],
-                                                      "subInstructions": [
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
                                                         {
                                                           "type": {
                                                             "value": "BooleanObjectVariable"
@@ -9914,7 +9907,24 @@
                                                             "True",
                                                             ""
                                                           ]
-                                                        },
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "LeftColY",
+                                                            "=",
+                                                            "Player_SensorGroundLeft.Y()"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
                                                         {
                                                           "type": {
                                                             "value": "BooleanObjectVariable"
@@ -9926,32 +9936,51 @@
                                                             ""
                                                           ]
                                                         }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "RightColY",
+                                                            "=",
+                                                            "Player_SensorGroundRight.Y()"
+                                                          ]
+                                                        }
                                                       ]
-                                                    }
-                                                  ],
-                                                  "actions": [],
-                                                  "events": [
+                                                    },
                                                     {
                                                       "type": "BuiltinCommonInstructions::Standard",
                                                       "conditions": [
                                                         {
                                                           "type": {
-                                                            "value": "NumberVariable"
+                                                            "value": "BuiltinCommonInstructions::Or"
                                                           },
-                                                          "parameters": [
-                                                            "LeftColY",
-                                                            "!=",
-                                                            "0"
-                                                          ]
-                                                        },
-                                                        {
-                                                          "type": {
-                                                            "value": "NumberVariable"
-                                                          },
-                                                          "parameters": [
-                                                            "RightColY",
-                                                            "!=",
-                                                            "0"
+                                                          "parameters": [],
+                                                          "subInstructions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "BooleanObjectVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "Player_SensorGroundLeft",
+                                                                "Collision",
+                                                                "True",
+                                                                ""
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": {
+                                                                "value": "BooleanObjectVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "Player_SensorGroundRight",
+                                                                "Collision",
+                                                                "True",
+                                                                ""
+                                                              ]
+                                                            }
                                                           ]
                                                         }
                                                       ],
@@ -9962,12 +9991,96 @@
                                                           "conditions": [
                                                             {
                                                               "type": {
-                                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                "value": "NumberVariable"
                                                               },
                                                               "parameters": [
-                                                                "abs(LeftColY-Player_MovementValues.FloatY)",
-                                                                ">=",
-                                                                "abs(RightColY-Player_MovementValues.FloatY)"
+                                                                "LeftColY",
+                                                                "!=",
+                                                                "0"
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": {
+                                                                "value": "NumberVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "RightColY",
+                                                                "!=",
+                                                                "0"
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "actions": [],
+                                                          "events": [
+                                                            {
+                                                              "type": "BuiltinCommonInstructions::Standard",
+                                                              "conditions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "abs(LeftColY-Player_MovementValues.FloatY)",
+                                                                    ">=",
+                                                                    "abs(RightColY-Player_MovementValues.FloatY)"
+                                                                  ]
+                                                                }
+                                                              ],
+                                                              "actions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "SetNumberObjectVariable"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "Player_MovementValues",
+                                                                    "FloatY",
+                                                                    "=",
+                                                                    "RightColY-Player_MovementValues.HeightRadius*cos(ToRad(Player_MovementValues.SensorAngle))"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "BuiltinCommonInstructions::Standard",
+                                                              "conditions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "abs(LeftColY-Player_MovementValues.FloatY)",
+                                                                    "<",
+                                                                    "abs(RightColY-Player_MovementValues.FloatY)"
+                                                                  ]
+                                                                }
+                                                              ],
+                                                              "actions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "SetNumberObjectVariable"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "Player_MovementValues",
+                                                                    "FloatY",
+                                                                    "=",
+                                                                    "LeftColY-Player_MovementValues.HeightRadius*cos(ToRad(Player_MovementValues.SensorAngle))"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "BuiltinCommonInstructions::Standard",
+                                                          "conditions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "NumberVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "LeftColY",
+                                                                "=",
+                                                                "0"
                                                               ]
                                                             }
                                                           ],
@@ -9990,12 +10103,12 @@
                                                           "conditions": [
                                                             {
                                                               "type": {
-                                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                "value": "NumberVariable"
                                                               },
                                                               "parameters": [
-                                                                "abs(LeftColY-Player_MovementValues.FloatY)",
-                                                                "<",
-                                                                "abs(RightColY-Player_MovementValues.FloatY)"
+                                                                "RightColY",
+                                                                "=",
+                                                                "0"
                                                               ]
                                                             }
                                                           ],
@@ -10020,237 +10133,117 @@
                                                       "conditions": [
                                                         {
                                                           "type": {
-                                                            "value": "NumberVariable"
+                                                            "value": "BooleanObjectVariable"
                                                           },
                                                           "parameters": [
-                                                            "LeftColY",
-                                                            "=",
-                                                            "0"
+                                                            "Player_SensorGroundLeft",
+                                                            "Collision",
+                                                            "False",
+                                                            ""
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "BooleanObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_SensorGroundRight",
+                                                            "Collision",
+                                                            "False",
+                                                            ""
                                                           ]
                                                         }
                                                       ],
                                                       "actions": [
                                                         {
                                                           "type": {
+                                                            "value": "SetBooleanObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_MovementValues",
+                                                            "Ground",
+                                                            "False",
+                                                            ""
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
                                                             "value": "SetNumberObjectVariable"
                                                           },
                                                           "parameters": [
                                                             "Player_MovementValues",
-                                                            "FloatY",
+                                                            "XSpeed",
                                                             "=",
-                                                            "RightColY-Player_MovementValues.HeightRadius*cos(ToRad(Player_MovementValues.SensorAngle))"
+                                                            "Player_MovementValues.SavedGroundSpeed * cos(ToRad(Player_MovementValues.Angle))"
                                                           ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": "BuiltinCommonInstructions::Standard",
-                                                      "conditions": [
+                                                        },
                                                         {
                                                           "type": {
-                                                            "value": "NumberVariable"
+                                                            "value": "SetNumberObjectVariable"
                                                           },
                                                           "parameters": [
-                                                            "RightColY",
+                                                            "Player_MovementValues",
+                                                            "YSpeed",
+                                                            "=",
+                                                            "Player_MovementValues.SavedGroundSpeed * sin(ToRad(Player_MovementValues.Angle))"
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_MovementValues",
+                                                            "Angle",
                                                             "=",
                                                             "0"
                                                           ]
                                                         }
-                                                      ],
-                                                      "actions": [
-                                                        {
-                                                          "type": {
-                                                            "value": "SetNumberObjectVariable"
-                                                          },
-                                                          "parameters": [
-                                                            "Player_MovementValues",
-                                                            "FloatY",
-                                                            "=",
-                                                            "LeftColY-Player_MovementValues.HeightRadius*cos(ToRad(Player_MovementValues.SensorAngle))"
-                                                          ]
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundLeft",
-                                                        "Collision",
-                                                        "False",
-                                                        ""
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundRight",
-                                                        "Collision",
-                                                        "False",
-                                                        ""
                                                       ]
                                                     }
                                                   ],
-                                                  "actions": [
+                                                  "variables": [
                                                     {
-                                                      "type": {
-                                                        "value": "SetBooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "Ground",
-                                                        "False",
-                                                        ""
-                                                      ]
+                                                      "folded": true,
+                                                      "name": "LeftColY",
+                                                      "type": "number",
+                                                      "value": 0
                                                     },
                                                     {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "XSpeed",
-                                                        "=",
-                                                        "Player_MovementValues.SavedGroundSpeed * cos(ToRad(Player_MovementValues.Angle))"
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "YSpeed",
-                                                        "=",
-                                                        "Player_MovementValues.SavedGroundSpeed * sin(ToRad(Player_MovementValues.Angle))"
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "Angle",
-                                                        "=",
-                                                        "0"
-                                                      ]
+                                                      "folded": true,
+                                                      "name": "RightColY",
+                                                      "type": "number",
+                                                      "value": 0
                                                     }
                                                   ]
                                                 }
-                                              ],
-                                              "variables": [
-                                                {
-                                                  "folded": true,
-                                                  "name": "LeftColY",
-                                                  "type": "number",
-                                                  "value": 0
-                                                },
-                                                {
-                                                  "folded": true,
-                                                  "name": "RightColY",
-                                                  "type": "number",
-                                                  "value": 0
-                                                }
                                               ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_MovementValues",
-                                                "SensorsHorizontal",
-                                                "False",
-                                                ""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [],
-                                          "events": [
+                                            },
                                             {
                                               "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [],
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "SensorsHorizontal",
+                                                    "False",
+                                                    ""
+                                                  ]
+                                                }
+                                              ],
                                               "actions": [],
                                               "events": [
                                                 {
                                                   "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
+                                                  "conditions": [],
+                                                  "actions": [],
+                                                  "events": [
                                                     {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundLeft",
-                                                        "Collision",
-                                                        "True",
-                                                        ""
-                                                      ]
-                                                    }
-                                                  ],
-                                                  "actions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "LeftColX",
-                                                        "=",
-                                                        "Player_SensorGroundLeft.X()"
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundRight",
-                                                        "Collision",
-                                                        "True",
-                                                        ""
-                                                      ]
-                                                    }
-                                                  ],
-                                                  "actions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "RightColX",
-                                                        "=",
-                                                        "Player_SensorGroundRight.X()"
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "BuiltinCommonInstructions::Or"
-                                                      },
-                                                      "parameters": [],
-                                                      "subInstructions": [
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
                                                         {
                                                           "type": {
                                                             "value": "BooleanObjectVariable"
@@ -10261,7 +10254,24 @@
                                                             "True",
                                                             ""
                                                           ]
-                                                        },
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "LeftColX",
+                                                            "=",
+                                                            "Player_SensorGroundLeft.X()"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
                                                         {
                                                           "type": {
                                                             "value": "BooleanObjectVariable"
@@ -10273,32 +10283,51 @@
                                                             ""
                                                           ]
                                                         }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "RightColX",
+                                                            "=",
+                                                            "Player_SensorGroundRight.X()"
+                                                          ]
+                                                        }
                                                       ]
-                                                    }
-                                                  ],
-                                                  "actions": [],
-                                                  "events": [
+                                                    },
                                                     {
                                                       "type": "BuiltinCommonInstructions::Standard",
                                                       "conditions": [
                                                         {
                                                           "type": {
-                                                            "value": "NumberVariable"
+                                                            "value": "BuiltinCommonInstructions::Or"
                                                           },
-                                                          "parameters": [
-                                                            "LeftColX",
-                                                            "!=",
-                                                            "0"
-                                                          ]
-                                                        },
-                                                        {
-                                                          "type": {
-                                                            "value": "NumberVariable"
-                                                          },
-                                                          "parameters": [
-                                                            "RightColX",
-                                                            "!=",
-                                                            "0"
+                                                          "parameters": [],
+                                                          "subInstructions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "BooleanObjectVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "Player_SensorGroundLeft",
+                                                                "Collision",
+                                                                "True",
+                                                                ""
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": {
+                                                                "value": "BooleanObjectVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "Player_SensorGroundRight",
+                                                                "Collision",
+                                                                "True",
+                                                                ""
+                                                              ]
+                                                            }
                                                           ]
                                                         }
                                                       ],
@@ -10309,12 +10338,96 @@
                                                           "conditions": [
                                                             {
                                                               "type": {
-                                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                "value": "NumberVariable"
                                                               },
                                                               "parameters": [
-                                                                "abs(LeftColX - Player_MovementValues.FloatX)",
-                                                                ">=",
-                                                                "abs(RightColX - Player_MovementValues.FloatX)"
+                                                                "LeftColX",
+                                                                "!=",
+                                                                "0"
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": {
+                                                                "value": "NumberVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "RightColX",
+                                                                "!=",
+                                                                "0"
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "actions": [],
+                                                          "events": [
+                                                            {
+                                                              "type": "BuiltinCommonInstructions::Standard",
+                                                              "conditions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "abs(LeftColX - Player_MovementValues.FloatX)",
+                                                                    ">=",
+                                                                    "abs(RightColX - Player_MovementValues.FloatX)"
+                                                                  ]
+                                                                }
+                                                              ],
+                                                              "actions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "SetNumberObjectVariable"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "Player_MovementValues",
+                                                                    "FloatX",
+                                                                    "=",
+                                                                    "RightColX+Player_MovementValues.HeightRadius*sin(ToRad(Player_MovementValues.SensorAngle))"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "BuiltinCommonInstructions::Standard",
+                                                              "conditions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "abs(LeftColX - Player_MovementValues.FloatX)",
+                                                                    "<",
+                                                                    "abs(RightColX - Player_MovementValues.FloatX)"
+                                                                  ]
+                                                                }
+                                                              ],
+                                                              "actions": [
+                                                                {
+                                                                  "type": {
+                                                                    "value": "SetNumberObjectVariable"
+                                                                  },
+                                                                  "parameters": [
+                                                                    "Player_MovementValues",
+                                                                    "FloatX",
+                                                                    "=",
+                                                                    "LeftColX+Player_MovementValues.HeightRadius*sin(ToRad(Player_MovementValues.SensorAngle))"
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "BuiltinCommonInstructions::Standard",
+                                                          "conditions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "NumberVariable"
+                                                              },
+                                                              "parameters": [
+                                                                "LeftColX",
+                                                                "=",
+                                                                "0"
                                                               ]
                                                             }
                                                           ],
@@ -10337,12 +10450,12 @@
                                                           "conditions": [
                                                             {
                                                               "type": {
-                                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                                "value": "NumberVariable"
                                                               },
                                                               "parameters": [
-                                                                "abs(LeftColX - Player_MovementValues.FloatX)",
-                                                                "<",
-                                                                "abs(RightColX - Player_MovementValues.FloatX)"
+                                                                "RightColX",
+                                                                "=",
+                                                                "0"
                                                               ]
                                                             }
                                                           ],
@@ -10367,158 +10480,103 @@
                                                       "conditions": [
                                                         {
                                                           "type": {
-                                                            "value": "NumberVariable"
+                                                            "value": "BooleanObjectVariable"
                                                           },
                                                           "parameters": [
-                                                            "LeftColX",
-                                                            "=",
-                                                            "0"
+                                                            "Player_SensorGroundLeft",
+                                                            "Collision",
+                                                            "False",
+                                                            ""
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "BooleanObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_SensorGroundRight",
+                                                            "Collision",
+                                                            "False",
+                                                            ""
                                                           ]
                                                         }
                                                       ],
                                                       "actions": [
                                                         {
                                                           "type": {
+                                                            "value": "SetBooleanObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_MovementValues",
+                                                            "Ground",
+                                                            "False",
+                                                            ""
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
                                                             "value": "SetNumberObjectVariable"
                                                           },
                                                           "parameters": [
                                                             "Player_MovementValues",
-                                                            "FloatX",
+                                                            "XSpeed",
                                                             "=",
-                                                            "RightColX+Player_MovementValues.HeightRadius*sin(ToRad(Player_MovementValues.SensorAngle))"
+                                                            "Player_MovementValues.SavedGroundSpeed * cos(ToRad(Player_MovementValues.Angle))"
                                                           ]
-                                                        }
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": "BuiltinCommonInstructions::Standard",
-                                                      "conditions": [
+                                                        },
                                                         {
                                                           "type": {
-                                                            "value": "NumberVariable"
+                                                            "value": "SetNumberObjectVariable"
                                                           },
                                                           "parameters": [
-                                                            "RightColX",
+                                                            "Player_MovementValues",
+                                                            "YSpeed",
+                                                            "=",
+                                                            "Player_MovementValues.SavedGroundSpeed * sin(ToRad(Player_MovementValues.Angle))"
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_MovementValues",
+                                                            "Angle",
                                                             "=",
                                                             "0"
                                                           ]
                                                         }
-                                                      ],
-                                                      "actions": [
-                                                        {
-                                                          "type": {
-                                                            "value": "SetNumberObjectVariable"
-                                                          },
-                                                          "parameters": [
-                                                            "Player_MovementValues",
-                                                            "FloatX",
-                                                            "=",
-                                                            "LeftColX+Player_MovementValues.HeightRadius*sin(ToRad(Player_MovementValues.SensorAngle))"
-                                                          ]
-                                                        }
-                                                      ]
-                                                    }
-                                                  ]
-                                                },
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundLeft",
-                                                        "Collision",
-                                                        "False",
-                                                        ""
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": {
-                                                        "value": "BooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_SensorGroundRight",
-                                                        "Collision",
-                                                        "False",
-                                                        ""
                                                       ]
                                                     }
                                                   ],
-                                                  "actions": [
+                                                  "variables": [
                                                     {
-                                                      "type": {
-                                                        "value": "SetBooleanObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "Ground",
-                                                        "False",
-                                                        ""
-                                                      ]
+                                                      "folded": true,
+                                                      "name": "LeftColX",
+                                                      "type": "number",
+                                                      "value": 0
                                                     },
                                                     {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "XSpeed",
-                                                        "=",
-                                                        "Player_MovementValues.SavedGroundSpeed * cos(ToRad(Player_MovementValues.Angle))"
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "YSpeed",
-                                                        "=",
-                                                        "Player_MovementValues.SavedGroundSpeed * sin(ToRad(Player_MovementValues.Angle))"
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "Angle",
-                                                        "=",
-                                                        "0"
-                                                      ]
+                                                      "folded": true,
+                                                      "name": "RightColX",
+                                                      "type": "number",
+                                                      "value": 0
                                                     }
                                                   ]
                                                 }
-                                              ],
-                                              "variables": [
-                                                {
-                                                  "folded": true,
-                                                  "name": "LeftColX",
-                                                  "type": "number",
-                                                  "value": 0
-                                                },
-                                                {
-                                                  "folded": true,
-                                                  "name": "RightColX",
-                                                  "type": "number",
-                                                  "value": 0
-                                                }
                                               ]
+                                            }
+                                          ],
+                                          "variables": [
+                                            {
+                                              "name": "ShouldStick",
+                                              "type": "boolean",
+                                              "value": true
                                             }
                                           ]
                                         }
                                       ],
-                                      "variables": [
-                                        {
-                                          "name": "ShouldStick",
-                                          "type": "boolean",
-                                          "value": true
-                                        }
-                                      ]
+                                      "parameters": []
                                     },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
@@ -10576,17 +10634,201 @@
                                             "=",
                                             "Player_MovementValues.CalculatedAngle"
                                           ]
+                                        }
+                                      ],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "UseSonicWorldsPhysics",
+                                                "=",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "SmoothAngle",
+                                                "=",
+                                                "Player_MovementValues.Angle"
+                                              ]
+                                            }
+                                          ]
                                         },
                                         {
-                                          "type": {
-                                            "value": "SetNumberObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player_MovementValues",
-                                            "SmoothAngle",
-                                            "=",
-                                            "Player_MovementValues.Angle"
-                                          ]
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "name": "Sonic Worlds rotation",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "UseSonicWorldsPhysics",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "StringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Action",
+                                                    "!=",
+                                                    "\"Roll\""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_SensorAngleLeft2",
+                                                    "Collision",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_SensorAngleRight1",
+                                                    "Collision",
+                                                    "True",
+                                                    ""
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                      },
+                                                      "parameters": [
+                                                        "abs(mod(Player_MovementValues.Angle - Player_MovementValues.SmoothAngle+540, 360)-180)",
+                                                        "<",
+                                                        "60"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [],
+                                                  "events": [
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                          },
+                                                          "parameters": [
+                                                            "abs(mod(0 - Player_MovementValues.Angle+540, 360)-180)",
+                                                            ">=",
+                                                            "40"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_MovementValues",
+                                                            "SmoothAngle",
+                                                            "=",
+                                                            "mod(Player_MovementValues.SmoothAngle, 360) + (mod(Player_MovementValues.Angle - Player_MovementValues.SmoothAngle+540, 360)-180)*max(0.165,  abs(Player_MovementValues.XSpeed/15))*0.8"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                          },
+                                                          "parameters": [
+                                                            "abs(mod(0 - Player_MovementValues.Angle+540, 360)-180)",
+                                                            "<",
+                                                            "40"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SetNumberObjectVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "Player_MovementValues",
+                                                            "SmoothAngle",
+                                                            "=",
+                                                            "mod(Player_MovementValues.SmoothAngle, 360) + (mod(0 - Player_MovementValues.SmoothAngle+540, 360)-180)*max(0.165,  abs(Player_MovementValues.XSpeed/15))*0.8"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                                                      },
+                                                      "parameters": [
+                                                        "abs(mod(Player_MovementValues.Angle - Player_MovementValues.SmoothAngle+540, 360)-180)",
+                                                        ">=",
+                                                        "60"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SetNumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_MovementValues",
+                                                        "SmoothAngle",
+                                                        "=",
+                                                        "mod(Player_MovementValues.Angle, 360)"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "parameters": []
                                         }
                                       ]
                                     },
@@ -11131,7 +11373,7 @@
                                       "parameters": [
                                         "Player_MovementValues",
                                         "FloatX",
-                                        ">=",
+                                        ">",
                                         "Master_Camera.CameraMaximumX-16"
                                       ]
                                     }
@@ -12995,6 +13237,106 @@
                                               ]
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Input",
+                                                "KeyLeft",
+                                                "True",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                              },
+                                              "parameters": [
+                                                "abs(Player_MovementValues.SavedGroundSpeed)",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FloatX",
+                                                "<=",
+                                                "Master_Camera.CameraMinimumX+16"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"Walk\""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Input",
+                                                "KeyRight",
+                                                "True",
+                                                ""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                              },
+                                              "parameters": [
+                                                "abs(Player_MovementValues.SavedGroundSpeed)",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FloatX",
+                                                ">=",
+                                                "Master_Camera.CameraMaximumX-16"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"Walk\""
+                                              ]
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -14031,7 +14373,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "\"Skid\" - Skidding",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -14065,6 +14406,377 @@
                                         }
                                       ],
                                       "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "UseSonicWorldsPhysics",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "StringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Others",
+                                                    "PreviousAction",
+                                                    "!=",
+                                                    "\"Skid\""
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_MovementValues",
+                                                        "Direction",
+                                                        "=",
+                                                        "-1"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SetNumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player",
+                                                        "SkidTimerRight",
+                                                        "=",
+                                                        "15"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player_MovementValues",
+                                                        "Direction",
+                                                        "=",
+                                                        "1"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SetNumberObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Player",
+                                                        "SkidTimerLeft",
+                                                        "=",
+                                                        "15"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "SkidTimerRight",
+                                                    ">",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "SkidTimerRight",
+                                                    "=",
+                                                    "max(0, Player.SkidTimerRight-1*60*TimeDelta())"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "SkidTimerLeft",
+                                                    ">",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "SkidTimerLeft",
+                                                    "=",
+                                                    "max(0, Player.SkidTimerLeft-1*60*TimeDelta())"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyRight",
+                                                    "True",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    "=",
+                                                    "min(Player_MovementValues.XSpeed+0.5*60*TimeDelta(), 0)"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "SkidTimerLeft",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyRight",
+                                                    "False",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Direction",
+                                                    "=",
+                                                    "-1"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetStringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Action",
+                                                    "=",
+                                                    "\"Stand\""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyLeft",
+                                                    "True",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    "=",
+                                                    "max(Player_MovementValues.XSpeed-0.5*60*TimeDelta(), 0)"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player",
+                                                    "SkidTimerRight",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyLeft",
+                                                    "False",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Direction",
+                                                    "=",
+                                                    "1"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetStringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Action",
+                                                    "=",
+                                                    "\"Stand\""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetStringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Action",
+                                                    "=",
+                                                    "\"Stand\""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Ground",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetStringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Action",
+                                                    "=",
+                                                    "\"Stand\""
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
                                         {
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
@@ -14123,82 +14835,6 @@
                                                 "JumpVariable",
                                                 "=",
                                                 "1"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "BooleanVariable"
-                                              },
-                                              "parameters": [
-                                                "UseSonicWorldsPhysics",
-                                                "True",
-                                                ""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [],
-                                          "events": [
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_Input",
-                                                    "KeyRight",
-                                                    "True",
-                                                    "1"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "SetNumberObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_MovementValues",
-                                                    "XSpeed",
-                                                    "=",
-                                                    "min(Player_MovementValues.XSpeed+0.5*60*TimeDelta(), 0)"
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_Input",
-                                                    "KeyLeft",
-                                                    "True",
-                                                    "1"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "SetNumberObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_MovementValues",
-                                                    "XSpeed",
-                                                    "=",
-                                                    "max(Player_MovementValues.XSpeed-0.5*60*TimeDelta(), 0)"
-                                                  ]
-                                                }
                                               ]
                                             }
                                           ]
@@ -18901,35 +19537,6 @@
                                                   },
                                                   "parameters": [
                                                     "Player_Input",
-                                                    "KeyRight",
-                                                    "True",
-                                                    "1"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "SetNumberObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_MovementValues",
-                                                    "Direction",
-                                                    "=",
-                                                    "1"
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "BooleanObjectVariable"
-                                                  },
-                                                  "parameters": [
-                                                    "Player_Input",
                                                     "KeyLeft",
                                                     "True",
                                                     "-1"
@@ -18946,6 +19553,35 @@
                                                     "Direction",
                                                     "=",
                                                     "-1"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyRight",
+                                                    "True",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Direction",
+                                                    "=",
+                                                    "1"
                                                   ]
                                                 }
                                               ]
@@ -25027,7 +25663,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -25037,7 +25672,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -25190,6 +25824,36 @@
                             "Player_MovementValues.FloatY+16"
                           ]
                         }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "UseSonicWorldsPhysics",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Master_Camera",
+                                "CameraTargetY",
+                                "-",
+                                "16"
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     },
                     {
@@ -25239,6 +25903,36 @@
                             "CameraLagTimer",
                             "=",
                             "max(0, Master_Camera.CameraLagTimer-TimeDelta())"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "UseSonicWorldsPhysics",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Master_Camera",
+                                "CameraTargetY",
+                                "-",
+                                "16"
+                              ]
+                            }
                           ]
                         }
                       ]

@@ -2522,6 +2522,16 @@
           "name": "PositionRecord",
           "type": "array",
           "children": []
+        },
+        {
+          "name": "SkidTimerLeft",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SkidTimerRight",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -14374,6 +14384,11 @@
           "name": "PositionYRecord",
           "type": "array",
           "children": []
+        },
+        {
+          "name": "AirAngleRotation",
+          "type": "number",
+          "value": 0
         },
         {
           "name": "PlayerID",
