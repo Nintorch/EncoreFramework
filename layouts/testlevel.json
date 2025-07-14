@@ -1322,10 +1322,6 @@
       "type": "HelperExtension::Parallax"
     },
     {
-      "name": "Platform",
-      "type": "PlatformBehavior::PlatformBehavior"
-    },
-    {
       "name": "Player",
       "type": "HelperExtension::Player",
       "Property": 0

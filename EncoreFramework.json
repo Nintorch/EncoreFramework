@@ -1,7 +1,7 @@
 {
   "firstLayout": "WebPressStart",
   "gdVersion": {
-    "build": 231,
+    "build": 236,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -631,14 +631,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\Fade.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "file": "assets/Characters/Tails/TailsIdle.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "TailsIdle",
         "smoothed": false,
         "userAdded": true
       },
@@ -2298,6 +2290,150 @@
         "userAdded": false
       },
       {
+        "file": "assets/levels/TestLevel/leveltile1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/TestLevel/leveltile2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/TestLevel/leveltile3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/TestLevel/leveltile4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\levels\\TestLevel\\leveltile4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Fly.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Fly",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Fly2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Fly2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Tired.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Tired.png\"}",
+        "name": "Tired",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Tired2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Tired2.png\"}",
+        "name": "Tired2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Tired3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Tired3.png\"}",
+        "name": "Tired3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Tired4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/Tired4.png\"}",
+        "name": "Tired4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Swim.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Swim",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Swim2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Swim2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Swim3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Swim3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Swim4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Swim4",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Swim5.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Swim5",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SwimTired.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SwimTired",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SwimTired2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SwimTired2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/SwimTired3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "SwimTired3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
         "file": "audio/music/invincibility_intro.ogg",
         "kind": "audio",
         "metadata": "",
@@ -2338,35 +2474,31 @@
         "userAdded": false
       },
       {
-        "file": "assets/levels/TestLevel/leveltile1.png",
+        "file": "assets/Characters/Tails/TailsIdle.png",
         "kind": "image",
         "metadata": "",
-        "name": "assets\\levels\\TestLevel\\leveltile1.png",
+        "name": "assets\\Characters\\Tails\\TailsIdle.png",
         "smoothed": false,
         "userAdded": false
       },
       {
-        "file": "assets/levels/TestLevel/leveltile2.png",
-        "kind": "image",
+        "file": "audio/sfx/tails_fly.wav",
+        "kind": "audio",
         "metadata": "",
-        "name": "assets\\levels\\TestLevel\\leveltile2.png",
-        "smoothed": false,
+        "name": "audio\\sfx\\tails_fly.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       },
       {
-        "file": "assets/levels/TestLevel/leveltile3.png",
-        "kind": "image",
+        "file": "audio/sfx/tails_fly_tired.wav",
+        "kind": "audio",
         "metadata": "",
-        "name": "assets\\levels\\TestLevel\\leveltile3.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/levels/TestLevel/leveltile4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\levels\\TestLevel\\leveltile4.png",
-        "smoothed": false,
+        "name": "audio\\sfx\\tails_fly_tired.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       }
     ],
@@ -2652,7 +2784,6 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "folded": true,
           "name": "PlayerID",
           "type": "number",
           "value": 0
@@ -4670,7 +4801,7 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "",
       "name": "PlayerSkin_Tails",
       "type": "Sprite",
@@ -4681,18 +4812,45 @@
           "name": "PlayerID",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "FlyFlag",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FlyFallGravity",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FlyFallSlowDown",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FlyMaxXSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FlyTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FlyTimerLimit",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "FlyPressed",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior",
-          "canBeGrabbed": true,
-          "platformType": "NormalPlatform",
-          "yGrabOffset": 0
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "Idle",
@@ -4705,7 +4863,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "TailsIdle",
+                  "image": "assets\\Characters\\Tails\\TailsIdle.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -6050,6 +6208,562 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Fly",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Fly",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Fly2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tired",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Tired",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Tired2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Tired3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Tired4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Swim",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Swim",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Swim2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Swim3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Swim4",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Swim5",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SwimTired",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "metadata": "{\"pskl\":{}}",
+              "timeBetweenFrames": 0.1,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SwimTired",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SwimTired2",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "SwimTired3",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 36,
+                    "y": 36
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 27,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 21
+                      },
+                      {
+                        "x": 48,
+                        "y": 52
+                      },
+                      {
+                        "x": 27,
+                        "y": 52
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -7342,15 +8056,7 @@
         }
       ],
       "effects": [],
-      "behaviors": [
-        {
-          "name": "Platform",
-          "type": "PlatformBehavior::PlatformBehavior",
-          "canBeGrabbed": true,
-          "platformType": "NormalPlatform",
-          "yGrabOffset": 0
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "Idle",
@@ -18545,13 +19251,13 @@
       "folded": true,
       "name": "CharacterStartMain",
       "type": "number",
-      "value": 0
+      "value": 1
     },
     {
       "folded": true,
       "name": "CharacterStartPartner",
       "type": "number",
-      "value": 1
+      "value": -1
     },
     {
       "name": "Level",

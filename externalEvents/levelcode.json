@@ -7,6 +7,7 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Encore Framework",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -16,6 +17,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Scene Setup",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -161,6 +163,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -170,6 +173,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1185,6 +1189,68 @@
                                     "Player_MovementValues",
                                     "Character",
                                     "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin_Tails",
+                                    "FlyFallGravity",
+                                    "=",
+                                    "0.03125"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin_Tails",
+                                    "FlyFallSlowDown",
+                                    "=",
+                                    "-0.1 * Player_MovementValues.YSpeed / 3"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin_Tails",
+                                    "FlyMaxXSpeed",
+                                    "=",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin_Tails",
+                                    "FlyTimerLimit",
+                                    "=",
+                                    "480"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Character",
+                                    "=",
                                     "2"
                                   ]
                                 }
@@ -1319,6 +1385,164 @@
                                         "0"
                                       ]
                                     }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Underwater"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Underwater",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "TopXSpeed",
+                                    "=",
+                                    "Player_MovementValues.TopXSpeed * 0.6"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "XAcceleration",
+                                    "=",
+                                    "Player_MovementValues.XAcceleration * 0.5"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "SlopeFactor",
+                                    "=",
+                                    "Player_MovementValues.SlopeFactor * 1.2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Deceleration",
+                                    "=",
+                                    "Player_MovementValues.Deceleration * 0.7"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "YAcceleration",
+                                    "=",
+                                    "Player_MovementValues.YAcceleration * 0.34"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_ActionValues",
+                                    "JumpStrength",
+                                    "=",
+                                    "Player_ActionValues.JumpStrength * 0.7"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_ActionValues",
+                                    "SkidMinimumAmount",
+                                    "=",
+                                    "Player_ActionValues.SkidMinimumAmount * 0.5"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Character",
+                                    "=",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Underwater",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin_Tails",
+                                    "FlyFallGravity",
+                                    "=",
+                                    "PlayerSkin_Tails.FlyFallGravity * 0.3"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerSkin_Tails",
+                                    "FlyFallSlowDown",
+                                    "=",
+                                    "PlayerSkin_Tails.FlyFallSlowDown * 0.5"
                                   ]
                                 }
                               ]
@@ -3694,6 +3918,17 @@
                                     "=",
                                     "Player_MovementValues.FloatY"
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetStringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "PreviousAction",
+                                    "=",
+                                    "Player_MovementValues.Action"
+                                  ]
                                 }
                               ]
                             }
@@ -3872,7 +4107,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Change Sensor Angle",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -4989,7 +5223,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Angle Sensors",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -7477,6 +7710,18 @@
                                           ]
                                         }
                                       ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "Air drag"
                                     },
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
@@ -11571,17 +11816,6 @@
                                     "False",
                                     ""
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetStringObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_Others",
-                                    "PreviousAction",
-                                    "=",
-                                    "Player_MovementValues.Action"
-                                  ]
                                 }
                               ]
                             },
@@ -12829,28 +13063,17 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "NumberObjectVariable"
+                                                "value": "StringObjectVariable"
                                               },
                                               "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "0"
+                                                "Player_Others",
+                                                "PreviousAction",
+                                                "!=",
+                                                "\"Hurt\""
                                               ]
                                             }
                                           ],
                                           "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "1"
-                                              ]
-                                            },
                                             {
                                               "type": {
                                                 "value": "SetNumberObjectVariable"
@@ -12911,17 +13134,6 @@
                                                 "Action",
                                                 "=",
                                                 "\"Stand\""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "0"
                                               ]
                                             },
                                             {
@@ -13063,28 +13275,17 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "NumberObjectVariable"
+                                                "value": "StringObjectVariable"
                                               },
                                               "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "0"
+                                                "Player_Others",
+                                                "PreviousAction",
+                                                "!=",
+                                                "\"Dead\""
                                               ]
                                             }
                                           ],
                                           "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "1"
-                                              ]
-                                            },
                                             {
                                               "type": {
                                                 "value": "SetNumberObjectVariable"
@@ -13926,28 +14127,17 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "NumberObjectVariable"
+                                                "value": "StringObjectVariable"
                                               },
                                               "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "0"
+                                                "Player_Others",
+                                                "PreviousAction",
+                                                "!=",
+                                                "\"Spindash\""
                                               ]
                                             }
                                           ],
                                           "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "1"
-                                              ]
-                                            },
                                             {
                                               "type": {
                                                 "value": "PlaySoundCanal"
@@ -13955,7 +14145,7 @@
                                               "parameters": [
                                                 "",
                                                 "audio/sfx/spindash.wav",
-                                                "1",
+                                                "1+Player_MovementValues.PlayerID",
                                                 "",
                                                 "",
                                                 ""
@@ -13967,7 +14157,7 @@
                                               },
                                               "parameters": [
                                                 "",
-                                                "1",
+                                                "1+Player_MovementValues.PlayerID",
                                                 "=",
                                                 "1"
                                               ]
@@ -14119,7 +14309,7 @@
                                               "parameters": [
                                                 "",
                                                 "audio/sfx/spindash.wav",
-                                                "1",
+                                                "1+Player_MovementValues.PlayerID",
                                                 "",
                                                 "",
                                                 ""
@@ -14131,7 +14321,7 @@
                                               },
                                               "parameters": [
                                                 "",
-                                                "1",
+                                                "1+Player_MovementValues.PlayerID",
                                                 "=",
                                                 "1 + Player_ActionValues.SpindashRev / 10"
                                               ]
@@ -14260,17 +14450,6 @@
                                               "parameters": [
                                                 "SpindashDust",
                                                 ""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_ActionValues",
-                                                "TriggerOnceVariable",
-                                                "=",
-                                                "0"
                                               ]
                                             }
                                           ],
@@ -15071,6 +15250,80 @@
                                                 "textG": 0,
                                                 "textR": 0
                                               },
+                                              "comment": "Tails Flying"
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Character",
+                                                    "=",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetStringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Action",
+                                                    "=",
+                                                    "\"Fly\""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetBooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "FlagAllowCommonInput",
+                                                    "True",
+                                                    "\"Stand\""
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "PlayerSkin_Tails",
+                                                    "FlyTimer",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "PlayerSkin_Tails",
+                                                    "FlyPressed",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Comment",
+                                              "color": {
+                                                "b": 109,
+                                                "g": 230,
+                                                "r": 255,
+                                                "textB": 0,
+                                                "textG": 0,
+                                                "textR": 0
+                                              },
                                               "comment": "Knuckles' Gliding"
                                             },
                                             {
@@ -15166,6 +15419,690 @@
                                                 }
                                               ]
                                             }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
+                                }
+                              ],
+                              "parameters": []
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "folded": true,
+                              "name": "Tails Actions",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "folded": true,
+                                  "name": "\"Fly\" - Flying",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "Action",
+                                            "=",
+                                            "\"Fly\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "PreviousAction",
+                                                "!=",
+                                                "\"Fly\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyFlag",
+                                                "=",
+                                                "1"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Comment",
+                                          "color": {
+                                            "b": 109,
+                                            "g": 230,
+                                            "r": 255,
+                                            "textB": 0,
+                                            "textG": 0,
+                                            "textR": 0
+                                          },
+                                          "comment": "Animation"
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                "<",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Underwater",
+                                                "=",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"Fly\""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                ">=",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Underwater",
+                                                "=",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"Tired\""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                "<",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Underwater",
+                                                "=",
+                                                "1"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"Swim\""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                ">=",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Underwater",
+                                                "=",
+                                                "1"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"SwimTired\""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Comment",
+                                          "color": {
+                                            "b": 109,
+                                            "g": 230,
+                                            "r": 255,
+                                            "textB": 0,
+                                            "textG": 0,
+                                            "textR": 0
+                                          },
+                                          "comment": "Movement"
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                "<",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                "+",
+                                                "1*60*TimeDelta()"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                ">=",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyPressed",
+                                                "=",
+                                                "0"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "YSpeed",
+                                                "+",
+                                                "(PlayerSkin_Tails.FlyFallGravity-Player_MovementValues.YAcceleration)*60*TimeDelta()"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                "<",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Input",
+                                                "KeyActionAPressed",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyFlag",
+                                                "+",
+                                                "1"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "YSpeed",
+                                                "<",
+                                                "-1"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyFlag",
+                                                "=",
+                                                "1"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyFlag",
+                                                ">",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "YSpeed",
+                                                ">",
+                                                "-1"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "YSpeed",
+                                                "+",
+                                                "(-0.125-PlayerSkin_Tails.FlyFallGravity)*60*TimeDelta()"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Comment",
+                                          "color": {
+                                            "b": 109,
+                                            "g": 230,
+                                            "r": 255,
+                                            "textB": 0,
+                                            "textG": 0,
+                                            "textR": 0
+                                          },
+                                          "comment": "Sound"
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"Fly\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "PlaySoundCanal"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "audio\\sfx\\tails_fly.wav",
+                                                "1+Player_MovementValues.PlayerID",
+                                                "yes",
+                                                "100",
+                                                "1"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Animation",
+                                                "=",
+                                                "\"Tired\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                ">=",
+                                                "PlayerSkin_Tails.FlyTimerLimit"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "PlaySoundCanal"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "audio\\sfx\\tails_fly_tired.wav",
+                                                "1+Player_MovementValues.PlayerID",
+                                                "yes",
+                                                "100",
+                                                "1"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "Underwater",
+                                                "=",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "StopSoundCanal"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "1+Player_MovementValues.PlayerID"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Comment",
+                                          "color": {
+                                            "b": 109,
+                                            "g": 230,
+                                            "r": 255,
+                                            "textB": 0,
+                                            "textG": 0,
+                                            "textR": 0
+                                          },
+                                          "comment": "Touching the floor"
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Ground",
+                                                "True",
+                                                "1"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyTimer",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerSkin_Tails",
+                                                "FlyFlag",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetStringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Action",
+                                                "=",
+                                                "\"Stand\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FlagAllowCommonInput",
+                                                "True",
+                                                "\"Stand\""
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_Others",
+                                            "PreviousAction",
+                                            "=",
+                                            "\"Fly\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "Action",
+                                            "!=",
+                                            "\"Fly\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "StopSoundCanal"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "1+Player_MovementValues.PlayerID"
                                           ]
                                         }
                                       ]
@@ -16899,6 +17836,17 @@
                                             "Player_MovementValues",
                                             "Action",
                                             "=",
+                                            "\"Fly\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "Action",
+                                            "=",
                                             "\"Push\""
                                           ]
                                         },
@@ -18358,6 +19306,178 @@
                                     "textG": 0,
                                     "textR": 0
                                   },
+                                  "comment": "Tails Flying"
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "Animation",
+                                        "=",
+                                        "\"Fly\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_Tails",
+                                        "Animation",
+                                        "=",
+                                        "\"Fly\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "\"Void\""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "Animation",
+                                        "=",
+                                        "\"Tired\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_Tails",
+                                        "Animation",
+                                        "=",
+                                        "\"Tired\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "\"Void\""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "Animation",
+                                        "=",
+                                        "\"Swim\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_Tails",
+                                        "Animation",
+                                        "=",
+                                        "\"Swim\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "\"Void\""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "StringObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "Animation",
+                                        "=",
+                                        "\"SwimTired\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_Tails",
+                                        "Animation",
+                                        "=",
+                                        "\"SwimTired\""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "\"Void\""
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Comment",
+                                  "color": {
+                                    "b": 109,
+                                    "g": 230,
+                                    "r": 255,
+                                    "textB": 0,
+                                    "textG": 0,
+                                    "textR": 0
+                                  },
                                   "comment": "Knuckles Gliding"
                                 },
                                 {
@@ -18902,6 +20022,17 @@
                                       },
                                       "parameters": [],
                                       "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "StringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_Others",
+                                            "Animation",
+                                            "=",
+                                            "\"Idle\""
+                                          ]
+                                        },
                                         {
                                           "type": {
                                             "value": "StringObjectVariable"
@@ -22718,6 +23849,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",

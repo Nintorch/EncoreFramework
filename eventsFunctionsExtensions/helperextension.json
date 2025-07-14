@@ -152,36 +152,24 @@
           "value": "0",
           "type": "Number",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "name": "XFactor"
         },
         {
           "value": "0",
           "type": "Number",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "name": "YFactor"
         },
         {
           "value": "0",
           "type": "Number",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "name": "XSpeed"
         },
         {
           "value": "",
           "type": "Number",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "hidden": true,
           "name": "YInit"
         }
@@ -711,8 +699,6 @@
           "value": "",
           "type": "Choice",
           "label": "Fading type",
-          "description": "",
-          "group": "",
           "extraInformation": [
             "No fading",
             "Fading in",
@@ -725,9 +711,6 @@
           "value": "256",
           "type": "Number",
           "label": "Fading speed",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "name": "FadingSpeed"
         }
       ],
@@ -902,18 +885,12 @@
           "value": "0",
           "type": "Number",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "name": "Value"
         },
         {
           "value": "0",
           "type": "Number",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "hidden": true,
           "name": "PrevValue"
         },
@@ -921,18 +898,12 @@
           "value": "0",
           "type": "Number",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "name": "RequiredLength"
         },
         {
           "value": " ",
           "type": "String",
           "label": "",
-          "description": "",
-          "group": "",
-          "extraInformation": [],
           "name": "FillerCharacter"
         }
       ],

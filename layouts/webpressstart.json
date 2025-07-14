@@ -295,10 +295,6 @@
       "type": "OpacityCapability::OpacityBehavior"
     },
     {
-      "name": "Platform",
-      "type": "PlatformBehavior::PlatformBehavior"
-    },
-    {
       "name": "Player",
       "type": "HelperExtension::Player"
     },
