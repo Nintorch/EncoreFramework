@@ -14251,6 +14251,11 @@
           "value": 0
         },
         {
+          "name": "SmoothAngle",
+          "type": "number",
+          "value": 0
+        },
+        {
           "name": "Layer",
           "type": "number",
           "value": 0
@@ -19251,13 +19256,13 @@
       "folded": true,
       "name": "CharacterStartMain",
       "type": "number",
-      "value": 1
+      "value": 0
     },
     {
       "folded": true,
       "name": "CharacterStartPartner",
       "type": "number",
-      "value": -1
+      "value": 1
     },
     {
       "name": "Level",

@@ -7,7 +7,6 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
       "name": "Encore Framework",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
@@ -163,7 +162,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -173,7 +171,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6303,7 +6300,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Movement Routines",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -7539,19 +7535,7 @@
                                       ]
                                     }
                                   ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetNumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player_MovementValues",
-                                        "Angle",
-                                        "=",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
+                                  "actions": [],
                                   "events": [
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
@@ -7707,6 +7691,102 @@
                                                 }
                                               ]
                                             }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Comment",
+                                      "color": {
+                                        "b": 109,
+                                        "g": 230,
+                                        "r": 255,
+                                        "textB": 0,
+                                        "textG": 0,
+                                        "textR": 0
+                                      },
+                                      "comment": "Air rotation"
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                          },
+                                          "parameters": [
+                                            "AngleDifference(Player_MovementValues.SmoothAngle, 0)",
+                                            ">",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "SmoothAngle",
+                                            "-",
+                                            "2.8125*60*TimeDelta()"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                          },
+                                          "parameters": [
+                                            "AngleDifference(Player_MovementValues.SmoothAngle, 0)",
+                                            "<",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "SmoothAngle",
+                                            "+",
+                                            "2.8125*60*TimeDelta()"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                          },
+                                          "parameters": [
+                                            "abs(AngleDifference(Player_MovementValues.SmoothAngle, 0))",
+                                            "<",
+                                            "1"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "SmoothAngle",
+                                            "=",
+                                            "0"
                                           ]
                                         }
                                       ]
@@ -10301,6 +10381,17 @@
                                             "Angle",
                                             "=",
                                             "Player_MovementValues.CalculatedAngle"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_MovementValues",
+                                            "SmoothAngle",
+                                            "=",
+                                            "Player_MovementValues.Angle"
                                           ]
                                         }
                                       ]
@@ -17617,7 +17708,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -20066,7 +20156,7 @@
                                       "parameters": [
                                         "PlayerSkin",
                                         "=",
-                                        "round(Player_MovementValues.Angle / RotationSnap) * RotationSnap"
+                                        "round(Player_MovementValues.SmoothAngle / RotationSnap) * RotationSnap"
                                       ]
                                     }
                                   ]
@@ -20170,7 +20260,7 @@
                               "colorR": 74,
                               "creationTime": 0,
                               "folded": true,
-                              "name": "Flash while invincible",
+                              "name": "Flash while invulnurable",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
