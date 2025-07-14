@@ -1151,6 +1151,56 @@
                               "conditions": [
                                 {
                                   "type": {
+                                    "value": "BooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "UseSonicWorldsPhysics",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "XAcceleration",
+                                    "=",
+                                    "0.056875"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "SlopeFactor",
+                                    "=",
+                                    "0.3*0.38"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Deceleration",
+                                    "=",
+                                    "0.056875*3"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
                                     "value": "StringObjectVariable"
                                   },
                                   "parameters": [
@@ -7641,6 +7691,17 @@
                                                     "True",
                                                     "1"
                                                   ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    "<",
+                                                    "Player_MovementValues.TopXSpeed"
+                                                  ]
                                                 }
                                               ],
                                               "actions": [
@@ -7653,37 +7714,6 @@
                                                     "XSpeed",
                                                     "+",
                                                     "Player_MovementValues.XAcceleration*2*60*TimeDelta()"
-                                                  ]
-                                                }
-                                              ],
-                                              "events": [
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "NumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "XSpeed",
-                                                        ">",
-                                                        "Player_MovementValues.TopXSpeed"
-                                                      ]
-                                                    }
-                                                  ],
-                                                  "actions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "XSpeed",
-                                                        "=",
-                                                        "Player_MovementValues.TopXSpeed"
-                                                      ]
-                                                    }
                                                   ]
                                                 }
                                               ]
@@ -7701,6 +7731,17 @@
                                                     "True",
                                                     "-1"
                                                   ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    ">",
+                                                    "-Player_MovementValues.TopXSpeed"
+                                                  ]
                                                 }
                                               ],
                                               "actions": [
@@ -7713,37 +7754,6 @@
                                                     "XSpeed",
                                                     "-",
                                                     "Player_MovementValues.XAcceleration*2*60*TimeDelta()"
-                                                  ]
-                                                }
-                                              ],
-                                              "events": [
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "NumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "XSpeed",
-                                                        "<",
-                                                        "-Player_MovementValues.TopXSpeed"
-                                                      ]
-                                                    }
-                                                  ],
-                                                  "actions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "SetNumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player_MovementValues",
-                                                        "XSpeed",
-                                                        "=",
-                                                        "-Player_MovementValues.TopXSpeed"
-                                                      ]
-                                                    }
                                                   ]
                                                 }
                                               ]
@@ -8720,6 +8730,16 @@
                                                             ">=",
                                                             "0"
                                                           ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "BooleanVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "UseSonicWorldsPhysics",
+                                                            "False",
+                                                            ""
+                                                          ]
                                                         }
                                                       ],
                                                       "actions": [
@@ -8873,6 +8893,16 @@
                                                             "XSpeed",
                                                             "<=",
                                                             "0"
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "BooleanVariable"
+                                                          },
+                                                          "parameters": [
+                                                            "UseSonicWorldsPhysics",
+                                                            "False",
+                                                            ""
                                                           ]
                                                         }
                                                       ],
@@ -10614,7 +10644,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "- Landing",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -10691,34 +10720,79 @@
                                       "conditions": [
                                         {
                                           "type": {
-                                            "value": "NumberVariable"
+                                            "value": "BooleanVariable"
                                           },
                                           "parameters": [
-                                            "DifferenceInAngle",
-                                            ">",
-                                            "23"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "NumberVariable"
-                                          },
-                                          "parameters": [
-                                            "DifferenceInAngle",
-                                            "<=",
-                                            "45"
+                                            "UseSonicWorldsPhysics",
+                                            "False",
+                                            ""
                                           ]
                                         }
                                       ],
-                                      "actions": [
+                                      "actions": [],
+                                      "events": [
                                         {
-                                          "type": {
-                                            "value": "SetNumberVariable"
-                                          },
-                                          "parameters": [
-                                            "CalculatedGroundSpeed",
-                                            "=",
-                                            "Player_MovementValues.YSpeed * 0.5 * sign(sin(ToRad(Player_MovementValues.Angle)))"
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "DifferenceInAngle",
+                                                ">",
+                                                "23"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "DifferenceInAngle",
+                                                "<=",
+                                                "45"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "CalculatedGroundSpeed",
+                                                "=",
+                                                "Player_MovementValues.YSpeed * 0.5 * sign(sin(ToRad(Player_MovementValues.Angle)))"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "DifferenceInAngle",
+                                                ">",
+                                                "45"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "CalculatedGroundSpeed",
+                                                "=",
+                                                "Player_MovementValues.YSpeed * sign(sin(ToRad(Player_MovementValues.Angle)))"
+                                              ]
+                                            }
                                           ]
                                         }
                                       ]
@@ -10728,24 +10802,91 @@
                                       "conditions": [
                                         {
                                           "type": {
-                                            "value": "NumberVariable"
+                                            "value": "BooleanVariable"
                                           },
                                           "parameters": [
-                                            "DifferenceInAngle",
-                                            ">",
-                                            "45"
+                                            "UseSonicWorldsPhysics",
+                                            "True",
+                                            ""
                                           ]
                                         }
                                       ],
-                                      "actions": [
+                                      "actions": [],
+                                      "events": [
                                         {
-                                          "type": {
-                                            "value": "SetNumberVariable"
-                                          },
-                                          "parameters": [
-                                            "CalculatedGroundSpeed",
-                                            "=",
-                                            "Player_MovementValues.YSpeed * sign(sin(ToRad(Player_MovementValues.Angle)))"
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "DifferenceInAngle",
+                                                ">",
+                                                "23"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "YSpeed",
+                                                ">=",
+                                                "0"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "CalculatedGroundSpeed",
+                                                "=",
+                                                "Player_MovementValues.XSpeed +(sin(ToRad(Player_MovementValues.Angle))*Player_MovementValues.YSpeed*1.5)"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberVariable"
+                                              },
+                                              "parameters": [
+                                                "DifferenceInAngle",
+                                                ">",
+                                                "23"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Input",
+                                                "KeyDown",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "CalculatedGroundSpeed",
+                                                "=",
+                                                "Player_MovementValues.XSpeed -(sin(ToRad(Player_MovementValues.Angle))*Player_MovementValues.YSpeed*0.7)"
+                                              ]
+                                            }
                                           ]
                                         }
                                       ]
@@ -13895,6 +14036,82 @@
                                           "conditions": [
                                             {
                                               "type": {
+                                                "value": "BooleanVariable"
+                                              },
+                                              "parameters": [
+                                                "UseSonicWorldsPhysics",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyRight",
+                                                    "True",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    "=",
+                                                    "min(Player_MovementValues.XSpeed+0.5*60*TimeDelta(), 0)"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyLeft",
+                                                    "True",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    "=",
+                                                    "max(Player_MovementValues.XSpeed-0.5*60*TimeDelta(), 0)"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
                                                 "value": "NumberObjectVariable"
                                               },
                                               "parameters": [
@@ -15914,6 +16131,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Tails Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -18093,6 +18311,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Special actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -18388,7 +18607,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -18426,7 +18644,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Change direction",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -18470,37 +18687,95 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "NumberObjectVariable"
+                                                "value": "BooleanVariable"
                                               },
                                               "parameters": [
-                                                "Player_MovementValues",
-                                                "XSpeed",
-                                                ">",
-                                                "0"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_Input",
-                                                "KeyRight",
-                                                "True",
-                                                "1"
+                                                "UseSonicWorldsPhysics",
+                                                "False",
+                                                ""
                                               ]
                                             }
                                           ],
-                                          "actions": [
+                                          "actions": [],
+                                          "events": [
                                             {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_MovementValues",
-                                                "Direction",
-                                                "=",
-                                                "1"
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    ">",
+                                                    "0"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyRight",
+                                                    "True",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Direction",
+                                                    "=",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "XSpeed",
+                                                    "<",
+                                                    "0"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyLeft",
+                                                    "True",
+                                                    "-1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Direction",
+                                                    "=",
+                                                    "-1"
+                                                  ]
+                                                }
                                               ]
                                             }
                                           ]
@@ -18510,37 +18785,73 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "NumberObjectVariable"
+                                                "value": "BooleanVariable"
                                               },
                                               "parameters": [
-                                                "Player_MovementValues",
-                                                "XSpeed",
-                                                "<",
-                                                "0"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BooleanObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_Input",
-                                                "KeyLeft",
+                                                "UseSonicWorldsPhysics",
                                                 "True",
-                                                "-1"
+                                                ""
                                               ]
                                             }
                                           ],
-                                          "actions": [
+                                          "actions": [],
+                                          "events": [
                                             {
-                                              "type": {
-                                                "value": "SetNumberObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Player_MovementValues",
-                                                "Direction",
-                                                "=",
-                                                "-1"
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyRight",
+                                                    "True",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Direction",
+                                                    "=",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "BooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_Input",
+                                                    "KeyLeft",
+                                                    "True",
+                                                    "-1"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Player_MovementValues",
+                                                    "Direction",
+                                                    "=",
+                                                    "-1"
+                                                  ]
+                                                }
                                               ]
                                             }
                                           ]

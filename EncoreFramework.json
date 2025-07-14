@@ -19321,6 +19321,11 @@
       "name": "CPUPlayerTargetInput",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "UseSonicWorldsPhysics",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
