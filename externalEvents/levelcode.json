@@ -10670,6 +10670,7 @@
                                           "colorG": 176,
                                           "colorR": 74,
                                           "creationTime": 0,
+                                          "folded": true,
                                           "name": "Sonic Worlds rotation",
                                           "source": "",
                                           "type": "BuiltinCommonInstructions::Group",
@@ -11665,7 +11666,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Invincibility and Speed Sneakers",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11759,35 +11759,95 @@
                                     "0"
                                   ]
                                 }
-                              ],
-                              "events": [
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
                                 {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "NumberObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Player",
-                                        "PlayerID",
-                                        "=",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetStringObjectVariable"
-                                      },
-                                      "parameters": [
-                                        "Master_Level",
-                                        "PlayingMusic",
-                                        "=",
-                                        "\"Level\""
-                                      ]
-                                    }
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakers",
+                                    ">",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakersTimer",
+                                    ">",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakersTimer",
+                                    "-",
+                                    "60*TimeDelta()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakers",
+                                    ">",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakersTimer",
+                                    "<=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakers",
+                                    "=",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "SpeedSneakersTimer",
+                                    "=",
+                                    "0"
                                   ]
                                 }
                               ]
@@ -12070,6 +12130,7 @@
                                               "colorG": 176,
                                               "colorR": 74,
                                               "creationTime": 0,
+                                              "folded": true,
                                               "name": "Ring Loss",
                                               "source": "",
                                               "type": "BuiltinCommonInstructions::Group",
@@ -12424,6 +12485,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -12462,6 +12524,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -14373,6 +14436,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Skid\" - Skidding",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -19339,6 +19403,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -19376,6 +19441,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Change direction",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -22303,7 +22369,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Common Objects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -23560,6 +23625,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "Icon Results",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -23619,6 +23685,26 @@
                                                 "=",
                                                 "\"Speed Shoes\""
                                               ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "AjoutObjConcern"
+                                              },
+                                              "parameters": [
+                                                "",
+                                                "PlayerVariablesSensors"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerVariablesSensors",
+                                                "PlayerID",
+                                                "=",
+                                                "0"
+                                              ]
                                             }
                                           ],
                                           "actions": [
@@ -23631,6 +23717,17 @@
                                                 "SpeedSneakers",
                                                 "=",
                                                 "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetNumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_Others",
+                                                "SpeedSneakersTimer",
+                                                "=",
+                                                "20*60"
                                               ]
                                             }
                                           ]
@@ -23671,17 +23768,6 @@
                                             }
                                           ],
                                           "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetStringObjectVariable"
-                                              },
-                                              "parameters": [
-                                                "Master_Level",
-                                                "PlayingMusic",
-                                                "=",
-                                                "\"Invincibility\""
-                                              ]
-                                            },
                                             {
                                               "type": {
                                                 "value": "SetNumberObjectVariable"
@@ -25663,6 +25749,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -25672,6 +25759,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27333,11 +27421,157 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_Others",
+                    "PlayerID",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_Others",
+                        "SpeedSneakers",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "PlayingMusic",
+                        "=",
+                        "\"SpeedSneakers\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_Others",
+                        "Invincibility",
+                        "=",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "PlayingMusic",
+                        "=",
+                        "\"Invincibility\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_Others",
+                        "SpeedSneakers",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_Others",
+                        "Invincibility",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "PlayingMusic",
+                        "=",
+                        "\"Level\""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": ""
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -27369,6 +27603,43 @@
                     "audio\\music\\invincibility_intro.ogg",
                     "audio\\music\\invincibility_loop.ogg",
                     "32",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "PlayingMusic",
+                    "=",
+                    "\"SpeedSneakers\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "audio\\music\\speed_sneakers.ogg",
+                    "32",
+                    "",
+                    "",
                     ""
                   ]
                 }

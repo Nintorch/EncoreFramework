@@ -2500,6 +2500,16 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "audio/music/speed_sneakers.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\music\\speed_sneakers.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
