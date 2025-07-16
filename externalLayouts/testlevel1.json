@@ -45,7 +45,7 @@
       "name": "LayerSwapper",
       "persistentUuid": "0271d3aa-df3b-4d01-963c-ae77bba27c15",
       "width": 8,
-      "x": 1312,
+      "x": 1352,
       "y": 432,
       "zOrder": 4,
       "numberProperties": [],
@@ -195,7 +195,7 @@
       "name": "Player",
       "persistentUuid": "f83d8d19-149a-44cf-87b2-c2006e40eb0d",
       "width": 0,
-      "x": 144,
+      "x": 128,
       "y": 672,
       "zOrder": 5,
       "numberProperties": [],
@@ -910,6 +910,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "YellowSpringRight",
+      "persistentUuid": "4cba0317-aa26-44af-8c9d-4db767726428",
+      "width": 0,
+      "x": 1280,
+      "y": 528,
+      "zOrder": 77,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -922,7 +938,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9665838166252706,
+    "zoomFactor": 0.550031472843134,
     "windowMask": false
   }
 }

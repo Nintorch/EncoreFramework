@@ -3319,7 +3319,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetX",
                                         "=",
-                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset*60*TimeDelta())*2-2]"
+                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset/60/TimeDelta())*2-2]"
                                       ]
                                     },
                                     {
@@ -3329,7 +3329,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetY",
                                         "=",
-                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset*60*TimeDelta())*2-1]"
+                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset/60/TimeDelta())*2-1]"
                                       ]
                                     },
                                     {
@@ -3339,7 +3339,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetInput",
                                         "=",
-                                        "Player_Input.InputRecord[Player_Input.VariableChildCount(InputRecord)-floor(PartnerAIOffset*60*TimeDelta())-1]"
+                                        "Player_Input.InputRecord[Player_Input.VariableChildCount(InputRecord)-floor(PartnerAIOffset/60/TimeDelta())-1]"
                                       ]
                                     }
                                   ]
@@ -4226,7 +4226,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Sensors",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -5091,7 +5090,7 @@
                                               },
                                               "parameters": [
                                                 "SensorsData",
-                                                "Player_MovementValues.PushRadius  + 6 + LeftWallLengthOffset*2"
+                                                "Player_MovementValues.PushRadius  + 6 + LeftWallLengthOffset"
                                               ]
                                             },
                                             {
@@ -5221,7 +5220,7 @@
                                           "parameters": [
                                             "Offset",
                                             "=",
-                                            "5"
+                                            "5*60*TimeDelta()"
                                           ]
                                         }
                                       ],
@@ -6011,7 +6010,7 @@
                                                   "parameters": [
                                                     "CentreX",
                                                     "+",
-                                                    "Player_MovementValues.XSpeed*cos(ToRad(Player_MovementValues.Angle))"
+                                                    "Player_MovementValues.XSpeed*cos(ToRad(Player_MovementValues.Angle))*60*TimeDelta()"
                                                   ]
                                                 },
                                                 {
@@ -6021,7 +6020,7 @@
                                                   "parameters": [
                                                     "CentreY",
                                                     "+",
-                                                    "Player_MovementValues.XSpeed*sin(ToRad(Player_MovementValues.Angle))"
+                                                    "Player_MovementValues.XSpeed*sin(ToRad(Player_MovementValues.Angle))*60*TimeDelta()"
                                                   ]
                                                 }
                                               ]
@@ -6049,7 +6048,7 @@
                                                   "parameters": [
                                                     "CentreX",
                                                     "+",
-                                                    "Player_MovementValues.XSpeed"
+                                                    "Player_MovementValues.XSpeed*60*TimeDelta()"
                                                   ]
                                                 },
                                                 {
@@ -6059,7 +6058,7 @@
                                                   "parameters": [
                                                     "CentreY",
                                                     "+",
-                                                    "Player_MovementValues.YSpeed"
+                                                    "Player_MovementValues.YSpeed*60*TimeDelta()"
                                                   ]
                                                 }
                                               ]
@@ -6546,7 +6545,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Movement Routines",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -8657,7 +8655,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "- Ground movement",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8903,7 +8900,7 @@
                                                             "Player_MovementValues",
                                                             "XSpeed",
                                                             "=",
-                                                            "Player_MovementValues.Deceleration*60*TimeDelta()"
+                                                            "Player_MovementValues.Deceleration"
                                                           ]
                                                         }
                                                       ]
@@ -9067,7 +9064,7 @@
                                                             "Player_MovementValues",
                                                             "XSpeed",
                                                             "=",
-                                                            "-Player_MovementValues.Deceleration*60*TimeDelta()"
+                                                            "-Player_MovementValues.Deceleration"
                                                           ]
                                                         }
                                                       ]
@@ -9692,7 +9689,6 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
-                                      "folded": true,
                                       "name": "Stick to the ground",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -11666,6 +11662,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Invincibility and Speed Sneakers",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -19403,7 +19400,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -23625,7 +23621,6 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
-                                      "folded": true,
                                       "name": "Icon Results",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -23727,7 +23722,7 @@
                                                 "Player_Others",
                                                 "SpeedSneakersTimer",
                                                 "=",
-                                                "20*60"
+                                                "21*60"
                                               ]
                                             }
                                           ]
@@ -25749,7 +25744,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -26170,7 +26164,7 @@
                                 "Master_Camera",
                                 "CameraX",
                                 "=",
-                                "max(Master_Camera.CameraX-16, Master_Camera.CameraTargetX+16)"
+                                "max(Master_Camera.CameraX-16*60*TimeDelta(), Master_Camera.CameraTargetX+16)"
                               ]
                             }
                           ]
@@ -26199,7 +26193,7 @@
                                 "Master_Camera",
                                 "CameraX",
                                 "=",
-                                "min(Master_Camera.CameraX+16, Master_Camera.CameraTargetX)"
+                                "min(Master_Camera.CameraX+16*60*TimeDelta(), Master_Camera.CameraTargetX)"
                               ]
                             }
                           ]
@@ -27421,6 +27415,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
