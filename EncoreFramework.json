@@ -14226,6 +14226,11 @@
           "value": 0
         },
         {
+          "name": "MaxXSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
           "name": "TopXSpeed",
           "type": "number",
           "value": 0
@@ -14242,6 +14247,11 @@
         },
         {
           "name": "YSpeed",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "MaxYSpeed",
           "type": "number",
           "value": 0
         },
@@ -14399,6 +14409,21 @@
           "name": "AirAngleRotation",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "PhysicsSteps",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PhysicsStepsBase",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DisablePhysicsUpdate",
+          "type": "boolean",
+          "value": false
         },
         {
           "name": "PlayerID",
