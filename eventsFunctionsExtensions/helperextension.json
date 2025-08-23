@@ -92,11 +92,10 @@
               "actions": [
                 {
                   "type": {
-                    "value": "HelperExtension::Parallax::SetPropertyYInit"
+                    "value": "SetNumberVariable"
                   },
                   "parameters": [
-                    "Object",
-                    "Behavior",
+                    "YInit",
                     "=",
                     "Object.Y()"
                   ]
@@ -109,12 +108,22 @@
               "actions": [
                 {
                   "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "XOffset",
+                    "+",
+                    "XSpeed*60*TimeDelta()"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "TiledSpriteObject::XOffset"
                   },
                   "parameters": [
                     "Object",
                     "=",
-                    "CameraBorderLeft()*XFactor+TimeFromStart()*XSpeed*60"
+                    "CameraBorderLeft()*XFactor+XOffset"
                   ]
                 },
                 {
@@ -172,6 +181,13 @@
           "label": "",
           "hidden": true,
           "name": "YInit"
+        },
+        {
+          "value": "",
+          "type": "Number",
+          "label": "",
+          "hidden": true,
+          "name": "XOffset"
         }
       ],
       "sharedPropertyDescriptors": []
@@ -910,5 +926,462 @@
       "sharedPropertyDescriptors": []
     }
   ],
-  "eventsBasedObjects": []
+  "eventsBasedObjects": [
+    {
+      "areaMaxX": 64,
+      "areaMaxY": 64,
+      "areaMaxZ": 64,
+      "areaMinX": 0,
+      "areaMinY": 0,
+      "areaMinZ": 0,
+      "defaultName": "",
+      "description": "",
+      "fullName": "",
+      "isUsingLegacyInstancesRenderer": false,
+      "name": "BitmapText",
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Letters",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "ID",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": []
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Letters"
+          }
+        ]
+      },
+      "objectsGroups": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Letters",
+          "persistentUuid": "fbfb0ce5-5b66-4c41-af24-3c879a4bea77",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "eventsFunctions": [
+        {
+          "fullName": "",
+          "functionType": "Action",
+          "name": "onCreated",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::BitmapText::SetText"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "Text",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                  },
+                  "parameters": [
+                    "Letters",
+                    "Animation",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "HelperExtension::BitmapText",
+              "type": "object"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "the text of the object.",
+          "fullName": "Text",
+          "functionType": "ExpressionAndCondition",
+          "group": "BitmapText configuration",
+          "name": "Text",
+          "sentence": "the text",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnString"
+                  },
+                  "parameters": [
+                    "Text"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "type": "string"
+          },
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "HelperExtension::BitmapText",
+              "type": "object"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "fullName": "",
+          "functionType": "ActionWithOperator",
+          "getterName": "Text",
+          "name": "SetText",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "HelperExtension::BitmapText::Text"
+                  },
+                  "parameters": [
+                    "Object",
+                    "!=",
+                    "OldText",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringVariable"
+                  },
+                  "parameters": [
+                    "Text",
+                    "=",
+                    "Value"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "OldLength",
+                        "=",
+                        "max(StrLength(OldText), 1)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "NewLength",
+                        "=",
+                        "StrLength(Text)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "NewLength",
+                            ">",
+                            "OldLength"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Index",
+                            "=",
+                            "OldLength"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "NewLength-OldLength",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "Letters",
+                                "Index*LetterWidth",
+                                "0",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "Letters",
+                                "ID",
+                                "=",
+                                "Index"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                              },
+                              "parameters": [
+                                "Letters",
+                                "Animation",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangeSprite"
+                              },
+                              "parameters": [
+                                "Letters",
+                                "=",
+                                "StrFind(Alphabet, StrAt(Text, Index))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Index",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "name": "Index",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "OldLength",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "NewLength",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "Letters",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Letters",
+                            "ID",
+                            ">=",
+                            "StrLength(Text)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "Letters"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Letters",
+                            "ID",
+                            "<",
+                            "StrLength(Text)"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "Letters",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangeSprite"
+                          },
+                          "parameters": [
+                            "Letters",
+                            "=",
+                            "StrFind(Alphabet, StrAt(Text, Letters.ID))"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "HelperExtension::BitmapText",
+              "type": "object"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "",
+          "type": "String",
+          "label": "",
+          "name": "Alphabet"
+        },
+        {
+          "value": "8",
+          "type": "Number",
+          "label": "Letter width",
+          "name": "LetterWidth"
+        },
+        {
+          "value": "",
+          "type": "String",
+          "label": "",
+          "name": "Text"
+        },
+        {
+          "value": "",
+          "type": "String",
+          "label": "",
+          "hidden": true,
+          "name": "OldText"
+        }
+      ],
+      "variants": []
+    }
+  ]
 }

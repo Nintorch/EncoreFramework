@@ -162,6 +162,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "NewBitmapText",
+      "persistentUuid": "47e250c8-e5e6-40f7-bcaf-0f9b6a793472",
+      "width": 0,
+      "x": 208,
+      "y": 72,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -174,7 +190,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.2191606102366443,
+    "zoomFactor": 1.5377379260725432,
     "windowMask": false
   }
 }

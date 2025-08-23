@@ -1,7 +1,7 @@
 {
   "firstLayout": "WebPressStart",
   "gdVersion": {
-    "build": 236,
+    "build": 237,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -2509,6 +2509,102 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Characters/Tails/Pushing5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\Tails\\Pushing5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Characters/Tails/Pushing6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Characters\\Tails\\Pushing6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\9.png",
+        "smoothed": false,
         "userAdded": false
       }
     ],
@@ -14416,11 +14512,6 @@
           "value": 0
         },
         {
-          "name": "PhysicsStepsBase",
-          "type": "number",
-          "value": 0
-        },
-        {
           "name": "DisablePhysicsUpdate",
           "type": "boolean",
           "value": false
@@ -14853,6 +14944,11 @@
         },
         {
           "name": "PreviousAction",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "PreviousAnimation",
           "type": "string",
           "value": "0"
         },

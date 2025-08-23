@@ -196,7 +196,7 @@
       "name": "Player",
       "persistentUuid": "f83d8d19-149a-44cf-87b2-c2006e40eb0d",
       "width": 32,
-      "x": 112,
+      "x": 128,
       "y": 672,
       "zOrder": 5,
       "numberProperties": [],
@@ -939,7 +939,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.846500636869001,
+    "zoomFactor": 0.4360799683165013,
     "windowMask": false
   }
 }

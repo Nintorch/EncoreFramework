@@ -161,6 +161,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -170,6 +171,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -185,6 +187,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Player Initialization",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -968,7 +971,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Character Attributes",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -1063,17 +1065,6 @@
                                     "AirAngleRotation",
                                     "=",
                                     "2.8125"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player_MovementValues",
-                                    "PhysicsStepsBase",
-                                    "=",
-                                    "4"
                                   ]
                                 },
                                 {
@@ -1490,7 +1481,7 @@
                                         "Player_MovementValues",
                                         "Action",
                                         "=",
-                                        "\"Climbing\""
+                                        "\"Climb\""
                                       ]
                                     }
                                   ],
@@ -4107,6 +4098,17 @@
                                     "=",
                                     "Player_MovementValues.Action"
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetStringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "PreviousAnimation",
+                                    "=",
+                                    "Player_Others.Animation"
+                                  ]
                                 }
                               ]
                             }
@@ -4254,6 +4256,18 @@
                           "parameters": []
                         },
                         {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "The physics are updated multiple times per frame in small steps to increase stability"
+                        },
+                        {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -4265,7 +4279,7 @@
                                 "Player_MovementValues",
                                 "PhysicsSteps",
                                 "=",
-                                "ceil(Player_MovementValues.PhysicsStepsBase*60*TimeDelta())"
+                                "max(1, ceil(abs(Player_MovementValues.XSpeed)/8*60*TimeDelta()))"
                               ]
                             }
                           ]
@@ -4805,6 +4819,7 @@
                                               ]
                                             },
                                             {
+                                              "disabled": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -4833,6 +4848,7 @@
                                               ]
                                             },
                                             {
+                                              "disabled": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -17736,7 +17752,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Knuckles Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -17746,7 +17761,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Gliding-related Actions",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -17756,7 +17770,6 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
-                                      "folded": true,
                                       "name": "\"Glide\" - Main gliding code",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -18284,7 +18297,7 @@
                                                         "Player_MovementValues",
                                                         "Action",
                                                         "=",
-                                                        "\"Climbing\""
+                                                        "\"Climb\""
                                                       ]
                                                     },
                                                     {
@@ -18669,8 +18682,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
-                                  "name": "\"Climbing\" - Climbing on a wall",
+                                  "name": "\"Climb\" - Climbing on a wall",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
@@ -18685,7 +18697,7 @@
                                             "Player_MovementValues",
                                             "Action",
                                             "=",
-                                            "\"Climbing\""
+                                            "\"Climb\""
                                           ]
                                         }
                                       ],
@@ -19528,7 +19540,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -21877,6 +21888,34 @@
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin",
+                                        "Animation",
+                                        "=",
+                                        "PlayerSkin.Animation::SpeedScale()*TimeScale()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
+                                      },
+                                      "parameters": [
+                                        "PlayerSkin_TailsTails",
+                                        "Animation",
+                                        "=",
+                                        "TimeScale()"
+                                      ]
+                                    }
+                                  ]
                                 }
                               ],
                               "parameters": []
@@ -21958,10 +21997,10 @@
                                         "value": "StringObjectVariable"
                                       },
                                       "parameters": [
-                                        "Player_MovementValues",
-                                        "Action",
+                                        "Player_Others",
+                                        "PreviousAnimation",
                                         "!=",
-                                        "Player_Others.PreviousAction"
+                                        "Player_Others.PreviousAnimation"
                                       ]
                                     }
                                   ],
@@ -26881,6 +26920,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Effects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27306,7 +27346,7 @@
                               "parameters": [
                                 "CenterX",
                                 "=",
-                                "Player_MovementValues.PositionXRecord[round(Player_MovementValues.VariableChildCount(PositionXRecord)-1-InvincibilityStar.TableOffset)]"
+                                "Player_MovementValues.PositionXRecord[round(Player_MovementValues.VariableChildCount(PositionXRecord)-1-(InvincibilityStar.TableOffset)/60/TimeDelta())]"
                               ]
                             },
                             {
@@ -27316,7 +27356,7 @@
                               "parameters": [
                                 "CenterY",
                                 "=",
-                                "Player_MovementValues.PositionYRecord[round(Player_MovementValues.VariableChildCount(PositionXRecord)-1-InvincibilityStar.TableOffset)]"
+                                "Player_MovementValues.PositionYRecord[round(Player_MovementValues.VariableChildCount(PositionXRecord)-1-(InvincibilityStar.TableOffset)/60/TimeDelta())]"
                               ]
                             },
                             {
@@ -27784,20 +27824,20 @@
           },
           "parameters": [
             "",
-            "\"y\""
+            "\"e\""
           ]
         }
       ],
       "actions": [
         {
           "type": {
-            "value": "SetNumberObjectVariable"
+            "value": "HelperExtension::BitmapText::SetText"
           },
           "parameters": [
-            "Player_MovementValues",
-            "XSpeed",
+            "NewBitmapText",
             "=",
-            "20"
+            "\"130\"",
+            ""
           ]
         }
       ]
@@ -27811,20 +27851,20 @@
           },
           "parameters": [
             "",
-            "\"u\""
+            "\"f\""
           ]
         }
       ],
       "actions": [
         {
           "type": {
-            "value": "SetNumberObjectVariable"
+            "value": "HelperExtension::BitmapText::SetText"
           },
           "parameters": [
-            "Player_MovementValues",
-            "XSpeed",
+            "NewBitmapText",
             "=",
-            "40"
+            "\"24\"",
+            ""
           ]
         }
       ]
