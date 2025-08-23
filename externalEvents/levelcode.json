@@ -82,21 +82,20 @@
                 },
                 {
                   "type": {
-                    "value": "SetStringObjectVariable"
-                  },
-                  "parameters": [
-                    "Master_Level",
-                    "PlayingMusic",
-                    "=",
-                    "\"Level\""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Cache"
                   },
                   "parameters": [
                     "LevelValueObjects"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModGlobalVolume"
+                  },
+                  "parameters": [
+                    "",
+                    "=",
+                    "0"
                   ]
                 }
               ],
@@ -27836,7 +27835,7 @@
           "parameters": [
             "NewBitmapText",
             "=",
-            "\"130\"",
+            "\"1\" + NewLine() + \"30\"",
             ""
           ]
         }
@@ -27863,7 +27862,7 @@
           "parameters": [
             "NewBitmapText",
             "=",
-            "\"24\"",
+            "\"2\"",
             ""
           ]
         }

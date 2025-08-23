@@ -749,7 +749,7 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "HelperExtension::BitmapCounter::PropertyValue"
+                    "value": "HelperExtension::BitmapCounter::PropertyInitialValue"
                   },
                   "parameters": [
                     "Object",
@@ -867,7 +867,7 @@
               "actions": [
                 {
                   "type": {
-                    "value": "HelperExtension::BitmapCounter::SetPropertyValue"
+                    "value": "HelperExtension::BitmapCounter::SetPropertyInitialValue"
                   },
                   "parameters": [
                     "Object",
@@ -937,6 +937,7 @@
       "defaultName": "",
       "description": "",
       "fullName": "",
+      "isInnerAreaFollowingParentSize": true,
       "isUsingLegacyInstancesRenderer": false,
       "name": "BitmapText",
       "objects": [
@@ -948,7 +949,12 @@
           "updateIfNotVisible": false,
           "variables": [
             {
-              "name": "ID",
+              "name": "OffsetX",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "Line",
               "type": "number",
               "value": 0
             }
@@ -1019,12 +1025,19 @@
         {
           "fullName": "",
           "functionType": "Action",
-          "name": "onCreated",
+          "name": "doStepPostEvents",
           "sentence": "",
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -1033,7 +1046,7 @@
                   "parameters": [
                     "Object",
                     "=",
-                    "Text",
+                    "InitialText",
                     ""
                   ]
                 },
@@ -1109,13 +1122,12 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "HelperExtension::BitmapText::Text"
+                    "value": "StringVariable"
                   },
                   "parameters": [
-                    "Object",
+                    "Value",
                     "!=",
-                    "OldText",
-                    ""
+                    "Text"
                   ]
                 }
               ],
@@ -1129,201 +1141,72 @@
                     "=",
                     "Value"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Letters",
+                    ""
+                  ]
                 }
               ],
               "events": [
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "OldLength",
-                        "=",
-                        "max(StrLength(OldText), 1)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "NewLength",
-                        "=",
-                        "StrLength(Text)"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "NewLength",
-                            ">",
-                            "OldLength"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetNumberVariable"
-                          },
-                          "parameters": [
-                            "Index",
-                            "=",
-                            "OldLength"
-                          ]
-                        }
-                      ],
-                      "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "NewLength-OldLength",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "Letters",
-                                "Index*LetterWidth",
-                                "0",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "Letters",
-                                "ID",
-                                "=",
-                                "Index"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
-                              },
-                              "parameters": [
-                                "Letters",
-                                "Animation",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ChangeSprite"
-                              },
-                              "parameters": [
-                                "Letters",
-                                "=",
-                                "StrFind(Alphabet, StrAt(Text, Index))"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "Index",
-                                "+",
-                                "1"
-                              ]
-                            }
-                          ]
-                        }
-                      ],
-                      "variables": [
-                        {
-                          "name": "Index",
-                          "type": "number",
-                          "value": 0
-                        }
-                      ]
-                    }
-                  ],
-                  "variables": [
-                    {
-                      "name": "OldLength",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "name": "NewLength",
-                      "type": "number",
-                      "value": 0
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "Letters",
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "StrLength(Text)",
                   "conditions": [],
                   "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "Letters",
-                            "ID",
-                            ">=",
-                            "StrLength(Text)"
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "Cache"
-                          },
-                          "parameters": [
-                            "Letters"
-                          ]
-                        }
-                      ]
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Letter exists in the alphabet"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "VarObjet"
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "Letters",
-                            "ID",
-                            "<",
-                            "StrLength(Text)"
+                            "StrFind(Alphabet, StrAt(Text, Index))",
+                            ">=",
+                            "0"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "Montre"
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Letters",
+                            "LetterX",
+                            "LetterY",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetSpeedScale"
                           },
                           "parameters": [
                             "Letters",
-                            ""
+                            "Animation",
+                            "=",
+                            "0"
                           ]
                         },
                         {
@@ -1333,12 +1216,300 @@
                           "parameters": [
                             "Letters",
                             "=",
-                            "StrFind(Alphabet, StrAt(Text, Letters.ID))"
+                            "StrFind(Alphabet, StrAt(Text, Index))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Letters",
+                            "OffsetX",
+                            "=",
+                            "LetterX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Letters",
+                            "Line",
+                            "=",
+                            "Line"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "LetterX",
+                            "+",
+                            "Letters.Width()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Special symbols"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareStrings"
+                          },
+                          "parameters": [
+                            "StrAt(Text, Index)",
+                            "=",
+                            "\" \""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "LetterX",
+                            "+",
+                            "SpaceWidth"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareStrings"
+                          },
+                          "parameters": [
+                            "StrAt(Text, Index)",
+                            "=",
+                            "NewLine()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PushNumber"
+                          },
+                          "parameters": [
+                            "LineWidth",
+                            "LetterX"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "LetterX",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "LetterY",
+                            "+",
+                            "LineHeight"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Line",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Index",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PushNumber"
+                      },
+                      "parameters": [
+                        "LineWidth",
+                        "LetterX"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AjoutObjConcern"
+                      },
+                      "parameters": [
+                        "",
+                        "Letters"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Letters",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Alignment",
+                                "=",
+                                "\"Center\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "Letters",
+                                "=",
+                                "Object.Width()/2-LineWidth[Letters.Line]/2+Letters.OffsetX"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Alignment",
+                                "=",
+                                "\"Right\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "Letters",
+                                "=",
+                                "Object.Width()-LineWidth[Letters.Line]+Letters.OffsetX"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "name": "Index",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "Line",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "LetterX",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "LetterY",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "LineWidth",
+                  "type": "array",
+                  "children": []
                 }
               ]
             }
@@ -1362,23 +1533,40 @@
           "name": "Alphabet"
         },
         {
+          "value": "Left",
+          "type": "Choice",
+          "label": "",
+          "extraInformation": [
+            "Left",
+            "Center",
+            "Right"
+          ],
+          "name": "Alignment"
+        },
+        {
           "value": "8",
           "type": "Number",
-          "label": "Letter width",
-          "name": "LetterWidth"
+          "label": "Space width",
+          "name": "SpaceWidth"
+        },
+        {
+          "value": "16",
+          "type": "Number",
+          "label": "Line height",
+          "name": "LineHeight"
         },
         {
           "value": "",
           "type": "String",
-          "label": "",
-          "name": "Text"
+          "label": "Initial text",
+          "name": "InitialText"
         },
         {
           "value": "",
           "type": "String",
           "label": "",
           "hidden": true,
-          "name": "OldText"
+          "name": "Text"
         }
       ],
       "variants": []

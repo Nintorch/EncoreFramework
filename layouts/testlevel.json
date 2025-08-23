@@ -992,99 +992,11 @@
       "behaviors": [],
       "content": {
         "Text": "10",
-        "Alphabet": "0123456789"
+        "Alphabet": "0123456789",
+        "InitialText": "1",
+        "Alignment": "Center"
       },
       "childrenContent": {
-        "Letter": {
-          "adaptCollisionMaskAutomatically": true,
-          "updateIfNotVisible": false,
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\Characters\\Tails\\Pushing5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 23,
-                            "y": 22
-                          },
-                          {
-                            "x": 51,
-                            "y": 22
-                          },
-                          {
-                            "x": 51,
-                            "y": 52
-                          },
-                          {
-                            "x": 23,
-                            "y": 52
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\Characters\\Tails\\Pushing6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 23,
-                            "y": 22
-                          },
-                          {
-                            "x": 51,
-                            "y": 22
-                          },
-                          {
-                            "x": 51,
-                            "y": 52
-                          },
-                          {
-                            "x": 23,
-                            "y": 52
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
         "Letters": {
           "adaptCollisionMaskAutomatically": true,
           "updateIfNotVisible": false,
