@@ -1019,21 +1019,6 @@
         "userAdded": true
       },
       {
-        "file": "assets/HUD/numbers.xml",
-        "kind": "bitmapFont",
-        "metadata": "",
-        "name": "assets\\HUD\\numbers.xml",
-        "userAdded": true
-      },
-      {
-        "file": "assets/HUD/numbers.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\numbers.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
         "disablePreload": false,
         "file": "layouts/testlevel2.json",
         "kind": "tilemap",
@@ -7743,35 +7728,6 @@
       ]
     },
     {
-      "assetStoreId": "",
-      "name": "RingsCounter",
-      "type": "BitmapText::BitmapTextObject",
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "BitmapCounter",
-          "type": "HelperExtension::BitmapCounter",
-          "Value": 0,
-          "PrevValue": 0,
-          "RequiredLength": 3,
-          "FillerCharacter": " "
-        }
-      ],
-      "content": {
-        "text": "  0",
-        "opacity": 255,
-        "scale": 1,
-        "fontSize": 20,
-        "tint": "255;255;255",
-        "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
-        "textureAtlasResourceName": "assets\\HUD\\numbers.png",
-        "align": "left",
-        "wordWrap": true,
-        "verticalTextAlignment": "top"
-      }
-    },
-    {
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Act2StartPosition",
@@ -7830,93 +7786,6 @@
           ]
         }
       ]
-    },
-    {
-      "assetStoreId": "",
-      "name": "SecondsCounter",
-      "type": "BitmapText::BitmapTextObject",
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "BitmapCounter",
-          "type": "HelperExtension::BitmapCounter",
-          "Value": 0,
-          "PrevValue": 0,
-          "RequiredLength": 2,
-          "FillerCharacter": "0"
-        }
-      ],
-      "content": {
-        "text": "00",
-        "opacity": 255,
-        "scale": 1,
-        "fontSize": 20,
-        "tint": "255;255;255",
-        "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
-        "textureAtlasResourceName": "assets\\HUD\\numbers.png",
-        "align": "left",
-        "wordWrap": true,
-        "verticalTextAlignment": "top"
-      }
-    },
-    {
-      "assetStoreId": "",
-      "name": "MinutesCounter",
-      "type": "BitmapText::BitmapTextObject",
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "BitmapCounter",
-          "type": "HelperExtension::BitmapCounter",
-          "Value": 0,
-          "PrevValue": 0,
-          "RequiredLength": 1,
-          "FillerCharacter": "0"
-        }
-      ],
-      "content": {
-        "text": "0",
-        "opacity": 255,
-        "scale": 1,
-        "fontSize": 20,
-        "tint": "255;255;255",
-        "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
-        "textureAtlasResourceName": "assets\\HUD\\numbers.png",
-        "align": "left",
-        "wordWrap": true,
-        "verticalTextAlignment": "top"
-      }
-    },
-    {
-      "assetStoreId": "",
-      "name": "ScoreCounter",
-      "type": "BitmapText::BitmapTextObject",
-      "variables": [],
-      "effects": [],
-      "behaviors": [
-        {
-          "name": "BitmapCounter",
-          "type": "HelperExtension::BitmapCounter",
-          "Value": 0,
-          "PrevValue": 0,
-          "RequiredLength": 6,
-          "FillerCharacter": "0"
-        }
-      ],
-      "content": {
-        "text": "     0",
-        "opacity": 255,
-        "scale": 1,
-        "fontSize": 20,
-        "tint": "255;255;255",
-        "bitmapFontResourceName": "assets\\HUD\\numbers.xml",
-        "textureAtlasResourceName": "assets\\HUD\\numbers.png",
-        "align": "left",
-        "wordWrap": true,
-        "verticalTextAlignment": "top"
-      }
     },
     {
       "adaptCollisionMaskAutomatically": true,
@@ -15048,6 +14917,11 @@
           "name": "PlayingMusic",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "RingCount",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -18839,6 +18713,1586 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "ScoreCounter",
+      "type": "HelperExtension::BitmapText",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Text": "10",
+        "Alphabet": "0123456789",
+        "InitialText": "0",
+        "Alignment": "Right"
+      },
+      "childrenContent": {
+        "Letters": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "MinuteCounter",
+      "type": "HelperExtension::BitmapText",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Text": "10",
+        "Alphabet": "0123456789",
+        "InitialText": "0",
+        "Alignment": "Right"
+      },
+      "childrenContent": {
+        "Letters": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "SecondCounter",
+      "type": "HelperExtension::BitmapText",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Text": "10",
+        "Alphabet": "0123456789",
+        "InitialText": "0",
+        "Alignment": "Right"
+      },
+      "childrenContent": {
+        "Letters": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "RingCounter",
+      "type": "HelperExtension::BitmapText",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Text": "10",
+        "Alphabet": "0123456789",
+        "InitialText": "0",
+        "Alignment": "Right"
+      },
+      "childrenContent": {
+        "Letters": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 1
+                          },
+                          {
+                            "x": 8,
+                            "y": 12
+                          },
+                          {
+                            "x": 1,
+                            "y": 12
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -19103,13 +20557,13 @@
             "objectName": "ScoreCounter"
           },
           {
-            "objectName": "MinutesCounter"
+            "objectName": "MinuteCounter"
           },
           {
-            "objectName": "SecondsCounter"
+            "objectName": "SecondCounter"
           },
           {
-            "objectName": "RingsCounter"
+            "objectName": "RingCounter"
           }
         ]
       }

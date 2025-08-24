@@ -731,199 +731,6 @@
         }
       ],
       "sharedPropertyDescriptors": []
-    },
-    {
-      "description": "",
-      "fullName": "",
-      "name": "BitmapCounter",
-      "objectType": "BitmapText::BitmapTextObject",
-      "eventsFunctions": [
-        {
-          "fullName": "",
-          "functionType": "Action",
-          "name": "doStepPreEvents",
-          "sentence": "",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "HelperExtension::BitmapCounter::PropertyInitialValue"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "!=",
-                    "PrevValue"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "HelperExtension::BitmapCounter::SetPropertyPrevValue"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "Value"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Text",
-                    "=",
-                    "ToString(Value)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Text",
-                    "=",
-                    "StrRepeat(FillerCharacter, RequiredLength-StrLength(Object.Text())) + Object.Text()"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "BitmapText::BitmapTextObject",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "HelperExtension::BitmapCounter",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "description": "the value of the object.",
-          "fullName": "Value",
-          "functionType": "ExpressionAndCondition",
-          "group": "BitmapCounter configuration",
-          "name": "Value",
-          "sentence": "the value",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnNumber"
-                  },
-                  "parameters": [
-                    "Value"
-                  ]
-                }
-              ]
-            }
-          ],
-          "expressionType": {
-            "type": "expression"
-          },
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "BitmapText::BitmapTextObject",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "HelperExtension::BitmapCounter",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        },
-        {
-          "fullName": "",
-          "functionType": "ActionWithOperator",
-          "getterName": "Value",
-          "name": "SetValue",
-          "sentence": "",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "HelperExtension::BitmapCounter::SetPropertyInitialValue"
-                  },
-                  "parameters": [
-                    "Object",
-                    "Behavior",
-                    "=",
-                    "Value"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": [
-            {
-              "description": "Object",
-              "name": "Object",
-              "supplementaryInformation": "BitmapText::BitmapTextObject",
-              "type": "object"
-            },
-            {
-              "description": "Behavior",
-              "name": "Behavior",
-              "supplementaryInformation": "HelperExtension::BitmapCounter",
-              "type": "behavior"
-            }
-          ],
-          "objectGroups": []
-        }
-      ],
-      "propertyDescriptors": [
-        {
-          "value": "0",
-          "type": "Number",
-          "label": "",
-          "name": "Value"
-        },
-        {
-          "value": "0",
-          "type": "Number",
-          "label": "",
-          "hidden": true,
-          "name": "PrevValue"
-        },
-        {
-          "value": "0",
-          "type": "Number",
-          "label": "",
-          "name": "RequiredLength"
-        },
-        {
-          "value": " ",
-          "type": "String",
-          "label": "",
-          "name": "FillerCharacter"
-        }
-      ],
-      "sharedPropertyDescriptors": []
     }
   ],
   "eventsBasedObjects": [
@@ -1249,6 +1056,16 @@
                             "LetterX",
                             "+",
                             "Letters.Width()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "DebuggerTools::ConsoleLog"
+                          },
+                          "parameters": [
+                            "ToString(SceneInstancesCount(Letters))",
+                            "\"info\"",
+                            ""
                           ]
                         }
                       ]

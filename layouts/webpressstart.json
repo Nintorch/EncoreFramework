@@ -275,10 +275,6 @@
       "type": "AnimatableCapability::AnimatableBehavior"
     },
     {
-      "name": "BitmapCounter",
-      "type": "HelperExtension::BitmapCounter"
-    },
-    {
       "name": "Effect",
       "type": "EffectCapability::EffectBehavior"
     },

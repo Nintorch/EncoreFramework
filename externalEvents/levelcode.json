@@ -160,7 +160,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -170,7 +169,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12001,7 +11999,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Check for Being Hurt",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -12223,14 +12220,13 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "HelperExtension::BitmapCounter::Value"
+                                                "value": "NumberObjectVariable"
                                               },
                                               "parameters": [
-                                                "RingsCounter",
-                                                "BitmapCounter",
+                                                "Master_Level",
+                                                "RingCount",
                                                 "=",
-                                                "0",
-                                                ""
+                                                "0"
                                               ]
                                             }
                                           ],
@@ -12253,14 +12249,13 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "HelperExtension::BitmapCounter::Value"
+                                                "value": "NumberObjectVariable"
                                               },
                                               "parameters": [
-                                                "RingsCounter",
-                                                "BitmapCounter",
+                                                "Master_Level",
+                                                "RingCount",
                                                 ">",
-                                                "0",
-                                                ""
+                                                "0"
                                               ]
                                             }
                                           ],
@@ -12271,38 +12266,13 @@
                                               "colorG": 176,
                                               "colorR": 74,
                                               "creationTime": 0,
-                                              "folded": true,
                                               "name": "Ring Loss",
                                               "source": "",
                                               "type": "BuiltinCommonInstructions::Group",
                                               "events": [
                                                 {
                                                   "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "HelperExtension::BitmapCounter::Value"
-                                                      },
-                                                      "parameters": [
-                                                        "RingsCounter",
-                                                        "BitmapCounter",
-                                                        ">",
-                                                        "0",
-                                                        ""
-                                                      ]
-                                                    },
-                                                    {
-                                                      "type": {
-                                                        "value": "NumberObjectVariable"
-                                                      },
-                                                      "parameters": [
-                                                        "Player",
-                                                        "PlayerID",
-                                                        "=",
-                                                        "0"
-                                                      ]
-                                                    }
-                                                  ],
+                                                  "conditions": [],
                                                   "actions": [
                                                     {
                                                       "type": {
@@ -12325,9 +12295,9 @@
                                                             "value": "NumberVariable"
                                                           },
                                                           "parameters": [
-                                                            "RingCounter",
+                                                            "RingCount",
                                                             "<",
-                                                            "min(RingsCounter.BitmapCounter::Value(), 32)"
+                                                            "min(Master_Level.RingCount, 32)"
                                                           ]
                                                         }
                                                       ],
@@ -12404,7 +12374,7 @@
                                                             "value": "SetNumberVariable"
                                                           },
                                                           "parameters": [
-                                                            "RingCounter",
+                                                            "RingCount",
                                                             "+",
                                                             "1"
                                                           ]
@@ -12466,7 +12436,7 @@
                                                                 "value": "NumberVariable"
                                                               },
                                                               "parameters": [
-                                                                "RingCounter",
+                                                                "RingCount",
                                                                 "=",
                                                                 "16"
                                                               ]
@@ -12500,7 +12470,7 @@
                                                   ],
                                                   "variables": [
                                                     {
-                                                      "name": "RingCounter",
+                                                      "name": "RingCount",
                                                       "type": "number",
                                                       "value": 0
                                                     },
@@ -12532,14 +12502,13 @@
                                                   "actions": [
                                                     {
                                                       "type": {
-                                                        "value": "HelperExtension::BitmapCounter::SetValue"
+                                                        "value": "SetNumberObjectVariable"
                                                       },
                                                       "parameters": [
-                                                        "RingsCounter",
-                                                        "BitmapCounter",
+                                                        "Master_Level",
+                                                        "RingCount",
                                                         "=",
-                                                        "0",
-                                                        ""
+                                                        "0"
                                                       ]
                                                     },
                                                     {
@@ -22541,7 +22510,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Rings",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -22643,14 +22611,13 @@
                         },
                         {
                           "type": {
-                            "value": "HelperExtension::BitmapCounter::SetValue"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
-                            "RingsCounter",
-                            "BitmapCounter",
+                            "Master_Level",
+                            "RingCount",
                             "+",
-                            "PickedInstancesCount(Ring)",
-                            ""
+                            "1"
                           ]
                         }
                       ]
@@ -23038,7 +23005,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Monitors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -23822,14 +23788,13 @@
                                             },
                                             {
                                               "type": {
-                                                "value": "HelperExtension::BitmapCounter::SetValue"
+                                                "value": "SetNumberObjectVariable"
                                               },
                                               "parameters": [
-                                                "RingsCounter",
-                                                "BitmapCounter",
+                                                "Master_Level",
+                                                "RingCount",
                                                 "+",
-                                                "10",
-                                                ""
+                                                "10"
                                               ]
                                             }
                                           ]
@@ -27537,7 +27502,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27548,26 +27512,65 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "HelperExtension::BitmapCounter::SetValue"
+                        "value": "HelperExtension::BitmapText::SetText"
                       },
                       "parameters": [
-                        "SecondsCounter",
-                        "BitmapCounter",
+                        "SecondCounter",
                         "=",
-                        "mod(floor(TimeFromStart()), 60)",
-                        ""
+                        "ToString(mod(floor(TimeFromStart()),60))",
+                        "To"
                       ]
                     },
                     {
                       "type": {
-                        "value": "HelperExtension::BitmapCounter::SetValue"
+                        "value": "HelperExtension::BitmapText::SetText"
                       },
                       "parameters": [
-                        "MinutesCounter",
-                        "BitmapCounter",
+                        "MinuteCounter",
                         "=",
-                        "floor(TimeFromStart()/60)",
-                        ""
+                        "ToString(floor(TimeFromStart()/60))",
+                        "To"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HelperExtension::BitmapText::SetText"
+                      },
+                      "parameters": [
+                        "RingCounter",
+                        "=",
+                        "ToString(Master_Level.RingCount)",
+                        "To"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod(floor(TimeFromStart()),60)",
+                            "<",
+                            "10"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "HelperExtension::BitmapText::SetText"
+                          },
+                          "parameters": [
+                            "SecondCounter",
+                            "=",
+                            "\"0\" + SecondCounter.Text()",
+                            "To"
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -27813,60 +27816,6 @@
         }
       ],
       "parameters": []
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"e\""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "HelperExtension::BitmapText::SetText"
-          },
-          "parameters": [
-            "NewBitmapText",
-            "=",
-            "\"1\" + NewLine() + \"30\"",
-            ""
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "value": "KeyFromTextPressed"
-          },
-          "parameters": [
-            "",
-            "\"f\""
-          ]
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "value": "HelperExtension::BitmapText::SetText"
-          },
-          "parameters": [
-            "NewBitmapText",
-            "=",
-            "\"2\"",
-            ""
-          ]
-        }
-      ]
     }
   ]
 }
