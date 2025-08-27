@@ -2513,7 +2513,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/0.png",
+        "file": "assets/HUD/maincount/0.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\0.png",
@@ -2521,7 +2521,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/1.png",
+        "file": "assets/HUD/maincount/1.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\1.png",
@@ -2529,7 +2529,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/2.png",
+        "file": "assets/HUD/maincount/2.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\2.png",
@@ -2537,7 +2537,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/3.png",
+        "file": "assets/HUD/maincount/3.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\3.png",
@@ -2545,7 +2545,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/4.png",
+        "file": "assets/HUD/maincount/4.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\4.png",
@@ -2553,7 +2553,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/5.png",
+        "file": "assets/HUD/maincount/5.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\5.png",
@@ -2561,7 +2561,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/6.png",
+        "file": "assets/HUD/maincount/6.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\6.png",
@@ -2569,7 +2569,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/7.png",
+        "file": "assets/HUD/maincount/7.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\7.png",
@@ -2577,7 +2577,7 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/8.png",
+        "file": "assets/HUD/maincount/8.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\8.png",
@@ -2585,11 +2585,101 @@
         "userAdded": false
       },
       {
-        "file": "assets/HUD/9.png",
+        "file": "assets/HUD/maincount/9.png",
         "kind": "image",
         "metadata": "",
         "name": "assets\\HUD\\9.png",
         "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/lifecount/9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\lifecount\\9.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "audio/music/extra_life.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\music\\extra_life.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": false
       }
     ],
@@ -14922,6 +15012,11 @@
           "name": "RingCount",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ExtraLifeMusic",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -20293,6 +20388,401 @@
           ]
         }
       }
+    },
+    {
+      "assetStoreId": "",
+      "name": "LifeCounter",
+      "type": "HelperExtension::BitmapText",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Text": "10",
+        "Alphabet": "0123456789",
+        "InitialText": "0",
+        "Alignment": "Right"
+      },
+      "childrenContent": {
+        "Letters": {
+          "adaptCollisionMaskAutomatically": true,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\6.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\7.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\8.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\HUD\\lifecount\\9.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 0
+                          },
+                          {
+                            "x": 8,
+                            "y": 7
+                          },
+                          {
+                            "x": 1,
+                            "y": 7
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -20564,6 +21054,9 @@
           },
           {
             "objectName": "RingCounter"
+          },
+          {
+            "objectName": "LifeCounter"
           }
         ]
       }
@@ -20926,6 +21419,17 @@
       "name": "UseSonicWorldsPhysics",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "PlayerValues",
+      "type": "structure",
+      "children": [
+        {
+          "name": "Lives",
+          "type": "number",
+          "value": 3
+        }
+      ]
     }
   ],
   "layouts": [

@@ -87,16 +87,6 @@
                   "parameters": [
                     "LevelValueObjects"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "ModGlobalVolume"
-                  },
-                  "parameters": [
-                    "",
-                    "=",
-                    "0"
-                  ]
                 }
               ],
               "events": [
@@ -968,6 +958,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Character Attributes",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11999,6 +11990,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Check for Being Hurt",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -12595,6 +12587,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -17720,6 +17713,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Knuckles Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -17729,6 +17723,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Gliding-related Actions",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -17738,6 +17733,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "\"Glide\" - Main gliding code",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -18650,6 +18646,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Climb\" - Climbing on a wall",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -19222,6 +19219,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Carried\" - Being carried by flying Tails",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -19508,6 +19506,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Animation",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -21966,7 +21965,7 @@
                                       },
                                       "parameters": [
                                         "Player_Others",
-                                        "PreviousAnimation",
+                                        "Animation",
                                         "!=",
                                         "Player_Others.PreviousAnimation"
                                       ]
@@ -22510,6 +22509,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Rings",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -23915,6 +23915,45 @@
                                                 "InvincibilityTimer",
                                                 "=",
                                                 "20*60"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                                              },
+                                              "parameters": [
+                                                "MonitorIcon",
+                                                "Animation",
+                                                "startsWith",
+                                                "\"Extra Life\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerValues.Lives",
+                                                "+",
+                                                "1"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Master_Level",
+                                                "ExtraLifeMusic",
+                                                "True",
+                                                "1"
                                               ]
                                             }
                                           ]
@@ -27502,6 +27541,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27541,6 +27581,17 @@
                         "=",
                         "ToString(Master_Level.RingCount)",
                         "To"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HelperExtension::BitmapText::SetText"
+                      },
+                      "parameters": [
+                        "LifeCounter",
+                        "=",
+                        "ToString(PlayerValues.Lives)",
+                        ""
                       ]
                     }
                   ],
@@ -27586,7 +27637,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -27807,6 +27857,137 @@
                     "",
                     "",
                     ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "ExtraLifeMusic",
+                    "True",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PauseSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "32"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVolumeSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "32",
+                        "=",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "audio\\music\\extra_life.ogg",
+                        "31",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SoundPlaying"
+                      },
+                      "parameters": [
+                        "",
+                        "31"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "RePlaySoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "32"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVolumeSoundCanal"
+                      },
+                      "parameters": [
+                        "",
+                        "32",
+                        "+",
+                        "2*60*TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SoundCanalVolume"
+                      },
+                      "parameters": [
+                        "",
+                        "32",
+                        "=",
+                        "100"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "ExtraLifeMusic",
+                        "False",
+                        ""
+                      ]
+                    }
                   ]
                 }
               ]

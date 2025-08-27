@@ -927,6 +927,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "MonitorExtraLife",
+      "persistentUuid": "b0d8ef2a-90d6-4a0c-b3eb-e3aebfe60e0c",
+      "width": 0,
+      "x": 352,
+      "y": 672,
+      "zOrder": 78,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -939,7 +955,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.40809382398631283,
+    "zoomFactor": 0.9045517212191707,
     "windowMask": false
   }
 }
