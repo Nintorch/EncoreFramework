@@ -561,8 +561,8 @@
       "name": "Spikes",
       "persistentUuid": "e6e6499f-2716-4cc6-9fb9-39d3b2b16394",
       "width": 0,
-      "x": 1008,
-      "y": 480,
+      "x": 192,
+      "y": 704,
       "zOrder": 55,
       "numberProperties": [],
       "stringProperties": [],
@@ -943,6 +943,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "",
+      "name": "Spikes",
+      "persistentUuid": "b34b4b2f-afa3-429e-ab6f-059a66e0fb3d",
+      "width": 0,
+      "x": 1008,
+      "y": 480,
+      "zOrder": 55,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -955,7 +971,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9045517212191707,
+    "zoomFactor": 1.1793911513204427,
     "windowMask": false
   }
 }

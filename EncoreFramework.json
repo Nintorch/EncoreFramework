@@ -1,7 +1,7 @@
 {
   "firstLayout": "WebPressStart",
   "gdVersion": {
-    "build": 237,
+    "build": 239,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -2677,6 +2677,16 @@
         "kind": "audio",
         "metadata": "",
         "name": "audio\\music\\extra_life.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "audio/music/game_over.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio\\music\\game_over.ogg",
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
@@ -15017,6 +15027,16 @@
           "name": "ExtraLifeMusic",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "LevelTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ProgressTime",
+          "type": "boolean",
+          "value": true
         }
       ],
       "effects": [],

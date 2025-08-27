@@ -383,11 +383,10 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "HelperExtension::Fade::PropertyFadingType"
+                    "value": "StringVariable"
                   },
                   "parameters": [
-                    "Object",
-                    "Behavior",
+                    "FadingType",
                     "!=",
                     "\"No fading\""
                   ]
@@ -411,11 +410,10 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "HelperExtension::Fade::PropertyFadingType"
+                    "value": "StringVariable"
                   },
                   "parameters": [
-                    "Object",
-                    "Behavior",
+                    "FadingType",
                     "=",
                     "\"Fading in\""
                   ]
@@ -453,11 +451,10 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "HelperExtension::Fade::SetPropertyFadingType"
+                        "value": "SetStringVariable"
                       },
                       "parameters": [
-                        "Object",
-                        "Behavior",
+                        "FadingType",
                         "=",
                         "\"No fading\""
                       ]
@@ -471,11 +468,10 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "HelperExtension::Fade::PropertyFadingType"
+                    "value": "StringVariable"
                   },
                   "parameters": [
-                    "Object",
-                    "Behavior",
+                    "FadingType",
                     "=",
                     "\"Fading out\""
                   ]
@@ -513,11 +509,10 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "HelperExtension::Fade::SetPropertyFadingType"
+                        "value": "SetStringVariable"
                       },
                       "parameters": [
-                        "Object",
-                        "Behavior",
+                        "FadingType",
                         "=",
                         "\"No fading\""
                       ]
@@ -629,11 +624,10 @@
                 },
                 {
                   "type": {
-                    "value": "HelperExtension::Fade::SetPropertyFadingType"
+                    "value": "SetStringVariable"
                   },
                   "parameters": [
-                    "Object",
-                    "Behavior",
+                    "FadingType",
                     "=",
                     "\"Fading out\""
                   ]
@@ -681,11 +675,10 @@
                 },
                 {
                   "type": {
-                    "value": "HelperExtension::Fade::SetPropertyFadingType"
+                    "value": "SetStringVariable"
                   },
                   "parameters": [
-                    "Object",
-                    "Behavior",
+                    "FadingType",
                     "=",
                     "\"Fading in\""
                   ]
@@ -693,6 +686,92 @@
               ]
             }
           ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Fade",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "async": true,
+          "fullName": "Wait for fading to finish",
+          "functionType": "Action",
+          "name": "WaitFadeEnd",
+          "sentence": "_PARAM0_: Wait for fading to finish",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "function wait() {",
+                "    let behavior = eventsFunctionContext.getObjects(\"Object\")[0]",
+                "        .getBehavior(eventsFunctionContext.getBehaviorName(\"Behavior\"));",
+                "    if (behavior.getFadingType() == \"No fading\") {",
+                "        eventsFunctionContext.task.resolve();",
+                "    }",
+                "    else {",
+                "        setTimeout(wait, 100);",
+                "    }",
+                "}",
+                "",
+                "wait();"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Fade",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Get fading type",
+          "fullName": "Get fading type",
+          "functionType": "StringExpression",
+          "name": "getFadingType",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnString"
+                  },
+                  "parameters": [
+                    "FadingType"
+                  ]
+                }
+              ]
+            }
+          ],
+          "expressionType": {
+            "supplementaryInformation": "[\"No fading\",\"Fading out\",\"Fading in\"]",
+            "type": "stringWithSelector"
+          },
           "parameters": [
             {
               "description": "Object",
@@ -1056,16 +1135,6 @@
                             "LetterX",
                             "+",
                             "Letters.Width()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "DebuggerTools::ConsoleLog"
-                          },
-                          "parameters": [
-                            "ToString(SceneInstancesCount(Letters))",
-                            "\"info\"",
-                            ""
                           ]
                         }
                       ]

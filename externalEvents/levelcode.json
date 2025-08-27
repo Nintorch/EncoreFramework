@@ -12587,7 +12587,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -12626,7 +12625,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -14105,7 +14103,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "\"Dead\" - Death",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -14168,6 +14165,17 @@
                                             "Animation",
                                             "=",
                                             "\"Dead\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetBooleanObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Player_Input",
+                                            "IgnoreInput",
+                                            "True",
+                                            ""
                                           ]
                                         }
                                       ],
@@ -14262,9 +14270,95 @@
                                                 },
                                                 {
                                                   "type": {
+                                                    "value": "SetBooleanObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Master_Level",
+                                                    "ProgressTime",
+                                                    "False",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player",
+                                                "PlayerID",
+                                                "=",
+                                                "0"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "NumberObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "FloatY",
+                                                ">=",
+                                                "CameraBorderTop() + 256"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::Once"
+                                              },
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetNumberVariable"
+                                              },
+                                              "parameters": [
+                                                "PlayerValues.Lives",
+                                                "-",
+                                                "1"
+                                              ]
+                                            }
+                                          ],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "PlayerValues.Lives",
+                                                    ">",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
                                                     "value": "Wait"
                                                   },
                                                   "parameters": [
+                                                    "1"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "FadeSoundVolume"
+                                                  },
+                                                  "parameters": [
+                                                    "",
+                                                    "32",
+                                                    "0",
                                                     "2"
                                                   ]
                                                 },
@@ -14280,21 +14374,12 @@
                                                 },
                                                 {
                                                   "type": {
-                                                    "value": "FadeMusicVolume"
+                                                    "value": "HelperExtension::Fade::WaitFadeEnd"
                                                   },
                                                   "parameters": [
-                                                    "",
-                                                    "32",
-                                                    "0",
-                                                    "2"
-                                                  ]
-                                                },
-                                                {
-                                                  "type": {
-                                                    "value": "Wait"
-                                                  },
-                                                  "parameters": [
-                                                    "2"
+                                                    "FadeObject",
+                                                    "Fade",
+                                                    ""
                                                   ]
                                                 },
                                                 {
@@ -14305,6 +14390,34 @@
                                                     "",
                                                     "CurrentSceneName()",
                                                     ""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "NumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "PlayerValues.Lives",
+                                                    "=",
+                                                    "0"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetStringObjectVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "Master_Level",
+                                                    "PlayingMusic",
+                                                    "=",
+                                                    "\"GameOver\""
                                                   ]
                                                 }
                                               ]
@@ -23005,6 +23118,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Monitors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -27541,11 +27655,39 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "ProgressTime",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "LevelTimer",
+                        "+",
+                        "60*TimeDelta()"
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
@@ -27557,7 +27699,7 @@
                       "parameters": [
                         "SecondCounter",
                         "=",
-                        "ToString(mod(floor(TimeFromStart()),60))",
+                        "ToString(mod(floor(Master_Level.LevelTimer/60),60))",
                         "To"
                       ]
                     },
@@ -27568,7 +27710,7 @@
                       "parameters": [
                         "MinuteCounter",
                         "=",
-                        "ToString(floor(TimeFromStart()/60))",
+                        "ToString(floor(Master_Level.LevelTimer/60/60))",
                         "To"
                       ]
                     },
@@ -27604,9 +27746,9 @@
                             "value": "BuiltinCommonInstructions::CompareNumbers"
                           },
                           "parameters": [
-                            "mod(floor(TimeFromStart()),60)",
-                            "<",
-                            "10"
+                            "StrLength(SecondCounter.Text())",
+                            "=",
+                            "1"
                           ]
                         }
                       ],
@@ -27988,6 +28130,43 @@
                         ""
                       ]
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "PlayingMusic",
+                    "=",
+                    "\"GameOver\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "audio\\music\\game_over.ogg",
+                    "32",
+                    "",
+                    "",
+                    ""
                   ]
                 }
               ]

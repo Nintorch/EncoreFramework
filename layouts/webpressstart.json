@@ -82,6 +82,7 @@
         "textAlignment": "center",
         "verticalTextAlignment": "center",
         "characterSize": 20,
+        "lineHeight": 0,
         "color": "255;255;255"
       }
     }
