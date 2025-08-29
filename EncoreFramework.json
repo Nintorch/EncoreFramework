@@ -15258,6 +15258,11 @@
           "name": "ProgressTime",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "LevelStarted",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],

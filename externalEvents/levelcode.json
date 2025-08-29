@@ -88,33 +88,6 @@
                     "LevelValueObjects"
                   ]
                 }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "SystemInfo::IsPreview"
-                      },
-                      "parameters": [
-                        ""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetFullScreen"
-                      },
-                      "parameters": [
-                        "",
-                        "yes",
-                        ""
-                      ]
-                    }
-                  ]
-                }
               ]
             },
             {
@@ -142,6 +115,45 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "LevelStarted",
+                    "=",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "TimeFromStart()",
+                    ">",
+                    "0.5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "LevelStarted",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -151,7 +163,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -161,7 +172,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -489,6 +499,17 @@
                                     "=",
                                     "Player.Y()"
                                   ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Input",
+                                    "IgnoreInput",
+                                    "True",
+                                    ""
+                                  ]
                                 }
                               ]
                             },
@@ -785,32 +806,13 @@
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "SetBooleanObjectVariable"
+                                            "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
                                           },
                                           "parameters": [
-                                            "Player_Input",
-                                            "IgnoreInput",
-                                            "False",
-                                            ""
-                                          ]
-                                        }
-                                      ],
-                                      "events": [
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
-                                              },
-                                              "parameters": [
-                                                "LivesIcon",
-                                                "Animation",
-                                                "=",
-                                                "Player_MovementValues.Character"
-                                              ]
-                                            }
+                                            "LivesIcon",
+                                            "Animation",
+                                            "=",
+                                            "Player_MovementValues.Character"
                                           ]
                                         }
                                       ]
@@ -861,17 +863,6 @@
                                             "PlayerSkin_TailsTails",
                                             "=",
                                             "PlayerSkin.ZOrder()-1"
-                                          ]
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "SetBooleanObjectVariable"
-                                          },
-                                          "parameters": [
-                                            "Player_Input",
-                                            "IgnoreInput",
-                                            "True",
-                                            ""
                                           ]
                                         }
                                       ]
@@ -12590,7 +12581,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -12629,7 +12619,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -14314,18 +14303,7 @@
                                               ]
                                             }
                                           ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "SetNumberVariable"
-                                              },
-                                              "parameters": [
-                                                "PlayerValues.Lives",
-                                                "-",
-                                                "1"
-                                              ]
-                                            }
-                                          ],
+                                          "actions": [],
                                           "events": [
                                             {
                                               "type": "BuiltinCommonInstructions::Standard",
@@ -14337,7 +14315,18 @@
                                                   "parameters": []
                                                 }
                                               ],
-                                              "actions": [],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetNumberVariable"
+                                                  },
+                                                  "parameters": [
+                                                    "PlayerValues.Lives",
+                                                    "-",
+                                                    "1"
+                                                  ]
+                                                }
+                                              ],
                                               "events": [
                                                 {
                                                   "type": "BuiltinCommonInstructions::Standard",
@@ -14370,7 +14359,7 @@
                                                         "",
                                                         "32",
                                                         "0",
-                                                        "2"
+                                                        "1"
                                                       ]
                                                     },
                                                     {
@@ -22634,6 +22623,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Common Objects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27803,6 +27793,18 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Remember the original positions"
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -27848,38 +27850,16 @@
                   ]
                 },
                 {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "TimeFromStart()",
-                        ">",
-                        "0.5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "TitleCard_Banner",
-                        "InProgress",
-                        "True",
-                        ""
-                      ]
-                    }
-                  ]
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Movement and progress"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -27891,6 +27871,17 @@
                       "parameters": [
                         "TitleCard_Banner",
                         "InProgress",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "LevelStarted",
                         "True",
                         ""
                       ]
@@ -28080,6 +28071,37 @@
                           "parameters": [
                             "",
                             "\"TitleCardWait\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Input",
+                                "PlayerID",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Input",
+                                "IgnoreInput",
+                                "False",
+                                ""
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -28440,7 +28462,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": ""
+                      "comment": "Set InProgress to false if all elements have disappeared"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -28524,7 +28546,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28541,6 +28562,17 @@
                     "PlayerID",
                     "=",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "LevelStarted",
+                    "True",
+                    ""
                   ]
                 }
               ],

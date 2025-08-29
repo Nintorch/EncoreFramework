@@ -1132,6 +1132,17 @@
             "=",
             "1"
           ]
+        },
+        {
+          "type": {
+            "value": "SetBooleanObjectVariable"
+          },
+          "parameters": [
+            "TitleCard_Banner",
+            "InProgress",
+            "True",
+            ""
+          ]
         }
       ]
     },

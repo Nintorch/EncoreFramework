@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 1.3466976286678998,
+    "zoomFactor": 1.1409189865007867,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -34,8 +34,8 @@
       "name": "NewText",
       "persistentUuid": "36dab26e-ee2c-4200-aac0-5477186d8956",
       "width": 231,
-      "x": 106,
-      "y": 95,
+      "x": 47,
+      "y": 108,
       "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
@@ -139,6 +139,33 @@
           },
           "parameters": [
             "NewText"
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SystemInfo::IsNativeDesktopApp"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetFullScreen"
+              },
+              "parameters": [
+                "",
+                "yes",
+                ""
+              ]
+            }
           ]
         }
       ]
