@@ -23,7 +23,7 @@
     "description": "",
     "author": "",
     "windowWidth": 320,
-    "windowHeight": 240,
+    "windowHeight": 224,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 20,
@@ -2497,102 +2497,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/Characters/Tails/Pushing5.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Characters\\Tails\\Pushing5.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/Characters/Tails/Pushing6.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\Characters\\Tails\\Pushing6.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\0.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\2.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\3.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\4.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/5.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\5.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/6.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\6.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/7.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\7.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/8.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\8.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/HUD/maincount/9.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "assets\\HUD\\9.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/HUD/lifecount/0.png",
         "kind": "image",
         "metadata": "",
@@ -2690,6 +2594,318 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/banner.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\banner.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/HUD/maincount/9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\HUD\\maincount\\9.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_A.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_A.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_B.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_B.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_C.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_C.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_D.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_D.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_E.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_E.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_F.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_F.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_G.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_G.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_H.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_H.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_I.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_I.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_J.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_J.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_K.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_K.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_L.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_L.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_M.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_M.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_N.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_N.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_O.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_O.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_P.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_P.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_Q.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_Q.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_R.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_R.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_S.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_S.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_T.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_T.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_U.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_U.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_V.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_V.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_W.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_W.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_X.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_X.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_Y.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_Y.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Letters/TitleCard_Z.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Letters\\TitleCard_Z.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Act1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Act1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/TitleCards/Act2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\TitleCards\\Act2.png",
+        "smoothed": false,
         "userAdded": false
       }
     ],
@@ -15014,6 +15230,11 @@
           "value": ""
         },
         {
+          "name": "LevelAct",
+          "type": "number",
+          "value": 1
+        },
+        {
           "name": "PlayingMusic",
           "type": "string",
           "value": ""
@@ -18833,7 +19054,7 @@
       "assetStoreId": "",
       "name": "ScoreCounter",
       "type": "HelperExtension::BitmapText",
-      "variant": "",
+      "variant": "NumbersHUD",
       "variables": [],
       "effects": [],
       "behaviors": [],
@@ -18842,393 +19063,13 @@
         "Alphabet": "0123456789",
         "InitialText": "0",
         "Alignment": "Right"
-      },
-      "childrenContent": {
-        "Letters": {
-          "adaptCollisionMaskAutomatically": true,
-          "updateIfNotVisible": false,
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\0.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\4.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\5.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\7.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\8.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    },
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "assets\\HUD\\9.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 1,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 1
-                          },
-                          {
-                            "x": 8,
-                            "y": 12
-                          },
-                          {
-                            "x": 1,
-                            "y": 12
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
       }
     },
     {
       "assetStoreId": "",
       "name": "MinuteCounter",
       "type": "HelperExtension::BitmapText",
-      "variant": "",
+      "variant": "NumbersHUD",
       "variables": [],
       "effects": [],
       "behaviors": [],
@@ -19623,7 +19464,7 @@
       "assetStoreId": "",
       "name": "SecondCounter",
       "type": "HelperExtension::BitmapText",
-      "variant": "",
+      "variant": "NumbersHUD",
       "variables": [],
       "effects": [],
       "behaviors": [],
@@ -20018,7 +19859,7 @@
       "assetStoreId": "",
       "name": "RingCounter",
       "type": "HelperExtension::BitmapText",
-      "variant": "",
+      "variant": "NumbersHUD",
       "variables": [],
       "effects": [],
       "behaviors": [],
@@ -20413,7 +20254,7 @@
       "assetStoreId": "",
       "name": "LifeCounter",
       "type": "HelperExtension::BitmapText",
-      "variant": "",
+      "variant": "NumbersLives",
       "variables": [],
       "effects": [],
       "behaviors": [],
@@ -20803,6 +20644,338 @@
           ]
         }
       }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "TitleCard_Banner",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "InProgress",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "OrigX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OrigY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DestY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpeedPerFrame",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "ExitFrame",
+          "type": "number",
+          "value": 1
+        },
+        {
+          "name": "WaitTime",
+          "type": "number",
+          "value": 90
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "TitleCard_Banner",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\TitleCards\\banner.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 0
+                      },
+                      {
+                        "x": 64,
+                        "y": 176
+                      },
+                      {
+                        "x": 0,
+                        "y": 176
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "TitleCard_ZoneName",
+      "type": "HelperExtension::BitmapText",
+      "variant": "TitleCard_ZoneName",
+      "variables": [
+        {
+          "name": "DestY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OrigY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OrigX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpeedPerFrame",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "ExitFrame",
+          "type": "number",
+          "value": 3
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Alignment": "Right",
+        "Alphabet": "abcdefghijklmnopqrstuvwxyz",
+        "InitialText": "",
+        "LineHeight": 24
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "TitleCard_Zone",
+      "type": "HelperExtension::BitmapText",
+      "variant": "TitleCard_ZoneName",
+      "variables": [
+        {
+          "name": "DestY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OrigY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OrigX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpeedPerFrame",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "ExitFrame",
+          "type": "number",
+          "value": 5
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "Alignment": "Right",
+        "Alphabet": "abcdefghijklmnopqrstuvwxyz",
+        "InitialText": "zone",
+        "LineHeight": 24
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "TitleCard_Act",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "DestY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OrigY",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OrigX",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "SpeedPerFrame",
+          "type": "number",
+          "value": 16
+        },
+        {
+          "name": "ExitFrame",
+          "type": "number",
+          "value": 7
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\TitleCards\\Act1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 49,
+                        "y": 0
+                      },
+                      {
+                        "x": 49,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\TitleCards\\Act2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 49,
+                        "y": 0
+                      },
+                      {
+                        "x": 49,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -21046,37 +21219,59 @@
         "folderName": "Interface",
         "children": [
           {
-            "objectName": "Score"
+            "folderName": "Title Cards",
+            "children": [
+              {
+                "objectName": "TitleCard_ZoneName"
+              },
+              {
+                "objectName": "TitleCard_Zone"
+              },
+              {
+                "objectName": "TitleCard_Banner"
+              },
+              {
+                "objectName": "TitleCard_Act"
+              }
+            ]
           },
           {
-            "objectName": "LivesIcon"
-          },
-          {
-            "objectName": "Time"
-          },
-          {
-            "objectName": "Rings"
-          },
-          {
-            "objectName": "HudColon"
+            "folderName": "HUD",
+            "children": [
+              {
+                "objectName": "LifeCounter"
+              },
+              {
+                "objectName": "RingCounter"
+              },
+              {
+                "objectName": "SecondCounter"
+              },
+              {
+                "objectName": "MinuteCounter"
+              },
+              {
+                "objectName": "ScoreCounter"
+              },
+              {
+                "objectName": "HudColon"
+              },
+              {
+                "objectName": "Rings"
+              },
+              {
+                "objectName": "Time"
+              },
+              {
+                "objectName": "LivesIcon"
+              },
+              {
+                "objectName": "Score"
+              }
+            ]
           },
           {
             "objectName": "FadeObject"
-          },
-          {
-            "objectName": "ScoreCounter"
-          },
-          {
-            "objectName": "MinuteCounter"
-          },
-          {
-            "objectName": "SecondCounter"
-          },
-          {
-            "objectName": "RingCounter"
-          },
-          {
-            "objectName": "LifeCounter"
           }
         ]
       }
@@ -21353,6 +21548,23 @@
         },
         {
           "name": "LayerSwapper"
+        }
+      ]
+    },
+    {
+      "name": "TitleCard",
+      "objects": [
+        {
+          "name": "TitleCard_Banner"
+        },
+        {
+          "name": "TitleCard_ZoneName"
+        },
+        {
+          "name": "TitleCard_Zone"
+        },
+        {
+          "name": "TitleCard_Act"
         }
       ]
     },

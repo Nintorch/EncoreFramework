@@ -132,12 +132,13 @@
               "actions": [
                 {
                   "type": {
-                    "value": "HelperExtension::Fade::FadeIn"
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
                     "FadeObject",
-                    "Fade",
-                    ""
+                    "Opacity",
+                    "=",
+                    "255"
                   ]
                 }
               ]
@@ -150,6 +151,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -159,6 +161,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12587,6 +12590,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -12625,6 +12629,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -14307,12 +14312,6 @@
                                                 ">=",
                                                 "CameraBorderTop() + 256"
                                               ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "BuiltinCommonInstructions::Once"
-                                              },
-                                              "parameters": []
                                             }
                                           ],
                                           "actions": [
@@ -14333,63 +14332,85 @@
                                               "conditions": [
                                                 {
                                                   "type": {
-                                                    "value": "NumberVariable"
+                                                    "value": "BuiltinCommonInstructions::Once"
                                                   },
-                                                  "parameters": [
-                                                    "PlayerValues.Lives",
-                                                    ">",
-                                                    "0"
-                                                  ]
+                                                  "parameters": []
                                                 }
                                               ],
-                                              "actions": [
+                                              "actions": [],
+                                              "events": [
                                                 {
-                                                  "type": {
-                                                    "value": "Wait"
-                                                  },
-                                                  "parameters": [
-                                                    "1"
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "PlayerValues.Lives",
+                                                        ">",
+                                                        "0"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Wait"
+                                                      },
+                                                      "parameters": [
+                                                        "1"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "FadeSoundVolume"
+                                                      },
+                                                      "parameters": [
+                                                        "",
+                                                        "32",
+                                                        "0",
+                                                        "2"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "HelperExtension::Fade::FadeOut"
+                                                      },
+                                                      "parameters": [
+                                                        "FadeObject",
+                                                        "Fade",
+                                                        ""
+                                                      ]
+                                                    }
                                                   ]
                                                 },
                                                 {
-                                                  "type": {
-                                                    "value": "FadeSoundVolume"
-                                                  },
-                                                  "parameters": [
-                                                    "",
-                                                    "32",
-                                                    "0",
-                                                    "2"
-                                                  ]
-                                                },
-                                                {
-                                                  "type": {
-                                                    "value": "HelperExtension::Fade::FadeOut"
-                                                  },
-                                                  "parameters": [
-                                                    "FadeObject",
-                                                    "Fade",
-                                                    ""
-                                                  ]
-                                                },
-                                                {
-                                                  "type": {
-                                                    "value": "HelperExtension::Fade::WaitFadeEnd"
-                                                  },
-                                                  "parameters": [
-                                                    "FadeObject",
-                                                    "Fade",
-                                                    ""
-                                                  ]
-                                                },
-                                                {
-                                                  "type": {
-                                                    "value": "Scene"
-                                                  },
-                                                  "parameters": [
-                                                    "",
-                                                    "CurrentSceneName()",
-                                                    ""
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "NumberVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "PlayerValues.Lives",
+                                                        "=",
+                                                        "0"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SetStringObjectVariable"
+                                                      },
+                                                      "parameters": [
+                                                        "Master_Level",
+                                                        "PlayingMusic",
+                                                        "=",
+                                                        "\"GameOver\""
+                                                      ]
+                                                    }
                                                   ]
                                                 }
                                               ]
@@ -14399,25 +14420,25 @@
                                               "conditions": [
                                                 {
                                                   "type": {
-                                                    "value": "NumberVariable"
+                                                    "value": "OpacityCapability::OpacityBehavior::Value"
                                                   },
                                                   "parameters": [
-                                                    "PlayerValues.Lives",
+                                                    "FadeObject",
+                                                    "Opacity",
                                                     "=",
-                                                    "0"
+                                                    "255"
                                                   ]
                                                 }
                                               ],
                                               "actions": [
                                                 {
                                                   "type": {
-                                                    "value": "SetStringObjectVariable"
+                                                    "value": "Scene"
                                                   },
                                                   "parameters": [
-                                                    "Master_Level",
-                                                    "PlayingMusic",
-                                                    "=",
-                                                    "\"GameOver\""
+                                                    "",
+                                                    "CurrentSceneName()",
+                                                    ""
                                                   ]
                                                 }
                                               ]
@@ -27655,6 +27676,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27770,6 +27792,729 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Title Card",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "TitleCard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TitleCard",
+                            "OrigX",
+                            "=",
+                            "TitleCard.X()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "TitleCard",
+                            "OrigY",
+                            "=",
+                            "TitleCard.Y()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::CompareNumbers"
+                      },
+                      "parameters": [
+                        "TimeFromStart()",
+                        ">",
+                        "0.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "TitleCard_Banner",
+                        "InProgress",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "TitleCard_Banner",
+                        "InProgress",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "HelperExtension::BitmapText::SetText"
+                          },
+                          "parameters": [
+                            "TitleCard_ZoneName",
+                            "=",
+                            "ToLowerCase(Master_Level.LevelName)",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                          },
+                          "parameters": [
+                            "TitleCard_Act",
+                            "Animation",
+                            "=",
+                            "Master_Level.LevelAct-1"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "TitleCard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreXY"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                "=",
+                                "TitleCard.OrigX",
+                                "=",
+                                "TitleCard.OrigY"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "TitleCard_Banner",
+                            "=",
+                            "TitleCard_Banner.DestY"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardWait\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardWait\"",
+                            ">=",
+                            "TitleCard_Banner.WaitTime/60"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::Value"
+                          },
+                          "parameters": [
+                            "FadeObject",
+                            "Opacity",
+                            "=",
+                            "255"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "HelperExtension::Fade::FadeIn"
+                          },
+                          "parameters": [
+                            "FadeObject",
+                            "Fade",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CompareTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardWait\"",
+                            ">=",
+                            "TitleCard_Banner.WaitTime/60"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::Value"
+                          },
+                          "parameters": [
+                            "FadeObject",
+                            "Opacity",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardWait2\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RemoveTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardWait\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "DisappearedEverything",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "TitleCard",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "DestX",
+                                "=",
+                                "TitleCard.DestX"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "DestY",
+                                "=",
+                                "TitleCard.DestY"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "SpeedPerFrame",
+                                "=",
+                                "TitleCard.SpeedPerFrame"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "ExitFrame",
+                                "=",
+                                "TitleCard.ExitFrame"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Disappearing",
+                                "False",
+                                "TitleCard.OrigX"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "CompareTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"TitleCardWait2\"",
+                                ">=",
+                                "ExitFrame/60"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Disappearing",
+                                "True",
+                                "TitleCard.OrigX"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Disappearing",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "DestX",
+                                "=",
+                                "TitleCard.OrigX"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "DestY",
+                                "=",
+                                "TitleCard.OrigY"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "SpeedPerFrame",
+                                "=",
+                                "TitleCard.SpeedPerFrame*2"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosX"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "!=",
+                                    "DestX"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "DisappearedEverything",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosY"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "!=",
+                                    "DestY"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "DisappearedEverything",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "Disappearing",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "DisappearedEverything",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                "<",
+                                "DestX"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                "=",
+                                "min(TitleCard.X()+SpeedPerFrame*60*TimeDelta(),DestX)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PosX"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                ">",
+                                "DestX"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreX"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                "=",
+                                "max(TitleCard.X()-SpeedPerFrame*60*TimeDelta(),DestX)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                "<",
+                                "DestY"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                "=",
+                                "min(TitleCard.Y()+SpeedPerFrame*60*TimeDelta(),DestY)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                ">",
+                                "DestY"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "TitleCard",
+                                "=",
+                                "max(TitleCard.Y()-SpeedPerFrame*60*TimeDelta(),DestY)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "DisappearedEverything",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "TitleCard_Banner",
+                            "InProgress",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "RemoveTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardWait2\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "DestX",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "DestY",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "SpeedPerFrame",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "ExitFrame",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "Disappearing",
+                      "type": "boolean",
+                      "value": false
+                    },
+                    {
+                      "name": "DisappearedEverything",
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -27779,6 +28524,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",

@@ -92,7 +92,7 @@
       "persistentUuid": "ddd1cb45-f9b8-4ffc-a137-1926624cb410",
       "width": 0,
       "x": 16,
-      "y": 216,
+      "y": 200,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -177,11 +177,116 @@
       "persistentUuid": "20f26d29-4fdb-49b3-8327-52865580844d",
       "width": 16,
       "x": 48,
-      "y": 224,
+      "y": 208,
       "zOrder": 15,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "TitleCard_Banner",
+      "persistentUuid": "c656f3d7-7874-4ef5-8807-189c859ac8c2",
+      "width": 0,
+      "x": 64,
+      "y": -176,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 64
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 64,
+      "height": 24,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "TitleCard_ZoneName",
+      "persistentUuid": "61eefa81-a63e-443c-a3fb-84436f85c021",
+      "width": 224,
+      "x": 328,
+      "y": 96,
+      "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "DestY",
+          "type": "number",
+          "value": 96
+        },
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 64
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "depth": 64,
+      "height": 24,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "TitleCard_Zone",
+      "persistentUuid": "beec88b9-b9dc-4c3d-b1af-22e5fc3ae3af",
+      "width": 72,
+      "x": 528,
+      "y": 128,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "DestY",
+          "type": "number",
+          "value": 128
+        },
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 216
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "TitleCard_Act",
+      "persistentUuid": "c66c4e73-d0be-4e09-94b2-c73a0be8f19f",
+      "width": 0,
+      "x": 600,
+      "y": 160,
+      "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "DestY",
+          "type": "number",
+          "value": 160
+        },
+        {
+          "name": "DestX",
+          "type": "number",
+          "value": 232
+        }
+      ]
     }
   ],
   "editionSettings": {
@@ -194,7 +299,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.3027678662016562,
+    "zoomFactor": 1.3921087172248643,
     "windowMask": false
   }
 }
