@@ -1,6 +1,7 @@
 {
   "author": "",
   "category": "",
+  "dimension": "",
   "extensionNamespace": "",
   "fullName": "Helper Extension",
   "gdevelopVersion": "",
@@ -64,12 +65,23 @@
       "objectGroups": []
     }
   ],
+  "eventsFunctionsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "functionName": "playMusicIntroLoop"
+      }
+    ]
+  },
   "eventsBasedBehaviors": [
     {
       "description": "",
       "fullName": "Parallax",
+      "helpPath": "",
+      "iconUrl": "",
       "name": "Parallax",
       "objectType": "TiledSpriteObject::TiledSprite",
+      "previewIconUrl": "",
       "eventsFunctions": [
         {
           "fullName": "",
@@ -156,6 +168,14 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "doStepPreEvents"
+          }
+        ]
+      },
       "propertyDescriptors": [
         {
           "value": "0",
@@ -190,13 +210,35 @@
           "name": "XOffset"
         }
       ],
-      "sharedPropertyDescriptors": []
+      "propertiesFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "propertyName": "XFactor"
+          },
+          {
+            "propertyName": "YFactor"
+          },
+          {
+            "propertyName": "XSpeed"
+          },
+          {
+            "propertyName": "YInit"
+          },
+          {
+            "propertyName": "XOffset"
+          }
+        ]
+      }
     },
     {
       "description": "",
       "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
       "name": "Player",
       "objectType": "",
+      "previewIconUrl": "",
       "eventsFunctions": [
         {
           "description": "Check if player's wall sensors are facing a wall",
@@ -363,14 +405,27 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "SensorWall"
+          }
+        ]
+      },
       "propertyDescriptors": [],
-      "sharedPropertyDescriptors": []
+      "propertiesFolderStructure": {
+        "folderName": "__ROOT"
+      }
     },
     {
       "description": "",
       "fullName": "Fade",
+      "helpPath": "",
+      "iconUrl": "",
       "name": "Fade",
       "objectType": "Sprite",
+      "previewIconUrl": "",
       "eventsFunctions": [
         {
           "fullName": "",
@@ -676,15 +731,41 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "doStepPreEvents"
+          },
+          {
+            "functionName": "onCreated"
+          },
+          {
+            "functionName": "FadeOut"
+          },
+          {
+            "functionName": "FadeIn"
+          }
+        ]
+      },
       "propertyDescriptors": [
         {
           "value": "",
           "type": "Choice",
           "label": "Fading type",
-          "extraInformation": [
-            "No fading",
-            "Fading in",
-            "Fading out"
+          "choices": [
+            {
+              "label": "No fading",
+              "value": "No fading"
+            },
+            {
+              "label": "Fading in",
+              "value": "Fading in"
+            },
+            {
+              "label": "Fading out",
+              "value": "Fading out"
+            }
           ],
           "hidden": true,
           "name": "FadingType"
@@ -696,7 +777,17 @@
           "name": "FadingSpeed"
         }
       ],
-      "sharedPropertyDescriptors": []
+      "propertiesFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "propertyName": "FadingType"
+          },
+          {
+            "propertyName": "FadingSpeed"
+          }
+        ]
+      }
     }
   ],
   "eventsBasedObjects": [
@@ -710,9 +801,12 @@
       "defaultName": "",
       "description": "",
       "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
       "isInnerAreaFollowingParentSize": true,
       "isUsingLegacyInstancesRenderer": false,
       "name": "BitmapText",
+      "previewIconUrl": "",
       "objects": [
         {
           "adaptCollisionMaskAutomatically": true,
@@ -751,6 +845,7 @@
           "ambientLightColorB": 200,
           "ambientLightColorG": 200,
           "ambientLightColorR": 200,
+          "camera2DPlaneMaxDrawingDistance": 5000,
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
@@ -794,6 +889,7 @@
           "initialVariables": []
         }
       ],
+      "editionSettings": {},
       "eventsFunctions": [
         {
           "fullName": "",
@@ -887,6 +983,7 @@
           "fullName": "",
           "functionType": "ActionWithOperator",
           "getterName": "Text",
+          "group": "BitmapText configuration",
           "name": "SetText",
           "sentence": "",
           "events": [
@@ -1298,6 +1395,25 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "doStepPostEvents"
+          },
+          {
+            "folderName": "BitmapText configuration",
+            "children": [
+              {
+                "functionName": "Text"
+              },
+              {
+                "functionName": "SetText"
+              }
+            ]
+          }
+        ]
+      },
       "propertyDescriptors": [
         {
           "value": "",
@@ -1309,10 +1425,19 @@
           "value": "Left",
           "type": "Choice",
           "label": "",
-          "extraInformation": [
-            "Left",
-            "Center",
-            "Right"
+          "choices": [
+            {
+              "label": "Left",
+              "value": "Left"
+            },
+            {
+              "label": "Center",
+              "value": "Center"
+            },
+            {
+              "label": "Right",
+              "value": "Right"
+            }
           ],
           "name": "Alignment"
         },
@@ -1342,6 +1467,29 @@
           "name": "Text"
         }
       ],
+      "propertiesFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "propertyName": "Alphabet"
+          },
+          {
+            "propertyName": "Alignment"
+          },
+          {
+            "propertyName": "SpaceWidth"
+          },
+          {
+            "propertyName": "LineHeight"
+          },
+          {
+            "propertyName": "InitialText"
+          },
+          {
+            "propertyName": "Text"
+          }
+        ]
+      },
       "variants": [
         {
           "areaMaxX": 64,
@@ -2338,6 +2486,7 @@
               "ambientLightColorB": 200,
               "ambientLightColorG": 200,
               "ambientLightColorR": 200,
+              "camera2DPlaneMaxDrawingDistance": 5000,
               "camera3DFarPlaneDistance": 10000,
               "camera3DFieldOfView": 45,
               "camera3DNearPlaneDistance": 3,
@@ -2380,7 +2529,8 @@
               "stringProperties": [],
               "initialVariables": []
             }
-          ]
+          ],
+          "editionSettings": {}
         },
         {
           "areaMaxX": 64,
@@ -2801,6 +2951,7 @@
               "ambientLightColorB": 200,
               "ambientLightColorG": 200,
               "ambientLightColorR": 200,
+              "camera2DPlaneMaxDrawingDistance": 5000,
               "camera3DFarPlaneDistance": 10000,
               "camera3DFieldOfView": 45,
               "camera3DNearPlaneDistance": 3,
@@ -2843,7 +2994,8 @@
               "stringProperties": [],
               "initialVariables": []
             }
-          ]
+          ],
+          "editionSettings": {}
         },
         {
           "areaMaxX": 64,
@@ -3264,6 +3416,7 @@
               "ambientLightColorB": 200,
               "ambientLightColorG": 200,
               "ambientLightColorR": 200,
+              "camera2DPlaneMaxDrawingDistance": 5000,
               "camera3DFarPlaneDistance": 10000,
               "camera3DFieldOfView": 45,
               "camera3DNearPlaneDistance": 3,
@@ -3306,7 +3459,8 @@
               "stringProperties": [],
               "initialVariables": []
             }
-          ]
+          ],
+          "editionSettings": {}
         }
       ]
     }

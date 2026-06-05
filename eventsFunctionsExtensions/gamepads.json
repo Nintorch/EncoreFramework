@@ -1,6 +1,7 @@
 {
   "author": "Bouh",
   "category": "Input",
+  "dimension": "",
   "extensionNamespace": "",
   "fullName": "Gamepads (controllers)",
   "gdevelopVersion": "",
@@ -2070,12 +2071,104 @@
       "objectGroups": []
     }
   ],
+  "eventsFunctionsFolderStructure": {
+    "folderName": "__ROOT",
+    "children": [
+      {
+        "functionName": "TriggerPressure"
+      },
+      {
+        "functionName": "StickForce"
+      },
+      {
+        "functionName": "StickRotationValue"
+      },
+      {
+        "functionName": "StickAngle"
+      },
+      {
+        "functionName": "AxisValue"
+      },
+      {
+        "functionName": "StickForceX"
+      },
+      {
+        "functionName": "StickForceY"
+      },
+      {
+        "functionName": "C_Button_released"
+      },
+      {
+        "functionName": "LastButtonID"
+      },
+      {
+        "functionName": "C_Any_Button_pressed"
+      },
+      {
+        "functionName": "LastButtonString"
+      },
+      {
+        "functionName": "GamepadCount"
+      },
+      {
+        "functionName": "C_Button_pressed"
+      },
+      {
+        "functionName": "Deadzone"
+      },
+      {
+        "functionName": "A_Set_deadzone"
+      },
+      {
+        "functionName": "C_Axis_pushed"
+      },
+      {
+        "functionName": "ConnectedGamepadsCount"
+      },
+      {
+        "functionName": "GamepadType"
+      },
+      {
+        "functionName": "C_Controller_type"
+      },
+      {
+        "functionName": "C_Controller_X_is_connected"
+      },
+      {
+        "functionName": "A_Vibrate_controller"
+      },
+      {
+        "functionName": "A_Advanced_Vibration_Controller"
+      },
+      {
+        "functionName": "A_Change_Vibration_Magnitude"
+      },
+      {
+        "functionName": "onFirstSceneLoaded"
+      },
+      {
+        "functionName": "onScenePostEvents"
+      },
+      {
+        "functionName": "C_any_button_released"
+      },
+      {
+        "functionName": "WeakVibrationMagnitude"
+      },
+      {
+        "functionName": "StrongVibrationMagnitude"
+      }
+    ]
+  },
   "eventsBasedBehaviors": [
     {
       "description": "Control a platformer character with a gamepad.",
       "fullName": "Platformer gamepad mapper",
+      "helpPath": "",
+      "iconUrl": "",
       "name": "PlatformerGamepadMapper",
       "objectType": "",
+      "previewIconUrl": "",
       "eventsFunctions": [
         {
           "fullName": "",
@@ -2832,6 +2925,14 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "doStepPreEvents"
+          }
+        ]
+      },
       "propertyDescriptors": [
         {
           "value": "",
@@ -2840,6 +2941,7 @@
           "extraInformation": [
             "PlatformBehavior::PlatformerObjectBehavior"
           ],
+          "choices": [],
           "name": "PlatformerCharacter"
         },
         {
@@ -2874,26 +2976,80 @@
           "type": "Choice",
           "label": "Jump button",
           "group": "Controls",
-          "extraInformation": [
-            "A or Cross",
-            "B or Circle",
-            "X or Square",
-            "Y or Triangle",
-            "LB or L1",
-            "RB or R1",
-            "LT or L2",
-            "RT or R2"
+          "choices": [
+            {
+              "label": "A or Cross",
+              "value": "A or Cross"
+            },
+            {
+              "label": "B or Circle",
+              "value": "B or Circle"
+            },
+            {
+              "label": "X or Square",
+              "value": "X or Square"
+            },
+            {
+              "label": "Y or Triangle",
+              "value": "Y or Triangle"
+            },
+            {
+              "label": "LB or L1",
+              "value": "LB or L1"
+            },
+            {
+              "label": "RB or R1",
+              "value": "RB or R1"
+            },
+            {
+              "label": "LT or L2",
+              "value": "LT or L2"
+            },
+            {
+              "label": "RT or R2",
+              "value": "RT or R2"
+            }
           ],
           "name": "JumpButton"
         }
       ],
-      "sharedPropertyDescriptors": []
+      "propertiesFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "propertyName": "PlatformerCharacter"
+          },
+          {
+            "propertyName": "GamepadIdentifier"
+          },
+          {
+            "folderName": "Controls",
+            "children": [
+              {
+                "propertyName": "UseArrows"
+              },
+              {
+                "propertyName": "UseLeftStick"
+              },
+              {
+                "propertyName": "UseRightStick"
+              },
+              {
+                "propertyName": "JumpButton"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "description": "Control a top-down character with a gamepad.",
       "fullName": "Top-down gamepad mapper",
+      "helpPath": "",
+      "iconUrl": "",
       "name": "TopDownGamepadMapper",
       "objectType": "",
+      "previewIconUrl": "",
       "eventsFunctions": [
         {
           "fullName": "",
@@ -3473,6 +3629,14 @@
           "objectGroups": []
         }
       ],
+      "eventsFunctionsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "functionName": "doStepPreEvents"
+          }
+        ]
+      },
       "propertyDescriptors": [
         {
           "value": "",
@@ -3481,6 +3645,7 @@
           "extraInformation": [
             "TopDownMovementBehavior::TopDownMovementBehavior"
           ],
+          "choices": [],
           "name": "TopDownMovement"
         },
         {
@@ -3515,15 +3680,51 @@
           "type": "Choice",
           "label": "Stick mode",
           "group": "Controls",
-          "extraInformation": [
-            "Analog",
-            "360°",
-            "8 Directions"
+          "choices": [
+            {
+              "label": "Analog",
+              "value": "Analog"
+            },
+            {
+              "label": "360°",
+              "value": "360°"
+            },
+            {
+              "label": "8 Directions",
+              "value": "8 Directions"
+            }
           ],
           "name": "StickMode"
         }
       ],
-      "sharedPropertyDescriptors": []
+      "propertiesFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "propertyName": "TopDownMovement"
+          },
+          {
+            "propertyName": "GamepadIdentifier"
+          },
+          {
+            "folderName": "Controls",
+            "children": [
+              {
+                "propertyName": "UseArrows"
+              },
+              {
+                "propertyName": "UseLeftStick"
+              },
+              {
+                "propertyName": "UseRightStick"
+              },
+              {
+                "propertyName": "StickMode"
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "eventsBasedObjects": []

@@ -294,12 +294,16 @@
     "gridType": "rectangular",
     "gridWidth": 8,
     "gridHeight": 8,
+    "gridDepth": 32,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
+    "gridOffsetZ": 0,
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
     "zoomFactor": 1.3921087172248643,
-    "windowMask": false
+    "windowMask": false,
+    "selectedLayer": "",
+    "gameEditorMode": "instances-editor"
   }
 }

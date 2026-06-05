@@ -1,9 +1,9 @@
 {
   "firstLayout": "WebPressStart",
   "gdVersion": {
-    "build": 239,
+    "build": 271,
     "major": 5,
-    "minor": 5,
+    "minor": 6,
     "revision": 0
   },
   "properties": {
@@ -18,6 +18,7 @@
     "scaleMode": "nearest",
     "sizeOnStartupMode": "",
     "templateSlug": "",
+    "useDeprecatedZeroAsDefaultStringVariable": true,
     "version": "1.0.0",
     "name": "Encore Framework",
     "description": "",
@@ -2908,8 +2909,7 @@
         "smoothed": false,
         "userAdded": false
       }
-    ],
-    "resourceFolders": []
+    ]
   },
   "objects": [
     {
@@ -12393,6 +12393,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Monitor10Rings",
+      "persistentUuid": "3de069df-63c3-4067-a1b1-f86c97c79756",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -12612,6 +12613,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "MonitorSpeedShoes",
+      "persistentUuid": "aa26a2fe-4f92-40fb-934b-4f9cfa4dc396",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -12685,6 +12687,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "MonitorExtraLife",
+      "persistentUuid": "c642a42c-75ca-490b-ab8a-7df62fdfaa1d",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -15211,6 +15214,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Master_Level",
+      "persistentUuid": "2d9f0036-752c-49c8-a8ba-0526b412937d",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -15263,6 +15267,11 @@
           "name": "LevelStarted",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "ExtraLifeRingsCheck",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
