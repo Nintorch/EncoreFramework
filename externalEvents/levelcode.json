@@ -222,7 +222,7 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "DepartScene"
+                                "value": "SceneJustBegins"
                               },
                               "parameters": [
                                 ""
@@ -232,7 +232,7 @@
                           "actions": [
                             {
                               "type": {
-                                "value": "Cache"
+                                "value": "Hide"
                               },
                               "parameters": [
                                 "Player"
@@ -486,7 +486,7 @@
                                 },
                                 {
                                   "type": {
-                                    "value": "Cache"
+                                    "value": "Hide"
                                   },
                                   "parameters": [
                                     "PlayerVariablesSensors"
@@ -545,7 +545,7 @@
                               "actions": [
                                 {
                                   "type": {
-                                    "value": "Montre"
+                                    "value": "Show"
                                   },
                                   "parameters": [
                                     "PlayerVariablesSensors",
@@ -554,7 +554,7 @@
                                 },
                                 {
                                   "type": {
-                                    "value": "ChangePlan"
+                                    "value": "SetZOrder"
                                   },
                                   "parameters": [
                                     "PlayerVariablesSensors",
@@ -763,7 +763,7 @@
                                         },
                                         {
                                           "type": {
-                                            "value": "ChangePlan"
+                                            "value": "SetZOrder"
                                           },
                                           "parameters": [
                                             "PlayerSkin_TailsTails",
@@ -791,7 +791,7 @@
                                           "actions": [
                                             {
                                               "type": {
-                                                "value": "Cache"
+                                                "value": "Hide"
                                               },
                                               "parameters": [
                                                 "PlayerSkin_TailsTails"
@@ -872,7 +872,7 @@
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "ChangePlan"
+                                            "value": "SetZOrder"
                                           },
                                           "parameters": [
                                             "PlayerSkin",
@@ -882,7 +882,7 @@
                                         },
                                         {
                                           "type": {
-                                            "value": "ChangePlan"
+                                            "value": "SetZOrder"
                                           },
                                           "parameters": [
                                             "PlayerSkin_TailsTails",
@@ -2000,6 +2000,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Keyboard",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -3265,7 +3266,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Partner AI",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -3348,7 +3348,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetX",
                                         "=",
-                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset/60/TimeDelta())*2-2]"
+                                        "Player_MovementValues.PositionXRecord[Player_MovementValues.VariableChildCount(PositionXRecord)-floor(PartnerAIOffset/60/TimeDelta())-1]"
                                       ]
                                     },
                                     {
@@ -3358,7 +3358,7 @@
                                       "parameters": [
                                         "CPUPlayerTargetY",
                                         "=",
-                                        "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(PartnerAIOffset/60/TimeDelta())*2-1]"
+                                        "Player_MovementValues.PositionYRecord[Player_MovementValues.VariableChildCount(PositionYRecord)-floor(PartnerAIOffset/60/TimeDelta())-1]"
                                       ]
                                     },
                                     {
@@ -11666,7 +11666,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Post-movement Code",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11675,26 +11674,6 @@
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
-                                {
-                                  "type": {
-                                    "value": "PushNumberToObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "PositionRecord",
-                                    "Player_MovementValues.FloatX"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "PushNumberToObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "PositionRecord",
-                                    "Player_MovementValues.FloatY"
-                                  ]
-                                },
                                 {
                                   "type": {
                                     "value": "PushNumberToObjectVariable"
@@ -11713,44 +11692,6 @@
                                     "Player_MovementValues",
                                     "PositionYRecord",
                                     "Player_MovementValues.FloatY"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "ObjectVariableChildCount"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "PositionRecord",
-                                    ">",
-                                    "60*2"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ObjectVariableRemoveAt"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "PositionRecord",
-                                    "0"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ObjectVariableRemoveAt"
-                                  },
-                                  "parameters": [
-                                    "Player",
-                                    "PositionRecord",
-                                    "0"
                                   ]
                                 }
                               ]
@@ -22643,6 +22584,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "1-Up Rewards",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -22655,116 +22597,135 @@
                                     "value": "NumberObjectVariable"
                                   },
                                   "parameters": [
-                                    "Master_Level",
-                                    "ExtraLifeRingsCheck",
+                                    "Player",
+                                    "PlayerID",
                                     "=",
                                     "0"
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Master_Level",
-                                    "RingCount",
-                                    ">=",
-                                    "100"
-                                  ]
                                 }
                               ],
-                              "actions": [
+                              "actions": [],
+                              "events": [
                                 {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "PlayerValues.Lives",
-                                    "+",
-                                    "1"
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "ExtraLifeRingsCheck",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "RingCount",
+                                        ">=",
+                                        "100"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "PlayerValues.Lives",
+                                        "+",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "ExtraLifeMusic",
+                                        "True",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "ExtraLifeRingsCheck",
+                                        "=",
+                                        "1"
+                                      ]
+                                    }
                                   ]
                                 },
                                 {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Master_Level",
-                                    "ExtraLifeMusic",
-                                    "True",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Master_Level",
-                                    "ExtraLifeRingsCheck",
-                                    "=",
-                                    "1"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Master_Level",
-                                    "ExtraLifeRingsCheck",
-                                    "=",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "NumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Master_Level",
-                                    "RingCount",
-                                    ">=",
-                                    "200"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "SetNumberVariable"
-                                  },
-                                  "parameters": [
-                                    "PlayerValues.Lives",
-                                    "+",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetBooleanObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Master_Level",
-                                    "ExtraLifeMusic",
-                                    "True",
-                                    "1"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "SetNumberObjectVariable"
-                                  },
-                                  "parameters": [
-                                    "Master_Level",
-                                    "ExtraLifeRingsCheck",
-                                    "=",
-                                    "2"
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "ExtraLifeRingsCheck",
+                                        "=",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "RingCount",
+                                        ">=",
+                                        "200"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberVariable"
+                                      },
+                                      "parameters": [
+                                        "PlayerValues.Lives",
+                                        "+",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetBooleanObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "ExtraLifeMusic",
+                                        "True",
+                                        "1"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Master_Level",
+                                        "ExtraLifeRingsCheck",
+                                        "=",
+                                        "2"
+                                      ]
+                                    }
                                   ]
                                 }
                               ]
@@ -23289,6 +23250,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Monitors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -26208,7 +26170,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -26258,7 +26219,7 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "DepartScene"
+                            "value": "SceneJustBegins"
                           },
                           "parameters": [
                             ""
@@ -26417,7 +26378,7 @@
                             "Master_Camera",
                             "CameraTargetX",
                             "=",
-                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Master_Camera.CameraLagTimer*60)*2-2]"
+                            "Player_MovementValues.PositionXRecord[Player_MovementValues.VariableChildCount(PositionXRecord)-floor(Master_Camera.CameraLagTimer*60)-1]"
                           ]
                         },
                         {
@@ -26428,7 +26389,7 @@
                             "Master_Camera",
                             "CameraTargetY",
                             "=",
-                            "Player.PositionRecord[Player.VariableChildCount(PositionRecord)-floor(Master_Camera.CameraLagTimer*60)*2-1]+16"
+                            "Player_MovementValues.PositionYRecord[Player_MovementValues.VariableChildCount(PositionYRecord)-floor(Master_Camera.CameraLagTimer*60)-1]+16"
                           ]
                         },
                         {
@@ -27825,7 +27786,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",

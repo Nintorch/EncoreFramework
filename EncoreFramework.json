@@ -2916,6 +2916,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Player",
+      "persistentUuid": "019e83a9-25e9-400e-9b3e-caea57b6d0d3",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -2923,12 +2924,6 @@
           "name": "PlayerID",
           "type": "number",
           "value": 0
-        },
-        {
-          "folded": true,
-          "name": "PositionRecord",
-          "type": "array",
-          "children": []
         },
         {
           "name": "SkidTimerLeft",
@@ -14496,6 +14491,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Player_MovementValues",
+      "persistentUuid": "6bb3f39c-2d91-44e5-8867-781f2f222ebe",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
