@@ -20855,7 +20855,7 @@
         {
           "name": "EnterFrame",
           "type": "number",
-          "value": 13
+          "value": 20
         }
       ],
       "effects": [],
@@ -20908,7 +20908,7 @@
         {
           "name": "EnterFrame",
           "type": "number",
-          "value": 23
+          "value": 30
         }
       ],
       "effects": [],
