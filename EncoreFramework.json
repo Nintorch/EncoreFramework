@@ -8163,6 +8163,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "LivesIcon",
+      "persistentUuid": "1aa9fcd8-8010-4b9f-9f84-9f587c5bb2b3",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -20659,6 +20660,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "TitleCard_Banner",
+      "persistentUuid": "f8d961e3-9a26-4e9a-b70a-8fb9c7a0b8ce",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -20701,6 +20703,11 @@
           "name": "WaitTime",
           "type": "number",
           "value": 90
+        },
+        {
+          "name": "EnterFrame",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -20759,6 +20766,7 @@
     {
       "assetStoreId": "",
       "name": "TitleCard_ZoneName",
+      "persistentUuid": "d25a7804-7fff-4dd7-a8f1-a9ab23e7d8d1",
       "type": "HelperExtension::BitmapText",
       "variant": "TitleCard_ZoneName",
       "variables": [
@@ -20791,6 +20799,11 @@
           "name": "ExitFrame",
           "type": "number",
           "value": 3
+        },
+        {
+          "name": "EnterFrame",
+          "type": "number",
+          "value": 3
         }
       ],
       "effects": [],
@@ -20805,6 +20818,7 @@
     {
       "assetStoreId": "",
       "name": "TitleCard_Zone",
+      "persistentUuid": "787e17c3-55f9-454e-842f-2933d604bf33",
       "type": "HelperExtension::BitmapText",
       "variant": "TitleCard_ZoneName",
       "variables": [
@@ -20837,6 +20851,11 @@
           "name": "ExitFrame",
           "type": "number",
           "value": 5
+        },
+        {
+          "name": "EnterFrame",
+          "type": "number",
+          "value": 13
         }
       ],
       "effects": [],
@@ -20852,6 +20871,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "TitleCard_Act",
+      "persistentUuid": "f3eba4af-b283-4197-ac9c-c5dbb94df812",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -20884,6 +20904,11 @@
           "name": "ExitFrame",
           "type": "number",
           "value": 7
+        },
+        {
+          "name": "EnterFrame",
+          "type": "number",
+          "value": 23
         }
       ],
       "effects": [],

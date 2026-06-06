@@ -3266,6 +3266,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Partner AI",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -11666,6 +11667,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Post-movement Code",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -26170,6 +26172,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27786,6 +27789,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27907,7 +27911,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Title Card",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -28040,6 +28043,15 @@
                             "Animation",
                             "=",
                             "Master_Level.LevelAct-1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardStart\""
                           ]
                         }
                       ],
@@ -28297,8 +28309,46 @@
                                 "value": "SetBooleanVariable"
                               },
                               "parameters": [
+                                "Appearing",
+                                "False",
+                                "TitleCard.OrigX"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
                                 "Disappearing",
                                 "False",
+                                "TitleCard.OrigX"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "CompareTimer"
+                              },
+                              "parameters": [
+                                "",
+                                "\"TitleCardStart\"",
+                                ">=",
+                                "TitleCard.EnterFrame/60"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "Appearing",
+                                "True",
                                 "TitleCard.OrigX"
                               ]
                             }
@@ -28467,105 +28517,141 @@
                           "conditions": [
                             {
                               "type": {
-                                "value": "PosX"
+                                "value": "BuiltinCommonInstructions::Or"
                               },
-                              "parameters": [
-                                "TitleCard",
-                                "<",
-                                "DestX"
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "Appearing",
+                                    "True",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "Disappearing",
+                                    "True",
+                                    ""
+                                  ]
+                                }
                               ]
                             }
                           ],
-                          "actions": [
+                          "actions": [],
+                          "events": [
                             {
-                              "type": {
-                                "value": "SetX"
-                              },
-                              "parameters": [
-                                "TitleCard",
-                                "=",
-                                "min(TitleCard.X()+SpeedPerFrame*60*TimeDelta(),DestX)"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosX"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "<",
+                                    "DestX"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetX"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "=",
+                                    "min(TitleCard.X()+SpeedPerFrame*60*TimeDelta(),DestX)"
+                                  ]
+                                }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                            },
                             {
-                              "type": {
-                                "value": "PosX"
-                              },
-                              "parameters": [
-                                "TitleCard",
-                                ">",
-                                "DestX"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosX"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    ">",
+                                    "DestX"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetX"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "=",
+                                    "max(TitleCard.X()-SpeedPerFrame*60*TimeDelta(),DestX)"
+                                  ]
+                                }
                               ]
-                            }
-                          ],
-                          "actions": [
+                            },
                             {
-                              "type": {
-                                "value": "SetX"
-                              },
-                              "parameters": [
-                                "TitleCard",
-                                "=",
-                                "max(TitleCard.X()-SpeedPerFrame*60*TimeDelta(),DestX)"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosY"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "<",
+                                    "DestY"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetY"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "=",
+                                    "min(TitleCard.Y()+SpeedPerFrame*60*TimeDelta(),DestY)"
+                                  ]
+                                }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                            },
                             {
-                              "type": {
-                                "value": "PosY"
-                              },
-                              "parameters": [
-                                "TitleCard",
-                                "<",
-                                "DestY"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetY"
-                              },
-                              "parameters": [
-                                "TitleCard",
-                                "=",
-                                "min(TitleCard.Y()+SpeedPerFrame*60*TimeDelta(),DestY)"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "PosY"
-                              },
-                              "parameters": [
-                                "TitleCard",
-                                ">",
-                                "DestY"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetY"
-                              },
-                              "parameters": [
-                                "TitleCard",
-                                "=",
-                                "max(TitleCard.Y()-SpeedPerFrame*60*TimeDelta(),DestY)"
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "PosY"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    ">",
+                                    "DestY"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetY"
+                                  },
+                                  "parameters": [
+                                    "TitleCard",
+                                    "=",
+                                    "max(TitleCard.Y()-SpeedPerFrame*60*TimeDelta(),DestY)"
+                                  ]
+                                }
                               ]
                             }
                           ]
@@ -28618,6 +28704,15 @@
                             "",
                             "\"TitleCardWait2\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "RemoveTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"TitleCardStart\""
+                          ]
                         }
                       ]
                     }
@@ -28645,6 +28740,11 @@
                     },
                     {
                       "name": "Disappearing",
+                      "type": "boolean",
+                      "value": false
+                    },
+                    {
+                      "name": "Appearing",
                       "type": "boolean",
                       "value": false
                     },
