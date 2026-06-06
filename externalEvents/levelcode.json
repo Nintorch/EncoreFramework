@@ -611,7 +611,7 @@
                                   "actions": [
                                     {
                                       "type": {
-                                        "value": "SetNumberObjectVariable"
+                                        "value": "SetStringObjectVariable"
                                       },
                                       "parameters": [
                                         "Player_MovementValues",
@@ -640,7 +640,7 @@
                                   "actions": [
                                     {
                                       "type": {
-                                        "value": "SetNumberObjectVariable"
+                                        "value": "SetStringObjectVariable"
                                       },
                                       "parameters": [
                                         "Player_MovementValues",
@@ -656,13 +656,13 @@
                                       "conditions": [
                                         {
                                           "type": {
-                                            "value": "NumberObjectVariable"
+                                            "value": "StringObjectVariable"
                                           },
                                           "parameters": [
                                             "Player_MovementValues",
                                             "Character",
                                             "=",
-                                            "-1"
+                                            "\"\""
                                           ]
                                         }
                                       ],
@@ -703,7 +703,7 @@
                                       "parameters": [
                                         "",
                                         "PlayerSkin",
-                                        "PlayerSkins[Player_MovementValues.Character]",
+                                        "\"PlayerSkin_\" + Player_MovementValues.Character",
                                         "Player.X()",
                                         "Player.Y()",
                                         ""
@@ -778,13 +778,13 @@
                                           "conditions": [
                                             {
                                               "type": {
-                                                "value": "NumberObjectVariable"
+                                                "value": "StringObjectVariable"
                                               },
                                               "parameters": [
                                                 "Player_MovementValues",
                                                 "Character",
                                                 "!=",
-                                                "1"
+                                                "\"Tails\""
                                               ]
                                             }
                                           ],
@@ -831,7 +831,7 @@
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "AnimatableCapability::AnimatableBehavior::SetIndex"
+                                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
                                           },
                                           "parameters": [
                                             "LivesIcon",
@@ -889,26 +889,6 @@
                                             "=",
                                             "PlayerSkin.ZOrder()-1"
                                           ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "variables": [
-                                    {
-                                      "name": "PlayerSkins",
-                                      "type": "array",
-                                      "children": [
-                                        {
-                                          "type": "string",
-                                          "value": "PlayerSkin_Sonic"
-                                        },
-                                        {
-                                          "type": "string",
-                                          "value": "PlayerSkin_Tails"
-                                        },
-                                        {
-                                          "type": "string",
-                                          "value": "PlayerSkin_Knuckles"
                                         }
                                       ]
                                     }
@@ -1302,13 +1282,13 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "StringObjectVariable"
                                   },
                                   "parameters": [
                                     "Player_MovementValues",
                                     "Character",
                                     "=",
-                                    "1"
+                                    "\"Tails\""
                                   ]
                                 }
                               ],
@@ -1364,13 +1344,13 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "StringObjectVariable"
                                   },
                                   "parameters": [
                                     "Player_MovementValues",
                                     "Character",
                                     "=",
-                                    "2"
+                                    "\"Knuckles\""
                                   ]
                                 }
                               ],
@@ -1620,13 +1600,13 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "StringObjectVariable"
                                   },
                                   "parameters": [
                                     "Player_MovementValues",
                                     "Character",
                                     "=",
-                                    "1"
+                                    "\"Tails\""
                                   ]
                                 },
                                 {
@@ -4176,13 +4156,13 @@
                               "conditions": [
                                 {
                                   "type": {
-                                    "value": "NumberObjectVariable"
+                                    "value": "StringObjectVariable"
                                   },
                                   "parameters": [
                                     "Player_MovementValues",
                                     "Character",
                                     "=",
-                                    "1"
+                                    "\"Tails\""
                                   ]
                                 }
                               ],
@@ -12548,7 +12528,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Player Actions",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -16623,13 +16602,13 @@
                                               "conditions": [
                                                 {
                                                   "type": {
-                                                    "value": "NumberObjectVariable"
+                                                    "value": "StringObjectVariable"
                                                   },
                                                   "parameters": [
                                                     "Player_MovementValues",
                                                     "Character",
                                                     "=",
-                                                    "1"
+                                                    "\"Tails\""
                                                   ]
                                                 },
                                                 {
@@ -16746,13 +16725,13 @@
                                               "conditions": [
                                                 {
                                                   "type": {
-                                                    "value": "NumberObjectVariable"
+                                                    "value": "StringObjectVariable"
                                                   },
                                                   "parameters": [
                                                     "Player_MovementValues",
                                                     "Character",
                                                     "=",
-                                                    "2"
+                                                    "\"Knuckles\""
                                                   ]
                                                 }
                                               ],
@@ -16870,7 +16849,7 @@
                                               "conditions": [
                                                 {
                                                   "type": {
-                                                    "value": "AjoutObjConcern"
+                                                    "value": "PickAllInstances"
                                                   },
                                                   "parameters": [
                                                     "",
@@ -16918,13 +16897,13 @@
                                                     },
                                                     {
                                                       "type": {
-                                                        "value": "NumberObjectVariable"
+                                                        "value": "StringObjectVariable"
                                                       },
                                                       "parameters": [
                                                         "Player_MovementValues",
                                                         "Character",
                                                         "=",
-                                                        "1"
+                                                        "\"Tails\""
                                                       ]
                                                     },
                                                     {
@@ -20003,13 +19982,13 @@
                                     },
                                     {
                                       "type": {
-                                        "value": "NumberObjectVariable"
+                                        "value": "StringObjectVariable"
                                       },
                                       "parameters": [
                                         "Player_MovementValues",
                                         "Character",
                                         "=",
-                                        "1"
+                                        "\"Tails\""
                                       ]
                                     }
                                   ],
@@ -20405,13 +20384,13 @@
                                       "conditions": [
                                         {
                                           "type": {
-                                            "value": "NumberObjectVariable"
+                                            "value": "StringObjectVariable"
                                           },
                                           "parameters": [
                                             "Player_MovementValues",
                                             "Character",
                                             "=",
-                                            "0"
+                                            "\"Sonic\""
                                           ]
                                         }
                                       ],
@@ -22180,13 +22159,13 @@
                                   "conditions": [
                                     {
                                       "type": {
-                                        "value": "NumberObjectVariable"
+                                        "value": "StringObjectVariable"
                                       },
                                       "parameters": [
                                         "Player_MovementValues",
                                         "Character",
                                         "=",
-                                        "1"
+                                        "\"Tails\""
                                       ]
                                     },
                                     {
@@ -22240,15 +22219,70 @@
                                         "=",
                                         "Player_MovementValues.FloatY-Player_Others.PreviousY"
                                       ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "DiffX",
+                                            "=",
+                                            "0"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "NumberVariable"
+                                          },
+                                          "parameters": [
+                                            "DiffY",
+                                            "=",
+                                            "0"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "DiffX",
+                                            "=",
+                                            "Player_MovementValues.XSpeed"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetNumberVariable"
+                                          },
+                                          "parameters": [
+                                            "DiffY",
+                                            "=",
+                                            "Player_MovementValues.YSpeed"
+                                          ]
+                                        }
+                                      ]
                                     },
                                     {
-                                      "type": {
-                                        "value": "SetAngle"
-                                      },
-                                      "parameters": [
-                                        "PlayerSkin_TailsTails",
-                                        "=",
-                                        "round(AngleBetweenPositions(0, 0, DiffX, DiffY)/RotationSnap)*RotationSnap"
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetAngle"
+                                          },
+                                          "parameters": [
+                                            "PlayerSkin_TailsTails",
+                                            "=",
+                                            "round(AngleBetweenPositions(0, 0, DiffX, DiffY)/RotationSnap)*RotationSnap"
+                                          ]
+                                        }
                                       ]
                                     }
                                   ],
@@ -22301,7 +22335,7 @@
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "Cache"
+                                            "value": "Hide"
                                           },
                                           "parameters": [
                                             "PlayerSkin"
@@ -22309,7 +22343,7 @@
                                         },
                                         {
                                           "type": {
-                                            "value": "Cache"
+                                            "value": "Hide"
                                           },
                                           "parameters": [
                                             "PlayerSkin_TailsTails"
@@ -22334,7 +22368,7 @@
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "Montre"
+                                            "value": "Show"
                                           },
                                           "parameters": [
                                             "PlayerSkin",
@@ -22343,7 +22377,7 @@
                                         },
                                         {
                                           "type": {
-                                            "value": "Montre"
+                                            "value": "Show"
                                           },
                                           "parameters": [
                                             "PlayerSkin_TailsTails",
@@ -22372,7 +22406,7 @@
                                   "actions": [
                                     {
                                       "type": {
-                                        "value": "Montre"
+                                        "value": "Show"
                                       },
                                       "parameters": [
                                         "PlayerSkin",
@@ -22381,7 +22415,7 @@
                                     },
                                     {
                                       "type": {
-                                        "value": "Montre"
+                                        "value": "Show"
                                       },
                                       "parameters": [
                                         "PlayerSkin_TailsTails",
@@ -22395,20 +22429,20 @@
                                   "conditions": [
                                     {
                                       "type": {
-                                        "value": "NumberObjectVariable"
+                                        "value": "StringObjectVariable"
                                       },
                                       "parameters": [
                                         "Player_MovementValues",
                                         "Character",
                                         "!=",
-                                        "1"
+                                        "\"Tails\""
                                       ]
                                     }
                                   ],
                                   "actions": [
                                     {
                                       "type": {
-                                        "value": "Cache"
+                                        "value": "Hide"
                                       },
                                       "parameters": [
                                         "PlayerSkin_TailsTails"
@@ -22477,7 +22511,7 @@
                                     },
                                     {
                                       "type": {
-                                        "value": "MettreXY"
+                                        "value": "SetXY"
                                       },
                                       "parameters": [
                                         "PlayerSkin",
@@ -22489,7 +22523,7 @@
                                     },
                                     {
                                       "type": {
-                                        "value": "MettreXY"
+                                        "value": "SetXY"
                                       },
                                       "parameters": [
                                         "PlayerSkin_TailsTails",
@@ -22555,7 +22589,7 @@
                                     },
                                     {
                                       "type": {
-                                        "value": "MettreXY"
+                                        "value": "SetXY"
                                       },
                                       "parameters": [
                                         "Player",
@@ -22747,6 +22781,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Common Objects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -23420,27 +23455,7 @@
                                     "MonitorIcon",
                                     "Animation",
                                     "=",
-                                    "PlayerAnimations[Player_MovementValues.Character]"
-                                  ]
-                                }
-                              ],
-                              "variables": [
-                                {
-                                  "name": "PlayerAnimations",
-                                  "type": "array",
-                                  "children": [
-                                    {
-                                      "type": "string",
-                                      "value": "Extra Life Sonic"
-                                    },
-                                    {
-                                      "type": "string",
-                                      "value": "Extra Life Tails"
-                                    },
-                                    {
-                                      "type": "string",
-                                      "value": "Extra Life Knuckles"
-                                    }
+                                    "\"Extra Life \" + Player_MovementValues.Character"
                                   ]
                                 }
                               ]
@@ -26172,7 +26187,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Camera",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27622,7 +27636,7 @@
                             },
                             {
                               "type": {
-                                "value": "MettreXY"
+                                "value": "SetXY"
                               },
                               "parameters": [
                                 "InvincibilityStar",
@@ -27911,6 +27925,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Title Card",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",

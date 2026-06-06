@@ -14498,8 +14498,8 @@
       "variables": [
         {
           "name": "Character",
-          "type": "number",
-          "value": 0
+          "type": "string",
+          "value": ""
         },
         {
           "name": "XSpeed",
@@ -21625,14 +21625,14 @@
     {
       "folded": true,
       "name": "CharacterStartMain",
-      "type": "number",
-      "value": 0
+      "type": "string",
+      "value": "Sonic"
     },
     {
       "folded": true,
       "name": "CharacterStartPartner",
-      "type": "number",
-      "value": 1
+      "type": "string",
+      "value": "Tails"
     },
     {
       "name": "Level",
