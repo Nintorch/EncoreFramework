@@ -27210,7 +27210,7 @@
                         "textG": 0,
                         "textR": 0
                       },
-                      "comment": "I used Sonic 2's source code as a reference while writing this code"
+                      "comment": "Sonic 2's source code was used as a reference while writing this code"
                     },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
@@ -27354,7 +27354,7 @@
                                     "InvincibilityStar",
                                     "StarTableOffset",
                                     "=",
-                                    "2"
+                                    "4"
                                   ]
                                 },
                                 {
@@ -27598,7 +27598,7 @@
                             "textG": 0,
                             "textR": 0
                           },
-                          "comment": "The original code didn't calculate the offsets on the fly but we're not making a game for Sega Genesis here so we can calculate that here"
+                          "comment": "The original code didn't calculate the offsets on the fly but we're not making a game for Sega Genesis here so we can calculate that"
                         },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
