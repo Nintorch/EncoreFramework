@@ -9,6 +9,8 @@ Check out my [TODO list](https://ru.yougile.com/board/c65u4diypzj8)
 - For commercial usage it's required to ***remove any code and other assets that are copyrighted by Sonic Team***,
 in which case this framework becomes **MIT licensed**. Please contact a professional lawyer if you have any other questions
 regarding commercial usage of this software.
+- You are allowed to use and share (redistribute) the framework, its source code, and assets as long as you follow
+the usage terms described above.
 
 ## Credits
 - [Sonic Physics Guide](https://info.sonicretro.org/Sonic_Physics_Guide)
