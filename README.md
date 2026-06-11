@@ -6,6 +6,7 @@ Check out my [TODO list](https://ru.yougile.com/board/c65u4diypzj8)
 ## Usage terms
 - For fan games: this framework is only allowed to be used for ***free, non-commercial, and educational purposes only***
 (due to the characters, sprites, and some parts of the code being copyrighted by SEGA and Sonic Team).
+Credit is required.
 - For commercial usage it's required to ***remove any code and other assets that are copyrighted by Sonic Team***,
 in which case this framework becomes **MIT licensed**. Please contact a professional lawyer if you have any other questions
 regarding commercial usage of this software.
