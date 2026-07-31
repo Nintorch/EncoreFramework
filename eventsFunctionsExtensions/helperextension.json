@@ -403,6 +403,50 @@
             }
           ],
           "objectGroups": []
+        },
+        {
+          "fullName": "Rebound after destroy",
+          "functionType": "Action",
+          "name": "DestroyRebound",
+          "sentence": "_PARAM0_ with _PARAM2_: Rebound after destroying an object",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Player_MovementValues",
+                    "YSpeed",
+                    "=",
+                    "-Player_MovementValues.Variable(YSpeed) - sign(Player_MovementValues.Variable(YSpeed))"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "description": "Object",
+              "name": "Object",
+              "type": "object"
+            },
+            {
+              "description": "Behavior",
+              "name": "Behavior",
+              "supplementaryInformation": "HelperExtension::Player",
+              "type": "behavior"
+            },
+            {
+              "description": "",
+              "name": "Player_MovementValues",
+              "type": "objectList"
+            }
+          ],
+          "objectGroups": []
         }
       ],
       "eventsFunctionsFolderStructure": {
@@ -410,6 +454,9 @@
         "children": [
           {
             "functionName": "SensorWall"
+          },
+          {
+            "functionName": "DestroyRebound"
           }
         ]
       },

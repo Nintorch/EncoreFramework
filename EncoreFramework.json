@@ -2908,6 +2908,14 @@
         "name": "assets\\TitleCards\\Act2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/LevelBoundary.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/LevelBoundary.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
