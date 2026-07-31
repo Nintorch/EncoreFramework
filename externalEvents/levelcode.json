@@ -27846,6 +27846,17 @@
                         "value": "HelperExtension::BitmapText::SetText"
                       },
                       "parameters": [
+                        "ScoreCounter",
+                        "=",
+                        "ToString(PlayerValues.Score)",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "HelperExtension::BitmapText::SetText"
+                      },
+                      "parameters": [
                         "SecondCounter",
                         "=",
                         "ToString(mod(floor(Master_Level.LevelTimer/60),60))",

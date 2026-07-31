@@ -21703,6 +21703,11 @@
           "name": "Lives",
           "type": "number",
           "value": 3
+        },
+        {
+          "name": "Score",
+          "type": "number",
+          "value": 0
         }
       ]
     }

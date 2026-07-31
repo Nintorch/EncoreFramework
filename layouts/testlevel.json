@@ -1374,6 +1374,16 @@
                     "TestBadnik",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "PlayerValues.Score",
+                    "+",
+                    "100"
+                  ]
                 }
               ]
             }
