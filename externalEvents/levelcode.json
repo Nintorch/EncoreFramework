@@ -197,7 +197,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6617,7 +6616,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Player Movement Routines",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -6627,7 +6625,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "- Special collision cases",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -6649,13 +6646,54 @@
                                       "conditions": [
                                         {
                                           "type": {
-                                            "value": "BooleanObjectVariable"
+                                            "value": "BuiltinCommonInstructions::Or"
                                           },
-                                          "parameters": [
-                                            "Player_MovementValues",
-                                            "Attacking",
-                                            "True",
-                                            ""
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Action",
+                                                "=",
+                                                "\"Roll\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Action",
+                                                "=",
+                                                "\"Jump\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Action",
+                                                "=",
+                                                "\"Glide\""
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "StringObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_MovementValues",
+                                                "Action",
+                                                "=",
+                                                "\"Slide\""
+                                              ]
+                                            }
                                           ]
                                         }
                                       ],
@@ -6714,6 +6752,66 @@
                                               },
                                               "parameters": [
                                                 "Player_SensorGroundRight",
+                                                "Ignore",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "CollisionNP"
+                                              },
+                                              "parameters": [
+                                                "Player_SensorLeft",
+                                                "MonitorBase",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_SensorLeft",
+                                                "Ignore",
+                                                "True",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "CollisionNP"
+                                              },
+                                              "parameters": [
+                                                "Player_SensorRight",
+                                                "MonitorBase",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "SetBooleanObjectVariable"
+                                              },
+                                              "parameters": [
+                                                "Player_SensorRight",
                                                 "Ignore",
                                                 "True",
                                                 ""
@@ -12562,6 +12660,35 @@
                               ]
                             },
                             {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Invincibility",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Attacking",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
                               "colorB": 228,
                               "colorG": 176,
                               "colorR": 74,
@@ -17785,7 +17912,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Knuckles Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -17795,7 +17921,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Gliding-related Actions",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -22781,7 +22906,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Common Objects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -27803,6 +27927,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",

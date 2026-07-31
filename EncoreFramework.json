@@ -3068,6 +3068,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Spikes",
+      "persistentUuid": "1ed06634-ca69-4f7b-8123-ee457baf61aa",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -12544,6 +12545,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "MonitorInvincibility",
+      "persistentUuid": "7a5bbd33-ff30-420e-963e-369b70339c85",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
