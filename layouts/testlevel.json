@@ -1294,7 +1294,7 @@
                     "value": "CollisionNP"
                   },
                   "parameters": [
-                    "Player_SensorBottom",
+                    "Player",
                     "TestBadnik",
                     "",
                     "",
@@ -1306,21 +1306,10 @@
                     "value": "NumberObjectVariable"
                   },
                   "parameters": [
-                    "Player",
-                    "PlayerID",
-                    "=",
-                    "Player_SensorBottom.PlayerID"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "NumberObjectVariable"
-                  },
-                  "parameters": [
                     "Player_MovementValues",
                     "PlayerID",
                     "=",
-                    "Player_SensorBottom.PlayerID"
+                    "Player.PlayerID"
                   ]
                 },
                 {
@@ -1330,59 +1319,107 @@
                   "parameters": []
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "value": "SetNumberObjectVariable"
-                  },
-                  "parameters": [
-                    "Player_MovementValues",
-                    "YSpeed",
-                    "=",
-                    "-Player_MovementValues.YSpeed-sign(Player_MovementValues.YSpeed)"
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_MovementValues",
+                        "Attacking",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_MovementValues",
+                        "YSpeed",
+                        "=",
+                        "-Player_MovementValues.YSpeed-sign(Player_MovementValues.YSpeed)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Explosion",
+                        "TestBadnik.X()",
+                        "TestBadnik.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "audio\\sfx\\destroy.wav",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "TestBadnik",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerValues.Score",
+                        "+",
+                        "100"
+                      ]
+                    }
                   ]
                 },
                 {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Explosion",
-                    "TestBadnik.X()",
-                    "TestBadnik.Y()",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "audio\\sfx\\destroy.wav",
-                    "",
-                    "",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "TestBadnik",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "PlayerValues.Score",
-                    "+",
-                    "100"
+                  "type": "BuiltinCommonInstructions::Else",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_MovementValues",
+                        "Attacking",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_MovementValues",
+                        "Hurt",
+                        "=",
+                        "1"
+                      ]
+                    }
                   ]
                 }
               ]
