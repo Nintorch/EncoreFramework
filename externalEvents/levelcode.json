@@ -197,6 +197,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -23286,7 +23287,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Monitors",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -23818,7 +23818,7 @@
                                         "Player_MovementValues",
                                         "YSpeed",
                                         "=",
-                                        "-Player_MovementValues.YSpeed"
+                                        "-Player_MovementValues.YSpeed-sign(Player_MovementValues.YSpeed)"
                                       ]
                                     },
                                     {
@@ -26177,7 +26177,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Interface and post-processing methods",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -27804,7 +27803,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "HUD",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",

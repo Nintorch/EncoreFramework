@@ -1333,13 +1333,13 @@
               "actions": [
                 {
                   "type": {
-                    "value": "HelperExtension::Player::DestroyRebound"
+                    "value": "SetNumberObjectVariable"
                   },
                   "parameters": [
-                    "Player",
-                    "Player",
                     "Player_MovementValues",
-                    ""
+                    "YSpeed",
+                    "=",
+                    "-Player_MovementValues.YSpeed-sign(Player_MovementValues.YSpeed)"
                   ]
                 },
                 {
