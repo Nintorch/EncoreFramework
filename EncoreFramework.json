@@ -21708,6 +21708,11 @@
           "name": "Score",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "ScoreExtraLife",
+          "type": "boolean",
+          "value": false
         }
       ]
     }
