@@ -1,7 +1,7 @@
 {
   "firstLayout": "WebPressStart",
   "gdVersion": {
-    "build": 271,
+    "build": 277,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -15598,6 +15598,7 @@
       "assetStoreId": "",
       "height": 32,
       "name": "LevelLeftBoundary",
+      "persistentUuid": "3174c24e-d9a8-447c-8c29-d26e7380daa9",
       "texture": "LevelBoundary",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
@@ -21386,6 +21387,139 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "WaterSplash",
+      "persistentUuid": "ef18e33e-81f0-427a-95f2-236e2c0f6458",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.0667,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/splash1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 32
+                      },
+                      {
+                        "x": 6,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/splash2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 32
+                      },
+                      {
+                        "x": 6,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/splash3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 32
+                      },
+                      {
+                        "x": 6,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -21485,6 +21619,9 @@
           {
             "folderName": "Water",
             "children": [
+              {
+                "objectName": "WaterSplash"
+              },
               {
                 "objectName": "WaterSurface"
               },

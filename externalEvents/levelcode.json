@@ -91,6 +91,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -957,6 +958,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Character Attributes",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -1823,7 +1825,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Input Management",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -2315,7 +2316,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Gamepad",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -16504,6 +16504,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Jump\" - Jumping and air roll",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -17335,6 +17336,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Tails Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -17344,6 +17346,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "\"Fly\" - Flying",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -29214,7 +29217,7 @@
                             "UnderwaterEffect",
                             "Resizable",
                             "=",
-                            "ScreenWidth()"
+                            "SceneWindowWidth()"
                           ]
                         },
                         {
@@ -29225,14 +29228,14 @@
                             "UnderwaterEffect",
                             "Resizable",
                             "=",
-                            "ScreenHeight()"
+                            "SceneWindowHeight()"
                           ]
                         }
                       ],
                       "events": [
                         {
                           "type": "BuiltinCommonInstructions::Repeat",
-                          "repeatExpression": "ScreenWidth()/(32*2)",
+                          "repeatExpression": "SceneWindowWidth()/(32*2)+1",
                           "conditions": [],
                           "actions": [
                             {
@@ -29724,6 +29727,18 @@
                                 "",
                                 ""
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "WaterSplash",
+                                "Player_MovementValues.FloatX",
+                                "WaterLevel.Y()",
+                                ""
+                              ]
                             }
                           ],
                           "events": [
@@ -29789,6 +29804,31 @@
                             }
                           ]
                         }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                      },
+                      "parameters": [
+                        "WaterSplash",
+                        "Animation"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "WaterSplash",
+                        ""
                       ]
                     }
                   ]
