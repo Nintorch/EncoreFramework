@@ -656,6 +656,7 @@
       "assetStoreId": "",
       "height": 128,
       "name": "LevelTile1",
+      "persistentUuid": "4c02f870-6026-4941-ab80-b239470b6e45",
       "texture": "assets\\levels\\TestLevel\\leveltile1.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 128,
@@ -1395,19 +1396,7 @@
                 },
                 {
                   "type": "BuiltinCommonInstructions::Else",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Player_MovementValues",
-                        "Attacking",
-                        "False",
-                        ""
-                      ]
-                    }
-                  ],
+                  "conditions": [],
                   "actions": [
                     {
                       "type": {
@@ -1448,23 +1437,7 @@
       "renderingType": "",
       "visibility": true,
       "cameras": [],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Light",
-          "doubleParameters": {
-            "elevation": 45,
-            "intensity": 1,
-            "rotation": 0
-          },
-          "stringParameters": {
-            "groundColor": "64;64;64",
-            "skyColor": "255;255;255",
-            "top": "Y-"
-          },
-          "booleanParameters": {}
-        }
-      ]
+      "effects": []
     },
     {
       "ambientLightColorB": 200,
@@ -1482,23 +1455,7 @@
       "renderingType": "",
       "visibility": true,
       "cameras": [],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Light",
-          "doubleParameters": {
-            "elevation": 45,
-            "intensity": 1,
-            "rotation": 0
-          },
-          "stringParameters": {
-            "groundColor": "64;64;64",
-            "skyColor": "255;255;255",
-            "top": "Y-"
-          },
-          "booleanParameters": {}
-        }
-      ]
+      "effects": []
     },
     {
       "ambientLightColorB": 200,
@@ -1527,23 +1484,25 @@
           "width": 0
         }
       ],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Light",
-          "doubleParameters": {
-            "elevation": 45,
-            "intensity": 1,
-            "rotation": 0
-          },
-          "stringParameters": {
-            "groundColor": "64;64;64",
-            "skyColor": "255;255;255",
-            "top": "Y-"
-          },
-          "booleanParameters": {}
-        }
-      ]
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 200,
+      "ambientLightColorG": 200,
+      "ambientLightColorR": 200,
+      "camera2DPlaneMaxDrawingDistance": 5000,
+      "camera3DFarPlaneDistance": 10000,
+      "camera3DFieldOfView": 45,
+      "camera3DNearPlaneDistance": 3,
+      "cameraType": "",
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "isLocked": false,
+      "name": "Water",
+      "renderingType": "",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
     },
     {
       "ambientLightColorB": 200,
@@ -1561,23 +1520,7 @@
       "renderingType": "",
       "visibility": true,
       "cameras": [],
-      "effects": [
-        {
-          "effectType": "Scene3D::HemisphereLight",
-          "name": "3D Light",
-          "doubleParameters": {
-            "elevation": 45,
-            "intensity": 1,
-            "rotation": 0
-          },
-          "stringParameters": {
-            "groundColor": "64;64;64",
-            "skyColor": "255;255;255",
-            "top": "Y-"
-          },
-          "booleanParameters": {}
-        }
-      ]
+      "effects": []
     }
   ],
   "behaviorsSharedData": [

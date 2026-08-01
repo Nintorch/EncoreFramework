@@ -197,6 +197,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -6616,6 +6617,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Player Movement Routines",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -6625,6 +6627,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "- Special collision cases",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -11746,6 +11749,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Post-movement Code",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -17228,7 +17232,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Tails Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -17238,7 +17241,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "\"Fly\" - Flying",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -17912,6 +17914,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Knuckles Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -22890,6 +22893,76 @@
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Extra life for 50 000 score points"
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerValues.Score",
+                                    ">=",
+                                    "50000"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerValues.ScoreExtraLife",
+                                    ">=",
+                                    "50000"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerValues.Lives",
+                                    "+",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Master_Level",
+                                    "ExtraLifeMusic",
+                                    "True",
+                                    "1"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetBooleanVariable"
+                                  },
+                                  "parameters": [
+                                    "PlayerValues.ScoreExtraLife",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
                             }
                           ],
                           "parameters": []
@@ -27298,6 +27371,36 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetCameraCenterX"
+                          },
+                          "parameters": [
+                            "",
+                            "=",
+                            "CameraCenterX()",
+                            "\"Water\"",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetCameraCenterY"
+                          },
+                          "parameters": [
+                            "",
+                            "=",
+                            "CameraCenterY()",
+                            "\"Water\"",
+                            ""
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -28048,76 +28151,6 @@
                             "To"
                           ]
                         }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Extra life for 50 000 score points"
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "NumberVariable"
-                      },
-                      "parameters": [
-                        "PlayerValues.Score",
-                        ">=",
-                        "50000"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "BooleanVariable"
-                      },
-                      "parameters": [
-                        "PlayerValues.ScoreExtraLife",
-                        ">=",
-                        "50000"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "PlayerValues.Lives",
-                        "+",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanObjectVariable"
-                      },
-                      "parameters": [
-                        "Master_Level",
-                        "ExtraLifeMusic",
-                        "True",
-                        "1"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetBooleanVariable"
-                      },
-                      "parameters": [
-                        "PlayerValues.ScoreExtraLife",
-                        "True",
-                        ""
                       ]
                     }
                   ]
@@ -28972,6 +29005,252 @@
                       "name": "DisappearedEverything",
                       "type": "boolean",
                       "value": false
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Water",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneJustBegins"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Master_Level",
+                        "WaterLevel",
+                        "=",
+                        "WaterLevel.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WaterLevel",
+                        "OscillationOffset",
+                        "=",
+                        "0.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Hide"
+                      },
+                      "parameters": [
+                        "WaterLevel"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "1",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "WaterSurface",
+                            "0",
+                            "Master_Level.WaterLevel",
+                            "\"Water\""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "WaterLevel",
+                        "OscillationDirection",
+                        "=",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WaterLevel",
+                        "OscillationSpeed",
+                        "+",
+                        "2/256*60*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WaterLevel",
+                        "OscillationOffset",
+                        "+",
+                        "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationOffset",
+                            ">=",
+                            "16"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationDirection",
+                            "Toggle",
+                            "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Else",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WaterLevel",
+                        "OscillationSpeed",
+                        "-",
+                        "2/256*60*TimeDelta()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "WaterLevel",
+                        "OscillationOffset",
+                        "+",
+                        "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationOffset",
+                            "<=",
+                            "16"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationDirection",
+                            "Toggle",
+                            "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "WaterLevel",
+                        "=",
+                        "Master_Level.WaterLevel+WaterLevel.OscillationOffset/2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "WaterSurface",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetY"
+                      },
+                      "parameters": [
+                        "WaterSurface",
+                        "=",
+                        "WaterLevel.Y()"
+                      ]
                     }
                   ]
                 }

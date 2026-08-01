@@ -2916,6 +2916,30 @@
         "name": "assets/LevelBoundary.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/surface1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/surface1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/surface2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/surface2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/surface3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/surface3.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -15279,6 +15303,11 @@
           "name": "ExtraLifeRingsCheck",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "WaterLevel",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -21021,6 +21050,216 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "WaterLevel",
+      "persistentUuid": "060fe245-bb9c-4640-9fb8-f282e302f8e1",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "OscillationOffset",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OscillationDirection",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "OscillationSpeed",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/LevelBoundary.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "WaterSurface",
+      "persistentUuid": "202b11b7-2764-42f9-a1f5-1bb2bfc48c22",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.13333,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/surface1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 2
+                      },
+                      {
+                        "x": 32,
+                        "y": 2
+                      },
+                      {
+                        "x": 32,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/surface2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 2
+                      },
+                      {
+                        "x": 32,
+                        "y": 2
+                      },
+                      {
+                        "x": 32,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/surface3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 2
+                      },
+                      {
+                        "x": 32,
+                        "y": 2
+                      },
+                      {
+                        "x": 32,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -21117,6 +21356,17 @@
       {
         "folderName": "Level objects",
         "children": [
+          {
+            "folderName": "Water",
+            "children": [
+              {
+                "objectName": "WaterSurface"
+              },
+              {
+                "objectName": "WaterLevel"
+              }
+            ]
+          },
           {
             "folderName": "Level boundaries",
             "children": [
