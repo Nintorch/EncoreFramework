@@ -2940,6 +2940,48 @@
         "name": "assets/levels/common/water/surface3.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "audio/sfx/splash.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/sfx/splash.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/filter.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/filter.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/splash1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/splash1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/splash2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/splash2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/splash3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/splash3.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -13376,6 +13418,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "YellowSpringUp",
+      "persistentUuid": "d2723f90-cae0-413c-8879-f40f59a18d0c",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
@@ -15303,6 +15346,11 @@
           "name": "ExtraLifeRingsCheck",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Water",
+          "type": "boolean",
+          "value": false
         },
         {
           "name": "WaterLevel",
@@ -21135,7 +21183,13 @@
       "persistentUuid": "202b11b7-2764-42f9-a1f5-1bb2bfc48c22",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "XOffset",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -21260,6 +21314,78 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "UnderwaterEffect",
+      "persistentUuid": "5ec2c4cf-687d-4f04-8942-ca6aec5c7b4a",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "BlendingMode",
+          "name": "Effect",
+          "doubleParameters": {
+            "blendmode": 2,
+            "opacity": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/filter.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 0
+                      },
+                      {
+                        "x": 16,
+                        "y": 16
+                      },
+                      {
+                        "x": 0,
+                        "y": 16
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -21364,6 +21490,9 @@
               },
               {
                 "objectName": "WaterLevel"
+              },
+              {
+                "objectName": "UnderwaterEffect"
               }
             ]
           },

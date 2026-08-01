@@ -197,7 +197,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Player",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -958,7 +957,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Character Attributes",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -1523,11 +1521,96 @@
                                   },
                                   "parameters": [
                                     "Player_MovementValues",
-                                    "TopXSpeed",
-                                    "=",
-                                    "Player_MovementValues.TopXSpeed * 0.6"
+                                    "XAcceleration",
+                                    "/",
+                                    "2"
                                   ]
                                 },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "YAcceleration",
+                                    "*",
+                                    "16/56"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Deceleration",
+                                    "/",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "TopXSpeed",
+                                    "/",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_ActionValues",
+                                    "JumpStrength",
+                                    "/",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_ActionValues",
+                                    "JumpReleaseStrength",
+                                    "/",
+                                    "2"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_ActionValues",
+                                    "SkidMinimumAmount",
+                                    "/",
+                                    "2"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "disabled": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Underwater",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
                                 {
                                   "type": {
                                     "value": "SetNumberObjectVariable"
@@ -1537,6 +1620,17 @@
                                     "XAcceleration",
                                     "=",
                                     "Player_MovementValues.XAcceleration * 0.5"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "TopXSpeed",
+                                    "=",
+                                    "Player_MovementValues.TopXSpeed * 0.6"
                                   ]
                                 },
                                 {
@@ -1670,6 +1764,17 @@
                                     "Player_Others",
                                     "SpeedSneakers",
                                     ">",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_Others",
+                                    "Underwater",
+                                    "=",
                                     "0"
                                   ]
                                 }
@@ -12697,7 +12802,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Common Actions",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -16400,7 +16504,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "\"Jump\" - Jumping and air roll",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -29032,59 +29135,192 @@
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Master_Level",
-                        "WaterLevel",
-                        "=",
-                        "WaterLevel.Y()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "WaterLevel",
-                        "OscillationOffset",
-                        "=",
-                        "0.5"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Hide"
-                      },
-                      "parameters": [
-                        "WaterLevel"
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Repeat",
-                      "repeatExpression": "1",
-                      "conditions": [],
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "WaterLevel",
+                            "=",
+                            "1"
+                          ]
+                        }
+                      ],
                       "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Level",
+                            "Water",
+                            "True",
+                            "WaterLevel.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Level",
+                            "WaterLevel",
+                            "=",
+                            "WaterLevel.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationOffset",
+                            "=",
+                            "0.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Hide"
+                          },
+                          "parameters": [
+                            "WaterLevel"
+                          ]
+                        },
                         {
                           "type": {
                             "value": "Create"
                           },
                           "parameters": [
                             "",
-                            "WaterSurface",
+                            "UnderwaterEffect",
                             "0",
-                            "Master_Level.WaterLevel",
+                            "0",
                             "\"Water\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                          },
+                          "parameters": [
+                            "UnderwaterEffect",
+                            "Resizable",
+                            "=",
+                            "ScreenWidth()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                          },
+                          "parameters": [
+                            "UnderwaterEffect",
+                            "Resizable",
+                            "=",
+                            "ScreenHeight()"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Repeat",
+                          "repeatExpression": "ScreenWidth()/(32*2)",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "WaterSurface",
+                                "0",
+                                "Master_Level.WaterLevel",
+                                "\"Water\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "WaterSurface",
+                                "XOffset",
+                                "=",
+                                "ID*32*2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "ID",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "variables": [
+                            {
+                              "name": "ID",
+                              "type": "number",
+                              "value": 0
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneInstancesCount"
+                          },
+                          "parameters": [
+                            "",
+                            "WaterLevel",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Level",
+                            "Water",
+                            "False",
+                            "WaterLevel.Y()"
                           ]
                         }
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": ""
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -29094,162 +29330,465 @@
                         "value": "BooleanObjectVariable"
                       },
                       "parameters": [
-                        "WaterLevel",
-                        "OscillationDirection",
-                        "=",
+                        "Master_Level",
+                        "Water",
+                        "True",
                         ""
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "WaterLevel",
-                        "OscillationSpeed",
-                        "+",
-                        "2/256*60*TimeDelta()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "WaterLevel",
-                        "OscillationOffset",
-                        "+",
-                        "WaterLevel.OscillationSpeed*60*TimeDelta()"
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "NumberObjectVariable"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
                             "WaterLevel",
-                            "OscillationOffset",
-                            ">=",
-                            "16"
+                            "OscillationDirection",
+                            "=",
+                            ""
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "SetNumberObjectVariable"
                           },
                           "parameters": [
                             "WaterLevel",
-                            "OscillationDirection",
-                            "Toggle",
+                            "OscillationSpeed",
+                            "+",
+                            "2/256*60*TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationOffset",
+                            "+",
                             "WaterLevel.OscillationSpeed*60*TimeDelta()"
                           ]
                         }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Else",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "WaterLevel",
-                        "OscillationSpeed",
-                        "-",
-                        "2/256*60*TimeDelta()"
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "WaterLevel",
+                                "OscillationOffset",
+                                ">=",
+                                "16"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "WaterLevel",
+                                "OscillationDirection",
+                                "Toggle",
+                                "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     },
                     {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "WaterLevel",
-                        "OscillationOffset",
-                        "+",
-                        "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                      "type": "BuiltinCommonInstructions::Else",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationSpeed",
+                            "-",
+                            "2/256*60*TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "OscillationOffset",
+                            "+",
+                            "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "WaterLevel",
+                                "OscillationOffset",
+                                "<=",
+                                "16"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanObjectVariable"
+                              },
+                              "parameters": [
+                                "WaterLevel",
+                                "OscillationDirection",
+                                "Toggle",
+                                "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                              ]
+                            }
+                          ]
+                        }
                       ]
-                    }
-                  ],
-                  "events": [
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "WaterLevel",
+                            "=",
+                            "Master_Level.WaterLevel+WaterLevel.OscillationOffset/2"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                              },
+                              "parameters": [
+                                "mod(floor(TimeFromStart()*60), 2)",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "GlobalXOffset",
+                                "=",
+                                "32"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "WaterSurface",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetX"
+                              },
+                              "parameters": [
+                                "WaterSurface",
+                                "=",
+                                "(CameraBorderLeft()-mod(CameraBorderLeft(), 32))+WaterSurface.XOffset+GlobalXOffset"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetY"
+                              },
+                              "parameters": [
+                                "WaterSurface",
+                                "=",
+                                "WaterLevel.Y()"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "name": "GlobalXOffset",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetXY"
+                          },
+                          "parameters": [
+                            "UnderwaterEffect",
+                            "=",
+                            "CameraBorderLeft()",
+                            "=",
+                            "max(WaterLevel.Y(), CameraBorderTop())"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Player",
                       "conditions": [
                         {
                           "type": {
                             "value": "NumberObjectVariable"
                           },
                           "parameters": [
-                            "WaterLevel",
-                            "OscillationOffset",
-                            "<=",
-                            "16"
+                            "PlayerVariablesSensors",
+                            "PlayerID",
+                            "=",
+                            "Player.PlayerID"
                           ]
                         }
                       ],
-                      "actions": [
+                      "actions": [],
+                      "events": [
                         {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "WaterLevel",
-                            "OscillationDirection",
-                            "Toggle",
-                            "WaterLevel.OscillationSpeed*60*TimeDelta()"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_MovementValues",
+                                "FloatY",
+                                ">=",
+                                "Master_Level.WaterLevel"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Others",
+                                "Underwater",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Others",
+                                "Underwater",
+                                "=",
+                                "1"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_MovementValues",
+                                "XSpeed",
+                                "/",
+                                "2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_MovementValues",
+                                "YSpeed",
+                                "/",
+                                "4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "audio/sfx/splash.wav",
+                                "",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "WaterSplash",
+                                "Player_MovementValues.FloatX",
+                                "WaterLevel.Y()",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_MovementValues",
+                                "FloatY",
+                                "<",
+                                "Master_Level.WaterLevel"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Others",
+                                "Underwater",
+                                "=",
+                                "1"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "Player_Others",
+                                "Underwater",
+                                "=",
+                                "0"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "audio/sfx/splash.wav",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "StringObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "Action",
+                                    "!=",
+                                    "\"Hurt\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetNumberObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Player_MovementValues",
+                                    "YSpeed",
+                                    "=",
+                                    "max(Player_MovementValues.YSpeed, -16)"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "YSpeed",
+                                        ">",
+                                        "-4"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_MovementValues",
+                                        "YSpeed",
+                                        "*",
+                                        "2"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
                           ]
                         }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetY"
-                      },
-                      "parameters": [
-                        "WaterLevel",
-                        "=",
-                        "Master_Level.WaterLevel+WaterLevel.OscillationOffset/2"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
-                },
-                {
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "WaterSurface",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetY"
-                      },
-                      "parameters": [
-                        "WaterSurface",
-                        "=",
-                        "WaterLevel.Y()"
                       ]
                     }
                   ]

@@ -813,6 +813,7 @@
       "assetStoreId": "",
       "height": 128,
       "name": "LevelTile4",
+      "persistentUuid": "fb4e039b-8839-4088-91d2-3d6304c1d293",
       "texture": "assets\\levels\\TestLevel\\leveltile4.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 128,
@@ -1048,6 +1049,164 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "NewShapePainter",
+      "persistentUuid": "34cad726-4c41-4190-a56d-a99b1a6325ae",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 1,
+      "outlineOpacity": 255,
+      "absoluteCoordinates": false,
+      "clearBetweenFrames": true,
+      "antialiasing": "none",
+      "fillColor": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "outlineColor": {
+        "r": 0,
+        "g": 0,
+        "b": 0
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "WaterSplash",
+      "persistentUuid": "ef18e33e-81f0-427a-95f2-236e2c0f6458",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.0667,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/splash1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 32
+                      },
+                      {
+                        "x": 6,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/splash2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 32
+                      },
+                      {
+                        "x": 6,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/splash3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 6,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 20
+                      },
+                      {
+                        "x": 26,
+                        "y": 32
+                      },
+                      {
+                        "x": 6,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -1106,6 +1265,9 @@
             "objectName": "LevelTile1"
           },
           {
+            "objectName": "NewShapePainter"
+          },
+          {
             "objectName": "LevelTile2"
           },
           {
@@ -1124,6 +1286,9 @@
       },
       {
         "folderName": "Act2"
+      },
+      {
+        "objectName": "WaterSplash"
       }
     ]
   },
