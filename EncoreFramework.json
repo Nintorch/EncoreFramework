@@ -2982,6 +2982,14 @@
         "name": "assets/levels/common/water/splash3.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/BlueFade.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/BlueFade.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -3202,6 +3210,7 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "FadeObject",
+      "persistentUuid": "5ed5c3a3-282d-49b4-a0f8-8ceec5f137ba",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [],
@@ -21520,6 +21529,85 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "BlueFadeObject",
+      "persistentUuid": "e4682e88-bde2-4b55-8be0-c017ef7fb132",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [
+        {
+          "effectType": "BlendingMode",
+          "name": "Effect",
+          "doubleParameters": {
+            "blendmode": 2,
+            "opacity": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Fade",
+          "type": "HelperExtension::Fade",
+          "FadingType": "",
+          "FadingSpeed": 384
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/BlueFade.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 0
+                      },
+                      {
+                        "x": 32,
+                        "y": 32
+                      },
+                      {
+                        "x": 0,
+                        "y": 32
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -21833,6 +21921,9 @@
           },
           {
             "objectName": "FadeObject"
+          },
+          {
+            "objectName": "BlueFadeObject"
           }
         ]
       }

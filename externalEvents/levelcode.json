@@ -131,6 +131,30 @@
               "actions": [
                 {
                   "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "FadeObject",
+                    "=",
+                    "0",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetXY"
+                  },
+                  "parameters": [
+                    "BlueFadeObject",
+                    "=",
+                    "0",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "OpacityCapability::OpacityBehavior::SetValue"
                   },
                   "parameters": [
@@ -189,6 +213,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Objects Management",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -28269,7 +28294,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Title Card",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -28507,6 +28531,16 @@
                           },
                           "parameters": [
                             "FadeObject",
+                            "Fade",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "HelperExtension::Fade::FadeIn"
+                          },
+                          "parameters": [
+                            "BlueFadeObject",
                             "Fade",
                             ""
                           ]
@@ -29122,6 +29156,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Water",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",

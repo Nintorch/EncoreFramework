@@ -194,7 +194,7 @@
       "width": 0,
       "x": 96,
       "y": -176,
-      "zOrder": 18,
+      "zOrder": 24,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
@@ -217,7 +217,7 @@
       "width": 224,
       "x": 432,
       "y": 96,
-      "zOrder": 20,
+      "zOrder": 24,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
@@ -245,7 +245,7 @@
       "width": 72,
       "x": 432,
       "y": 128,
-      "zOrder": 21,
+      "zOrder": 24,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
@@ -272,7 +272,7 @@
       "width": 0,
       "x": 431,
       "y": 160,
-      "zOrder": 22,
+      "zOrder": 24,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
@@ -287,6 +287,23 @@
           "value": 272
         }
       ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "keepRatio": true,
+      "layer": "HUD",
+      "name": "BlueFadeObject",
+      "opacity": 0,
+      "persistentUuid": "2df56a14-be77-466b-9cdd-38d2e6f20fb8",
+      "width": 0,
+      "x": 40,
+      "y": 0,
+      "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -301,7 +318,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9045517212191473,
+    "zoomFactor": 0.9665838166252481,
     "windowMask": false,
     "selectedLayer": "",
     "gameEditorMode": "instances-editor"
