@@ -145,7 +145,7 @@
                   "parameters": [
                     "Object",
                     "=",
-                    "YInit-CameraBorderTop()*YFactor"
+                    "YInit-floor(CameraBorderTop()*YFactor)"
                   ]
                 }
               ]
