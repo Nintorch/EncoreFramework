@@ -30373,6 +30373,17 @@
                     },
                     {
                       "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_Others",
+                        "Air",
+                        "<",
+                        "18"
+                      ]
+                    },
+                    {
+                      "type": {
                         "value": "BuiltinCommonInstructions::Once"
                       },
                       "parameters": []
@@ -30404,6 +30415,17 @@
                         "Invincibility",
                         "=",
                         "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_Others",
+                        "Air",
+                        "<",
+                        "18"
                       ]
                     },
                     {
@@ -30450,6 +30472,17 @@
                         "Invincibility",
                         "=",
                         "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_Others",
+                        "Air",
+                        "<",
+                        "18"
                       ]
                     },
                     {
