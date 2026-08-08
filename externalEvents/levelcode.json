@@ -20019,6 +20019,17 @@
                                     },
                                     {
                                       "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "BubbleTimer",
+                                        "=",
+                                        "0"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
                                         "value": "PlaySound"
                                       },
                                       "parameters": [
@@ -20143,6 +20154,17 @@
                                         "+",
                                         "TimeDelta()"
                                       ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "BubbleTimer",
+                                        "+",
+                                        "TimeDelta()"
+                                      ]
                                     }
                                   ]
                                 },
@@ -20258,6 +20280,47 @@
                                             "\"Drowning\""
                                           ]
                                         }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "NumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "BubbleTimer",
+                                        ">=",
+                                        "1"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "WaterBubble",
+                                        "Player_MovementValues.FloatX+6*Player_MovementValues.Direction",
+                                        "Player_MovementValues.FloatY-12",
+                                        ""
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "SetNumberObjectVariable"
+                                      },
+                                      "parameters": [
+                                        "Player_Others",
+                                        "BubbleTimer",
+                                        "-",
+                                        "1"
                                       ]
                                     }
                                   ]
@@ -30050,7 +30113,7 @@
                             "=",
                             "CameraBorderLeft()",
                             "=",
-                            "max(WaterLevel.Y(), CameraBorderTop())"
+                            "max(Master_Level.WaterLevelApparent, CameraBorderTop())"
                           ]
                         }
                       ]
@@ -30310,6 +30373,137 @@
                       "parameters": [
                         "WaterSplash",
                         ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Water bubbles"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEach",
+                  "object": "WaterBubble",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterBubble",
+                            "OriginalX",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterBubble",
+                            "OriginalX",
+                            "=",
+                            "WaterBubble.X()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "WaterBubble",
+                            "Timer",
+                            "+",
+                            "TimeDelta()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetX"
+                          },
+                          "parameters": [
+                            "WaterBubble",
+                            "=",
+                            "WaterBubble.OriginalX+sin(WaterBubble.Timer/(128.0/60)*2*Pi())*4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetY"
+                          },
+                          "parameters": [
+                            "WaterBubble",
+                            "-",
+                            "0.5*60*TimeDelta()"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "WaterBubble",
+                            "<=",
+                            "Master_Level.WaterLevelApparent"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::Name"
+                              },
+                              "parameters": [
+                                "WaterBubble",
+                                "Animation",
+                                "=",
+                                "\"Small\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "WaterBubble",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     }
                   ]

@@ -3010,6 +3010,30 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/bubble1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/bubble1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/bubble2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/bubble2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/levels/common/water/bubble3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets/levels/common/water/bubble3.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -15270,6 +15294,11 @@
           "value": 0
         },
         {
+          "name": "BubbleTimer",
+          "type": "number",
+          "value": 0
+        },
+        {
           "name": "PlayerID",
           "persistentUuid": "2bdb2a49-2248-49c0-954f-08a07bb42aba",
           "type": "number",
@@ -21666,6 +21695,151 @@
           ]
         }
       ]
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "",
+      "name": "WaterBubble",
+      "persistentUuid": "df417840-fc3e-4bbe-9eec-a837f920c0ed",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Timer",
+          "persistentUuid": "985f68fd-0676-4e13-bb69-cdc6e738040f",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "OriginalX",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Small",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.233,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/bubble1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/bubble2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets/levels/common/water/bubble3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 14,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 14
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 14,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -21765,6 +21939,9 @@
           {
             "folderName": "Water",
             "children": [
+              {
+                "objectName": "WaterBubble"
+              },
               {
                 "objectName": "WaterSplash"
               },
