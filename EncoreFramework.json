@@ -3000,6 +3000,16 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "audio/music/drowning.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/music/drowning.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },

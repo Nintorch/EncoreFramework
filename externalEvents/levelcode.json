@@ -20151,60 +20151,113 @@
                                   "conditions": [
                                     {
                                       "type": {
-                                        "value": "BuiltinCommonInstructions::Or"
+                                        "value": "NumberObjectVariable"
                                       },
-                                      "parameters": [],
-                                      "subInstructions": [
+                                      "parameters": [
+                                        "Player",
+                                        "PlayerID",
+                                        "=",
+                                        "0"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
                                         {
                                           "type": {
-                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                            "value": "BuiltinCommonInstructions::Or"
                                           },
-                                          "parameters": [
-                                            "floor(Player_Others.Air)",
-                                            "=",
-                                            "5"
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                              },
+                                              "parameters": [
+                                                "floor(Player_Others.Air)",
+                                                "=",
+                                                "5"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                              },
+                                              "parameters": [
+                                                "floor(Player_Others.Air)",
+                                                "=",
+                                                "10"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::CompareNumbers"
+                                              },
+                                              "parameters": [
+                                                "floor(Player_Others.Air)",
+                                                "=",
+                                                "15"
+                                              ]
+                                            }
                                           ]
                                         },
                                         {
                                           "type": {
-                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                            "value": "BuiltinCommonInstructions::Once"
                                           },
-                                          "parameters": [
-                                            "floor(Player_Others.Air)",
-                                            "=",
-                                            "10"
-                                          ]
-                                        },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
                                         {
                                           "type": {
-                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                            "value": "PlaySound"
                                           },
                                           "parameters": [
-                                            "floor(Player_Others.Air)",
-                                            "=",
-                                            "15"
+                                            "",
+                                            "audio/sfx/underwater_warning_chime.wav",
+                                            "",
+                                            "",
+                                            ""
                                           ]
                                         }
                                       ]
                                     },
                                     {
-                                      "type": {
-                                        "value": "BuiltinCommonInstructions::Once"
-                                      },
-                                      "parameters": []
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "PlaySound"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "audio/sfx/underwater_warning_chime.wav",
-                                        "",
-                                        "",
-                                        ""
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                                          },
+                                          "parameters": [
+                                            "floor(Player_Others.Air)",
+                                            "=",
+                                            "18"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetStringObjectVariable"
+                                          },
+                                          "parameters": [
+                                            "Master_Level",
+                                            "PlayingMusic",
+                                            "=",
+                                            "\"Drowning\""
+                                          ]
+                                        }
                                       ]
                                     }
                                   ]
@@ -29539,7 +29592,8 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Water",
+              "folded": true,
+              "name": "Water (Post)",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -30261,7 +30315,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Music",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -30657,6 +30710,43 @@
                   "parameters": [
                     "",
                     "audio\\music\\game_over.ogg",
+                    "32",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Master_Level",
+                    "PlayingMusic",
+                    "=",
+                    "\"Drowning\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySoundOnChannel"
+                  },
+                  "parameters": [
+                    "",
+                    "audio/music/drowning.ogg",
                     "32",
                     "",
                     "",
