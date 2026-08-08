@@ -2990,6 +2990,16 @@
         "name": "assets/BlueFade.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "audio/sfx/underwater_warning_chime.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "audio/sfx/underwater_warning_chime.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ]
   },
@@ -15155,86 +15165,103 @@
       "adaptCollisionMaskAutomatically": true,
       "assetStoreId": "",
       "name": "Player_Others",
+      "persistentUuid": "6380d356-b607-4e41-8304-9411334102ce",
       "type": "Sprite",
       "updateIfNotVisible": false,
       "variables": [
         {
           "name": "SuperForm",
+          "persistentUuid": "a2de7308-5740-46fa-825e-2aaa58ed8407",
           "type": "boolean",
           "value": false
         },
         {
           "name": "Shield",
+          "persistentUuid": "dc188b28-b01f-497e-a11c-7e6d5f589042",
           "type": "number",
           "value": 0
         },
         {
           "name": "Invincibility",
+          "persistentUuid": "1293f49d-23a5-4acd-9cef-9af75199dd33",
           "type": "number",
           "value": 0
         },
         {
           "name": "InvincibilityTimer",
+          "persistentUuid": "33062023-6ecf-4e7d-a249-93fa32331efd",
           "type": "number",
           "value": 0
         },
         {
           "name": "SpeedSneakers",
+          "persistentUuid": "71de4b8a-0d24-4f90-8711-75702ed19ba0",
           "type": "number",
           "value": 0
         },
         {
           "name": "SpeedSneakersTimer",
+          "persistentUuid": "2b8aa71d-1adb-4ab7-8b61-e3c11aa8cdd8",
           "type": "number",
           "value": 0
         },
         {
           "name": "Underwater",
+          "persistentUuid": "a24d1555-39b6-4c49-9d0a-c05d3d4d93d0",
           "type": "number",
           "value": 0
         },
         {
           "name": "Combo",
+          "persistentUuid": "c5355610-6912-4a6d-9347-dce34c91b8f7",
           "type": "number",
           "value": 0
         },
         {
           "name": "Air",
+          "persistentUuid": "dc4413ef-2807-4425-a3ac-94ff89ae578e",
           "type": "number",
           "value": 0
         },
         {
           "name": "PreviousX",
+          "persistentUuid": "067a457d-d3bd-4dbc-9f96-e75e276cca18",
           "type": "number",
           "value": 0
         },
         {
           "name": "PreviousY",
+          "persistentUuid": "0311e947-c0ee-4dd1-b2fb-46fc207e2447",
           "type": "number",
           "value": 0
         },
         {
           "name": "PreviousAction",
+          "persistentUuid": "29453165-6bd0-4d79-9192-588d8528dcec",
           "type": "string",
           "value": "0"
         },
         {
           "name": "PreviousAnimation",
+          "persistentUuid": "06fac0f7-ca23-40cf-9f57-d6bcaccff30a",
           "type": "string",
           "value": "0"
         },
         {
           "name": "Animation",
+          "persistentUuid": "b52afdb9-7ce0-4935-aa82-2e24025b0968",
           "type": "string",
           "value": ""
         },
         {
           "name": "AnimationTimer",
+          "persistentUuid": "d89ae3c6-d364-4e8c-976d-59a2dcdbb50a",
           "type": "number",
           "value": 0
         },
         {
           "name": "PlayerID",
+          "persistentUuid": "2bdb2a49-2248-49c0-954f-08a07bb42aba",
           "type": "number",
           "value": 0
         }
