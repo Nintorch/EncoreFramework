@@ -29592,7 +29592,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Water (Post)",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -29949,12 +29948,23 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Master_Level",
+                            "WaterLevelApparent",
+                            "=",
+                            "Master_Level.WaterLevel+WaterLevel.OscillationOffset/2"
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "SetY"
                           },
                           "parameters": [
                             "WaterLevel",
                             "=",
-                            "Master_Level.WaterLevel+WaterLevel.OscillationOffset/2"
+                            "Master_Level.WaterLevelApparent"
                           ]
                         }
                       ]
@@ -30013,7 +30023,7 @@
                               "parameters": [
                                 "WaterSurface",
                                 "=",
-                                "WaterLevel.Y()"
+                                "Master_Level.WaterLevelApparent"
                               ]
                             }
                           ]
@@ -30143,7 +30153,7 @@
                                 "",
                                 "WaterSplash",
                                 "Player_MovementValues.FloatX",
-                                "WaterLevel.Y()",
+                                "Master_Level.WaterLevelApparent",
                                 ""
                               ]
                             }
@@ -30207,7 +30217,7 @@
                                 "",
                                 "WaterSplash",
                                 "Player_MovementValues.FloatX",
-                                "WaterLevel.Y()",
+                                "Master_Level.WaterLevelApparent",
                                 ""
                               ]
                             }

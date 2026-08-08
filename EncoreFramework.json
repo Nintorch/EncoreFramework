@@ -15340,66 +15340,84 @@
       "variables": [
         {
           "name": "StageClear",
+          "persistentUuid": "f81bddc3-8543-4c7f-8cda-4382b6caf63c",
           "type": "number",
           "value": 0
         },
         {
           "name": "Boss",
+          "persistentUuid": "2b0600eb-cd46-4a43-8dc5-629f6f61689a",
           "type": "number",
           "value": 0
         },
         {
           "name": "LevelName",
+          "persistentUuid": "49ba4ec7-3257-4e2d-a700-1b9183992b22",
           "type": "string",
           "value": ""
         },
         {
           "name": "LevelAct",
+          "persistentUuid": "973c4322-7375-4f51-98ab-46b4aeab7035",
           "type": "number",
           "value": 1
         },
         {
           "name": "PlayingMusic",
+          "persistentUuid": "302e8a2c-b382-41d2-b4e9-db4a16897e42",
           "type": "string",
           "value": ""
         },
         {
           "name": "RingCount",
+          "persistentUuid": "aed6031d-69d6-49e6-9be9-9615474fdb29",
           "type": "number",
           "value": 0
         },
         {
           "name": "ExtraLifeMusic",
+          "persistentUuid": "4362b94e-5e3e-499a-ab90-f9a367055743",
           "type": "boolean",
           "value": false
         },
         {
           "name": "LevelTimer",
+          "persistentUuid": "f9af624c-1af3-4c23-86d2-2677d65f0d3c",
           "type": "number",
           "value": 0
         },
         {
           "name": "ProgressTime",
+          "persistentUuid": "eb067fd1-b7fc-417e-91c5-fc2659c3407b",
           "type": "boolean",
           "value": true
         },
         {
           "name": "LevelStarted",
+          "persistentUuid": "8c2702f7-9c3e-4fe4-96f1-3f6bf7a4df6a",
           "type": "boolean",
           "value": false
         },
         {
           "name": "ExtraLifeRingsCheck",
+          "persistentUuid": "2f8261ff-cdc5-4c8f-b9ac-aa9c60c3d09a",
           "type": "number",
           "value": 0
         },
         {
           "name": "Water",
+          "persistentUuid": "da5fd0e6-d8e4-485a-a8df-0f28522956c6",
           "type": "boolean",
           "value": false
         },
         {
           "name": "WaterLevel",
+          "persistentUuid": "03e70377-3324-4018-9480-56ee7b1527e3",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "WaterLevelApparent",
           "type": "number",
           "value": 0
         }
@@ -21156,16 +21174,19 @@
       "variables": [
         {
           "name": "OscillationOffset",
+          "persistentUuid": "6bb53faa-ccf1-4813-b548-d769fc1a7a96",
           "type": "number",
           "value": 0
         },
         {
           "name": "OscillationDirection",
+          "persistentUuid": "db563be2-8cfe-471c-bea5-9c74d4941e82",
           "type": "boolean",
           "value": false
         },
         {
           "name": "OscillationSpeed",
+          "persistentUuid": "3fdeed94-9322-44bc-b1fa-6d916856e35b",
           "type": "number",
           "value": 0
         }
